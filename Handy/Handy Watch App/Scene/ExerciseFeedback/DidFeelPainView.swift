@@ -9,10 +9,40 @@ import SwiftUI
 
 struct DidFeelPainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Sentiu dor ao praticar?")
+                .multilineTextAlignment(.center)
+                .bold()
+            
+            Spacer()
+            
+            HStack (spacing: 30){
+                Button {
+                    
+                } label: {
+                    Image(systemName: "xmark")
+                }
+                
+                Button {
+                    
+                } label: {
+                    Image(systemName: "checkmark")
+                }
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("3/3")
+            }
+        })
     }
 }
 
 #Preview {
-    DidFeelPainView()
+    NavigationStack {
+        DidFeelPainView()
+    }
 }
