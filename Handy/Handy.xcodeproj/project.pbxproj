@@ -14,6 +14,15 @@
 		E8F9EE242BF7F2F500E34C5D /* Handy_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE232BF7F2F500E34C5D /* Handy_Watch_AppTests.swift */; };
 		E8F9EE2E2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE2D2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift */; };
 		E8F9EE302BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */; };
+		FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
+		FDA964022BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
+		FDA964032BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
+		FDA964052BFBE0950006E4EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964042BFBE0950006E4EA /* User.swift */; };
+		FDA964062BFBE0950006E4EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964042BFBE0950006E4EA /* User.swift */; };
+		FDA964072BFBE0950006E4EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964042BFBE0950006E4EA /* User.swift */; };
+		FDA964092BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
+		FDA9640A2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
+		FDA9640B2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,9 @@
 		E8F9EE292BF7F2F500E34C5D /* Handy Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handy Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE2D2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDA964002BFBD1A70006E4EA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		FDA964042BFBE0950006E4EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FDA964082BFBE2BD0006E4EA /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,7 @@
 		E8F9EE112BF7F2F300E34C5D /* Handy Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				FDA963FF2BFBD17D0006E4EA /* Model */,
 				E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */,
 				E8F9EE142BF7F2F300E34C5D /* ContentView.swift */,
 				E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */,
@@ -125,6 +138,16 @@
 				E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Handy Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		FDA963FF2BFBD17D0006E4EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDA964002BFBD1A70006E4EA /* Exercise.swift */,
+				FDA964042BFBE0950006E4EA /* User.swift */,
+				FDA964082BFBE2BD0006E4EA /* Meta.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA964052BFBE0950006E4EA /* User.swift in Sources */,
 				E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
+				FDA964092BFBE2BD0006E4EA /* Meta.swift in Sources */,
+				FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA9640A2BFBE2BD0006E4EA /* Meta.swift in Sources */,
 				E8F9EE242BF7F2F500E34C5D /* Handy_Watch_AppTests.swift in Sources */,
+				FDA964022BFBD1A70006E4EA /* Exercise.swift in Sources */,
+				FDA964062BFBE0950006E4EA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA964072BFBE0950006E4EA /* User.swift in Sources */,
 				E8F9EE2E2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift in Sources */,
 				E8F9EE302BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift in Sources */,
+				FDA9640B2BFBE2BD0006E4EA /* Meta.swift in Sources */,
+				FDA964032BFBD1A70006E4EA /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
