@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct BorgScaleView: View {
+    @State var borgScale : Int = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 5){
+            TitleForm(text: "Qual foi a dificuldade do exercício?")
+            Spacer()
+            stepperBorgScale
+            Spacer()
+            ButtonNextPage()
+        }
+    }
+    
+    // MARK: MODULARIZAÇÃO DAS VIEWS
+    
+    var stepperBorgScale : some View {
+        Stepper(value: $borgScale, in: 1 ... 10, label: {
+            Text(borgScale.description)
+                .frame(width: 75, height: 75)
+                .background(Color.secondary)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+        })
     }
 }
 

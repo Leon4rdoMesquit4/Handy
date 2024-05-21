@@ -1,5 +1,21 @@
 {
   "sourceLanguage" : "en",
-  "strings" : {},
+  "strings" : {
+    "3/3" : {
+
+    },
+    "Hello, world!" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Qual a dificuldade" : {
+
+    },
+    "Sentiu dor ao praticar?" : {
+
+    }
+  },
   "version" : "1.0"
 }

@@ -12,7 +12,7 @@
 		C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38173FC2BFBE7C6007A0584 /* CountdownView.swift */; };
 		C38174012BFBE85A007A0584 /* ExerciseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174002BFBE85A007A0584 /* ExerciseTabView.swift */; };
 		C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174032BFBE90D007A0584 /* BorgScaleView.swift */; };
-		C38174062BFBE950007A0584 /* ExerciseDifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174052BFBE950007A0584 /* ExerciseDifficultyView.swift */; };
+		C38174062BFBE950007A0584 /* ExerciseUserFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174052BFBE950007A0584 /* ExerciseUserFeedbackView.swift */; };
 		C38174082BFBE974007A0584 /* DidFeelPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174072BFBE974007A0584 /* DidFeelPainView.swift */; };
 		C381740A2BFBE983007A0584 /* PainScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174092BFBE983007A0584 /* PainScaleView.swift */; };
 		C381740D2BFBE9FF007A0584 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381740C2BFBE9FF007A0584 /* HomeView.swift */; };
@@ -37,6 +37,9 @@
 		E8F9EE242BF7F2F500E34C5D /* Handy_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE232BF7F2F500E34C5D /* Handy_Watch_AppTests.swift */; };
 		E8F9EE2E2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE2D2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift */; };
 		E8F9EE302BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */; };
+		FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C772BFCD0970036DBE2 /* TitleForm.swift */; };
+		FD900C7B2BFCD2310036DBE2 /* ButtonNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C7A2BFCD2310036DBE2 /* ButtonNextPage.swift */; };
+		FD900C7D2BFCD3C60036DBE2 /* StepperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */; };
 		FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
 		FDA964022BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
 		FDA964032BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
@@ -71,7 +74,7 @@
 		C38173FC2BFBE7C6007A0584 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		C38174002BFBE85A007A0584 /* ExerciseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTabView.swift; sourceTree = "<group>"; };
 		C38174032BFBE90D007A0584 /* BorgScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorgScaleView.swift; sourceTree = "<group>"; };
-		C38174052BFBE950007A0584 /* ExerciseDifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDifficultyView.swift; sourceTree = "<group>"; };
+		C38174052BFBE950007A0584 /* ExerciseUserFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseUserFeedbackView.swift; sourceTree = "<group>"; };
 		C38174072BFBE974007A0584 /* DidFeelPainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidFeelPainView.swift; sourceTree = "<group>"; };
 		C38174092BFBE983007A0584 /* PainScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
 		C381740C2BFBE9FF007A0584 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -99,6 +102,9 @@
 		E8F9EE292BF7F2F500E34C5D /* Handy Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handy Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE2D2BF7F2F500E34C5D /* Handy_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD900C772BFCD0970036DBE2 /* TitleForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleForm.swift; sourceTree = "<group>"; };
+		FD900C7A2BFCD2310036DBE2 /* ButtonNextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNextPage.swift; sourceTree = "<group>"; };
+		FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperImage.swift; sourceTree = "<group>"; };
 		FDA964002BFBD1A70006E4EA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		FDA964042BFBE0950006E4EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FDA964082BFBE2BD0006E4EA /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
@@ -157,8 +163,9 @@
 		C38173FE2BFBE80B007A0584 /* ExerciseFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				FD900C792BFCD09A0036DBE2 /* Component */,
 				C38174032BFBE90D007A0584 /* BorgScaleView.swift */,
-				C38174052BFBE950007A0584 /* ExerciseDifficultyView.swift */,
+				C38174052BFBE950007A0584 /* ExerciseUserFeedbackView.swift */,
 				C38174072BFBE974007A0584 /* DidFeelPainView.swift */,
 				C38174092BFBE983007A0584 /* PainScaleView.swift */,
 			);
@@ -279,6 +286,16 @@
 				E8F9EE2F2BF7F2F500E34C5D /* Handy_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Handy Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		FD900C792BFCD09A0036DBE2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FD900C772BFCD0970036DBE2 /* TitleForm.swift */,
+				FD900C7A2BFCD2310036DBE2 /* ButtonNextPage.swift */,
+				FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		FDA963FF2BFBD17D0006E4EA /* Model */ = {
@@ -428,9 +445,11 @@
 				C38174012BFBE85A007A0584 /* ExerciseTabView.swift in Sources */,
 				C38174142BFBEA67007A0584 /* ExerciseDetailView.swift in Sources */,
 				FDA964052BFBE0950006E4EA /* User.swift in Sources */,
+				FD900C7B2BFCD2310036DBE2 /* ButtonNextPage.swift in Sources */,
 				C381740A2BFBE983007A0584 /* PainScaleView.swift in Sources */,
 				C38174252BFBEBAD007A0584 /* ExerciseController.swift in Sources */,
-				C38174062BFBE950007A0584 /* ExerciseDifficultyView.swift in Sources */,
+				C38174062BFBE950007A0584 /* ExerciseUserFeedbackView.swift in Sources */,
+				FD900C7D2BFCD3C60036DBE2 /* StepperImage.swift in Sources */,
 				C38174172BFBEAB8007A0584 /* SelectGraphView.swift in Sources */,
 				C381742E2BFBEC46007A0584 /* Strings.swift in Sources */,
 				E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */,
@@ -438,6 +457,7 @@
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
+				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
 				C38173F92BFBE7A9007A0584 /* ExerciseStatsView.swift in Sources */,
@@ -613,7 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = PCTRQS8Z4G;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
@@ -643,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = PCTRQS8Z4G;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;

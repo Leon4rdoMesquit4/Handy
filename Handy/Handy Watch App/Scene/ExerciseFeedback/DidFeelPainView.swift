@@ -10,10 +10,8 @@ import SwiftUI
 struct DidFeelPainView: View {
     var body: some View {
         VStack{
-            Text("Sentiu dor ao praticar?")
-                .multilineTextAlignment(.center)
-                .bold()
             
+            TitleForm(text: "Sentiu dor ao praticar?")
             Spacer()
             
             HStack (spacing: 30){
