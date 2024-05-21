@@ -36,6 +36,28 @@ class Exercise {
     
     init() {}
     
+    /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
+    func returnImageBorgScale () -> String {
+        if let borgScale {
+            return "borgScale\(borgScale)"
+        } else {
+            return ""
+        }
+    }
+    
+    /// Uma função que retorna uma string que vai se usada em uma Image para renderizar a imagem que representa a quantidade de dor que o usuário sentiu durante o exercício (se o usuário teve um level de dor nulo ou 0, ele simplesmente retorna uma string vazia)
+    func returnImagePainScale () -> String {
+        if let painLevel {
+            if painLevel == 0 {
+                return ""
+            } else {
+                return "pain\(painLevel)"
+            }
+        } else {
+            return ""
+        }
+    }
+    
     private func validateBorgScale (newValue : Int) {
         if newValue >= 0 && newValue <= 10 {
             self.borgScale = newValue
