@@ -40,6 +40,7 @@
 		FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C772BFCD0970036DBE2 /* TitleForm.swift */; };
 		FD900C7B2BFCD2310036DBE2 /* ButtonNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C7A2BFCD2310036DBE2 /* ButtonNextPage.swift */; };
 		FD900C7D2BFCD3C60036DBE2 /* StepperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */; };
+		FD900C802BFD314A0036DBE2 /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD900C7F2BFD314A0036DBE2 /* ExerciseDetailViewModel.swift */; };
 		FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
 		FDA964022BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
 		FDA964032BFBD1A70006E4EA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964002BFBD1A70006E4EA /* Exercise.swift */; };
@@ -105,6 +106,7 @@
 		FD900C772BFCD0970036DBE2 /* TitleForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleForm.swift; sourceTree = "<group>"; };
 		FD900C7A2BFCD2310036DBE2 /* ButtonNextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNextPage.swift; sourceTree = "<group>"; };
 		FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperImage.swift; sourceTree = "<group>"; };
+		FD900C7F2BFD314A0036DBE2 /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
 		FDA964002BFBD1A70006E4EA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		FDA964042BFBE0950006E4EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FDA964082BFBE2BD0006E4EA /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		C38174122BFBEA3A007A0584 /* ExerciseDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FD900C7E2BFD31390036DBE2 /* ViewModel */,
 				C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */,
 			);
 			path = ExerciseDetail;
@@ -296,6 +299,14 @@
 				FD900C7C2BFCD3C60036DBE2 /* StepperImage.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		FD900C7E2BFD31390036DBE2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD900C7F2BFD314A0036DBE2 /* ExerciseDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FDA963FF2BFBD17D0006E4EA /* Model */ = {
@@ -454,6 +465,7 @@
 				C381742E2BFBEC46007A0584 /* Strings.swift in Sources */,
 				E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */,
 				C381740F2BFBEA16007A0584 /* GoalView.swift in Sources */,
+				FD900C802BFD314A0036DBE2 /* ExerciseDetailViewModel.swift in Sources */,
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
