@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Essa é uma View que detalha um treino de um dia específico, ela mostra as informações do exercício passado como argumento e permite que se faça o compartilhamento das informações do exercício.
 struct ExerciseDetailView: View {
     var exercise : Exercise
     @StateObject var vm = ExerciseDetailViewModel()
@@ -14,36 +15,46 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .leading){
+                // mostrando a duração do exercício
                 sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
+                
+                // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
                     sectionBuilder(title: "Batimentos", subtitle: "\(avarageHeartBeats) bpm")
                 }
                 
+                // mostrando a intensidade do exercício com base na escala de Borg
                 sectionBuilder(title: "Intensidade", image: exercise.returnImageBorgScale())
                 
+                // mostrando o nível de dor que a pessoa sentiu durante os exercícios
                 sectionBuilder(title: "Nível de dor", subtitle: "1")
                 
+                // mostrando o botão que permite o compartilhamento das informações exercício
                 HStack {
                     Spacer()
-                    sharelinkBuilder()
+                    sharelink
                     Spacer()
                 }
             }
         }
         .navigationTitle(exercise.startTrainning?.formatted(date: .numeric, time: .omitted) ?? "")
         .onAppear(perform: {
+            // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
         })
     }
     
-    @ViewBuilder
-    func sharelinkBuilder () -> some View {
+    var sharelink : some View {
         ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning?.formatted(date: .numeric, time: .omitted).description ?? "")")) {
             Image(systemName: "square.and.arrow.up")
         }
         .frame(width: 75)
     }
     
+    
+    // MARK: VIEW BUILDERS
+    
+    /// Função que constrói uma seção do detalhamento usando um título e um subtítulo, ele estiliza esses valores e mostra eles de maneira modular.
     @ViewBuilder
     func sectionBuilder (title : String, subtitle : String?) -> some View{
         Section {
@@ -58,6 +69,10 @@ struct ExerciseDetailView: View {
         }
     }
     
+    /// Função que constrói uma seção do detalhamento usando um título e uma imagem, ele estiliza esses valores e mostra eles de maneira modular.
+    /// - Parameters:
+    ///  - title: uma String que representa o título da seção
+    ///  - image: uma String que representa o nome da imagem que vai ser mostrada na seção
     @ViewBuilder
     func sectionBuilder (title : String, image : String?) -> some View{
         Section {
