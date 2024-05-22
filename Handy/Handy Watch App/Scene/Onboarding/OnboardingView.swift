@@ -25,5 +25,4 @@ struct Onboarding: View {
 
 #Preview {
     Onboarding(isOnboardingComplete: Binding.constant(false))
-        .environment(Coordinator())
 }

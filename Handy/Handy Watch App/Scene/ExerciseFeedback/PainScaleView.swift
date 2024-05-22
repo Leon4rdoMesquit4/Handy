@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PainScaleView: View {
     @State var painIntensity : Int = 0
-    @Environment(Coordinator.self) var coordinator
-
+    @Environment(ExerciseCoordinator.self) var coordinator
+    @Binding var isExercising: Bool
     
     var body: some View {
         VStack{
@@ -20,6 +20,7 @@ struct PainScaleView: View {
             Spacer()
             
             Button {
+                isExercising = false
                 coordinator.navigateToRoot()
             } label: {
                 Image(systemName: "checkmark")
@@ -31,5 +32,5 @@ struct PainScaleView: View {
 }
 
 #Preview {
-    PainScaleView()
+    PainScaleView(isExercising: .constant(true))
 }

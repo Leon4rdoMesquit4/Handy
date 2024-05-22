@@ -9,27 +9,25 @@ import SwiftUI
 
 struct ExerciseTabView: View {
     
-    @Environment(Coordinator.self) var coordinator
-    @State var exerciseIsFinished: Bool = false
+    @Binding var isExercising: Bool
+//    @Binding var exerciseCoordinator: Bool
     
     var body: some View {
         ZStack{
             
-            TabView(selection: .constant(1)){
+            TabView(){
                 ExerciseControlView()
-                    .environment(coordinator)
                     .tabItem {  }
                 
                 ExerciseStatsView()
                     .tabItem {  }
-                    .tag(1)
-            }
+            }.tabViewStyle(.carousel)
             .navigationBarBackButtonHidden()
-            
         }
     }
+    
 }
 
 #Preview {
-    ExerciseTabView()
+    ExerciseTabView(isExercising: .constant(true))
 }

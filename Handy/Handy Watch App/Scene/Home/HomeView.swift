@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @Environment(Coordinator.self) var coordinator
+    @Environment(HomeCoordinator.self) var coordinator
     
     var body: some View {
         VStack{
@@ -28,5 +28,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
-        .environment(Coordinator())
+        .environment(HomeCoordinator())
 }

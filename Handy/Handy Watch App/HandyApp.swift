@@ -12,7 +12,9 @@ import SwiftData
 struct Handy_Watch_AppApp: App {
     
     @AppStorage("Onboarding") var isOnboardingComplete: Bool = false
-    @State var coordinator = Coordinator()
+    @State var homeCoordinator = HomeCoordinator()
+    @State var exerciseCoordinator = ExerciseCoordinator()
+    @State var isExercising: Bool = false
     
     let container : ModelContainer
     
@@ -31,31 +33,39 @@ struct Handy_Watch_AppApp: App {
             if !isOnboardingComplete{
                 Onboarding(isOnboardingComplete: $isOnboardingComplete)
             } else {
-                NavigationStack(path: $coordinator.navPath){
-                    HomeTabView()
-                        .navigationDestination(for: Coordinator.Destination.self) { destination in
-                            switch destination {
-                            case .countdownView:
-                                CountdownView()
-                            case .graphView:
-                                GraphScrollView()
-                            case .selectGraphView:
-                                SelectGraphView()
-                            case .exerciseTabView:
-                                ExerciseTabView()
-                            case .homeTabView:
-                                HomeTabView()
-                            case .borgScaleView:
-                                BorgScaleView()
-                            case .didFeelPainView:
-                                DidFeelPainView()
-                            case .painScaleView:
-                                PainScaleView()
-                            case .exerciseUserFeedbackView:
-                                ExerciseUserFeedbackView()
+                if !isExercising {
+                    NavigationStack(path: $homeCoordinator.navPath){
+                        HomeTabView()
+                            .navigationDestination(for: HomeCoordinator.Destination.self) { destination in
+                                switch destination {
+                                case .countdownView:
+                                    CountdownView(isExercising: $isExercising)
+                                case .graphView:
+                                    GraphScrollView()
+                                case .selectGraphView:
+                                    SelectGraphView()
+                                }
                             }
-                        }
-                }.environment(coordinator)
+                    }.environment(homeCoordinator)
+                }
+                else {
+                    NavigationStack(path: $exerciseCoordinator.navPath){
+                        ExerciseTabView(isExercising: $isExercising)
+                            .navigationDestination(for: ExerciseCoordinator.Destination.self) { destination in
+                                switch destination {
+                                case .borgScaleView:
+                                    BorgScaleView()
+                                case .didFeelPainView:
+                                    DidFeelPainView(isExercising: $isExercising)
+                                case .painScaleView:
+                                    PainScaleView(isExercising: $isExercising)
+                                case .exerciseUserFeedbackView:
+                                    ExerciseUserFeedbackView()
+                                }
+                            }
+                            
+                    }.environment(exerciseCoordinator)
+                }
             }
         }
     }

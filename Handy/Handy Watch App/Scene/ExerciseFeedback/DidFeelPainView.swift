@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DidFeelPainView: View {
     
-    @Environment(Coordinator.self) var coordinator
+    @Environment(ExerciseCoordinator.self) var coordinator
+    @Binding var isExercising: Bool
     
     var body: some View {
         VStack{
@@ -23,8 +24,9 @@ struct DidFeelPainView: View {
                 } label: {
                     Image(systemName: "xmark")
                 }
-//                
+               
                 Button {
+                    isExercising = false
                     coordinator.navigateToRoot()
                 } label: {
                     Image(systemName: "checkmark")
@@ -44,6 +46,6 @@ struct DidFeelPainView: View {
 
 #Preview {
     NavigationStack {
-        DidFeelPainView()
+        DidFeelPainView(isExercising: .constant(true))
     }
 }

@@ -30,6 +30,7 @@
 		C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174292BFBEBFD007A0584 /* SwiftDataController.swift */; };
 		C381742C2BFBEC2D007A0584 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */; };
 		C381742E2BFBEC46007A0584 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381742D2BFBEC46007A0584 /* Strings.swift */; };
+		E8A60B972BFE74E800D33F3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A60B962BFE74E800D33F3D /* Extensions.swift */; };
 		E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */; };
 		E8F9EE152BF7F2F300E34C5D /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE142BF7F2F300E34C5D /* HomeTabView.swift */; };
 		E8F9EE172BF7F2F500E34C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		C38174292BFBEBFD007A0584 /* SwiftDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C381742D2BFBEC46007A0584 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E8A60B962BFE74E800D33F3D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E8F9EE0F2BF7F2F300E34C5D /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
 		E8F9EE142BF7F2F300E34C5D /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				C38174292BFBEBFD007A0584 /* SwiftDataController.swift */,
 				C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */,
 				C381742D2BFBEC46007A0584 /* Strings.swift */,
+				E8A60B962BFE74E800D33F3D /* Extensions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
+				E8A60B972BFE74E800D33F3D /* Extensions.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
 				C38173F92BFBE7A9007A0584 /* ExerciseStatsView.swift in Sources */,
@@ -633,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = PCTRQS8Z4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
@@ -663,7 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = PCTRQS8Z4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;

@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ExerciseControlView: View {
     
-    @Environment(Coordinator.self) var coordinator
+    @Environment(ExerciseCoordinator.self) var coordinator
 
     var body: some View {
+        
         Text("ExerciseControlView")
             .onTapGesture {
                 coordinator.navigate(to: .exerciseUserFeedbackView)
+            }
+            .onAppear{
+                coordinator.navigateToRoot()
             }
         
     }
@@ -22,5 +26,5 @@ struct ExerciseControlView: View {
 
 #Preview {
     ExerciseControlView()
-        .environment(Coordinator())
+        .environment(ExerciseCoordinator())
 }

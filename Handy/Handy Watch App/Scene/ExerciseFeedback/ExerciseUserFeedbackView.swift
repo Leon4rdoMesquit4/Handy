@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExerciseUserFeedbackView: View {
     @State var feedback : Int = 1
-    @Environment(Coordinator.self) var coordinator
+    @Environment(ExerciseCoordinator.self) var coordinator
     
     
     

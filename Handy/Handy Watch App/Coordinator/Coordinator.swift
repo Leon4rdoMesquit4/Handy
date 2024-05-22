@@ -9,33 +9,49 @@ import Foundation
 
 
 @Observable
-final class Coordinator{
+final class HomeCoordinator{
     
     public enum Destination: Codable, Hashable {
         case countdownView
         case graphView
         case selectGraphView
-        case exerciseTabView
-        case homeTabView
-        case borgScaleView
-        case didFeelPainView
-        case painScaleView
-        case exerciseUserFeedbackView
     }
     
-    var isOnboardingComplete: Bool = false
+    public enum navpth{
+        case n1
+        case n2
+    }
+    
     var navPath: [Destination] = []
     
     func navigate(to destination: Destination) {
         navPath.append(destination)
     }
     
-    func navigateBack() {
-        navPath.removeLast()
+    func navigateToRoot() {
+        navPath = []
+    }
+    
+}
+
+@Observable
+final class ExerciseCoordinator{
+    
+    public enum Destination: Codable, Hashable {
+        case borgScaleView
+        case didFeelPainView
+        case painScaleView
+        case exerciseUserFeedbackView
+    }
+
+    var navPath: [Destination] = []
+
+    func navigate( to destination: Destination) {
+        navPath.append(destination)
     }
     
     func navigateToRoot() {
-        navPath.removeLast(navPath.count)
+        navPath = []
     }
     
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExercisesScrollView: View {
     
-    @Environment(Coordinator.self) var coordinator
+    @Environment(HomeCoordinator.self) var coordinator
     
     var body: some View {
         Text("Hello, World!")
@@ -18,5 +18,5 @@ struct ExercisesScrollView: View {
 
 #Preview {
     ExercisesScrollView()
-        .environment(Coordinator())
+        .environment(HomeCoordinator())
 }

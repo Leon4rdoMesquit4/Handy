@@ -9,13 +9,19 @@ import SwiftUI
 
 struct CountdownView: View {
     
-    @Environment(Coordinator.self) var coordinator
+    @Environment(HomeCoordinator.self) var coordinator
+
+    @Binding var isExercising: Bool
     
     var body: some View {
         VStack{
             Text("CountdownView")
                 .onTapGesture {
-                    coordinator.navigate(to:.exerciseTabView )
+                    withAnimation {
+                        coordinator.navigateToRoot()
+                        isExercising = true
+
+                    }
                 }
                 .navigationBarBackButtonHidden()
         }
@@ -23,6 +29,6 @@ struct CountdownView: View {
 }
 
 #Preview {
-    CountdownView()
-        .environment(Coordinator())
+    CountdownView(isExercising: .constant(true))
+        
 }

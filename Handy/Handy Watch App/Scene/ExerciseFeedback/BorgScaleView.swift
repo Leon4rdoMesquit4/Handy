@@ -9,8 +9,7 @@ import SwiftUI
 
 struct BorgScaleView: View {
     @State var borgScale : Int = 1
-    @Environment(Coordinator.self) var coordinator
-
+    @Environment(ExerciseCoordinator.self) var coordinator
     
     var body: some View {
         VStack (spacing: 5){
