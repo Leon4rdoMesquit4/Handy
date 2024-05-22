@@ -50,6 +50,7 @@
 		FDA964092BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
 		FDA9640A2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
 		FDA9640B2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
+		FDBBB7DF2BFE1A9500552287 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		FDA964002BFBD1A70006E4EA /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		FDA964042BFBE0950006E4EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FDA964082BFBE2BD0006E4EA /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		C38173F42BFBE725007A0584 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				FDBBB7DD2BFE1A7500552287 /* Components */,
 				C38174002BFBE85A007A0584 /* ExerciseTabView.swift */,
 				C38173F82BFBE7A9007A0584 /* ExerciseStatsView.swift */,
 				C38173FA2BFBE7B6007A0584 /* ExerciseControlView.swift */,
@@ -319,6 +322,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FDBBB7DD2BFE1A7500552287 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,6 +479,7 @@
 				FD900C802BFD314A0036DBE2 /* ExerciseDetailViewModel.swift in Sources */,
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
+				FDBBB7DF2BFE1A9500552287 /* CircularProgressBarView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
