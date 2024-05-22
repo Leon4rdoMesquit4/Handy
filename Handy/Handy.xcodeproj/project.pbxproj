@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C326975E2BFD1EC900CD3568 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C326975D2BFD1EC900CD3568 /* HomeTabView.swift */; };
 		C38173F92BFBE7A9007A0584 /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38173F82BFBE7A9007A0584 /* ExerciseStatsView.swift */; };
 		C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38173FA2BFBE7B6007A0584 /* ExerciseControlView.swift */; };
 		C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38173FC2BFBE7C6007A0584 /* CountdownView.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C326975D2BFD1EC900CD3568 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		C38173F82BFBE7A9007A0584 /* ExerciseStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
 		C38173FA2BFBE7B6007A0584 /* ExerciseControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseControlView.swift; sourceTree = "<group>"; };
 		C38173FC2BFBE7C6007A0584 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				C381740E2BFBEA16007A0584 /* GoalView.swift */,
 				C38174102BFBEA28007A0584 /* ExercisesScrollView.swift */,
 				C38174222BFBEB9B007A0584 /* HomeController.swift */,
+				C326975D2BFD1EC900CD3568 /* HomeTabView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
+				C326975E2BFD1EC900CD3568 /* HomeTabView.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
 				C38173F92BFBE7A9007A0584 /* ExerciseStatsView.swift in Sources */,
@@ -633,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = CKX23Y9XSA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
@@ -663,7 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XQLYL986B;
+				DEVELOPMENT_TEAM = CKX23Y9XSA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;

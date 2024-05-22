@@ -9,7 +9,30 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("Fennec")
+                .resizable()
+                .frame(width: 200, height: 230)
+            VStack {
+                HStack {
+                    Image(systemName: "chart.bar.xaxis")
+                        .padding(12)
+                        .onTapGesture {
+                            print("hey")
+                        }
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    Image("addExercise")
+                        .padding(.trailing, 10)
+                        .onTapGesture {
+                            print("hey")
+                        }
+                }
+                Spacer()
+            }.ignoresSafeArea()
+        }
     }
 }
 
