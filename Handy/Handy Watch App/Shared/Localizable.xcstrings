@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "1/3" : {
+
+    },
     "3/3" : {
 
     },
@@ -10,7 +13,7 @@
     "Hello, World!" : {
 
     },
-    "Minha meta" : {
+    "Treino do dia: %@" : {
 
     }
   },

@@ -12,12 +12,15 @@ struct BorgScaleView: View {
     
     var body: some View {
         VStack (spacing: 5){
+            
             TitleForm(text: "Qual foi a dificuldade do exercício?")
             Spacer()
             stepperBorgScale
             Spacer()
             ButtonNextPage()
         }
+        .navigationTitle("1/3")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     // MARK: MODULARIZAÇÃO DAS VIEWS
@@ -33,5 +36,7 @@ struct BorgScaleView: View {
 }
 
 #Preview {
-    BorgScaleView()
+    NavigationStack {
+        BorgScaleView()
+    }
 }

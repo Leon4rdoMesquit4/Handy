@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ExerciseControlView: View {
+    @State var progresso : Double = 1
+    @State var contador : Int = 3
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+        }
+        
     }
 }
 

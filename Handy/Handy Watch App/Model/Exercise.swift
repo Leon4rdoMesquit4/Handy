@@ -8,12 +8,13 @@
 import Foundation
 import SwiftData
 
+@Model
 class Exercise {
-    var time : TimeInterval?
-    var avarageHeartBeats : Double
-    var minHeartBeats : Double
-    var maxHeartBeats : Double
-    var startTrainning : Date = Date()
+    var time : String?
+    var avarageHeartBeats : Double?
+    var minHeartBeats : Double?
+    var maxHeartBeats : Double?
+    var startTrainning : Date?
     
     /// Um atributo que indica a escala de Borg do usuário, eu fiz uma pequena validação para saber se o novo valor que ele passou está válido
     var borgScale : Int? {
@@ -25,31 +26,35 @@ class Exercise {
     }
     
     /// Um atributo que indica o quanto de dor que a pessoa teve durante o exercício. Caso seja 0, então não teve dor.
-    var painLevel : Double {
+    var painLevel : Double? {
         willSet {
-            validatePainScale(newValue: newValue)
+            if let newValue {
+                validatePainScale(newValue: newValue)
+            }
         }
     }
     
-    init(borgScale: Int, time: TimeInterval, avarageHeartBeats: Double, minHeartBeats: Double, maxHeartBeats: Double, startTrainning: Date, painLevel: Double) {
-        self.time = time
-        self.avarageHeartBeats = avarageHeartBeats
-        self.minHeartBeats = minHeartBeats
-        self.maxHeartBeats = maxHeartBeats
-        self.startTrainning = startTrainning
-        
-        // validando o nível de dor passado pelo usuário, se for válido, ele atribui, se não for válido, então ele atribui 0
-        if painLevel >= 0 && painLevel <= 5 {
-            self.painLevel = painLevel
+    init() {}
+    
+    /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
+    func returnImageBorgScale () -> String {
+        if let borgScale {
+            return "borgScale\(borgScale)"
         } else {
-            self.painLevel = 0
+            return ""
         }
-                
-        // validando a escala de borg passada pelo usuário, se não for válido, ele atribui o valor nil
-        if borgScale >= 0 && borgScale <= 10 {
-            self.borgScale = borgScale
+    }
+    
+    /// Uma função que retorna uma string que vai se usada em uma Image para renderizar a imagem que representa a quantidade de dor que o usuário sentiu durante o exercício (se o usuário teve um level de dor nulo ou 0, ele simplesmente retorna uma string vazia)
+    func returnImagePainScale () -> String {
+        if let painLevel {
+            if painLevel == 0 {
+                return ""
+            } else {
+                return "pain\(painLevel)"
+            }
         } else {
-            self.borgScale = nil
+            return ""
         }
     }
     
