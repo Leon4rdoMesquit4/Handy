@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct TreatmentTimeBeginningView: View {
+    @Environment (\.dismiss) var dismiss
     @Binding var dataInicio : Date
     
     var body: some View {
-        DatePicker("Data de início", selection: $dataInicio)
         
+        VStack (spacing: 20){
+            DatePicker("Data de início", selection: $dataInicio)
+                .frame(height: 120)
+            
+            Button ("Definir") {
+                dismiss()
+            }
+        }
         
     }
 }

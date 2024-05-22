@@ -12,34 +12,46 @@ struct TreatmentTimeView_: View {
     @State var dataFinal : Date = Date()
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 20){
-            Text("Duração do tratamento:")
-                .font(.title3)
-                .bold()
-                .frame(height: 50)
+        VStack (alignment: .leading, spacing: 10){
+            treatmentDuration
+                .font(.caption)
+                .padding(.horizontal)
                 
             NavigationLink {
                 TreatmentTimeBeginningView(dataInicio: $dataInicio)
             } label: {
-                VStack (alignment: .leading, spacing: 4){
-                    Text("Data de início")
-                        .bold()
-                        .font(.caption)
-                    Text(dataInicio.formatted(date: .numeric, time: .omitted))
-                        .font(.caption2)
-                }
+                dateButton("Data de início", date: dataInicio)
             }
         
             NavigationLink {
                 TreatmentTimeEndView(dataFinal: $dataFinal)
             } label: {
-                VStack (alignment: .leading, spacing: 4){
-                    Text("Data final")
-                        .bold()
-                        .font(.caption)
-                    Text(dataFinal.formatted(date: .numeric, time: .omitted))
-                }
+                dateButton("Data final", date: dataFinal)
             }
+            
+            HStack {
+                Spacer()
+                ButtonNextPage()
+                Spacer()
+            }
+            
+        }
+    }
+    
+    var treatmentDuration : some View {
+        Text("Duração do tratamento:")
+            .font(.title3)
+            .bold()
+            .frame(height: 50)
+    }
+    
+    @ViewBuilder
+    func dateButton (_ label : String, date : Date) -> some View {
+        VStack (alignment: .leading, spacing: 4){
+            Text(label)
+                .bold()
+                .font(.caption)
+            Text(date.formatted(date: .numeric, time: .omitted))
         }
     }
 }

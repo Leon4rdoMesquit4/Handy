@@ -9,9 +9,16 @@ import SwiftUI
 
 struct TreatmentTimeEndView: View {
     @Binding var dataFinal : Date
+    @Environment (\.dismiss) var dismiss
     
     var body: some View {
-        DatePicker("Data do final", selection: $dataFinal)
+        VStack {
+            DatePicker("Data do final", selection: $dataFinal)
+            
+            Button ("Definir") {
+                dismiss()
+            }
+        }
     }
 }
 
