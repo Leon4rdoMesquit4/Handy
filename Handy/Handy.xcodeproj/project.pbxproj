@@ -52,6 +52,10 @@
 		FDA9640A2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
 		FDA9640B2BFBE2BD0006E4EA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA964082BFBE2BD0006E4EA /* Meta.swift */; };
 		FDBBB7DF2BFE1A9500552287 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */; };
+		FDBBB7EA2BFE722C00552287 /* EmojiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7E92BFE722C00552287 /* EmojiSelectionView.swift */; };
+		FDBBB7EC2BFE737800552287 /* TreatmentTimeView .swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */; };
+		FDBBB7EE2BFE740E00552287 /* TreatmentTimeBeginningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7ED2BFE740E00552287 /* TreatmentTimeBeginningView.swift */; };
+		FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7EF2BFE741900552287 /* TreatmentTimeEndView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		FDA964042BFBE0950006E4EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FDA964082BFBE2BD0006E4EA /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		FDBBB7E92BFE722C00552287 /* EmojiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSelectionView.swift; sourceTree = "<group>"; };
+		FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentTimeView .swift"; sourceTree = "<group>"; };
+		FDBBB7ED2BFE740E00552287 /* TreatmentTimeBeginningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentTimeBeginningView.swift; sourceTree = "<group>"; };
+		FDBBB7EF2BFE741900552287 /* TreatmentTimeEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentTimeEndView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,10 @@
 			isa = PBXGroup;
 			children = (
 				C381741B2BFBEB01007A0584 /* Onboarding.swift */,
+				FDBBB7E92BFE722C00552287 /* EmojiSelectionView.swift */,
+				FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */,
+				FDBBB7ED2BFE740E00552287 /* TreatmentTimeBeginningView.swift */,
+				FDBBB7EF2BFE741900552287 /* TreatmentTimeEndView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -480,6 +492,7 @@
 				E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */,
 				C381740F2BFBEA16007A0584 /* GoalView.swift in Sources */,
 				FD900C802BFD314A0036DBE2 /* ExerciseDetailViewModel.swift in Sources */,
+				FDBBB7EC2BFE737800552287 /* TreatmentTimeView .swift in Sources */,
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				FDBBB7DF2BFE1A9500552287 /* CircularProgressBarView.swift in Sources */,
@@ -487,12 +500,15 @@
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
 				C326975E2BFD1EC900CD3568 /* HomeTabView.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
+				FDBBB7EE2BFE740E00552287 /* TreatmentTimeBeginningView.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
+				FDBBB7EA2BFE722C00552287 /* EmojiSelectionView.swift in Sources */,
 				C38173F92BFBE7A9007A0584 /* ExerciseStatsView.swift in Sources */,
 				FDA964092BFBE2BD0006E4EA /* Meta.swift in Sources */,
 				FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */,
 				C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */,
 				C38174212BFBEB5B007A0584 /* CoordinatorView.swift in Sources */,
+				FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */,
 				C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */,
 				C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */,
 				C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */,
