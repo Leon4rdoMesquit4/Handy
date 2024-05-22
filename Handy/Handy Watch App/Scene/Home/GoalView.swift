@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GoalView: View {
+    var goal: Goal
     var body: some View {
         VStack {
             HStack {
@@ -26,12 +27,12 @@ struct GoalView: View {
 extension GoalView {
     var GoalProgress: some View {
         VStack {
-            Image(systemName: "fork.knife")
-                .resizable()
+            Text(goal.emoji)
+                .font(.largeTitle)
                 .frame(width: 40, height: 60)
             HStack {
-                Image("face.smiling.inverse")
-                Text("65%")
+                Image(systemName: "face.smiling.inverse")
+                Text("\(Int(goal.progress))%")
             }
         }
     }
@@ -47,7 +48,7 @@ extension GoalView {
                 )
                 .frame(width: 160)
             Circle()
-                .trim(from: 0, to: 0.25)
+                .trim(from: 0, to: goal.progress/100)
                 .stroke(style: StrokeStyle(lineWidth: 25, lineCap: .round)
                         
                 )
@@ -59,5 +60,5 @@ extension GoalView {
 }
 
 #Preview {
-    GoalView()
+    GoalView(goal: Goal(name: "", emoji: "🍴", progress: 50))
 }

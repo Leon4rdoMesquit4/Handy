@@ -10,10 +10,12 @@ import Foundation
 class Goal {
     var name : String
     var emoji : String
+    var progress : Double
     
-    init(name: String, emoji: String) {
+    init(name: String, emoji: String, progress: Double) {
         self.name = name
         self.emoji = emoji
+        self.progress = progress
     }
     
 }
