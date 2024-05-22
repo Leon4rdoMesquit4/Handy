@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack{
+            Text("Graph")
+                .onTapGesture {
+                    coordinator.navigate(to: .selectGraphView)
+                }
+            Text("CountdownView")
+                .onTapGesture {
+                    coordinator.navigate(to: .countdownView)
+                }
+        }
     }
 }
 
+
 #Preview {
     HomeView()
+        .environment(Coordinator())
 }

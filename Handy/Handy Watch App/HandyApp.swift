@@ -11,6 +11,7 @@ import SwiftData
 @main
 struct Handy_Watch_AppApp: App {
     
+    @AppStorage("Onboarding") var isOnboardingComplete: Bool = false
     @State var coordinator = Coordinator()
     
     let container : ModelContainer
@@ -27,27 +28,35 @@ struct Handy_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $coordinator.navPath){
-                Onboarding()
-                    .navigationDestination(for: Coordinator.Destination.self) { destination in
-                        switch destination {
-                        case .homeView:
-                            HomeView()
-                        case .countdownView:
-                            CountdownView()
-                        case .graphView:
-                            GraphScrollView()
-                        case .selectGraphView:
-                            SelectGraphView()
-                        case .goalView:
-                            GoalView()
-                        case .exerciseScrollView:
-                            ExercisesScrollView()
+            if !isOnboardingComplete{
+                Onboarding(isOnboardingComplete: $isOnboardingComplete)
+            } else {
+                NavigationStack(path: $coordinator.navPath){
+                    HomeTabView()
+                        .navigationDestination(for: Coordinator.Destination.self) { destination in
+                            switch destination {
+                            case .countdownView:
+                                CountdownView()
+                            case .graphView:
+                                GraphScrollView()
+                            case .selectGraphView:
+                                SelectGraphView()
+                            case .exerciseTabView:
+                                ExerciseTabView()
+                            case .homeTabView:
+                                HomeTabView()
+                            case .borgScaleView:
+                                BorgScaleView()
+                            case .didFeelPainView:
+                                DidFeelPainView()
+                            case .painScaleView:
+                                PainScaleView()
+                            case .exerciseUserFeedbackView:
+                                ExerciseUserFeedbackView()
+                            }
                         }
-                    }
-            }.environment(coordinator)
-                
-            
+                }.environment(coordinator)
+            }
         }
     }
 }

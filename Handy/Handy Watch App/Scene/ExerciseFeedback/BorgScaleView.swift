@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BorgScaleView: View {
     @State var borgScale : Int = 1
+    @Environment(Coordinator.self) var coordinator
+
     
     var body: some View {
         VStack (spacing: 5){
@@ -16,7 +18,13 @@ struct BorgScaleView: View {
             Spacer()
             stepperBorgScale
             Spacer()
-            ButtonNextPage()
+//            ButtonNextPage()
+            
+            Text("ExerciseControlView")
+                .onTapGesture {
+                    coordinator.navigate(to: .didFeelPainView)
+                }
+            
         }
     }
     

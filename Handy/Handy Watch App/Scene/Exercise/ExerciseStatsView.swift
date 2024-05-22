@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ExerciseStatsView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationStack{
+            Text("Hello, World!")
+        }
     }
 }
 
 #Preview {
     ExerciseStatsView()
+    
 }

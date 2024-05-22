@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ExerciseControlView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+
     var body: some View {
-        Text("Hello, World!")
+        Text("ExerciseControlView")
+            .onTapGesture {
+                coordinator.navigate(to: .exerciseUserFeedbackView)
+            }
+        
     }
 }
 
 #Preview {
     ExerciseControlView()
+        .environment(Coordinator())
 }

@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct ExerciseTabView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+    @State var exerciseIsFinished: Bool = false
+    
     var body: some View {
-        Text("Hello, World!")
+        ZStack{
+            
+            TabView(selection: .constant(1)){
+                ExerciseControlView()
+                    .environment(coordinator)
+                    .tabItem {  }
+                
+                ExerciseStatsView()
+                    .tabItem {  }
+                    .tag(1)
+            }
+            .navigationBarBackButtonHidden()
+            
+        }
     }
 }
 

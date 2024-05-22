@@ -4,10 +4,28 @@
     "3/3" : {
 
     },
-    "Hello, world!" : {
+    "CountdownView" : {
+
+    },
+    "ExerciseControlView" : {
+
+    },
+    "ExerciseDetailView" : {
+
+    },
+    "Graph" : {
+
+    },
+    "GraphScrollView" : {
 
     },
     "Hello, World!" : {
+
+    },
+    "OnboardingView" : {
+
+    },
+    "SelectGraphView" : {
 
     }
   },

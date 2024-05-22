@@ -21,7 +21,7 @@
 		C38174142BFBEA67007A0584 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */; };
 		C38174172BFBEAB8007A0584 /* SelectGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174162BFBEAB8007A0584 /* SelectGraphView.swift */; };
 		C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174182BFBEAE7007A0584 /* GraphScrollView.swift */; };
-		C381741C2BFBEB01007A0584 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741B2BFBEB01007A0584 /* Onboarding.swift */; };
+		C381741C2BFBEB01007A0584 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741B2BFBEB01007A0584 /* OnboardingView.swift */; };
 		C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741E2BFBEB1A007A0584 /* Coordinator.swift */; };
 		C38174212BFBEB5B007A0584 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174202BFBEB5B007A0584 /* CoordinatorView.swift */; };
 		C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174222BFBEB9B007A0584 /* HomeController.swift */; };
@@ -31,7 +31,7 @@
 		C381742C2BFBEC2D007A0584 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */; };
 		C381742E2BFBEC46007A0584 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381742D2BFBEC46007A0584 /* Strings.swift */; };
 		E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */; };
-		E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE142BF7F2F300E34C5D /* ContentView.swift */; };
+		E8F9EE152BF7F2F300E34C5D /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE142BF7F2F300E34C5D /* HomeTabView.swift */; };
 		E8F9EE172BF7F2F500E34C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */; };
 		E8F9EE1A2BF7F2F500E34C5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F9EE192BF7F2F500E34C5D /* Preview Assets.xcassets */; };
 		E8F9EE242BF7F2F500E34C5D /* Handy_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE232BF7F2F500E34C5D /* Handy_Watch_AppTests.swift */; };
@@ -83,7 +83,7 @@
 		C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 		C38174162BFBEAB8007A0584 /* SelectGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
 		C38174182BFBEAE7007A0584 /* GraphScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphScrollView.swift; sourceTree = "<group>"; };
-		C381741B2BFBEB01007A0584 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		C381741B2BFBEB01007A0584 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C381741E2BFBEB1A007A0584 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C38174202BFBEB5B007A0584 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		C38174222BFBEB9B007A0584 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		C381742D2BFBEC46007A0584 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E8F9EE0F2BF7F2F300E34C5D /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
-		E8F9EE142BF7F2F300E34C5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8F9EE142BF7F2F300E34C5D /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8F9EE192BF7F2F500E34C5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8F9EE1F2BF7F2F500E34C5D /* Handy Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handy Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,7 +203,7 @@
 		C381741A2BFBEAF2007A0584 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				C381741B2BFBEB01007A0584 /* Onboarding.swift */,
+				C381741B2BFBEB01007A0584 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				C38173F32BFBE6F7007A0584 /* Scene */,
 				FDA963FF2BFBD17D0006E4EA /* Model */,
 				E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */,
-				E8F9EE142BF7F2F300E34C5D /* ContentView.swift */,
+				E8F9EE142BF7F2F300E34C5D /* HomeTabView.swift */,
 				E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */,
 				E8F9EE182BF7F2F500E34C5D /* Preview Content */,
 			);
@@ -441,7 +441,7 @@
 			files = (
 				C38174082BFBE974007A0584 /* DidFeelPainView.swift in Sources */,
 				C381740D2BFBE9FF007A0584 /* HomeView.swift in Sources */,
-				C381741C2BFBEB01007A0584 /* Onboarding.swift in Sources */,
+				C381741C2BFBEB01007A0584 /* OnboardingView.swift in Sources */,
 				C38174012BFBE85A007A0584 /* ExerciseTabView.swift in Sources */,
 				C38174142BFBEA67007A0584 /* ExerciseDetailView.swift in Sources */,
 				FDA964052BFBE0950006E4EA /* User.swift in Sources */,
@@ -452,7 +452,7 @@
 				FD900C7D2BFCD3C60036DBE2 /* StepperImage.swift in Sources */,
 				C38174172BFBEAB8007A0584 /* SelectGraphView.swift in Sources */,
 				C381742E2BFBEC46007A0584 /* Strings.swift in Sources */,
-				E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */,
+				E8F9EE152BF7F2F300E34C5D /* HomeTabView.swift in Sources */,
 				C381740F2BFBEA16007A0584 /* GoalView.swift in Sources */,
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,

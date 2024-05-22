@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct CountdownView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack{
+            Text("CountdownView")
+                .onTapGesture {
+                    coordinator.navigate(to:.exerciseTabView )
+                }
+                .navigationBarBackButtonHidden()
+        }
     }
 }
 
 #Preview {
     CountdownView()
+        .environment(Coordinator())
 }

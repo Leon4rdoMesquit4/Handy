@@ -7,18 +7,23 @@
 
 import Foundation
 
+
 @Observable
 final class Coordinator{
     
     public enum Destination: Codable, Hashable {
-        case homeView
         case countdownView
         case graphView
         case selectGraphView
-        case goalView
-        case exerciseScrollView
+        case exerciseTabView
+        case homeTabView
+        case borgScaleView
+        case didFeelPainView
+        case painScaleView
+        case exerciseUserFeedbackView
     }
     
+    var isOnboardingComplete: Bool = false
     var navPath: [Destination] = []
     
     func navigate(to destination: Destination) {
