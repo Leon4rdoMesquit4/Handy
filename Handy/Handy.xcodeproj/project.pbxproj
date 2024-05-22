@@ -18,7 +18,7 @@
 		C381740D2BFBE9FF007A0584 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381740C2BFBE9FF007A0584 /* HomeView.swift */; };
 		C381740F2BFBEA16007A0584 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381740E2BFBEA16007A0584 /* GoalView.swift */; };
 		C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174102BFBEA28007A0584 /* ExercisesScrollView.swift */; };
-		C38174142BFBEA67007A0584 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */; };
+		C38174142BFBEA67007A0584 /* ExerciseMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174132BFBEA67007A0584 /* ExerciseMainView.swift */; };
 		C38174172BFBEAB8007A0584 /* SelectGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174162BFBEAB8007A0584 /* SelectGraphView.swift */; };
 		C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174182BFBEAE7007A0584 /* GraphScrollView.swift */; };
 		C381741C2BFBEB01007A0584 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741B2BFBEB01007A0584 /* Onboarding.swift */; };
@@ -30,6 +30,11 @@
 		C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174292BFBEBFD007A0584 /* SwiftDataController.swift */; };
 		C381742C2BFBEC2D007A0584 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */; };
 		C381742E2BFBEC46007A0584 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381742D2BFBEC46007A0584 /* Strings.swift */; };
+		E0FF7A452BFD21A8008DA7C8 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF7A442BFD21A8008DA7C8 /* ExerciseDetailView.swift */; };
+		E0FF7A482BFD2269008DA7C8 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF7A472BFD2269008DA7C8 /* TimeView.swift */; };
+		E0FF7A4A2BFD22A3008DA7C8 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF7A492BFD22A3008DA7C8 /* TimeFormatter.swift */; };
+		E0FF7A4D2BFD37A9008DA7C8 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF7A4C2BFD37A9008DA7C8 /* ControlView.swift */; };
+		E0FF7A502BFD37EE008DA7C8 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF7A4F2BFD37EE008DA7C8 /* ControlButton.swift */; };
 		E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */; };
 		E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE142BF7F2F300E34C5D /* ContentView.swift */; };
 		E8F9EE172BF7F2F500E34C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */; };
@@ -80,7 +85,7 @@
 		C381740C2BFBE9FF007A0584 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C381740E2BFBEA16007A0584 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		C38174102BFBEA28007A0584 /* ExercisesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesScrollView.swift; sourceTree = "<group>"; };
-		C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		C38174132BFBEA67007A0584 /* ExerciseMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMainView.swift; sourceTree = "<group>"; };
 		C38174162BFBEAB8007A0584 /* SelectGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
 		C38174182BFBEAE7007A0584 /* GraphScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphScrollView.swift; sourceTree = "<group>"; };
 		C381741B2BFBEB01007A0584 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -92,6 +97,11 @@
 		C38174292BFBEBFD007A0584 /* SwiftDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C381742D2BFBEC46007A0584 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E0FF7A442BFD21A8008DA7C8 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		E0FF7A472BFD2269008DA7C8 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		E0FF7A492BFD22A3008DA7C8 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		E0FF7A4C2BFD37A9008DA7C8 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		E0FF7A4F2BFD37EE008DA7C8 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
 		E8F9EE0F2BF7F2F300E34C5D /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
 		E8F9EE142BF7F2F300E34C5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,7 +196,9 @@
 		C38174122BFBEA3A007A0584 /* ExerciseDetail */ = {
 			isa = PBXGroup;
 			children = (
-				C38174132BFBEA67007A0584 /* ExerciseDetailView.swift */,
+				E0FF7A4B2BFD379E008DA7C8 /* ControlView */,
+				E0FF7A432BFD2168008DA7C8 /* DetailView */,
+				C38174132BFBEA67007A0584 /* ExerciseMainView.swift */,
 			);
 			path = ExerciseDetail;
 			sourceTree = "<group>";
@@ -221,11 +233,46 @@
 			isa = PBXGroup;
 			children = (
 				C38174272BFBEBE9007A0584 /* WorkoutController.swift */,
+				E0FF7A492BFD22A3008DA7C8 /* TimeFormatter.swift */,
 				C38174292BFBEBFD007A0584 /* SwiftDataController.swift */,
 				C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */,
 				C381742D2BFBEC46007A0584 /* Strings.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0FF7A432BFD2168008DA7C8 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF7A462BFD225F008DA7C8 /* SubView */,
+				E0FF7A442BFD21A8008DA7C8 /* ExerciseDetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		E0FF7A462BFD225F008DA7C8 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF7A472BFD2269008DA7C8 /* TimeView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		E0FF7A4B2BFD379E008DA7C8 /* ControlView */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF7A4E2BFD37E3008DA7C8 /* SubViews */,
+				E0FF7A4C2BFD37A9008DA7C8 /* ControlView.swift */,
+			);
+			path = ControlView;
+			sourceTree = "<group>";
+		};
+		E0FF7A4E2BFD37E3008DA7C8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF7A4F2BFD37EE008DA7C8 /* ControlButton.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		E8F9EE062BF7F2F300E34C5D = {
@@ -439,12 +486,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FF7A4D2BFD37A9008DA7C8 /* ControlView.swift in Sources */,
 				C38174082BFBE974007A0584 /* DidFeelPainView.swift in Sources */,
+				E0FF7A502BFD37EE008DA7C8 /* ControlButton.swift in Sources */,
 				C381740D2BFBE9FF007A0584 /* HomeView.swift in Sources */,
 				C381741C2BFBEB01007A0584 /* Onboarding.swift in Sources */,
 				C38174012BFBE85A007A0584 /* ExerciseTabView.swift in Sources */,
-				C38174142BFBEA67007A0584 /* ExerciseDetailView.swift in Sources */,
+				C38174142BFBEA67007A0584 /* ExerciseMainView.swift in Sources */,
 				FDA964052BFBE0950006E4EA /* User.swift in Sources */,
+				E0FF7A452BFD21A8008DA7C8 /* ExerciseDetailView.swift in Sources */,
 				FD900C7B2BFCD2310036DBE2 /* ButtonNextPage.swift in Sources */,
 				C381740A2BFBE983007A0584 /* PainScaleView.swift in Sources */,
 				C38174252BFBEBAD007A0584 /* ExerciseController.swift in Sources */,
@@ -457,6 +507,7 @@
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
+				E0FF7A482BFD2269008DA7C8 /* TimeView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
@@ -465,6 +516,7 @@
 				FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */,
 				C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */,
 				C38174212BFBEB5B007A0584 /* CoordinatorView.swift in Sources */,
+				E0FF7A4A2BFD22A3008DA7C8 /* TimeFormatter.swift in Sources */,
 				C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */,
 				C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */,
 				C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */,
