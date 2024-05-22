@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            // Cai - de novo
+            // Cai is gay
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
