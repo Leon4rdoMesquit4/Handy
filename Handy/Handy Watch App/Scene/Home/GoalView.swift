@@ -10,17 +10,31 @@ import SwiftUI
 struct GoalView: View {
     var goal: Goal
     var body: some View {
-        VStack {
-            HStack {
-                Text("Minha meta")
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 20)
-                    .font(.title3)
+        ZStack {
+            VStack {
+                HStack {
+                    Text("Minha meta")
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 20)
+                        .font(.title3)
+                    Spacer()
+                }
+                GoalGraph
                 Spacer()
-            }
-            GoalGraph
-            Spacer()
-        }.ignoresSafeArea()
+            }.ignoresSafeArea()
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image(systemName: "pencil.circle.fill")
+                        .font(.title2)
+                        .padding()
+                        .onTapGesture {
+                            print("hey")
+                        }
+                }
+            }.ignoresSafeArea()
+        }
     }
 }
 
@@ -44,16 +58,16 @@ extension GoalView {
             Circle()
                 .stroke(
                     Color.white.opacity(0.2),
-                    lineWidth: 25
+                    lineWidth: 20
                 )
-                .frame(width: 160)
+                .frame(width: 145)
             Circle()
                 .trim(from: 0, to: goal.progress/100)
-                .stroke(style: StrokeStyle(lineWidth: 25, lineCap: .round)
+                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round)
                         
                 )
                 .rotationEffect(.degrees(-90))
-                .frame(width: 160)
+                .frame(width: 145)
             GoalProgress
         }
     }
