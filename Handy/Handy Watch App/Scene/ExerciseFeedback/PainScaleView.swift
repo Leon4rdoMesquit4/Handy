@@ -16,7 +16,9 @@ struct PainScaleView: View {
             Spacer()
             StepperImage(value: $painIntensity, interval: 1 ... 10, prefixImage: "pain")
             Spacer()
-            ButtonNextPage()
+            ButtonNextPage{
+                
+            }
         }
     }
 }

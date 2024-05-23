@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TreatmentTimeView_: View {
+    
+    @Binding var isOnboardingComplete: Bool
     @State var dataInicio : Date = Date()
     @State var dataFinal : Date = Date()
+    @Environment(OnboardingCoordinator.self) var coordinator
     
     var body: some View {
         VStack (alignment: .leading, spacing: 10){
@@ -17,21 +20,24 @@ struct TreatmentTimeView_: View {
                 .font(.caption)
                 .padding(.horizontal)
                 
-            NavigationLink {
-                TreatmentTimeBeginningView(dataInicio: $dataInicio)
-            } label: {
+            
                 dateButton("Data de início", date: dataInicio)
-            }
+                .onTapGesture {
+                    coordinator.navigate(to: .treatmentTimeBeginningView)
+                }
         
-            NavigationLink {
-                TreatmentTimeEndView(dataFinal: $dataFinal)
-            } label: {
+                        
                 dateButton("Data final", date: dataFinal)
-            }
+                .onTapGesture {
+                    coordinator.navigate(to: .treatmentTimeEndView)
+                }
+            
             
             HStack {
                 Spacer()
-                ButtonNextPage()
+                ButtonNextPage{
+                    isOnboardingComplete = true
+                }
                 Spacer()
             }
             
@@ -58,7 +64,8 @@ struct TreatmentTimeView_: View {
 
 #Preview {
     NavigationStack {
-        TreatmentTimeView_()
+        TreatmentTimeView_(isOnboardingComplete: .constant(true))
+            .environment(OnboardingCoordinator())
     }
     
 }

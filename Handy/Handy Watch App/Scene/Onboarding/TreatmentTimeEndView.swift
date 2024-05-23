@@ -9,14 +9,14 @@ import SwiftUI
 
 struct TreatmentTimeEndView: View {
     @Binding var dataFinal : Date
-    @Environment (\.dismiss) var dismiss
+    @Environment(OnboardingCoordinator.self) var coordinator
     
     var body: some View {
         VStack {
             DatePicker("Data do final", selection: $dataFinal)
             
             Button ("Definir") {
-                dismiss()
+                coordinator.navigateBack()
             }
         }
     }
@@ -24,4 +24,5 @@ struct TreatmentTimeEndView: View {
 
 #Preview {
     TreatmentTimeEndView(dataFinal: .constant(Date()))
+        .environment(OnboardingCoordinator())
 }

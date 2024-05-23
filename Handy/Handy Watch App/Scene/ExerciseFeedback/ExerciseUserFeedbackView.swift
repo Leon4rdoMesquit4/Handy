@@ -16,7 +16,9 @@ struct ExerciseUserFeedbackView: View {
             Spacer()
             StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
             Spacer()
-            ButtonNextPage()
+            ButtonNextPage{
+                
+            }
         }
     }
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TreatmentTimeBeginningView: View {
-    @Environment (\.dismiss) var dismiss
+    
     @Binding var dataInicio : Date
+    @Environment(OnboardingCoordinator.self) var coordinator
     
     var body: some View {
         
@@ -18,7 +19,7 @@ struct TreatmentTimeBeginningView: View {
                 .frame(height: 120)
             
             Button ("Definir") {
-                dismiss()
+                coordinator.navigateBack()
             }
         }
         
@@ -27,4 +28,5 @@ struct TreatmentTimeBeginningView: View {
 
 #Preview {
     TreatmentTimeBeginningView(dataInicio: .constant(Date()))
+        .environment(OnboardingCoordinator())
 }

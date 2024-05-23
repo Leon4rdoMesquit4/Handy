@@ -17,7 +17,9 @@ struct BorgScaleView: View {
             Spacer()
             stepperBorgScale
             Spacer()
-            ButtonNextPage()
+            ButtonNextPage{
+                
+            }
         }
         .navigationTitle("1/3")
         .navigationBarTitleDisplayMode(.inline)

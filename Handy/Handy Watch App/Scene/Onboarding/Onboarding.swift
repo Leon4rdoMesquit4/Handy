@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Onboarding: View {
+    
+    @Environment(OnboardingCoordinator.self) var coordinator
 
     var body: some View {
         VStack (alignment: .leading, spacing: 10){
@@ -22,7 +24,9 @@ struct Onboarding: View {
             HStack {
                 Spacer()
                 
-                ButtonNextPage()
+                ButtonNextPage{
+                    coordinator.navigate(to: .emojiSelectionView)
+                }
                     .frame(height: 1)
                 Spacer()
             }
@@ -41,4 +45,5 @@ struct Onboarding: View {
 
 #Preview {
     Onboarding()
+        .environment(OnboardingCoordinator())
 }

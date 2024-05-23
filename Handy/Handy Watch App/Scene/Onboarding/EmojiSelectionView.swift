@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmojiSelectionView: View {
     @State var emoji : String = ""
+    @Environment(OnboardingCoordinator.self) var coordinator
     
     var body: some View {
         VStack (alignment: .leading, spacing: 30){
@@ -20,7 +21,9 @@ struct EmojiSelectionView: View {
             
             HStack {
                 Spacer()
-                ButtonNextPage()
+                ButtonNextPage{
+                    coordinator.navigate(to: .treatmentTimeView)
+                }
                 Spacer()
             }
         }
@@ -29,4 +32,5 @@ struct EmojiSelectionView: View {
 
 #Preview {
     EmojiSelectionView()
+        .environment(OnboardingCoordinator())
 }

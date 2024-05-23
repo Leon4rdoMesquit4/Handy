@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 final class Coordinator{
@@ -51,6 +52,10 @@ final class OnboardingCoordinator{
     
     func navigate(to destination: Destination) {
         navPath.append(destination)
+    }
+    
+    func navigateBack() {
+        navPath.removeLast()
     }
     
 }

@@ -1,13 +1,31 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "%lld%%" : {
+
+    },
     "1/3" : {
 
     },
     "3/3" : {
 
     },
-    "65%" : {
+    "Data de início" : {
+
+    },
+    "Data do final" : {
+
+    },
+    "Definir" : {
+
+    },
+    "Duração do tratamento:" : {
+
+    },
+    "Estabeleça a sua meta" : {
 
     },
     "Hello, world!" : {
@@ -16,7 +34,13 @@
     "Hello, World!" : {
 
     },
+    "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo." : {
+
+    },
     "Minha meta" : {
+
+    },
+    "Qual a sua meta?" : {
 
     },
     "Treino do dia: %@" : {

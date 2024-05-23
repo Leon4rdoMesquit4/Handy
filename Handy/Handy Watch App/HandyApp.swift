@@ -36,16 +36,20 @@ struct Handy_Watch_AppApp: App {
                             switch destination {
                             case .emojiSelectionView:
                                 EmojiSelectionView()
+                                    .navigationBarBackButtonHidden()
                             case .treatmentTimeView:
-                                TreatmentTimeView_()
+                                TreatmentTimeView_(isOnboardingComplete: $isOnboardingComplete)
+                                    .navigationBarBackButtonHidden()
                             case .treatmentTimeBeginningView:
                                 TreatmentTimeBeginningView(dataInicio: .constant(.now))
+                                    
                             case .treatmentTimeEndView:
                                 TreatmentTimeEndView(dataFinal: .constant(.distantFuture))
+                                    
                             }
                         }
-                }
-                
+                        
+                }.environment(onboardingCoordinator)
             } else {
                 NavigationStack(path: $mainCoordinator.navPath){
                     HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
