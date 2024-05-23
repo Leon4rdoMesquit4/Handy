@@ -18,17 +18,32 @@ struct EmojiSelectionView: View {
                 .font(.title3)
                 .bold()
             
-            //TextField("", text: $vm.emoji)
-            
-            Button (vm.emoji) {
-                coordinator.navigate(to: .EmojiPickerView($vm.emoji))
+            HStack {
+                Spacer()
+                
+                ZStack {
+                    if vm.emoji.count == 0 {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(height: 40)
+                            .foregroundStyle(.gray)
+                            .onTapGesture {
+                                coordinator.navigate(to: .EmojiPickerView($vm.emoji))
+                            }
+                    }
+                    
+                    Text(vm.emoji)
+                        .onTapGesture {
+                            coordinator.navigate(to: .EmojiPickerView($vm.emoji))
+                        }
+
+                }
+                Spacer()
             }
-            
-            
+                        
             self.botaoNextPage
         }
         .alert(isPresented: $vm.alertInvalidEmojiIsPresented) {
-            Alert(title: Text("Ops! Isso não é um emoji..."))
+            Alert(title: Text("Ops! Nenhum emoji selecionado"))
         }
     }
     
@@ -36,14 +51,14 @@ struct EmojiSelectionView: View {
     var botaoNextPage : some View {
         HStack {
             Spacer()
-            ButtonNextPage{
-                // aqui eu salvo o emoji passado e vou para a próxima view.
+            
+            ButtonNextPage(callback: {
                 if vm.validateEmoji() {
                     coordinator.navigate(to: .treatmentTimeView)
                 } else {
                     vm.showAlertInvalidEmoji()
                 }
-            }
+            })
             Spacer()
         }
     }
