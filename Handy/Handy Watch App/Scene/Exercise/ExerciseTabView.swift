@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ExerciseTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: .constant(1)){
+            ExerciseControlView()
+            
+            ExerciseStatsView()
+                .tag(1)
+        }
+        
     }
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BorgScaleView: View {
     @State var borgScale : Int = 1
+    @Environment(Coordinator.self) var coordinator
     
     var body: some View {
         VStack (spacing: 5){
@@ -18,7 +19,7 @@ struct BorgScaleView: View {
             stepperBorgScale
             Spacer()
             ButtonNextPage{
-                
+                coordinator.navigate(to: .didFeelPainView)
             }
         }
         .navigationTitle("1/3")

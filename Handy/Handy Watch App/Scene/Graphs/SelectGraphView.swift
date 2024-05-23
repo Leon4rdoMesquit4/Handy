@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct SelectGraphView: View {
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Go to graph View")
+            .onTapGesture {
+                coordinator.navigate(to: .graphView)
+            }
     }
 }
 

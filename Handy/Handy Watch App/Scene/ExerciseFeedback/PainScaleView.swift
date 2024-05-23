@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PainScaleView: View {
     @State var painIntensity : Int = 0
+    @Environment(Coordinator.self) var coordinator
     
     var body: some View {
         VStack{
@@ -17,7 +18,7 @@ struct PainScaleView: View {
             StepperImage(value: $painIntensity, interval: 1 ... 10, prefixImage: "pain")
             Spacer()
             ButtonNextPage{
-                
+                coordinator.navigateToRoot()
             }
         }
     }

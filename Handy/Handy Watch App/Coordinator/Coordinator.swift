@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 
+///Responsável pela navegação principal do app
 @Observable
 final class Coordinator{
     
+    ///Destinos possíveis para a navegação
     public enum Destination: Codable, Hashable {
         case countdownView
         case graphView
@@ -38,6 +40,7 @@ final class Coordinator{
     
 }
 
+///Responsável pela navegação do Onboarding do app
 @Observable
 final class OnboardingCoordinator{
     

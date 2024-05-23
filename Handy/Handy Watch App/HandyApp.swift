@@ -57,20 +57,26 @@ struct Handy_Watch_AppApp: App {
                             switch destination {
                             case .countdownView:
                                 CountdownView()
+                                    .navigationBarBackButtonHidden()
                             case .graphView:
                                 GraphScrollView()
                             case .selectGraphView:
                                 SelectGraphView()
                             case .exerciseTabView:
                                 ExerciseTabView()
+                                    .navigationBarBackButtonHidden()
                             case .borgScaleView:
                                 BorgScaleView()
+                                    .navigationBarBackButtonHidden()
                             case .didFeelPainView:
                                 DidFeelPainView()
+                                    .navigationBarBackButtonHidden()
                             case .painScaleView:
                                 PainScaleView()
+                                    .navigationBarBackButtonHidden()
                             case .exerciseUserFeedbackView:
                                 ExerciseUserFeedbackView()
+                                    .navigationBarBackButtonHidden()
                             }
                         }
                 }.environment(mainCoordinator)

@@ -24,7 +24,6 @@
 		C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174182BFBEAE7007A0584 /* GraphScrollView.swift */; };
 		C381741C2BFBEB01007A0584 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741B2BFBEB01007A0584 /* Onboarding.swift */; };
 		C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381741E2BFBEB1A007A0584 /* Coordinator.swift */; };
-		C38174212BFBEB5B007A0584 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174202BFBEB5B007A0584 /* CoordinatorView.swift */; };
 		C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174222BFBEB9B007A0584 /* HomeController.swift */; };
 		C38174252BFBEBAD007A0584 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174242BFBEBAD007A0584 /* ExerciseController.swift */; };
 		C38174282BFBEBE9007A0584 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174272BFBEBE9007A0584 /* WorkoutController.swift */; };
@@ -93,7 +92,6 @@
 		C38174182BFBEAE7007A0584 /* GraphScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphScrollView.swift; sourceTree = "<group>"; };
 		C381741B2BFBEB01007A0584 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		C381741E2BFBEB1A007A0584 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		C38174202BFBEB5B007A0584 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		C38174222BFBEB9B007A0584 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C38174242BFBEBAD007A0584 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
 		C38174272BFBEBE9007A0584 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				C381741E2BFBEB1A007A0584 /* Coordinator.swift */,
-				C38174202BFBEB5B007A0584 /* CoordinatorView.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -507,7 +504,6 @@
 				FDA964092BFBE2BD0006E4EA /* Meta.swift in Sources */,
 				FDA964012BFBD1A70006E4EA /* Exercise.swift in Sources */,
 				C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */,
-				C38174212BFBEB5B007A0584 /* CoordinatorView.swift in Sources */,
 				FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */,
 				C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */,
 				C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */,
