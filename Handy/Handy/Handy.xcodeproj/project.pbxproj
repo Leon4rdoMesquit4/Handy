@@ -8,10 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E02970552BFFDCCA0042E261 /* Handy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E029705B2BFFDCCA0042E261 /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705A2BFFDCCA0042E261 /* HandyApp.swift */; };
 		E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705C2BFFDCCA0042E261 /* ContentView.swift */; };
 		E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E029705E2BFFDCCC0042E261 /* Assets.xcassets */; };
 		E02970622BFFDCCC0042E261 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */; };
+		E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF52BFFE1B100084CAF /* HandyApp.swift */; };
+		E0711D252BFFE1BE00084CAF /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */; };
+		E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF82BFFE1BE00084CAF /* ControlButton.swift */; };
+		E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */; };
+		E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */; };
+		E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFD2BFFE1BE00084CAF /* TimeView.swift */; };
+		E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */; };
+		E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D002BFFE1BE00084CAF /* ExerciseController.swift */; };
+		E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */; };
+		E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */; };
+		E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */; };
+		E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */; };
+		E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D082BFFE1BE00084CAF /* StepperImage.swift */; };
+		E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D092BFFE1BE00084CAF /* TitleForm.swift */; };
+		E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */; };
+		E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */; };
+		E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */; };
+		E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */; };
+		E0711D362BFFE1BE00084CAF /* GraphScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */; };
+		E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */; };
+		E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */; };
+		E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D142BFFE1BE00084CAF /* GoalView.swift */; };
+		E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D152BFFE1BE00084CAF /* HomeController.swift */; };
+		E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D162BFFE1BE00084CAF /* HomeTabView.swift */; };
+		E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D172BFFE1BE00084CAF /* HomeView.swift */; };
+		E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D192BFFE1BE00084CAF /* EmojiList.swift */; };
+		E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */; };
+		E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */; };
+		E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */; };
+		E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */; };
+		E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */; };
+		E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */; };
+		E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */; };
+		E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D452BFFE1D000084CAF /* Exercise.swift */; };
+		E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D462BFFE1D000084CAF /* Meta.swift */; };
+		E0711D4B2BFFE1D000084CAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D472BFFE1D000084CAF /* User.swift */; };
+		E0711D512BFFE1DB00084CAF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */; };
+		E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4D2BFFE1DB00084CAF /* Strings.swift */; };
+		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
+		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
+		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +81,51 @@
 /* Begin PBXFileReference section */
 		E029704F2BFFDCCA0042E261 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02970552BFFDCCA0042E261 /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E029705A2BFFDCCA0042E261 /* HandyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
 		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E029705E2BFFDCCC0042E261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Handy Watch App.entitlements"; sourceTree = "<group>"; };
+		E0711CF52BFFE1B100084CAF /* HandyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
+		E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		E0711CF82BFFE1BE00084CAF /* ControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
+		E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseControlView.swift; sourceTree = "<group>"; };
+		E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
+		E0711CFD2BFFE1BE00084CAF /* TimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		E0711D002BFFE1BE00084CAF /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTabView.swift; sourceTree = "<group>"; };
+		E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNextPage.swift; sourceTree = "<group>"; };
+		E0711D082BFFE1BE00084CAF /* StepperImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperImage.swift; sourceTree = "<group>"; };
+		E0711D092BFFE1BE00084CAF /* TitleForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleForm.swift; sourceTree = "<group>"; };
+		E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorgScaleView.swift; sourceTree = "<group>"; };
+		E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidFeelPainView.swift; sourceTree = "<group>"; };
+		E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseUserFeedbackView.swift; sourceTree = "<group>"; };
+		E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
+		E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphScrollView.swift; sourceTree = "<group>"; };
+		E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
+		E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesScrollView.swift; sourceTree = "<group>"; };
+		E0711D142BFFE1BE00084CAF /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		E0711D152BFFE1BE00084CAF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		E0711D162BFFE1BE00084CAF /* HomeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		E0711D172BFFE1BE00084CAF /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E0711D192BFFE1BE00084CAF /* EmojiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiList.swift; sourceTree = "<group>"; };
+		E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionViewModel.swift; sourceTree = "<group>"; };
+		E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionView.swift; sourceTree = "<group>"; };
+		E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeBeginningView.swift; sourceTree = "<group>"; };
+		E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeEndView.swift; sourceTree = "<group>"; };
+		E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreatmentTimeView .swift"; sourceTree = "<group>"; };
+		E0711D452BFFE1D000084CAF /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E0711D462BFFE1D000084CAF /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		E0711D472BFFE1D000084CAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E0711D4D2BFFE1DB00084CAF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
+		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */,
-				E029705A2BFFDCCA0042E261 /* HandyApp.swift */,
+				E0711CF52BFFE1B100084CAF /* HandyApp.swift */,
+				E0711D562BFFE1E200084CAF /* Coordinator */,
+				E0711D502BFFE1DB00084CAF /* Shared */,
+				E0711D482BFFE1D000084CAF /* Model */,
+				E0711D242BFFE1BE00084CAF /* Scene */,
 				E029705C2BFFDCCA0042E261 /* ContentView.swift */,
 				E029705E2BFFDCCC0042E261 /* Assets.xcassets */,
 				E02970602BFFDCCC0042E261 /* Preview Content */,
@@ -94,6 +178,178 @@
 				E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E0711CF92BFFE1BE00084CAF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */,
+				E0711CF82BFFE1BE00084CAF /* ControlButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E0711CFB2BFFE1BE00084CAF /* ExerciseControlView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */,
+			);
+			path = ExerciseControlView;
+			sourceTree = "<group>";
+		};
+		E0711CFE2BFFE1BE00084CAF /* ExerciseStatsView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */,
+				E0711CFD2BFFE1BE00084CAF /* TimeView.swift */,
+			);
+			path = ExerciseStatsView;
+			sourceTree = "<group>";
+		};
+		E0711D022BFFE1BE00084CAF /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CF92BFFE1BE00084CAF /* Components */,
+				E0711CFB2BFFE1BE00084CAF /* ExerciseControlView */,
+				E0711CFE2BFFE1BE00084CAF /* ExerciseStatsView */,
+				E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */,
+				E0711D002BFFE1BE00084CAF /* ExerciseController.swift */,
+				E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		E0711D042BFFE1BE00084CAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0711D062BFFE1BE00084CAF /* ExerciseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D042BFFE1BE00084CAF /* ViewModel */,
+				E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */,
+			);
+			path = ExerciseDetail;
+			sourceTree = "<group>";
+		};
+		E0711D0A2BFFE1BE00084CAF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */,
+				E0711D082BFFE1BE00084CAF /* StepperImage.swift */,
+				E0711D092BFFE1BE00084CAF /* TitleForm.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E0711D0F2BFFE1BE00084CAF /* ExerciseFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D0A2BFFE1BE00084CAF /* Component */,
+				E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */,
+				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
+				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
+				E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */,
+			);
+			path = ExerciseFeedback;
+			sourceTree = "<group>";
+		};
+		E0711D122BFFE1BE00084CAF /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */,
+				E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		E0711D182BFFE1BE00084CAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */,
+				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
+				E0711D152BFFE1BE00084CAF /* HomeController.swift */,
+				E0711D162BFFE1BE00084CAF /* HomeTabView.swift */,
+				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D192BFFE1BE00084CAF /* EmojiList.swift */,
+				E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */,
+			);
+			path = EmojiPickerView;
+			sourceTree = "<group>";
+		};
+		E0711D1D2BFFE1BE00084CAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0711D232BFFE1BE00084CAF /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */,
+				E0711D1D2BFFE1BE00084CAF /* ViewModel */,
+				E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */,
+				E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */,
+				E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */,
+				E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */,
+				E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E0711D242BFFE1BE00084CAF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D022BFFE1BE00084CAF /* Exercise */,
+				E0711D062BFFE1BE00084CAF /* ExerciseDetail */,
+				E0711D0F2BFFE1BE00084CAF /* ExerciseFeedback */,
+				E0711D122BFFE1BE00084CAF /* Graphs */,
+				E0711D182BFFE1BE00084CAF /* Home */,
+				E0711D232BFFE1BE00084CAF /* Onboarding */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E0711D482BFFE1D000084CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D452BFFE1D000084CAF /* Exercise.swift */,
+				E0711D462BFFE1D000084CAF /* Meta.swift */,
+				E0711D472BFFE1D000084CAF /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0711D502BFFE1DB00084CAF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */,
+				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
+				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
+				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0711D562BFFE1E200084CAF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D552BFFE1E200084CAF /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +440,7 @@
 			files = (
 				E02970622BFFDCCC0042E261 /* Preview Assets.xcassets in Resources */,
 				E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */,
+				E0711D512BFFE1DB00084CAF /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +451,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */,
+				E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */,
+				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
+				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,
+				E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */,
+				E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */,
+				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
+				E0711D362BFFE1BE00084CAF /* GraphScrollView.swift in Sources */,
+				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
+				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
+				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
+				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
+				E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */,
+				E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */,
+				E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */,
+				E0711D252BFFE1BE00084CAF /* CircularProgressBarView.swift in Sources */,
+				E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */,
+				E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */,
+				E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */,
+				E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */,
+				E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */,
+				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
+				E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */,
+				E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */,
+				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
-				E029705B2BFFDCCA0042E261 /* HandyApp.swift in Sources */,
+				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,
+				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
+				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
+				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
+				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
+				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
+				E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */,
+				E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */,
+				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
+				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
+				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
+				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
+				E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */,
+				E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
