@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExerciseUserFeedbackView: View {
     @State var feedback : Int = 1
+    @Environment(Coordinator.self) var coordinator
     
     var body: some View {
         VStack (spacing: 8) {
@@ -16,7 +17,9 @@ struct ExerciseUserFeedbackView: View {
             Spacer()
             StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
             Spacer()
-            ButtonNextPage()
+            ButtonNextPage{
+                coordinator.navigate(to: .borgScaleView)
+            }
         }
     }
 }

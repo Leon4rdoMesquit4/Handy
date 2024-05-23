@@ -8,37 +8,30 @@
 import SwiftUI
 
 struct CountdownView: View {
-    @StateObject var vm = CountdownViewModel()
+    @Environment(Coordinator.self) var coordinator
+    @State var counter : Double = 3
     
     var body: some View {
         VStack {
-            CircularProgressBar(contagem: $vm.counter, contagemMaxima: 3)
+            CircularProgressBar(contagem: $counter, contagemMaxima: 3)
                 .overlay(alignment: .center) {
-                    Text(Int(vm.counter).description)
+                    Text(Int(counter).description)
                         .font(.title)
                         .bold()
                 }
         }
         .onAppear(perform: {
-            vm.setupTimer()
-        })
-    }
-    
-    // TODO: TIRAR ESSA VIEWMODEL DESSE ARQUIVO, EU NÃO CONSEGUI FAZER ISSO FOI MAL :(
-    class CountdownViewModel : ObservableObject {
-        @Published var counter : Double = 3
-        
-        func setupTimer() {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
-                if let self {
-                    if self.counter <= 0 {
-                        timer.invalidate()
-                    } else {
-                        self.counter -= 1
-                    }
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                
+                if self.counter <= 0 {
+                    timer.invalidate()
+                    coordinator.navigate(to: .exerciseTabView)
+                } else {
+                    self.counter -= 1
                 }
+                
             }
-        }
+        })
     }
 }
 

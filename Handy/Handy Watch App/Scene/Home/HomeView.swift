@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
         ZStack {
             Image("Fennec")
@@ -18,7 +21,7 @@ struct HomeView: View {
                     Image(systemName: "chart.bar.xaxis")
                         .padding(12)
                         .onTapGesture {
-                            print("hey")
+                            coordinator.navigate(to: .selectGraphView)
                         }
                     Spacer()
                 }
@@ -27,7 +30,7 @@ struct HomeView: View {
                     Image("addExercise")
                         .padding(.trailing, 10)
                         .onTapGesture {
-                            print("hey")
+                            coordinator.navigate(to: .countdownView)
                         }
                 }
                 Spacer()

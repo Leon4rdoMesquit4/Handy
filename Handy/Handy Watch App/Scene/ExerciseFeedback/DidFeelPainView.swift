@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DidFeelPainView: View {
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
         VStack{
             
@@ -16,13 +18,13 @@ struct DidFeelPainView: View {
             
             HStack (spacing: 30){
                 Button {
-                    
+                    coordinator.navigateToRoot()
                 } label: {
                     Image(systemName: "xmark")
                 }
                 
                 Button {
-                    
+                    coordinator.navigate(to: .painScaleView)
                 } label: {
                     Image(systemName: "checkmark")
                 }

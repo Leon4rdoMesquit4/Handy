@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExercisesScrollView: View {
+    
+    @Environment(Coordinator.self) var coordinator
+    
     var body: some View {
         ZStack {
             VStack {

@@ -10,6 +10,11 @@ import SwiftData
 
 @main
 struct Handy_Watch_AppApp: App {
+    
+    @State var mainCoordinator: Coordinator = Coordinator()
+    @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
+    @AppStorage("onboarding") var isOnboardingComplete: Bool = false
+    
     let container : ModelContainer
     
     init() {
@@ -24,10 +29,60 @@ struct Handy_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                HomeView()
+            if !isOnboardingComplete{
+                NavigationStack(path: $onboardingCoordinator.navPath){
+                    Onboarding()
+                        .navigationDestination(for: OnboardingCoordinator.Destination.self) { destination in
+                            switch destination {
+                            case .emojiSelectionView:
+                                EmojiSelectionView()
+                                    .navigationBarBackButtonHidden()
+                            case .treatmentTimeView:
+                                TreatmentTimeView_(isOnboardingComplete: $isOnboardingComplete)
+                                    .navigationBarBackButtonHidden()
+                            case .treatmentTimeBeginningView(let binding):
+                                TreatmentTimeBeginningView(dataInicio: binding)
+                            case .treatmentTimeEndView(let binding):
+                                TreatmentTimeEndView(dataFinal: binding)
+                            }
+                        }
+                    
+                }.environment(onboardingCoordinator)
+            } else {
+                NavigationStack(path: $mainCoordinator.navPath){
+                    HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
+                        .navigationDestination(for: Coordinator.Destination.self) { destination in
+                            switch destination {
+                            case .countdownView:
+                                CountdownView()
+                                    .navigationBarBackButtonHidden()
+                            case .graphView:
+                                GraphScrollView()
+                            case .selectGraphView:
+                                SelectGraphView()
+                            case .exerciseTabView:
+                                ExerciseTabView()
+                                    .navigationBarBackButtonHidden()
+                            case .borgScaleView:
+                                BorgScaleView()
+                                    .navigationBarBackButtonHidden()
+                            case .didFeelPainView:
+                                DidFeelPainView()
+                                    .navigationBarBackButtonHidden()
+                            case .painScaleView:
+                                PainScaleView()
+                                    .navigationBarBackButtonHidden()
+                            case .exerciseUserFeedbackView:
+                                ExerciseUserFeedbackView()
+                                    .navigationBarBackButtonHidden()
+                            }
+                        }
+                }.environment(mainCoordinator)
+                
             }
-        }
-        .modelContainer(container)
+            
+        }.modelContainer(container)
     }
+    
 }
+

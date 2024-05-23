@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld%%" : {
 
     },
@@ -10,10 +13,31 @@
     "3/3" : {
 
     },
+    "Data de início" : {
+
+    },
+    "Data do final" : {
+
+    },
+    "Definir" : {
+
+    },
+    "Duração do tratamento:" : {
+
+    },
+    "Estabeleça a sua meta" : {
+
+    },
+    "Go to graph View" : {
+
+    },
     "Hello, world!" : {
 
     },
     "Hello, World!" : {
+
+    },
+    "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo." : {
 
     },
     "Minha meta" : {
@@ -25,6 +49,12 @@
           }
         }
       }
+    },
+    "Qual a sua meta?" : {
+
+    },
+    "Touch her for next view" : {
+
     },
     "Treino do dia: %@" : {
 
