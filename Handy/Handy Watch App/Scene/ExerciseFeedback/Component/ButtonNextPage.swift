@@ -15,6 +15,7 @@ struct ButtonNextPage : View {
     
     var body: some View {
         Button {
+            // boa leozinho!
             callback()
         } label: {
             Image (systemName: "chevron.right")

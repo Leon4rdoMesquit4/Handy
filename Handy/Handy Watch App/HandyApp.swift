@@ -44,6 +44,8 @@ struct Handy_Watch_AppApp: App {
                                 TreatmentTimeBeginningView(dataInicio: binding)
                             case .treatmentTimeEndView(let binding):
                                 TreatmentTimeEndView(dataFinal: binding)
+                            case .EmojiPickerView(let binding):
+                                EmojiPickerView(emojiPicked: binding)
                             }
                         }
                     
