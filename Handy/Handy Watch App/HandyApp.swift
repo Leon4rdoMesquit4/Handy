@@ -11,6 +11,7 @@ import SwiftData
 @main
 struct Handy_Watch_AppApp: App {
     
+    @StateObject var controller = WorkoutController()
     @State var mainCoordinator: Coordinator = Coordinator()
     @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
     @AppStorage("onboarding") var isOnboardingComplete: Bool = false
@@ -46,8 +47,11 @@ struct Handy_Watch_AppApp: App {
                                 TreatmentTimeEndView(dataFinal: binding)
                             }
                         }
-                    
-                }.environment(onboardingCoordinator)
+                }
+                .onAppear(perform: {
+                    controller.requestAuthorization()
+                })
+                .environment(onboardingCoordinator)
                 
             } else {
                 NavigationStack(path: $mainCoordinator.navPath){
