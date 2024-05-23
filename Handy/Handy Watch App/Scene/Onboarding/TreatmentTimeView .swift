@@ -19,7 +19,6 @@ struct TreatmentTimeView_: View {
             treatmentDuration
                 .font(.caption)
                 .padding(.horizontal)
-                
             
                 dateButton("Data de início", date: dataInicio)
                 .onTapGesture {

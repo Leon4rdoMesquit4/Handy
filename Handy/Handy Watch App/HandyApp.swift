@@ -48,6 +48,7 @@ struct Handy_Watch_AppApp: App {
                         }
                     
                 }.environment(onboardingCoordinator)
+                
             } else {
                 NavigationStack(path: $mainCoordinator.navPath){
                     HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
