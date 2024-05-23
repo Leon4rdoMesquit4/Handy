@@ -45,6 +45,7 @@
 		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E029705E2BFFDCCC0042E261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Handy Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		E02970592BFFDCCA0042E261 /* Handy Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */,
 				E029705A2BFFDCCA0042E261 /* HandyApp.swift */,
 				E029705C2BFFDCCA0042E261 /* ContentView.swift */,
 				E029705E2BFFDCCC0042E261 /* Assets.xcassets */,
@@ -327,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
@@ -334,6 +337,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to healthy records";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share user heathy data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update user healthy records";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
@@ -364,6 +371,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to healthy records";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share user heathy data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update user healthy records";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
