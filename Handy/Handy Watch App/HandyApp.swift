@@ -10,6 +10,11 @@ import SwiftData
 
 @main
 struct Handy_Watch_AppApp: App {
+    
+    @State var mainCoordinator: Coordinator = Coordinator()
+    @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
+    @AppStorage("onboarding") var isOnboardingComplete: Bool = false
+    
     let container : ModelContainer
     
     init() {
@@ -24,10 +29,52 @@ struct Handy_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                HomeView()
+            if !isOnboardingComplete{
+                NavigationStack(path: $onboardingCoordinator.navPath){
+                    Onboarding()
+                        .navigationDestination(for: OnboardingCoordinator.Destination.self) { destination in
+                            switch destination {
+                            case .emojiSelectionView:
+                                EmojiSelectionView()
+                            case .treatmentTimeView:
+                                TreatmentTimeView_()
+                            case .treatmentTimeBeginningView:
+                                TreatmentTimeBeginningView(dataInicio: .constant(.now))
+                            case .treatmentTimeEndView:
+                                TreatmentTimeEndView(dataFinal: .constant(.distantFuture))
+                            }
+                        }
+                }
+                
+            } else {
+                NavigationStack(path: $mainCoordinator.navPath){
+                    HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
+                        .navigationDestination(for: Coordinator.Destination.self) { destination in
+                            switch destination {
+                            case .countdownView:
+                                CountdownView()
+                            case .graphView:
+                                GraphScrollView()
+                            case .selectGraphView:
+                                SelectGraphView()
+                            case .exerciseTabView:
+                                ExerciseTabView()
+                            case .borgScaleView:
+                                BorgScaleView()
+                            case .didFeelPainView:
+                                DidFeelPainView()
+                            case .painScaleView:
+                                PainScaleView()
+                            case .exerciseUserFeedbackView:
+                                ExerciseUserFeedbackView()
+                            }
+                        }
+                }.environment(mainCoordinator)
+                
             }
-        }
-        .modelContainer(container)
+                
+        }.modelContainer(container)
     }
+        
 }
+
