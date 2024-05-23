@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%lld%%" : {
 
     },
@@ -26,6 +23,9 @@
 
     },
     "Duração do tratamento:" : {
+
+    },
+    "Escolha um emoji %@" : {
 
     },
     "Estabeleça a sua meta" : {
@@ -52,6 +52,9 @@
           }
         }
       }
+    },
+    "Ops! Nenhum emoji selecionado" : {
+
     },
     "Qual a sua meta?" : {
 

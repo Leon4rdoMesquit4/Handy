@@ -55,6 +55,9 @@
 		FDBBB7EC2BFE737800552287 /* TreatmentTimeView .swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */; };
 		FDBBB7EE2BFE740E00552287 /* TreatmentTimeBeginningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7ED2BFE740E00552287 /* TreatmentTimeBeginningView.swift */; };
 		FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBB7EF2BFE741900552287 /* TreatmentTimeEndView.swift */; };
+		FDD544F92BFFC1B700F505B6 /* EmojiSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD544F82BFFC1B700F505B6 /* EmojiSelectionViewModel.swift */; };
+		FDD545042BFFC75A00F505B6 /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD545032BFFC75A00F505B6 /* EmojiPickerView.swift */; };
+		FDD545062BFFC76500F505B6 /* EmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD545052BFFC76500F505B6 /* EmojiList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,9 @@
 		FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentTimeView .swift"; sourceTree = "<group>"; };
 		FDBBB7ED2BFE740E00552287 /* TreatmentTimeBeginningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentTimeBeginningView.swift; sourceTree = "<group>"; };
 		FDBBB7EF2BFE741900552287 /* TreatmentTimeEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentTimeEndView.swift; sourceTree = "<group>"; };
+		FDD544F82BFFC1B700F505B6 /* EmojiSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSelectionViewModel.swift; sourceTree = "<group>"; };
+		FDD545032BFFC75A00F505B6 /* EmojiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		FDD545052BFFC76500F505B6 /* EmojiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,8 @@
 		C381741A2BFBEAF2007A0584 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				FDD544FA2BFFC4D900F505B6 /* EmojiPickerView */,
+				FDD544F72BFFC1A300F505B6 /* ViewModel */,
 				C381741B2BFBEB01007A0584 /* Onboarding.swift */,
 				FDBBB7E92BFE722C00552287 /* EmojiSelectionView.swift */,
 				FDBBB7EB2BFE737800552287 /* TreatmentTimeView .swift */,
@@ -342,6 +350,23 @@
 				FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FDD544F72BFFC1A300F505B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDD544F82BFFC1B700F505B6 /* EmojiSelectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDD544FA2BFFC4D900F505B6 /* EmojiPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				FDD545032BFFC75A00F505B6 /* EmojiPickerView.swift */,
+				FDD545052BFFC76500F505B6 /* EmojiList.swift */,
+			);
+			path = EmojiPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +523,7 @@
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
 				C326975E2BFD1EC900CD3568 /* HomeTabView.swift in Sources */,
+				FDD544F92BFFC1B700F505B6 /* EmojiSelectionViewModel.swift in Sources */,
 				C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */,
 				FDBBB7EE2BFE740E00552287 /* TreatmentTimeBeginningView.swift in Sources */,
 				E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */,
@@ -508,9 +534,11 @@
 				C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */,
 				FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */,
 				C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */,
+				FDD545062BFFC76500F505B6 /* EmojiList.swift in Sources */,
 				C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */,
 				C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */,
 				C38174282BFBEBE9007A0584 /* WorkoutController.swift in Sources */,
+				FDD545042BFFC75A00F505B6 /* EmojiPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

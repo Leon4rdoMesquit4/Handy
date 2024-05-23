@@ -21,21 +21,27 @@ struct Onboarding: View {
             descriptionPage
                 .font(.system(size: 12))
             Spacer()
-            HStack {
-                Spacer()
-                
-                ButtonNextPage{
-                    coordinator.navigate(to: .emojiSelectionView)
-                }
-                    .frame(height: 1)
-                Spacer()
-            }
             
+            self.buttonNextPage
         }
     }
     
+    // MARK: COMPONENTES DE UI
+    
     var title : some View {
         Text("Estabeleça a sua meta")
+    }
+    
+    var buttonNextPage : some View {
+        HStack {
+            Spacer()
+            
+            ButtonNextPage{
+                coordinator.navigate(to: .emojiSelectionView)
+            }
+                .frame(height: 1)
+            Spacer()
+        }
     }
     
     var descriptionPage : some View {

@@ -59,6 +59,8 @@ final class OnboardingCoordinator{
                 hasher.combine("treatmentTimeBeginningView\(binding)")
             case .treatmentTimeEndView(let binding):
                 hasher.combine("treatmentTimeEndView\(binding)")
+            case .EmojiPickerView(let binding):
+                hasher.combine("emojiPickerView\(binding)")
             }
         }
         
@@ -66,6 +68,7 @@ final class OnboardingCoordinator{
         case treatmentTimeView
         case treatmentTimeBeginningView(Binding<Date>)
         case treatmentTimeEndView(Binding<Date>)
+        case EmojiPickerView(Binding<String>)
     }
     
     var navPath: [Destination] = []
