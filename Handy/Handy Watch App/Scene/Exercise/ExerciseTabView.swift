@@ -10,6 +10,7 @@ import WatchKit
 
 struct ExerciseTabView: View {
     
+    @Environment(\.isLuminanceReduced) var isLuminanceReduced
     @State var selection:TabItems = .stats
     
     enum TabItems {
@@ -22,7 +23,12 @@ struct ExerciseTabView: View {
             
             ExerciseStatsView().tag(TabItems.stats)
             
-        
+            NowPlayingView().tag(TabItems.media)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
+        .tabViewStyle(.carousel)
+        .onChange(of: isLuminanceReduced) { _,_ in
+            selection = .stats
         }
         
     }
