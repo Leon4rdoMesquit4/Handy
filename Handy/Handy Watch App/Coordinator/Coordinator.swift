@@ -44,11 +44,28 @@ final class Coordinator{
 @Observable
 final class OnboardingCoordinator{
     
-    public enum Destination: Codable, Hashable {
+    public enum Destination: Equatable, Hashable {
+        public static func == (lhs: OnboardingCoordinator.Destination, rhs: OnboardingCoordinator.Destination) -> Bool {
+            return lhs.hashValue == rhs.hashValue
+        }
+        
+        public func hash(into hasher: inout Hasher) {
+            switch self {
+            case .emojiSelectionView:
+                hasher.combine("emojiSelectionView")
+            case .treatmentTimeView:
+                hasher.combine("treatmentTimeView")
+            case .treatmentTimeBeginningView(let binding):
+                hasher.combine("treatmentTimeBeginningView\(binding)")
+            case .treatmentTimeEndView(let binding):
+                hasher.combine("treatmentTimeEndView\(binding)")
+            }
+        }
+        
         case emojiSelectionView
         case treatmentTimeView
-        case treatmentTimeBeginningView
-        case treatmentTimeEndView
+        case treatmentTimeBeginningView(Binding<Date>)
+        case treatmentTimeEndView(Binding<Date>)
     }
     
     var navPath: [Destination] = []

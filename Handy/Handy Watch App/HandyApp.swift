@@ -40,15 +40,13 @@ struct Handy_Watch_AppApp: App {
                             case .treatmentTimeView:
                                 TreatmentTimeView_(isOnboardingComplete: $isOnboardingComplete)
                                     .navigationBarBackButtonHidden()
-                            case .treatmentTimeBeginningView:
-                                TreatmentTimeBeginningView(dataInicio: .constant(.now))
-                                    
-                            case .treatmentTimeEndView:
-                                TreatmentTimeEndView(dataFinal: .constant(.distantFuture))
-                                    
+                            case .treatmentTimeBeginningView(let binding):
+                                TreatmentTimeBeginningView(dataInicio: binding)
+                            case .treatmentTimeEndView(let binding):
+                                TreatmentTimeEndView(dataFinal: binding)
                             }
                         }
-                        
+                    
                 }.environment(onboardingCoordinator)
             } else {
                 NavigationStack(path: $mainCoordinator.navPath){
@@ -82,9 +80,9 @@ struct Handy_Watch_AppApp: App {
                 }.environment(mainCoordinator)
                 
             }
-                
+            
         }.modelContainer(container)
     }
-        
+    
 }
 

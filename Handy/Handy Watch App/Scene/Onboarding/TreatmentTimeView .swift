@@ -23,13 +23,13 @@ struct TreatmentTimeView_: View {
             
                 dateButton("Data de início", date: dataInicio)
                 .onTapGesture {
-                    coordinator.navigate(to: .treatmentTimeBeginningView)
+                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
                 }
         
                         
                 dateButton("Data final", date: dataFinal)
                 .onTapGesture {
-                    coordinator.navigate(to: .treatmentTimeEndView)
+                    coordinator.navigate(to: .treatmentTimeEndView($dataFinal))
                 }
             
             
