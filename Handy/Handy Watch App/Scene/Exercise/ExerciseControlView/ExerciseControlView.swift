@@ -13,15 +13,11 @@ struct ExerciseControlView: View {
     @Environment(Coordinator.self) var coordinator
     
     var body: some View {
-        VStack {
-            Text("Touch her for next view")
-                .onTapGesture {
-                    coordinator.navigate(to: .exerciseUserFeedbackView)
-                }
-            
-        }
-        
-    }
+          HStack{
+              ControlButton(color: .gray, action: {print("teste")}, name: "end", image: Image(systemName: "xmark"))
+              ControlButton(color: .gray, action: {print("pausou")}, name: "Pausar", image: Image(systemName: "pause.fill"))
+          }
+      }
 }
 
 #Preview {
