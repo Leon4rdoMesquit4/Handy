@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct ExerciseTabView: View {
+    
+    @State var selection:TabItems = .stats
+    
+    enum TabItems {
+        case control, stats, media
+    }
+    
     var body: some View {
-        TabView(selection: .constant(1)){
-            ExerciseControlView()
+        TabView(selection: $selection){
+            ExerciseControlView().tag(TabItems.control)
             
-            ExerciseStatsView()
-                .tag(1)
+            ExerciseStatsView().tag(TabItems.stats)
+            
+        
         }
         
     }
