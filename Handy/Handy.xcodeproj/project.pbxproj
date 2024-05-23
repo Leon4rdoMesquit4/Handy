@@ -30,6 +30,8 @@
 		C381742A2BFBEBFD007A0584 /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38174292BFBEBFD007A0584 /* SwiftDataController.swift */; };
 		C381742C2BFBEC2D007A0584 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */; };
 		C381742E2BFBEC46007A0584 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381742D2BFBEC46007A0584 /* Strings.swift */; };
+		E028A2AC2BFFC6A5002ABAD1 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E028A2AB2BFFC6A5002ABAD1 /* ControlButton.swift */; };
+		E028A2B02BFFC7B2002ABAD1 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E028A2AF2BFFC7B2002ABAD1 /* TimeView.swift */; };
 		E8F9EE132BF7F2F300E34C5D /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */; };
 		E8F9EE152BF7F2F300E34C5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9EE142BF7F2F300E34C5D /* ContentView.swift */; };
 		E8F9EE172BF7F2F500E34C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F9EE162BF7F2F500E34C5D /* Assets.xcassets */; };
@@ -98,6 +100,8 @@
 		C38174292BFBEBFD007A0584 /* SwiftDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		C381742B2BFBEC2D007A0584 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C381742D2BFBEC46007A0584 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E028A2AB2BFFC6A5002ABAD1 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
+		E028A2AF2BFFC7B2002ABAD1 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		E8A60BA22BFFB9F200D33F3D /* Handy Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Handy Watch App.entitlements"; sourceTree = "<group>"; };
 		E8F9EE0F2BF7F2F300E34C5D /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F9EE122BF7F2F300E34C5D /* HandyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
@@ -164,10 +168,10 @@
 		C38173F42BFBE725007A0584 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				E028A2AD2BFFC6CB002ABAD1 /* ExerciseStatsView */,
+				E028A2AA2BFFC647002ABAD1 /* ExerciseControlView */,
 				FDBBB7DD2BFE1A7500552287 /* Components */,
 				C38174002BFBE85A007A0584 /* ExerciseTabView.swift */,
-				C38173F82BFBE7A9007A0584 /* ExerciseStatsView.swift */,
-				C38173FA2BFBE7B6007A0584 /* ExerciseControlView.swift */,
 				C38173FC2BFBE7C6007A0584 /* CountdownView.swift */,
 				C38174242BFBEBAD007A0584 /* ExerciseController.swift */,
 			);
@@ -245,6 +249,23 @@
 				C381742D2BFBEC46007A0584 /* Strings.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E028A2AA2BFFC647002ABAD1 /* ExerciseControlView */ = {
+			isa = PBXGroup;
+			children = (
+				C38173FA2BFBE7B6007A0584 /* ExerciseControlView.swift */,
+			);
+			path = ExerciseControlView;
+			sourceTree = "<group>";
+		};
+		E028A2AD2BFFC6CB002ABAD1 /* ExerciseStatsView */ = {
+			isa = PBXGroup;
+			children = (
+				C38173F82BFBE7A9007A0584 /* ExerciseStatsView.swift */,
+				E028A2AF2BFFC7B2002ABAD1 /* TimeView.swift */,
+			);
+			path = ExerciseStatsView;
 			sourceTree = "<group>";
 		};
 		E8F9EE062BF7F2F300E34C5D = {
@@ -339,6 +360,7 @@
 		FDBBB7DD2BFE1A7500552287 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E028A2AB2BFFC6A5002ABAD1 /* ControlButton.swift */,
 				FDBBB7DE2BFE1A9500552287 /* CircularProgressBarView.swift */,
 			);
 			path = Components;
@@ -494,6 +516,7 @@
 				FDBBB7EC2BFE737800552287 /* TreatmentTimeView .swift in Sources */,
 				C38174192BFBEAE7007A0584 /* GraphScrollView.swift in Sources */,
 				C38173FD2BFBE7C6007A0584 /* CountdownView.swift in Sources */,
+				E028A2B02BFFC7B2002ABAD1 /* TimeView.swift in Sources */,
 				FDBBB7DF2BFE1A9500552287 /* CircularProgressBarView.swift in Sources */,
 				C38174112BFBEA28007A0584 /* ExercisesScrollView.swift in Sources */,
 				FD900C782BFCD0970036DBE2 /* TitleForm.swift in Sources */,
@@ -508,6 +531,7 @@
 				C38173FB2BFBE7B6007A0584 /* ExerciseControlView.swift in Sources */,
 				FDBBB7F02BFE741900552287 /* TreatmentTimeEndView.swift in Sources */,
 				C38174232BFBEB9B007A0584 /* HomeController.swift in Sources */,
+				E028A2AC2BFFC6A5002ABAD1 /* ControlButton.swift in Sources */,
 				C38174042BFBE90D007A0584 /* BorgScaleView.swift in Sources */,
 				C381741F2BFBEB1A007A0584 /* Coordinator.swift in Sources */,
 				C38174282BFBEBE9007A0584 /* WorkoutController.swift in Sources */,
@@ -690,7 +714,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = watchkitapp20;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp20;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -724,7 +748,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = watchkitapp20;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp20;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
