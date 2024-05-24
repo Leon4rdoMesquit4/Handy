@@ -5,6 +5,7 @@
 //  Created by Bruno Teodoro on 20/05/24.
 //
 
+// Classe responsável por gerar uma sessão de workout e resgatar dados do healthyKit
 import Foundation
 import HealthKit
 
@@ -22,6 +23,7 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
     
     
     //MARK: - Main functions
+    ///Pedi autorização para o usuário
     func requestAuthorization() {
         let typesToShare: Set = [
             HKQuantityType.workoutType()
@@ -39,6 +41,7 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
         }
     }
     
+    ///Inicia o workout e permite que o mesmo funcione em background
     func startWorkout(){
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = workoutType
@@ -54,6 +57,16 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
         
         session?.delegate = self
         builder?.delegate = self
+        
+        builder?.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: configuration)
+        
+        let startDate = Date()
+        session?.startActivity(with: startDate)
+        builder?.beginCollection(withStart: startDate, completion: { (success,error) in
+            if let error = error{
+                print(error.localizedDescription)
+            }
+        })
     }
     
     
@@ -61,6 +74,7 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
     
     @Published var working:Bool = false
     
+    ///funções responsáveis por controlar os estados do workout
     func togglePause(){
         if working == true{
             self.pause()
@@ -83,9 +97,11 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
     
     
     //MARK: - Metrics
+    //Variáveis e funções responsáveis por receber os dados do workout
     @Published var heartRate: Double = 0
     @Published var workout: HKWorkout?
     
+    ///atualiza as métricas do workout
     func updateMetrics(_ statics: HKStatistics?){
         guard let statics = statics else { return }
         
@@ -94,12 +110,14 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
             case HKQuantityType.quantityType(forIdentifier: .heartRate):
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
                 self.heartRate = statics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
+                print(self.heartRate)
             default:
                 return
             }
         }
     }
     
+    ///Reinicia o workout
     func reset(){
         builder = nil
         session = nil
@@ -108,6 +126,7 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
 }
 
 //MARK: - Controller Extensions
+//Delgates da session e do builder
 extension WorkoutController: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
         DispatchQueue.main.async {

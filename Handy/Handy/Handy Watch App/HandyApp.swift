@@ -50,9 +50,6 @@ struct Handy_Watch_AppApp: App {
                             }
                         }
                 }
-                .onAppear(perform: {
-                    controller.requestAuthorization()
-                })
                 .environment(onboardingCoordinator)
                 
             } else {
@@ -84,7 +81,12 @@ struct Handy_Watch_AppApp: App {
                                     .navigationBarBackButtonHidden()
                             }
                         }
-                }.environment(mainCoordinator)
+                }
+                .onAppear(perform: {
+                    controller.requestAuthorization()
+                    controller.startWorkout()
+                })
+                .environment(mainCoordinator)
                 
             }
             

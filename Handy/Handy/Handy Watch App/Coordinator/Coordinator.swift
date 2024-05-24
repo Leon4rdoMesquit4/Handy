@@ -14,6 +14,18 @@ final class Coordinator{
     
     ///Destinos possíveis para a navegação
     public enum Destination: Codable, Hashable {
+        
+        public static func == (lhs: Coordinator.Destination, rhs: Coordinator.Destination) -> Bool {
+            return lhs.hashValue == rhs.hashValue
+        }
+        
+        public func hash(into hasher: inout Hasher) {
+            switch self {
+            default:
+                hasher.combine("\(self)")
+            }
+        }
+        
         case countdownView
         case graphView
         case selectGraphView
@@ -51,16 +63,8 @@ final class OnboardingCoordinator{
         
         public func hash(into hasher: inout Hasher) {
             switch self {
-            case .emojiSelectionView:
-                hasher.combine("emojiSelectionView")
-            case .treatmentTimeView:
-                hasher.combine("treatmentTimeView")
-            case .treatmentTimeBeginningView(let binding):
-                hasher.combine("treatmentTimeBeginningView\(binding)")
-            case .treatmentTimeEndView(let binding):
-                hasher.combine("treatmentTimeEndView\(binding)")
-            case .EmojiPickerView(let binding):
-                hasher.combine("emojiPickerView\(binding)")
+            default:
+                hasher.combine("\(self)")
             }
         }
         
