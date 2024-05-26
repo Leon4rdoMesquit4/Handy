@@ -13,7 +13,7 @@ import SwiftUI
 final class Coordinator{
     
     ///Destinos possíveis para a navegação
-    public enum Destination: Codable, Hashable {
+    public enum Destination: Equatable, Hashable {
         
         public static func == (lhs: Coordinator.Destination, rhs: Coordinator.Destination) -> Bool {
             return lhs.hashValue == rhs.hashValue
@@ -34,6 +34,7 @@ final class Coordinator{
         case didFeelPainView
         case painScaleView
         case exerciseUserFeedbackView
+        case exerciseDetailView(Exercise)
     }
     
     var navPath: [Destination] = []

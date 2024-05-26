@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Essa é uma View que detalha um treino de um dia específico, ela mostra as informações do exercício passado como argumento e permite que se faça o compartilhamento das informações do exercício.
 struct ExerciseDetailView: View {
-    var exercise : Exercise
+    @State var exercise : Exercise
     @StateObject var vm = ExerciseDetailViewModel()
     
     var body: some View {
@@ -27,7 +27,7 @@ struct ExerciseDetailView: View {
                 sectionBuilder(title: "Intensidade", image: exercise.returnImageBorgScale())
                 
                 // mostrando o nível de dor que a pessoa sentiu durante os exercícios
-                sectionBuilder(title: "Nível de dor", subtitle: "1")
+                sectionBuilder(title: "Nível de dor", subtitle: "\(Int(exercise.painLevel ?? 0))")
                 
                 // mostrando o botão que permite o compartilhamento das informações exercício
                 HStack {
@@ -101,7 +101,6 @@ struct ExerciseDetailView: View {
         exercise.avarageHeartBeats = 90
         exercise.startTrainning = Date()
         exercise.painLevel = 1
-        
         
         return exercise
     }

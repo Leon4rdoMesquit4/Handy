@@ -10,6 +10,8 @@ import SwiftData
 
 @Model
 class Exercise {
+    
+    var exerciseFeedback: Int?
     var time : String?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?

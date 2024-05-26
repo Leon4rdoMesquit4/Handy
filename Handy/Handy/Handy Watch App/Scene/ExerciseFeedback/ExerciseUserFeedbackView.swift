@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ExerciseUserFeedbackView: View {
     @State var feedback : Int = 1
     @Environment(Coordinator.self) var coordinator
+    @Environment(SwiftDataController.self) var controller
     
     var body: some View {
         VStack (spacing: 8) {
@@ -18,6 +20,7 @@ struct ExerciseUserFeedbackView: View {
             StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
             Spacer()
             ButtonNextPage{
+                controller.exerciseFeedback = feedback
                 coordinator.navigate(to: .borgScaleView)
             }
         }
@@ -26,4 +29,6 @@ struct ExerciseUserFeedbackView: View {
 
 #Preview {
     ExerciseUserFeedbackView()
+        .environment(Coordinator())
+        .environment(SwiftDataController())
 }

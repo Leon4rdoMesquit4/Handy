@@ -10,6 +10,7 @@ import SwiftUI
 struct BorgScaleView: View {
     @State var borgScale : Int = 1
     @Environment(Coordinator.self) var coordinator
+    @Environment(SwiftDataController.self) var controller
     
     var body: some View {
         VStack (spacing: 5){
@@ -19,6 +20,7 @@ struct BorgScaleView: View {
             stepperBorgScale
             Spacer()
             ButtonNextPage{
+                controller.borgScale = borgScale
                 coordinator.navigate(to: .didFeelPainView)
             }
         }
@@ -41,5 +43,7 @@ struct BorgScaleView: View {
 #Preview {
     NavigationStack {
         BorgScaleView()
+            .environment(Coordinator())
+            .environment(SwiftDataController())
     }
 }

@@ -20,4 +20,5 @@ struct SelectGraphView: View {
 
 #Preview {
     SelectGraphView()
+        .environment(Coordinator())
 }

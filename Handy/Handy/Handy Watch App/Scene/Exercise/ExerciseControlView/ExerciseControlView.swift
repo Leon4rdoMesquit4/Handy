@@ -14,7 +14,7 @@ struct ExerciseControlView: View {
     
     var body: some View {
           HStack{
-              ControlButton(color: .gray, action: {print("teste")}, name: "end", image: Image(systemName: "xmark"))
+              ControlButton(color: .gray, action: {coordinator.navigate(to: .exerciseUserFeedbackView)}, name: "end", image: Image(systemName: "xmark"))
               ControlButton(color: .gray, action: {print("pausou")}, name: "Pausar", image: Image(systemName: "pause.fill"))
           }
       }
@@ -22,4 +22,5 @@ struct ExerciseControlView: View {
 
 #Preview {
     ExerciseControlView()
+        .environment(Coordinator())
 }

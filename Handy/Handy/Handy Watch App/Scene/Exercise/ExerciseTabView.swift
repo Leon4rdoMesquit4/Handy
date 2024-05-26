@@ -11,7 +11,7 @@ import WatchKit
 struct ExerciseTabView: View {
     
     @Environment(\.isLuminanceReduced) var isLuminanceReduced
-    @State var selection:TabItems = .stats
+    @State var selection: TabItems = .stats
     
     enum TabItems {
         case control, stats, media

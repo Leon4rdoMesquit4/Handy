@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DidFeelPainView: View {
     @Environment(Coordinator.self) var coordinator
+    @Environment(\.modelContext) var context
+    @Environment(SwiftDataController.self) var controller
     
     var body: some View {
         VStack{
@@ -18,6 +20,7 @@ struct DidFeelPainView: View {
             
             HStack (spacing: 30){
                 Button {
+                    controller.saveNewExercise(context: context)
                     coordinator.navigateToRoot()
                 } label: {
                     Image(systemName: "xmark")
@@ -33,16 +36,18 @@ struct DidFeelPainView: View {
             Spacer()
         }
         .padding()
-        .toolbar(content: {
+        .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Text("3/3")
             }
-        })
+        }
     }
 }
 
 #Preview {
     NavigationStack {
         DidFeelPainView()
+            .environment(Coordinator())
+            .environment(SwiftDataController())
     }
 }

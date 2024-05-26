@@ -27,7 +27,7 @@ struct HomeView: View {
                 }
                 HStack {
                     Spacer()
-                    Image("addExercise")
+                    Image(systemName: "plus.message.fill")
                         .padding(.trailing, 10)
                         .onTapGesture {
                             coordinator.navigate(to: .countdownView)
@@ -41,4 +41,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environment(Coordinator())
 }

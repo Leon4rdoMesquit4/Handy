@@ -14,6 +14,7 @@ struct Handy_Watch_AppApp: App {
     @StateObject var controller = WorkoutController()
     @State var mainCoordinator: Coordinator = Coordinator()
     @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
+    @State var swiftDataController = SwiftDataController()
     @AppStorage("onboarding") var isOnboardingComplete: Bool = false
     
     let container : ModelContainer
@@ -79,6 +80,8 @@ struct Handy_Watch_AppApp: App {
                             case .exerciseUserFeedbackView:
                                 ExerciseUserFeedbackView()
                                     .navigationBarBackButtonHidden()
+                            case .exerciseDetailView(let exercise):
+                                ExerciseDetailView(exercise: exercise)
                             }
                         }
                 }
@@ -87,6 +90,7 @@ struct Handy_Watch_AppApp: App {
                     controller.startWorkout()
                 })
                 .environment(mainCoordinator)
+                .environment(swiftDataController)
                 
             }
             

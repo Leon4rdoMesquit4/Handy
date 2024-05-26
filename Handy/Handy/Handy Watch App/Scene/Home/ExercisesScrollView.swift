@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ExercisesScrollView: View {
     
     @Environment(Coordinator.self) var coordinator
+    @Query private var exercises: [Exercise]
     
     var body: some View {
         ZStack {
@@ -24,20 +26,27 @@ struct ExercisesScrollView: View {
                 Spacer()
             }.ignoresSafeArea()
             ScrollView {
-                exerciseListItem
+                ForEach(exercises) { exercise in
+                    exerciseListItem(exercise: exercise)
+                }
+                
             }.padding(.top, 25)
         }
     }
 }
 
 extension ExercisesScrollView {
-    var exerciseListItem: some View {
+    @ViewBuilder
+    func exerciseListItem(exercise: Exercise) -> some View {
         VStack (alignment: .leading) {
             HStack {
                 Text("10/05/24")
                     .foregroundStyle(.black)
                     .padding(.leading)
                 Spacer()
+            }.onTapGesture {
+                coordinator.navigate(to: .exerciseDetailView(exercise
+                                                            ))
             }
             .padding(.vertical, 25)
             .background(Color.gray)
@@ -48,4 +57,5 @@ extension ExercisesScrollView {
 
 #Preview {
     ExercisesScrollView()
+        .environment(Coordinator())
 }
