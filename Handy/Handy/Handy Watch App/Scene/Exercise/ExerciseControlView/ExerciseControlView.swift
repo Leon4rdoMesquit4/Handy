@@ -15,8 +15,17 @@ struct ExerciseControlView: View {
     
     var body: some View {
           HStack{
-              ControlButton(color: .gray, action: {print("teste")}, name: "end", image: Image(systemName: "xmark"))
-              ControlButton(color: .gray, action: {controller.togglePause()}, name: "Pausar", image: Image(systemName: "pause.fill"))
+              ControlButton(color: .gray, action: {
+                  
+                  controller.endWorkout()
+                  
+              }, name: "end", image: Image(systemName: "xmark"))
+              
+              ControlButton(color: .gray, action: {
+                  
+                  controller.togglePause()
+                  
+              }, name: "Pausar", image: Image(systemName: "pause.fill"))
           }
       }
 }
