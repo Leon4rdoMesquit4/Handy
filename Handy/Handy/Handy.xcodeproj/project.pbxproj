@@ -52,6 +52,8 @@
 		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
 		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
 		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
+		E0D9FEDA2C010E6700614A40 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FED92C010E6700614A40 /* TimeFormatter.swift */; };
+		E0D9FEDC2C01121F00614A40 /* MetricsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E0D9FED92C010E6700614A40 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +344,8 @@
 				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
 				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
 				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
+				E0D9FED92C010E6700614A40 /* TimeFormatter.swift */,
+				E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */,
 				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
+				E0D9FEDC2C01121F00614A40 /* MetricsTime.swift in Sources */,
 				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
@@ -488,6 +495,7 @@
 				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
 				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
 				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				E0D9FEDA2C010E6700614A40 /* TimeFormatter.swift in Sources */,
 				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
 				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
 				E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */,
