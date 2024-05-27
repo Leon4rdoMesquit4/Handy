@@ -54,8 +54,7 @@ struct Handy_Watch_AppApp: App {
                 
             } else {
                 NavigationStack(path: $mainCoordinator.navPath){
-//                    HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
-                    ExerciseTabView()
+                    HomeTabView(goal: .init(name: "", emoji: "", progress: 9))
                         .navigationDestination(for: Coordinator.Destination.self) { destination in
                             switch destination {
                             case .countdownView:
