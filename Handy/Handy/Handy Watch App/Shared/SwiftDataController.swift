@@ -9,16 +9,16 @@ import Foundation
 import SwiftData
 
 @Observable
-class SwiftDataController{
+class SwiftDataController {
     
-    var time : String?
-    var avarageHeartBeats : Double?
-    var minHeartBeats : Double?
-    var maxHeartBeats : Double?
-    var startTrainning : Date?
-    var borgScale : Int?
-    var painLevel : Double?
-    var exerciseFeedback : Int?
+    var time: String?
+    var avarageHeartBeats: Double?
+    var minHeartBeats: Double?
+    var maxHeartBeats: Double?
+    var startTrainning: Date?
+    var borgScale: Int?
+    var painLevel: Double?
+    var exerciseFeedback: Int?
     
     func saveNewExercise(context: ModelContext){
         let exercise = Exercise()
@@ -31,6 +31,18 @@ class SwiftDataController{
         exercise.painLevel = painLevel
         exercise.exerciseFeedback = exerciseFeedback
         context.insert(exercise)
+        resetElements()
+    }
+    
+    func resetElements(){
+        time = ""
+        avarageHeartBeats = 0.0
+        minHeartBeats = 0.0
+        maxHeartBeats = 0.0
+        startTrainning = .now
+        borgScale = 0
+        painLevel = 0.0
+        exerciseFeedback = 0
     }
     
 }

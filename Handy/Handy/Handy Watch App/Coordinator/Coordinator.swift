@@ -26,8 +26,14 @@ final class Coordinator{
             }
         }
         
+        
+        enum GraphCases{
+            case month
+            case week
+        }
+        
         case countdownView
-        case graphView
+        case graphView(GraphCases)
         case selectGraphView
         case exerciseTabView
         case borgScaleView

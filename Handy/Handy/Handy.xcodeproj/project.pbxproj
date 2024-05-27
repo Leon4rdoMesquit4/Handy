@@ -29,7 +29,6 @@
 		E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */; };
 		E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */; };
 		E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */; };
-		E0711D362BFFE1BE00084CAF /* GraphScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */; };
 		E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */; };
 		E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */; };
 		E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D142BFFE1BE00084CAF /* GoalView.swift */; };
@@ -52,6 +51,12 @@
 		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
 		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
 		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
+		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
+		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
+		E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */; };
+		E888FB8C2C02BD1E000B048F /* BorgScaleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */; };
+		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
+		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +108,6 @@
 		E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidFeelPainView.swift; sourceTree = "<group>"; };
 		E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseUserFeedbackView.swift; sourceTree = "<group>"; };
 		E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
-		E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphScrollView.swift; sourceTree = "<group>"; };
 		E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
 		E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesScrollView.swift; sourceTree = "<group>"; };
 		E0711D142BFFE1BE00084CAF /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,12 @@
 		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
+		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
+		E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyGraphView.swift; sourceTree = "<group>"; };
+		E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorgScaleGraphView.swift; sourceTree = "<group>"; };
+		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
+		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,8 +271,9 @@
 		E0711D122BFFE1BE00084CAF /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
-				E0711D102BFFE1BE00084CAF /* GraphScrollView.swift */,
+				E888FB912C02BD46000B048F /* EspecifiedGraphs */,
 				E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */,
+				E888FB822C02BC8E000B048F /* GraphsTabView.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -350,6 +361,18 @@
 				E0711D552BFFE1E200084CAF /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E888FB912C02BD46000B048F /* EspecifiedGraphs */ = {
+			isa = PBXGroup;
+			children = (
+				E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */,
+				E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */,
+				E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */,
+				E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */,
+				E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */,
+			);
+			path = EspecifiedGraphs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,18 +476,21 @@
 			files = (
 				E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */,
 				E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */,
+				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
 				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
 				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,
 				E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */,
 				E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */,
+				E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */,
 				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
-				E0711D362BFFE1BE00084CAF /* GraphScrollView.swift in Sources */,
 				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
+				E888FB8C2C02BD1E000B048F /* BorgScaleGraphView.swift in Sources */,
 				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
 				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
 				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
 				E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */,
 				E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */,
+				E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */,
 				E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */,
 				E0711D252BFFE1BE00084CAF /* CircularProgressBarView.swift in Sources */,
 				E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */,
@@ -481,6 +507,7 @@
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
+				E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */,
 				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
 				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
 				E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */,
@@ -488,6 +515,7 @@
 				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
 				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
 				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */,
 				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
 				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
 				E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */,
