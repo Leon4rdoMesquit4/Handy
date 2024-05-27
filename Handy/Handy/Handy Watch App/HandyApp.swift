@@ -36,8 +36,8 @@ struct Handy_Watch_AppApp: App {
                     Onboarding()
                         .navigationDestination(for: OnboardingCoordinator.Destination.self) { destination in
                             switch destination {
-                            case .emojiSelectionView:
-                                EmojiSelectionView()
+                            case .symbolSelectionView:
+                                SymbolSelectionView()
                                     .navigationBarBackButtonHidden()
                             case .treatmentTimeView:
                                 TreatmentTimeView_(isOnboardingComplete: $isOnboardingComplete)
@@ -46,8 +46,8 @@ struct Handy_Watch_AppApp: App {
                                 TreatmentTimeBeginningView(dataInicio: binding)
                             case .treatmentTimeEndView(let binding):
                                 TreatmentTimeEndView(dataFinal: binding)
-                            case .EmojiPickerView(let binding):
-                                EmojiPickerView(emojiPicked: binding)
+                            case .SymbolPickerView(let binding):
+                                SymbolPickerView(symbolPicked: binding)
                             }
                         }
                 }

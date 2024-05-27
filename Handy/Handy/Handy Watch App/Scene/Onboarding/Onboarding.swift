@@ -37,7 +37,7 @@ struct Onboarding: View {
             Spacer()
             
             ButtonNextPage{
-                coordinator.navigate(to: .emojiSelectionView)
+                coordinator.navigate(to: .symbolSelectionView)
             }
                 .frame(height: 1)
             Spacer()

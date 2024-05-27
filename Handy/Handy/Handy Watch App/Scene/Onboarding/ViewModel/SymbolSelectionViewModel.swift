@@ -8,17 +8,19 @@
 import Foundation
 import SwiftUI
 
-extension EmojiSelectionView {
-    class EmojiSelectionViewModel : ObservableObject {
+extension SymbolSelectionView {
+    class SymbolSelectionViewModel : ObservableObject {
         @Published var alertInvalidEmojiIsPresented : Bool = false
-        @Published var emoji : String = ""
+        @Published var symbol : String = ""
         @Published var buttonEnabled : Bool = false
-        @AppStorage ("emoji") var emojiAppStorage : String = ""
+        
+        /// Variável que vai representar o símbolo salvo dentro da App Storage
+        @AppStorage ("symbol") var symbolAppStorage : String = ""
         
         
         /// Essa função não somente valida o emoji
         func validateEmoji () -> Bool {
-            if emoji.count == 0 {
+            if symbol.count == 0 {
                 return false
             } else {
                 return true
@@ -27,7 +29,7 @@ extension EmojiSelectionView {
         
         /// Função que salva o emoji no User Defaults
         func saveEmoji () {
-            self.emojiAppStorage = emoji
+            self.symbol = symbol
             buttonEnabled = true
         }
         
