@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExerciseStatsView: View {
     
-    @EnvironmentObject var controller: WorkoutController
+    @Environment(WorkoutController.self) var controller
     
     var body: some View {
         VStack(alignment: .leading){

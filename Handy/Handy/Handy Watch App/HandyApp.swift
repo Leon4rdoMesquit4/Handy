@@ -11,7 +11,7 @@ import SwiftData
 @main
 struct Handy_Watch_AppApp: App {
     
-    @StateObject var controller = WorkoutController()
+    @State var controller = WorkoutController()
     @State var mainCoordinator: Coordinator = Coordinator()
     @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
     @AppStorage("onboarding") var isOnboardingComplete: Bool = false
@@ -87,7 +87,7 @@ struct Handy_Watch_AppApp: App {
                     controller.requestAuthorization()
                     controller.startWorkout()
                 })
-                .environmentObject(controller)
+                .environment(controller)
                 .environment(mainCoordinator)
                 
             }

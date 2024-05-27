@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimeView: View {
     var timePassed: TimeInterval = 0
-    @EnvironmentObject var controller:WorkoutController
+    @Environment(WorkoutController.self) var controller
     @State var formatter = TimeFormatter()
     
     var body: some View {

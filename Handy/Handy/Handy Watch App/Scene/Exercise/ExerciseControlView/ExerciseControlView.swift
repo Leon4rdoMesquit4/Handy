@@ -11,7 +11,7 @@ struct ExerciseControlView: View {
     @State var progresso : Double = 1
     @State var contador : Int = 3
     @Environment(Coordinator.self) var coordinator
-    @EnvironmentObject var controller: WorkoutController
+    @Environment(WorkoutController.self) var controller
     
     var body: some View {
           HStack{
