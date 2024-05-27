@@ -9,7 +9,8 @@
 import Foundation
 import HealthKit
 
-class WorkoutController: NSObject, ObservableObject, Observable  {
+@Observable
+class WorkoutController: NSObject  {
     //MARK: - Main Variables
     //Workout type
     let workoutType: HKWorkoutActivityType = .preparationAndRecovery
@@ -72,7 +73,7 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
     
     //MARK: - Session state control
     
-    @Published var working:Bool = false
+    var working:Bool = false
     
     ///funções responsáveis por controlar os estados do workout
     func togglePause(){
@@ -98,8 +99,8 @@ class WorkoutController: NSObject, ObservableObject, Observable  {
     
     //MARK: - Metrics
     //Variáveis e funções responsáveis por receber os dados do workout
-    @Published var heartRate: Double = 0
-    @Published var workout: HKWorkout?
+    var heartRate: Double = 0
+    var workout: HKWorkout?
     
     ///atualiza as métricas do workout
     func updateMetrics(_ statics: HKStatistics?){
