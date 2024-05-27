@@ -11,11 +11,12 @@ import SwiftData
 @Observable
 class SwiftDataController{
     
-    var time : String?
+    var time : DateComponents?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
     var startTrainning : Date?
+    var endTrainning: Date?
     var borgScale : Int?
     var painLevel : Double?
     var exerciseFeedback : Int?
@@ -23,7 +24,8 @@ class SwiftDataController{
     func saveNewExercise(context: ModelContext){
         let exercise = Exercise()
         exercise.startTrainning = startTrainning
-        exercise.time = time
+        exercise.endTrainning = endTrainning
+        exercise.time = getDateComponents()
         exercise.avarageHeartBeats = avarageHeartBeats
         exercise.minHeartBeats = minHeartBeats
         exercise.maxHeartBeats = maxHeartBeats
@@ -33,4 +35,11 @@ class SwiftDataController{
         context.insert(exercise)
     }
     
+    func getDateComponents() -> DateComponents{
+        if let startTrainning = startTrainning, let endTrainning = endTrainning {
+            let components = Calendar.current.dateComponents([.minute,.second], from: startTrainning, to: endTrainning )
+            return components
+        }
+        return Calendar.current.dateComponents([.minute,.second], from: Date())
+    }
 }
