@@ -16,7 +16,7 @@ struct ExerciseDetailView: View {
         ScrollView {
             VStack (alignment: .leading){
                 // mostrando a duração do exercício
-                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
+//                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
@@ -97,7 +97,7 @@ struct ExerciseDetailView: View {
     func setupExercise () -> Exercise {
         let exercise = Exercise()
         exercise.borgScale = 1
-        exercise.time = "20:30s"
+//        exercise.time = "20:30s"
         exercise.avarageHeartBeats = 90
         exercise.startTrainning = Date()
         exercise.painLevel = 1

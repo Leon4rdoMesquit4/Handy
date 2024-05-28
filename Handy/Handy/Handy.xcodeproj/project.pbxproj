@@ -35,10 +35,9 @@
 		E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D152BFFE1BE00084CAF /* HomeController.swift */; };
 		E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D162BFFE1BE00084CAF /* HomeTabView.swift */; };
 		E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D172BFFE1BE00084CAF /* HomeView.swift */; };
-		E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D192BFFE1BE00084CAF /* EmojiList.swift */; };
-		E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */; };
-		E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */; };
-		E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */; };
+		E0711D3E2BFFE1BE00084CAF /* SymbolPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1A2BFFE1BE00084CAF /* SymbolPickerView.swift */; };
+		E0711D3F2BFFE1BE00084CAF /* SymbolSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1C2BFFE1BE00084CAF /* SymbolSelectionViewModel.swift */; };
+		E0711D402BFFE1BE00084CAF /* SymbolSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1E2BFFE1BE00084CAF /* SymbolSelectionView.swift */; };
 		E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */; };
 		E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */; };
 		E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */; };
@@ -51,6 +50,8 @@
 		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
 		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
 		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
+		E0D9FEDA2C010E6700614A40 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FED92C010E6700614A40 /* TimeFormatter.swift */; };
+		E0D9FEDC2C01121F00614A40 /* MetricsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */; };
 		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
 		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
 		E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */; };
@@ -114,10 +115,9 @@
 		E0711D152BFFE1BE00084CAF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		E0711D162BFFE1BE00084CAF /* HomeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		E0711D172BFFE1BE00084CAF /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		E0711D192BFFE1BE00084CAF /* EmojiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiList.swift; sourceTree = "<group>"; };
-		E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
-		E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionViewModel.swift; sourceTree = "<group>"; };
-		E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionView.swift; sourceTree = "<group>"; };
+		E0711D1A2BFFE1BE00084CAF /* SymbolPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPickerView.swift; sourceTree = "<group>"; };
+		E0711D1C2BFFE1BE00084CAF /* SymbolSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolSelectionViewModel.swift; sourceTree = "<group>"; };
+		E0711D1E2BFFE1BE00084CAF /* SymbolSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolSelectionView.swift; sourceTree = "<group>"; };
 		E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeBeginningView.swift; sourceTree = "<group>"; };
 		E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeEndView.swift; sourceTree = "<group>"; };
@@ -130,6 +130,8 @@
 		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E0D9FED92C010E6700614A40 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTime.swift; sourceTree = "<group>"; };
 		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
 		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
 		E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyGraphView.swift; sourceTree = "<group>"; };
@@ -290,19 +292,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */ = {
+		E0711D1B2BFFE1BE00084CAF /* SymbolPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				E0711D192BFFE1BE00084CAF /* EmojiList.swift */,
-				E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */,
+				E0711D1A2BFFE1BE00084CAF /* SymbolPickerView.swift */,
 			);
-			path = EmojiPickerView;
+			path = SymbolPickerView;
 			sourceTree = "<group>";
 		};
 		E0711D1D2BFFE1BE00084CAF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */,
+				E0711D1C2BFFE1BE00084CAF /* SymbolSelectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,9 +311,9 @@
 		E0711D232BFFE1BE00084CAF /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */,
+				E0711D1B2BFFE1BE00084CAF /* SymbolPickerView */,
 				E0711D1D2BFFE1BE00084CAF /* ViewModel */,
-				E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */,
+				E0711D1E2BFFE1BE00084CAF /* SymbolSelectionView.swift */,
 				E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */,
 				E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */,
 				E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */,
@@ -351,6 +352,8 @@
 				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
 				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
 				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
+				E0D9FED92C010E6700614A40 /* TimeFormatter.swift */,
+				E0D9FEDB2C01121F00614A40 /* MetricsTime.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -498,23 +501,26 @@
 				E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */,
 				E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */,
 				E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */,
-				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
 				E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */,
 				E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */,
 				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
+				E0D9FEDC2C01121F00614A40 /* MetricsTime.swift in Sources */,
 				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
+				E0711D402BFFE1BE00084CAF /* SymbolSelectionView.swift in Sources */,
+				E0711D3F2BFFE1BE00084CAF /* SymbolSelectionViewModel.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
 				E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */,
 				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
 				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
 				E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */,
-				E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */,
+				E0711D3E2BFFE1BE00084CAF /* SymbolPickerView.swift in Sources */,
 				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
 				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
 				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				E0D9FEDA2C010E6700614A40 /* TimeFormatter.swift in Sources */,
 				E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */,
 				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
 				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
