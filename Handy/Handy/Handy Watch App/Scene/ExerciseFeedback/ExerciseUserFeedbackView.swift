@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ExerciseUserFeedbackView: View {
-    @State var faceImages = ["face1", "face2", "face3", "face4", "face5", "face6"]
     @State var feedback : Int = 1
     @Environment(Coordinator.self) var coordinator
     @Environment(SwiftDataController.self) var controller
@@ -18,7 +17,7 @@ struct ExerciseUserFeedbackView: View {
         VStack (spacing: 8) {
             TitleForm(text: "Como foi a prática do exercício")
             Spacer()
-            StepperImage(value: $feedback, interval: 1 ... 6, prefixImage: "face")
+            StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
             Spacer()
             ButtonNextPage{
                 controller.exerciseFeedback = feedback

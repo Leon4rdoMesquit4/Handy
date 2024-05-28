@@ -4,6 +4,9 @@
     "%lld%%" : {
 
     },
+    "00:00.01" : {
+
+    },
     "1/3" : {
 
     },
@@ -25,7 +28,7 @@
     "Duração do tratamento:" : {
 
     },
-    "Escolha um símbolo" : {
+    "Escolha um emoji %@" : {
 
     },
     "Estabeleça a sua meta" : {
@@ -62,7 +65,7 @@
     "Suas práticas" : {
 
     },
-    "Tempo de Pratica" : {
+    "Tempo de PrÃ¡tica" : {
 
     },
     "Treino do dia: %@" : {

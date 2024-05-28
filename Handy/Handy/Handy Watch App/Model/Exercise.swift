@@ -12,14 +12,11 @@ import SwiftData
 class Exercise {
     
     var exerciseFeedback: Int?
-    
-    /// Variável que indica a quantidade de segundos que o usuário passou fazendo o exercício
-    var secondsExercise : Int?
+    var time : String?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
     var startTrainning : Date?
-    var endTrainning : Date?
     
     /// Um atributo que indica a escala de Borg do usuário, eu fiz uma pequena validação para saber se o novo valor que ele passou está válido
     var borgScale : Int? {
