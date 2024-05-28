@@ -45,4 +45,30 @@ class SwiftDataController {
         exerciseFeedback = 0
     }
     
+    func fetchExercises (_ context : ModelContext) -> [Exercise] {
+        var exercisesFetched : [Exercise] = []
+        
+        if let exercisesRetrieved = try? context.fetch(FetchDescriptor<Exercise>()) {
+            exercisesFetched = exercisesRetrieved
+        }
+        
+        return exercisesFetched
+    }
+    
+    func fetchExercises (_ context : ModelContext, in week: ClosedRange<Date>) -> [Exercise]{
+        let totalExercises = fetchExercises(context)
+        var exercisesInWeek : [Exercise] = []
+        
+        
+        for exercise in totalExercises {
+            if let startTrainning = exercise.startTrainning {
+                if  week.contains(startTrainning) {
+                    exercisesInWeek.append(exercise)
+                }
+            }
+        }
+        
+        return exercisesInWeek
+        
+    }
 }
