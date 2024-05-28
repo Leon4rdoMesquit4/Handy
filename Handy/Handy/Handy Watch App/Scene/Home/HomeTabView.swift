@@ -31,4 +31,5 @@ struct HomeTabView: View {
 
 #Preview {
     HomeTabView(goal: Goal(name: "", emoji: "🍴", progress: 25))
+        .environment(Coordinator())
 }

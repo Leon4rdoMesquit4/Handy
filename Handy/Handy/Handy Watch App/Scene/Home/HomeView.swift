@@ -7,34 +7,51 @@
 
 import SwiftUI
 
+//Change the name of this enum later once we know mascot name
+/// Esse enum vai servir para guardar as views aleatórias do mascote que vão ser mostradas na HomeView
+enum RandomHomeView {
+    case view1
+}
+
 struct HomeView: View {
     
     @Environment(Coordinator.self) var coordinator
+    let randomView: [RandomHomeView] = []
     
     var body: some View {
         ZStack {
-            Image("Fennec")
-                .resizable()
-                .frame(width: 200, height: 230)
-            VStack {
-                HStack {
-                    Image(systemName: "chart.bar.xaxis")
-                        .padding(12)
-                        .onTapGesture {
-                            coordinator.navigate(to: .selectGraphView)
-                        }
-                    Spacer()
+            selectRandomHomeView(randomView.randomElement() ?? .view1)
+                .onTapGesture {
+                    coordinator.navigate(to: .countdownView)
                 }
-                HStack {
-                    Spacer()
-                    Image(systemName: "plus.message.fill")
-                        .padding(.trailing, 10)
-                        .onTapGesture {
-                            coordinator.navigate(to: .countdownView)
-                        }
-                }
+            navigateToGraphButton
+        }.ignoresSafeArea()
+    }
+}
+
+//implementação temporária
+///Função que retorna uma view aleatória para ser mostrada na HomeView
+@ViewBuilder
+func selectRandomHomeView (_ view : RandomHomeView) -> some View {
+    switch view {
+    default:
+        Image(systemName: "plus.square.fill")
+    }
+}
+
+//Botão que navega para a SelectGraphView
+extension HomeView {
+    var navigateToGraphButton: some View {
+        VStack {
+            HStack {
+                Image(systemName: "chart.bar.xaxis")
+                    .padding(15)
+                    .onTapGesture {
+                        coordinator.navigate(to: .selectGraphView)
+                    }
                 Spacer()
-            }.ignoresSafeArea()
+            }
+            Spacer()
         }
     }
 }
