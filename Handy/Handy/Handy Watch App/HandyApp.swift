@@ -61,8 +61,8 @@ struct Handy_Watch_AppApp: App {
                             case .countdownView:
                                 CountdownView()
                                     .navigationBarBackButtonHidden()
-                            case .graphView:
-                                GraphScrollView()
+                            case .graphView(let graphCase):
+                                GraphsTabView(graphCase: graphCase)
                             case .selectGraphView:
                                 SelectGraphView()
                             case .exerciseTabView:

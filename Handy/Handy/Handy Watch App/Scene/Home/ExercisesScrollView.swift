@@ -44,13 +44,14 @@ extension ExercisesScrollView {
                     .foregroundStyle(.black)
                     .padding(.leading)
                 Spacer()
-            }.onTapGesture {
-                coordinator.navigate(to: .exerciseDetailView(exercise
-                                                            ))
             }
             .padding(.vertical, 25)
             .background(Color.gray)
             .clipShape(RoundedRectangle(cornerRadius: 15))
+            .onTapGesture {
+                coordinator.navigate(to: .exerciseDetailView(exercise
+                                                            ))
+            }
         }
     }
 }

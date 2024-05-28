@@ -38,10 +38,10 @@ struct ExerciseDetailView: View {
             }
         }
         .navigationTitle(exercise.startTrainning?.formatted(date: .numeric, time: .omitted) ?? "")
-        .onAppear(perform: {
+        .onAppear{
             // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
-        })
+        }
     }
     
     var sharelink : some View {
