@@ -11,7 +11,7 @@ import SwiftData
 struct ExercisesScrollView: View {
     
     @Environment(Coordinator.self) var coordinator
-    @Query private var exercises: [Exercise]
+    @Query(sort: \Exercise.startTrainning, order: .reverse) private var exercises: [Exercise]
     
     var body: some View {
         ZStack {
@@ -40,7 +40,7 @@ extension ExercisesScrollView {
     func exerciseListItem(exercise: Exercise) -> some View {
         VStack (alignment: .leading) {
             HStack {
-                Text("10/05/24")
+                Text(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
                     .foregroundStyle(.black)
                     .padding(.leading)
                 Spacer()

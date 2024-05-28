@@ -11,11 +11,14 @@ struct GraphsTabView: View {
     
     @State var graphCase: Coordinator.Destination.GraphCases
     
+    @Environment(SwiftDataController.self) var controller
+    @Environment(\.modelContext) var context
+    
     var body: some View {
         TabView{
             PracticeTimeGraphView()
             
-            BPMGraphView()
+            BPMGraphView(sampleAnalytics: controller.fecthLastWeekExercises(context: context))
             
             BorgScaleGraphView()
             

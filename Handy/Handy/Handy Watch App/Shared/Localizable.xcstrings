@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld%%" : {
 
     },
@@ -13,13 +16,19 @@
     "3/3" : {
 
     },
-    "10/05/24" : {
+    "Batimentos" : {
+
+    },
+    "bpm" : {
 
     },
     "Data de início" : {
 
     },
     "Data do final" : {
+
+    },
+    "day" : {
 
     },
     "Definir" : {

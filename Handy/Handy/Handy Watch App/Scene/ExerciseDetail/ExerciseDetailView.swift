@@ -37,7 +37,7 @@ struct ExerciseDetailView: View {
                 }
             }
         }
-        .navigationTitle(exercise.startTrainning?.formatted(date: .numeric, time: .omitted) ?? "")
+        .navigationTitle(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
         .onAppear{
             // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
@@ -45,7 +45,7 @@ struct ExerciseDetailView: View {
     }
     
     var sharelink : some View {
-        ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning?.formatted(date: .numeric, time: .omitted).description ?? "")")) {
+        ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
             Image(systemName: "square.and.arrow.up")
         }
         .frame(width: 75)

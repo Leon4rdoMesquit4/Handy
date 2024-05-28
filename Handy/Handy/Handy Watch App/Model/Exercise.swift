@@ -16,7 +16,7 @@ class Exercise {
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
-    var startTrainning : Date?
+    var startTrainning : Date
     
     /// Um atributo que indica a escala de Borg do usuário, eu fiz uma pequena validação para saber se o novo valor que ele passou está válido
     var borgScale : Int? {
@@ -36,7 +36,9 @@ class Exercise {
         }
     }
     
-    init() {}
+    init() {
+        startTrainning = .now
+    }
     
     /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
     func returnImageBorgScale () -> String {
@@ -77,4 +79,14 @@ class Exercise {
             self.painLevel = 0
         }
     }
+    
+    static func minBPM(sampleAnalytics: [Exercise]) -> Double {
+        return sampleAnalytics.min(by: {$0.avarageHeartBeats! < $1.avarageHeartBeats!})!.avarageHeartBeats!
+    }
+    
+    static func maxBPM(sampleAnalytics: [Exercise]) -> Double {
+        return sampleAnalytics.max(by: {$0.avarageHeartBeats! < $1.avarageHeartBeats!})!.avarageHeartBeats!
+    }
 }
+
+

@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @Environment(Coordinator.self) var coordinator
+    @Environment(SwiftDataController.self) var controller
+    @Environment(\.modelContext) var context
     
     var body: some View {
         ZStack {
@@ -30,7 +32,8 @@ struct HomeView: View {
                     Image(systemName: "plus.message.fill")
                         .padding(.trailing, 10)
                         .onTapGesture {
-                            coordinator.navigate(to: .countdownView)
+//                            coordinator.navigate(to: .countdownView)
+                            controller.saveALotOfNewExercise(context: context)
                         }
                 }
                 Spacer()
@@ -42,4 +45,5 @@ struct HomeView: View {
 #Preview {
     HomeView()
         .environment(Coordinator())
+        .environment(SwiftDataController())
 }
