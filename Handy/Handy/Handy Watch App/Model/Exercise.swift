@@ -12,7 +12,7 @@ import SwiftData
 class Exercise {
     
     var exerciseFeedback: Int?
-    var time : DateComponents?
+//    var time : DateComponents?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?

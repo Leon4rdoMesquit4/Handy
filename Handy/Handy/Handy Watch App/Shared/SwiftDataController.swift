@@ -11,7 +11,7 @@ import SwiftData
 @Observable
 class SwiftDataController{
     
-    var time : DateComponents?
+//    var time : DateComponents?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
@@ -25,7 +25,7 @@ class SwiftDataController{
         let exercise = Exercise()
         exercise.startTrainning = startTrainning
         exercise.endTrainning = endTrainning
-        exercise.time = getDateComponents()
+//        exercise.time = getDateComponents()
         exercise.avarageHeartBeats = avarageHeartBeats
         exercise.minHeartBeats = minHeartBeats
         exercise.maxHeartBeats = maxHeartBeats
