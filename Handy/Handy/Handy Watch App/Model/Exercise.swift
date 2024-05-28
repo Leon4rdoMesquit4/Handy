@@ -12,7 +12,9 @@ import SwiftData
 class Exercise {
     
     var exerciseFeedback: Int?
-//    var time : DateComponents?
+    
+    /// Variável que indica a quantidade de segundos que o usuário passou fazendo o exercício
+    var secondsExercise : Int?
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
