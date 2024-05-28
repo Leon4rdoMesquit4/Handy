@@ -18,7 +18,7 @@ struct GraphsTabView: View {
         TabView{
             PracticeTimeGraphView()
             
-            BPMGraphView(sampleAnalytics: controller.fecthLastWeekExercises(context: context))
+            BPMGraphView(graphCase: graphCase)
             
             BorgScaleGraphView()
             

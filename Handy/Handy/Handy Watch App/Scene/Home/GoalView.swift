@@ -17,6 +17,7 @@ struct GoalView: View {
                         .padding(.horizontal, 10)
                         .padding(.vertical, 20)
                         .font(.title3)
+                    
                     Spacer()
                 }
                 GoalGraph
@@ -30,7 +31,6 @@ struct GoalView: View {
                         .font(.title2)
                         .padding()
                         .onTapGesture {
-                            print("hey")
                         }
                 }
             }.ignoresSafeArea()

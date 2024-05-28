@@ -30,7 +30,7 @@ struct BorgScaleGraphView: View {
     }
     
     func retrieveData () {
-        let lastWeekDays = getLastWeekDaysForPredicate()
+        let lastWeekDays = controller.getLastWeekDaysForPredicate()
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
         for exercise in exercises {
@@ -40,17 +40,9 @@ struct BorgScaleGraphView: View {
         }
     }
     
-    
-    func getLastWeekDaysForPredicate() -> (Date, Date) {
-           let calendar = Calendar.current
-           let today = calendar.startOfDay(for: Date.now)
-           let dayOfWeek = calendar.component(.weekday, from: today)
-           let dates = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
-              .compactMap { calendar.date(byAdding:.day, value: $0 - dayOfWeek, to: today) }
-           return (dates[0], dates[6])
-    }
 }
 
 #Preview {
     BorgScaleGraphView()
+        .environment(SwiftDataController())
 }

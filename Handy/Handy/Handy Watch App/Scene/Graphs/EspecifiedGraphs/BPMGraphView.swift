@@ -10,49 +10,68 @@ import Charts
 
 struct BPMGraphView: View {
     
-    @State var sampleAnalytics: [Exercise]
+    @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
-    @State var graphCase: 
-        
+    @State var graphCase: Coordinator.Destination.GraphCases
+    
     var body: some View {
         VStack{
-            Chart{
-                ForEach(sampleAnalytics) { item in
-                    LineMark(x: .value("day", item.startTrainning),
-                             y: .value("bpm", item.avarageHeartBeats!))
-                    .foregroundStyle(LinearGradient(colors: [.orange, .pink], startPoint: .bottomLeading, endPoint: .topTrailing))
-                }
-                .symbol(.circle)
-            }
-            
-            
-            .chartYScale(domain: Exercise.minBPM(sampleAnalytics: sampleAnalytics)...Exercise.maxBPM(sampleAnalytics: sampleAnalytics))
-            
-                .chartYAxis{
-                    AxisMarks(position: .leading)
-                }
-            //        .chartYAxis(.hidden)
-                .chartXAxis{
-                    AxisMarks {
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel("")
-                    }
-                }
+            LineChart()
                 .onAppear{
-                    sampleAnalytics = self.controller.fecthLastWeekExercises(context: self.context).sorted(by: {$0.startTrainning < $1.startTrainning})
+                    switch graphCase {
+                    case .month:
+                        exerciseAnalytics = []
+                    case .week:
+                        retrieveData()
+                    }
+                    
                 }
                 .padding(EdgeInsets(top: 15, leading: 15, bottom: 0, trailing: 15))
                 .navigationTitle("Batimentos")
-            
         }
+    }
+    
+    @ViewBuilder
+    func LineChart() -> some View {
+        Chart{
+            ForEach(exerciseAnalytics) { item in
+                LineMark(x: .value("day", item.date),
+                         y: .value("bpm", item.value))
+                .foregroundStyle(LinearGradient(colors: [.orange, .pink], startPoint: .bottomLeading, endPoint: .topTrailing))
+            }
+            .symbol(.circle)
+        }
+        
+        .chartYScale(domain: Exercise.minBPM(analytics: exerciseAnalytics)...Exercise.maxBPM(analytics: exerciseAnalytics))
+        
+        .chartYAxis{
+            AxisMarks(position: .leading)
+        }
+        //        .chartYAxis(.hidden)
+        .chartXAxis{
+            AxisMarks {
+                AxisGridLine()
+                AxisTick()
+                AxisValueLabel("")
+            }
+        }
+    }
+    
+    func retrieveData () {
+        let lastWeekDays = controller.getLastWeekDaysForPredicate()
+        let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
+        
+        exerciseAnalytics = Date.averageValuesByDay(exercises: exercises)
     }
     
 }
 
+
+
 #Preview {
-    BPMGraphView(sampleAnalytics: [])
+    
+    BPMGraphView(exerciseAnalytics: [], graphCase: .week)
         .environment(SwiftDataController())
 }
 

@@ -80,12 +80,21 @@ class Exercise {
         }
     }
     
-    static func minBPM(sampleAnalytics: [Exercise]) -> Double {
-        return sampleAnalytics.min(by: {$0.avarageHeartBeats! < $1.avarageHeartBeats!})!.avarageHeartBeats!
+    static func minBPM(analytics: [GraphData<Double>]) -> Double {
+        if let analytics = analytics.min(by: {$0.value < $1.value}){
+            return analytics.value
+        } else {
+            return 60
+        }
+        
     }
     
-    static func maxBPM(sampleAnalytics: [Exercise]) -> Double {
-        return sampleAnalytics.max(by: {$0.avarageHeartBeats! < $1.avarageHeartBeats!})!.avarageHeartBeats!
+    static func maxBPM(analytics: [GraphData<Double>]) -> Double {
+        if let analytics = analytics.max(by: {$0.value < $1.value}){
+            return analytics.value
+        } else {
+            return 90
+        }
     }
 }
 

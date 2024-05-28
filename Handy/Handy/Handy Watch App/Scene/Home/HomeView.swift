@@ -35,6 +35,12 @@ struct HomeView: View {
 //                            coordinator.navigate(to: .countdownView)
                             controller.saveALotOfNewExercise(context: context)
                         }
+                    Image(systemName: "minus")
+                        .padding(.trailing, 10)
+                        .onTapGesture {
+//                            coordinator.navigate(to: .countdownView)
+                            controller.removeAll(context: context)
+                        }
                 }
                 Spacer()
             }.ignoresSafeArea()

@@ -41,6 +41,7 @@ class SwiftDataController {
             let exercise = Exercise()
             exercise.startTrainning = .now + TimeInterval(89000 * n) - 300000
             exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
+            exercise.borgScale = Int.random(in: 0...3)
             exercises.append(exercise)
         }
         
@@ -48,6 +49,10 @@ class SwiftDataController {
             context.insert(n)
         }
         
+    }
+    
+    func removeAll(context: ModelContext){
+        try! context.delete(model: Exercise.self)
     }
     
     func resetElements() {
@@ -99,13 +104,11 @@ class SwiftDataController {
         let totalExercises = fetchExercises(context)
         var exercisesInWeek : [Exercise] = []
         
-        
         for exercise in totalExercises {
-            if let startTrainning = exercise.startTrainning {
-                if  week.contains(startTrainning) {
+            let startTrainning = exercise.startTrainning 
+                if week.contains(startTrainning) {
                     exercisesInWeek.append(exercise)
                 }
-            }
         }
         
         return exercisesInWeek
