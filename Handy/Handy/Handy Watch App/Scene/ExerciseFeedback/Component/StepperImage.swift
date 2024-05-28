@@ -20,7 +20,7 @@ struct StepperImage : View {
     
     var body: some View {
         Stepper(value: $value, in: interval, label: {
-            Image("\(prefixImage)\(value)")
+            Image("\(prefixImage)_\(value)")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 75, height: 75)
