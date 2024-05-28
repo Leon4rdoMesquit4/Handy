@@ -11,9 +11,15 @@ struct SelectGraphView: View {
     @Environment(Coordinator.self) var coordinator
     
     var body: some View {
-        Text("Go to graph View")
+        
+        Text("Week")
             .onTapGesture {
-                coordinator.navigate(to: .graphView)
+                coordinator.navigate(to: .graphView(.week))
+            }
+        
+        Text("Month")
+            .onTapGesture {
+                coordinator.navigate(to: .graphView(.month))
             }
     }
 }

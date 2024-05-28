@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Observable
-class SwiftDataController{
+class SwiftDataController {
     
     var time : DateComponents?
     var avarageHeartBeats : Double?
@@ -33,6 +33,18 @@ class SwiftDataController{
         exercise.painLevel = painLevel
         exercise.exerciseFeedback = exerciseFeedback
         context.insert(exercise)
+        resetElements()
+    }
+    
+    func resetElements(){
+        time = ""
+        avarageHeartBeats = 0.0
+        minHeartBeats = 0.0
+        maxHeartBeats = 0.0
+        startTrainning = .now
+        borgScale = 0
+        painLevel = 0.0
+        exerciseFeedback = 0
     }
     
     /// Função que retorna a quantidade de segundos que o usuário passou fazendo o exercício,

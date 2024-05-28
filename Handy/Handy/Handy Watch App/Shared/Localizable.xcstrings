@@ -31,9 +31,6 @@
     "Estabeleça a sua meta" : {
 
     },
-    "Go to graph View" : {
-
-    },
     "Hello, world!" : {
 
     },
@@ -53,6 +50,9 @@
         }
       }
     },
+    "Month" : {
+
+    },
     "Ops! Nenhum emoji selecionado" : {
 
     },
@@ -66,6 +66,9 @@
 
     },
     "Treino do dia: %@" : {
+
+    },
+    "Week" : {
 
     }
   },
