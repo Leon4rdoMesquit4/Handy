@@ -15,8 +15,9 @@ struct TreatmentTimeView_: View {
     
     // MARK: VARIÁVEIS RELACIONADAS AO QUE ESTÁ SENDO SALVO NO USERDEFAULTS
     // A data de início do tratamento e a data do fim do tratamento.
-    @AppStorage ("dateBeginningTreatment") var dateBeginningTreatment : String = Date().formatted()
-    @AppStorage ("dateEndTreatment") var dateEndTreatment : String = Date().formatted()
+    // a gente vai ter que salvar isso na App Storage como String, então vai seguir a seguinte formatação: dd_MM_YYYY
+    @AppStorage ("dateBeginningTreatment") var dateBeginningTreatment : String = ""
+    @AppStorage ("dateEndTreatment") var dateEndTreatment : String = ""
     
     var body: some View {
         VStack (alignment: .leading, spacing: 10){
@@ -40,9 +41,8 @@ struct TreatmentTimeView_: View {
                 Spacer()
                 ButtonNextPage{
                     // salvando as coisas no User Defaults
-                    // TODO: AINDA FAREI ALGUMAS VALIDAÇÕES
-                    self.dateBeginningTreatment = dataInicio.formatted()
-                    self.dateEndTreatment = dataFinal.formatted()
+                    self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
+                    self.dateEndTreatment = Date.convertDateToString(dataFinal)
                     isOnboardingComplete = true
                 }
                 Spacer()
@@ -67,6 +67,7 @@ struct TreatmentTimeView_: View {
             Text(date.formatted(date: .numeric, time: .omitted))
         }
     }
+    
 }
 
 #Preview {

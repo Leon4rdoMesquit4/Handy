@@ -62,6 +62,7 @@
 		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
 		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
 		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
+		FDE0DFE62C07A75500B3E280 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE52C07A75500B3E280 /* Date+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
 		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
 		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
+		FDE0DFE52C07A75500B3E280 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +366,11 @@
 				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
 				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
 				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
+<<<<<<< Developer
 				E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */,
+=======
+				FDE0DFE52C07A75500B3E280 /* Date+Format.swift */,
+>>>>>>> fix/my-goal
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
 				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
 				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				FDE0DFE62C07A75500B3E280 /* Date+Format.swift in Sources */,
 				E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */,
 				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
 				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
