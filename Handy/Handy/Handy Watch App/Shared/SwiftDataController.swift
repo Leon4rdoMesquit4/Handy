@@ -16,13 +16,19 @@ class SwiftDataController {
     var minHeartBeats: Double?
     var maxHeartBeats: Double?
     var startTrainning: Date?
+    var endTrainning: Date?
     var borgScale: Double?
     var painLevel: Double?
     var exerciseFeedback: Double?
     
     func saveNewExercise(context: ModelContext){
         let exercise = Exercise()
-        exercise.startTrainning = startTrainning!
+        if let startTrainning = startTrainning {
+            exercise.startTrainning = startTrainning
+        }
+        if let endTrainning = endTrainning {
+            exercise.endTrainning = endTrainning
+        }
         exercise.time = time
         exercise.avarageHeartBeats = avarageHeartBeats
         exercise.minHeartBeats = minHeartBeats
@@ -40,6 +46,7 @@ class SwiftDataController {
         for n in 0...17 {
             let exercise = Exercise()
             exercise.startTrainning = .now + TimeInterval(89000 * n) - 300000
+            exercise.startTrainning = .now + TimeInterval(89000 * n) - 280000
             exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
             exercise.borgScale = Double(Int.random(in: 1...5))
             exercise.exerciseFeedback = Double(Int.random(in: 0...3))

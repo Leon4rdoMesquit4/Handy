@@ -41,8 +41,10 @@ struct BPMGraphView: View {
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.avarageHeartBeats)
         print(exerciseAnalytics)
         
-        minValue = Exercise.minBPM(analytics: exerciseAnalytics) - 2
-        maxValue = Exercise.maxBPM(analytics: exerciseAnalytics) + 2
+        if !exerciseAnalytics.isEmpty {
+            minValue = Exercise.minBPM(analytics: exerciseAnalytics) - 2
+            maxValue = Exercise.maxBPM(analytics: exerciseAnalytics) + 2
+        }
     }
     
 }
