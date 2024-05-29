@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TimeView: View {
     var timePassed: TimeInterval = 0
+    var formatter = TimeFormatter()
     var body: some View {
-            Text("00:00.01")
-                .fontWeight(.semibold)
+        Text(NSNumber(value: timePassed), formatter: formatter)
+            .fontWeight(.semibold)
     }
 }
 
