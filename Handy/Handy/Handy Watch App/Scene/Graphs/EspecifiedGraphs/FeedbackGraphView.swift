@@ -37,7 +37,10 @@ struct FeedbackGraphView: View {
         
         for exercise in exercises {
             if let feedback = exercise.exerciseFeedback {
-                elements[Int(feedback)] += 1
+                if Int(feedback) < elements.count {
+                    elements[Int(feedback)] += 1
+                }
+                
             }
         }
     }

@@ -25,7 +25,7 @@ struct LineChart: View {
             .symbol(.circle)
         }
         
-        .chartYScale(domain: ((Exercise.minBPM(analytics: exerciseAnalytics) ?? minValue) - 1)...((Exercise.maxBPM(analytics: exerciseAnalytics) ?? maxValue)) + 1)
+        .chartYScale(domain: minValue...maxValue)
         
         .chartYAxis{
             AxisMarks(position: .leading)
