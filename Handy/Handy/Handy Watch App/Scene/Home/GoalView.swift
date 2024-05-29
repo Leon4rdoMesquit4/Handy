@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct GoalView: View {
+    @AppStorage("emoji") var emoji : String = "🍴"
+    @AppStorage("dateBeginningTreatment") var beginningTreatmentAppStorage : String = "25_05_2024"
+    @AppStorage("dateEndTreatment") var endTreatmentAppStorage : String = "31_05_2024"
+    
+    @State var initialTreatmentDate : Date?
+    @State var endingTreatmentDate : Date?
+    
     var goal: Goal
     var body: some View {
         ZStack {
@@ -20,59 +27,111 @@ struct GoalView: View {
                     
                     Spacer()
                 }
-                GoalGraph
+                goalGraph
+                    .padding(.bottom, 30)
                 Spacer()
-            }.ignoresSafeArea()
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Image(systemName: "pencil.circle.fill")
-                        .font(.title2)
-                        .padding()
-                        .onTapGesture {
-                        }
-                }
             }.ignoresSafeArea()
         }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Spacer()
+                    pencilButton
+                }
+            }
+        }
+        .onAppear(perform: {
+            configTreatmentDate()
+        })
+    }
+    
+    
+    func getWatchWidth () -> Double {
+        let s = WKInterfaceDevice.current().screenBounds
+        return s.width
+    }
+    
+    private func configTreatmentDate () {
+        initialTreatmentDate = Date.convertStringToDate(beginningTreatmentAppStorage)
+        endingTreatmentDate = Date.convertStringToDate(endTreatmentAppStorage)
+    }
+    
+    private func calculateProgressTreatment () -> Double {
+        if let initialTreatmentDate, let endingTreatmentDate {
+            //primeiramente eu preciso saber a subtração entre a data final pela inicial
+            let totalTime = endingTreatmentDate.timeIntervalSinceReferenceDate - initialTreatmentDate.timeIntervalSinceReferenceDate
+            let alreadyProgressed = Date().timeIntervalSinceReferenceDate - initialTreatmentDate.timeIntervalSinceReferenceDate
+            print(totalTime)
+            print(alreadyProgressed)
+            return (alreadyProgressed / totalTime) * 100
+        }
+        
+        
+        return 0
     }
 }
 
+
+
+// MARK: GoalProgress
+// mostra a progresso do tratamento da pessoa em percentual e emoji
 extension GoalView {
-    var GoalProgress: some View {
+    var goalProgress: some View {
         VStack {
-            Text(goal.emoji)
+            Text(self.emoji)
                 .font(.largeTitle)
                 .frame(width: 40, height: 60)
             HStack {
                 Image(systemName: "face.smiling.inverse")
-                Text("\(Int(goal.progress))%")
+                Text("\(Int(calculateProgressTreatment()))%")
             }
         }
     }
 }
 
+
+// MARK: GoalGraph
+// mostra o gráfico do progresso
 extension GoalView {
-    var GoalGraph: some View {
+    var goalGraph: some View {
         ZStack {
             Circle()
                 .stroke(
                     Color.white.opacity(0.2),
-                    lineWidth: 20
+                    lineWidth: 10
                 )
-                .frame(width: 145)
+                .frame(width: self.getWatchWidth() / 1.4)
             Circle()
-                .trim(from: 0, to: goal.progress/100)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round)
+                .trim(from: 0, to: calculateProgressTreatment()/100)
+                .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round)
                         
                 )
                 .rotationEffect(.degrees(-90))
-                .frame(width: 145)
-            GoalProgress
+                .frame(width: self.getWatchWidth() / 1.4)
+        }
+        .overlay(alignment: .center) {
+            goalProgress
+        }
+    }
+}
+
+// MARK: PENCIL BUTTON
+extension GoalView {
+    var pencilButton : some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Image(systemName: "pencil.circle.fill")
+                    .font(.title2)
+                    .onTapGesture {}
+            }
         }
     }
 }
 
 #Preview {
-    GoalView(goal: Goal(name: "", emoji: "🍴", progress: 50))
+    NavigationStack {
+        GoalView(goal: Goal(name: "", emoji: "🍴", progress: 50))
+    }
 }
