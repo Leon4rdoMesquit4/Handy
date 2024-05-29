@@ -11,7 +11,6 @@ import SwiftUI
 struct EmojiSelectionView: View {
     @Environment(OnboardingCoordinator.self) var coordinator
     @StateObject var vm = EmojiSelectionViewModel()
-    @AppStorage("emoji") var emojiSalvo = ""
     
     var body: some View {
         VStack (alignment: .leading, spacing: 30){
@@ -55,7 +54,6 @@ struct EmojiSelectionView: View {
             
             ButtonNextPage(callback: {
                 if vm.validateEmoji() {
-                    self.emojiSalvo = vm.emoji
                     coordinator.navigate(to: .treatmentTimeView)
                 } else {
                     vm.showAlertInvalidEmoji()
