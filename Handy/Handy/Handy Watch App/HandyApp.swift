@@ -86,9 +86,9 @@ struct Handy_Watch_AppApp: App {
                         }
                 }
                 .onAppear(perform: {
-                    controller.requestAuthorization()
-                    controller.startWorkout()
+                    controller.requestAuthorization()               
                 })
+                .environment(controller)
                 .environment(mainCoordinator)
                 .environment(swiftDataController)
                 

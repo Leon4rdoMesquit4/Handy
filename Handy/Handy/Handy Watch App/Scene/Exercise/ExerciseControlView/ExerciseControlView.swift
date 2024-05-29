@@ -12,16 +12,26 @@ struct ExerciseControlView: View {
     @State var contador : Int = 3
     @Environment(Coordinator.self) var coordinator
     @Environment(SwiftDataController.self) var controller
+    @Environment(WorkoutController.self) var wcontroller
     
     var body: some View {
-          HStack{
-              ControlButton(color: .gray, action: {
-                  controller.startTrainning = .now
-                  coordinator.navigate(to: .exerciseUserFeedbackView)
-              }, name: "end", image: Image(systemName: "xmark"))
-              ControlButton(color: .gray, action: {print("pausou")}, name: "Pausar", image: Image(systemName: "pause.fill"))
-          }
-      }
+        HStack{
+            ControlButton(color: .gray, action: {
+                
+                wcontroller.endWorkout()
+                controller.startTrainning = .now
+                coordinator.navigate(to: .exerciseUserFeedbackView)
+                
+            }, name: "end", image: Image(systemName: "xmark"))
+            
+            
+            ControlButton(color: .gray, action: {
+                
+                wcontroller.togglePause()
+                
+            }, name: "Pausar", image: Image(systemName: "pause.fill"))
+        }
+    }
 }
 
 #Preview {

@@ -12,7 +12,7 @@ struct ExerciseStatsView: View {
     var body: some View {
         VStack(alignment: .leading){
             
-            Text("Tempo de PrÃ¡tica")
+            Text("Tempo de Pratica")
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
             
