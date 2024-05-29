@@ -22,12 +22,6 @@
     "bpm" : {
 
     },
-    "cai" : {
-
-    },
-    "Como se sentiu" : {
-
-    },
     "Data de início" : {
 
     },
@@ -61,6 +55,9 @@
     "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo." : {
 
     },
+    "image" : {
+
+    },
     "Minha meta" : {
       "localizations" : {
         "en" : {
@@ -87,6 +84,9 @@
 
     },
     "Treino do dia: %@" : {
+
+    },
+    "value" : {
 
     },
     "Week" : {
