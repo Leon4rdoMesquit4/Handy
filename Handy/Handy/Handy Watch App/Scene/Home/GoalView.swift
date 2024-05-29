@@ -108,7 +108,7 @@ extension GoalView {
 
     var goalGraph: some View {
         ZStack {
-            let lineWidth : CGFloat = 20
+            let lineWidth : CGFloat = getWatchWidth() / 12
             
             Circle()
                 .stroke(
