@@ -14,7 +14,6 @@ struct DifficultGraphView: View {
     @Environment(\.modelContext) var context
     @State var graphCase: Coordinator.Destination.GraphCases
     
-    
     var body: some View {
         VStack{
             LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: .constant(1), maxValue: .constant(5))
@@ -38,6 +37,7 @@ struct DifficultGraphView: View {
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.borgScale)
         print(exerciseAnalytics)
     }
+    
 }
 
 #Preview {

@@ -18,8 +18,7 @@ struct FeedbackGraphView: View {
     
     var body: some View {
         VStack {
-            //BarChart(elements: $elements, symbols: ["😡", "😠", "😐", "🙂"])
-            //.navigationTitle("Como se sentiu")
+            BarChart<Int>(plottedElements: $plottedElements)
         }
         .onAppear{
             switch graphCase {
@@ -47,6 +46,12 @@ struct FeedbackGraphView: View {
                 }
                 
             }
+        }
+        
+        var contador : Int = 0
+        for element in elements {
+            plottedElements.append(PlottedElement(image: "intensity\(contador)", value: element))
+            contador += 1
         }
     }
     
