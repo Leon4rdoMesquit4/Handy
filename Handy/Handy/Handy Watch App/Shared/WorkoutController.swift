@@ -136,10 +136,12 @@ class WorkoutController: NSObject  {
     
     func pause(){
         session?.pause()
+        working.toggle()
     }
     
     func resume(){
         session?.resume()
+        working.toggle()
     }
     
     func endWorkout(){
