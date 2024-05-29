@@ -15,24 +15,23 @@ struct ExerciseControlView: View {
     @Environment(SwiftDataController.self) var controller
     
     var body: some View {
-          HStack{
-              ControlButton(color: .gray, action: {
-                  
-                  wcontroller.endWorkout()
-                  
-              }, name: "end", image: Image(systemName: "xmark"))
-              
-              ControlButton(color: .gray, action: {
-                  
-                  wcontroller.togglePause()
-                  
-              }, name: "Pausar", image: Image(systemName: "pause.fill"))
-                  controller.startTrainning = .now
-                  coordinator.navigate(to: .exerciseUserFeedbackView)
-              }, name: "end", image: Image(systemName: "xmark"))
-              ControlButton(color: .gray, action: {print("pausou")}, name: "Pausar", image: Image(systemName: "pause.fill"))
-          }
-      }
+        HStack{
+            ControlButton(color: .gray, action: {
+                
+                wcontroller.endWorkout()
+                controller.startTrainning = .now
+                coordinator.navigate(to: .exerciseUserFeedbackView)
+                
+            }, name: "end", image: Image(systemName: "xmark"))
+            
+            
+            ControlButton(color: .gray, action: {
+                
+                wcontroller.togglePause()
+                
+            }, name: "Pausar", image: Image(systemName: "pause.fill"))
+        }
+    }
 }
 
 #Preview {

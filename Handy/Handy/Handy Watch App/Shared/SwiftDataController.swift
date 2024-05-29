@@ -37,7 +37,7 @@ class SwiftDataController {
     }
     
     func resetElements(){
-        time = ""
+//        time = ""
         avarageHeartBeats = 0.0
         minHeartBeats = 0.0
         maxHeartBeats = 0.0

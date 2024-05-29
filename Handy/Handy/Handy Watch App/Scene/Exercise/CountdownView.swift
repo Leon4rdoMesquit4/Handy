@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CountdownView: View {
     @Environment(Coordinator.self) var coordinator
+    @Environment(WorkoutController.self) var workoutController
     @State var counter : Double = 3
     
     var body: some View {
@@ -26,6 +27,7 @@ struct CountdownView: View {
                 if self.counter <= 0 {
                     timer.invalidate()
                     coordinator.navigate(to: .exerciseTabView)
+                    workoutController.startWorkout()
                 } else {
                     self.counter -= 1
                 }
