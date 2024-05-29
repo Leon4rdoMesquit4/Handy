@@ -41,8 +41,9 @@ struct TreatmentTimeView_: View {
                 ButtonNextPage{
                     // salvando as coisas no User Defaults
                     // TODO: AINDA FAREI ALGUMAS VALIDAÇÕES
-                    self.dateBeginningTreatment = Data.convertDateToString(dataInicio)
-                    self.dateEndTreatment = Data.convertDateToString(dataFinal)
+                    self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
+                    self.dateEndTreatment = Date.convertDateToString(dataFinal)
+                    
                     isOnboardingComplete = true
                 }
                 Spacer()

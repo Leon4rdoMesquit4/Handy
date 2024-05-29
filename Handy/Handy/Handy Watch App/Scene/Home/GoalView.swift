@@ -19,16 +19,11 @@ struct GoalView: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack {
-                    Text("Minha meta")
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 20)
-                        .font(.title3)
-                    
-                    Spacer()
-                }
+                title
+                    .padding(5)
+                
                 goalGraph
-                    .padding(.bottom, 30)
+
                 Spacer()
             }.ignoresSafeArea()
         }
@@ -36,7 +31,12 @@ struct GoalView: View {
             ToolbarItem(placement: .bottomBar) {
                 HStack {
                     Spacer()
-                    pencilButton
+                    VStack {
+                        Spacer()
+                        pencilButton
+                        
+                    }
+                    
                 }
             }
         }
@@ -45,6 +45,16 @@ struct GoalView: View {
         })
     }
     
+    var title : some View {
+        HStack {
+            Text("Minha meta")
+                .padding()
+                .font(.title3)
+                .bold()
+            
+            Spacer()
+        }
+    }
     
     func getWatchWidth () -> Double {
         let s = WKInterfaceDevice.current().screenBounds
@@ -80,9 +90,10 @@ extension GoalView {
         VStack {
             Text(self.emoji)
                 .font(.largeTitle)
-                .frame(width: 40, height: 60)
+                .padding()
             HStack {
                 Image(systemName: "face.smiling.inverse")
+                    .foregroundStyle(.borgScale0)
                 Text("\(Int(calculateProgressTreatment()))%")
             }
         }
@@ -93,21 +104,26 @@ extension GoalView {
 // MARK: GoalGraph
 // mostra o gráfico do progresso
 extension GoalView {
+    
+
     var goalGraph: some View {
         ZStack {
+            let lineWidth : CGFloat = 20
+            
             Circle()
                 .stroke(
-                    Color.white.opacity(0.2),
-                    lineWidth: 10
+                    Color.brand.opacity(0.2),
+                    lineWidth: lineWidth
                 )
                 .frame(width: self.getWatchWidth() / 1.4)
             Circle()
                 .trim(from: 0, to: calculateProgressTreatment()/100)
-                .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round)
+                .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round)
                         
                 )
                 .rotationEffect(.degrees(-90))
                 .frame(width: self.getWatchWidth() / 1.4)
+                .foregroundStyle(Color.brand)
         }
         .overlay(alignment: .center) {
             goalProgress
@@ -122,9 +138,19 @@ extension GoalView {
             Spacer()
             HStack {
                 Spacer()
-                Image(systemName: "pencil.circle.fill")
+                Image(systemName: "pencil")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20)
                     .font(.title2)
                     .onTapGesture {}
+                    .foregroundStyle(Color.base)
+                    .padding()
+                    .background(
+                        Color.brand
+                            .clipShape(Circle())
+                    )
+                    
             }
         }
     }
@@ -135,3 +161,4 @@ extension GoalView {
         GoalView(goal: Goal(name: "", emoji: "🍴", progress: 50))
     }
 }
+

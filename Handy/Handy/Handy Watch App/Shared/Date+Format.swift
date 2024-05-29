@@ -16,7 +16,7 @@ extension Date {
         return stringFormatted
     }
     
-    /// A funçào que transforma uma String do UserDefaults que a gente vai usar dentro do nosso projeto.
+    /// A função que transforma uma String do UserDefaults que a gente vai usar dentro do nosso projeto.
     static func convertStringToDate (_ string : String) -> Date? {
         let components = string.split(separator: "_")
         let day = Int(components[0])
