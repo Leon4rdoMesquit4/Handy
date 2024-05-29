@@ -17,8 +17,8 @@ struct FeedbackGraphView: View {
     
     var body: some View {
         VStack {
-            BarChart(elements: $elements, emojis: ["😡", "😠", "😐", "🙂"])
-            .navigationTitle("Como se sentiu")
+            //BarChart(elements: $elements, symbols: ["😡", "😠", "😐", "🙂"])
+            //.navigationTitle("Como se sentiu")
         }
         .onAppear{
             switch graphCase {

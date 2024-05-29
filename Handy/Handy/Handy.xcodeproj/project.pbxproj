@@ -60,6 +60,7 @@
 		E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */; };
 		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
 		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
+		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultGraphView.swift; sourceTree = "<group>"; };
 		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
 		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
+		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 				E0711D452BFFE1D000084CAF /* Exercise.swift */,
 				E0711D462BFFE1D000084CAF /* Meta.swift */,
 				E0711D472BFFE1D000084CAF /* User.swift */,
+				FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */,
 				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
 				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
+				FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */,
 				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
 				E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */,
 				E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */,

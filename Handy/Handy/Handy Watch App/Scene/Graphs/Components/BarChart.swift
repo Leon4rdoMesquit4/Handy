@@ -8,23 +8,48 @@
 import SwiftUI
 import Charts
 
+
+
 struct BarChart<T: Plottable & Hashable>: View {
-    
-    @Binding var elements : [T]
-    @State var emojis: [String]?
+    /// lista de elementos plotados na tela
+    @Binding var plottedElements : [PlottedElement]
     
     var body: some View {
-        Chart {
-            ForEach(Array(elements.enumerated()), id: \.offset) { index, value in
-                BarMark(x: .value("emoji", "\(emojis?[index] ?? "")"), y: .value("value", value))
+        Chart (plottedElements, id: \.image){p in
+            BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
+                .clipShape(Capsule())
+                .foregroundStyle(by: .value("value", p.image))
+        }
+        .chartLegend(.hidden)
+        
+        .chartXAxis {
+            AxisMarks { val in
+                AxisValueLabel {
+                    axisImage(val: val.index)
+                }
             }
         }
-        .chartYAxis{
-            AxisMarks(position: .leading)
-        }
+    }
+    
+    @ViewBuilder
+    private func axisImage (val : Int) -> some View {
+        Image(plottedElements[val].image)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 15)
+            .padding(.vertical)
     }
 }
 
 #Preview {
-    BarChart<Int>(elements: .constant([Int]()) )
+    @State var elementsList = [
+        PlottedElement(image: "intensity0", value: 15),
+        PlottedElement(image: "intensity1", value: 5),
+        PlottedElement(image: "intensity2", value: 5),
+        PlottedElement(image: "intensity3", value: 8),
+        PlottedElement(image: "intensity4", value: 18),
+        PlottedElement(image: "intensity5", value: 5),
+
+    ]
+    return BarChart<Int>(plottedElements: $elementsList)
 }
