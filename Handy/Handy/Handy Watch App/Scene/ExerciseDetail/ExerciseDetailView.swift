@@ -20,7 +20,7 @@ struct ExerciseDetailView: View {
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
-                    sectionBuilder(title: "Batimentos", subtitle: "\(avarageHeartBeats) bpm")
+                    sectionBuilder(title: "Média de batimentos", subtitle: "\(avarageHeartBeats) bpm")
                 }
                 
                 // mostrando a intensidade do exercício com base na escala de Borg

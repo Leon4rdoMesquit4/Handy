@@ -10,6 +10,7 @@ import SwiftUI
 struct ExerciseStatsView: View {
     
     @Environment(WorkoutController.self) var wcontroller
+    @Environment(SwiftDataController.self) var controller
     
     var body: some View {
         TimelineView(MetricsTimelineSchedule(from: wcontroller.builder?.startDate ?? Date(),

@@ -26,6 +26,7 @@ struct PainScaleView: View {
                 controller.maxHeartBeats = wcontroller.maxHeartRate
                 controller.minHeartBeats = wcontroller.minHeartRate
                 controller.startTrainning = wcontroller.startTrainning
+                controller.time = wcontroller.time
                 controller.saveNewExercise(context: context)
                 wcontroller.reset()
                 coordinator.navigateToRoot()

@@ -21,6 +21,7 @@ class WorkoutController: NSObject  {
     var startTrainning: Date = Date()
     var endTrainning: Date = Date()
     var workout: HKWorkout?
+    var time: String = ""
     
     
     var working:Bool = false
@@ -119,6 +120,7 @@ class WorkoutController: NSObject  {
         maxHeartRate = 0
         startTrainning = Date()
         endTrainning = Date()
+        time = ""
     }
     
     //MARK: - Session state control
@@ -142,6 +144,7 @@ class WorkoutController: NSObject  {
     
     func endWorkout(){
         session?.end()
+        self.time = self.builder?.elapsedTime(at: Date()).description ?? ""
         endTrainning = session?.endDate ?? Date()
     }
 }
