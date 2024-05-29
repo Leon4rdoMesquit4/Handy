@@ -22,6 +22,7 @@ class Exercise {
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
     var startTrainning : Date
+    var endTrainning : Date
     
     //Dificuldade do exercício (ESCALA DE BORG)
     /// Um atributo que indica a escala de Borg do usuário, eu fiz uma pequena validação para saber se o novo valor que ele passou está válido
@@ -45,6 +46,7 @@ class Exercise {
     
     init() {
         startTrainning = .now
+        endTrainning = .now
     }
     
     /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
