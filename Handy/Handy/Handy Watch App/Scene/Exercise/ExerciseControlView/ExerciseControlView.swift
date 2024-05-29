@@ -29,7 +29,7 @@ struct ExerciseControlView: View {
                 
                 wcontroller.togglePause()
                 
-            }, name: "Pausar", image: Image(systemName: "pause.fill"))
+            }, name: "Pausar", image: Image(systemName: wcontroller.working ? "pause.fill" : "play.fill"))
         }
     }
 }
