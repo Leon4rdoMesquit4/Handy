@@ -14,9 +14,10 @@ struct DifficultGraphView: View {
     @Environment(\.modelContext) var context
     @State var graphCase: Coordinator.Destination.GraphCases
     
+    
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: 1, maxValue: 5)
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: .constant(1), maxValue: .constant(5))
                 .onAppear{
                     switch graphCase {
                     case .month:

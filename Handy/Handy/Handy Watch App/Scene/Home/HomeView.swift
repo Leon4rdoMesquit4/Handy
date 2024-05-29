@@ -16,14 +16,21 @@ enum RandomHomeView {
 struct HomeView: View {
     
     @Environment(Coordinator.self) var coordinator
+    @Environment(SwiftDataController.self) var controller
+    @Environment(\.modelContext) var context
     let randomView: [RandomHomeView] = []
     
     var body: some View {
-        ZStack {
+        VStack {
             selectRandomHomeView(randomView.randomElement() ?? .view1)
                 .onTapGesture {
-                    coordinator.navigate(to: .countdownView)
+//                    coordinator.navigate(to: .countdownView)
+//                    controller.saveALotOfNewExercise(context: context)
+                    controller.saveOneExercise(context: context)
                 }
+            Button("CLIQUE AQUI") {
+                controller.removeAll(context: context)
+            }
             navigateToGraphButton
         }.ignoresSafeArea()
     }
