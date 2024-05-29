@@ -54,8 +54,8 @@
 		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
 		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
 		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
-		E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */; };
-		E888FB8C2C02BD1E000B048F /* BorgScaleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */; };
+		E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */; };
+		E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */; };
 		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
 		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
 /* End PBXBuildFile section */
@@ -134,8 +134,8 @@
 		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
 		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
 		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
-		E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyGraphView.swift; sourceTree = "<group>"; };
-		E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorgScaleGraphView.swift; sourceTree = "<group>"; };
+		E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGraphView.swift; sourceTree = "<group>"; };
+		E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultGraphView.swift; sourceTree = "<group>"; };
 		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
 		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -370,8 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */,
-				E888FB892C02BD0B000B048F /* DifficultyGraphView.swift */,
-				E888FB8B2C02BD1E000B048F /* BorgScaleGraphView.swift */,
+				E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */,
+				E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */,
 				E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */,
 				E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */,
 			);
@@ -488,7 +488,7 @@
 				E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */,
 				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
 				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
-				E888FB8C2C02BD1E000B048F /* BorgScaleGraphView.swift in Sources */,
+				E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */,
 				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
 				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
 				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
@@ -511,7 +511,7 @@
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
-				E888FB8A2C02BD0B000B048F /* DifficultyGraphView.swift in Sources */,
+				E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */,
 				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
 				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
 				E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */,

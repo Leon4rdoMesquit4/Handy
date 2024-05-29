@@ -16,15 +16,15 @@ struct GraphsTabView: View {
     
     var body: some View {
         TabView{
-            PracticeTimeGraphView()
+            PracticeTimeGraphView(graphCase: graphCase)
             
             BPMGraphView(graphCase: graphCase)
             
-            BorgScaleGraphView()
+            FeedbackGraphView(graphCase: graphCase)
             
-            DifficultyGraphView()
+            DifficultGraphView(graphCase: graphCase)
             
-            PainIntensityGraphView()
+            PainIntensityGraphView(graphCase: graphCase)
         }
         .tabViewStyle(.carousel)
     }

@@ -9,23 +9,25 @@ import SwiftUI
 import SwiftData
 import Charts
 
-struct BorgScaleGraphView: View {
-    @State var elements : [Int] = [0, 0, 0, 0, 0, 0]
+struct FeedbackGraphView: View {
+    @State var elements : [Int] = [0, 0, 0, 0]
     @Environment (\.modelContext) var context
     @Environment (SwiftDataController.self) var controller
+    @State var graphCase: Coordinator.Destination.GraphCases
     
     var body: some View {
         VStack {
-            Chart {
-                BarMark(x: .value("cai", "😡"), y: .value("bruno", elements[0]))
-                BarMark(x: .value("cai", "😠"), y: .value("bruno", elements[1]))
-                BarMark(x: .value("cai", "😐"), y: .value("bruno", elements[2]))
-                BarMark(x: .value("cai", "🙂"), y: .value("bruno", elements[3]))
+            BarChart(elements: $elements, emojis: ["😡", "😠", "😐", "🙂"])
+            .navigationTitle("Como se sentiu")
+        }
+        .onAppear{
+            switch graphCase {
+            case .month:
+                elements = [0, 0, 0, 0]
+            case .week:
+                retrieveData()
             }
         }
-        .onAppear(perform: {
-            retrieveData()
-        })
         
     }
     
@@ -34,8 +36,8 @@ struct BorgScaleGraphView: View {
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
         for exercise in exercises {
-            if let borgScale = exercise.borgScale {
-                elements[borgScale] += 1
+            if let feedback = exercise.exerciseFeedback {
+                elements[Int(feedback)] += 1
             }
         }
     }
@@ -43,6 +45,6 @@ struct BorgScaleGraphView: View {
 }
 
 #Preview {
-    BorgScaleGraphView()
+    FeedbackGraphView(graphCase: .week)
         .environment(SwiftDataController())
 }

@@ -20,7 +20,7 @@ struct ExerciseUserFeedbackView: View {
             StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
             Spacer()
             ButtonNextPage{
-                controller.exerciseFeedback = feedback
+                controller.exerciseFeedback = Double(feedback)
                 coordinator.navigate(to: .borgScaleView)
             }
         }

@@ -16,9 +16,9 @@ class SwiftDataController {
     var minHeartBeats: Double?
     var maxHeartBeats: Double?
     var startTrainning: Date?
-    var borgScale: Int?
+    var borgScale: Double?
     var painLevel: Double?
-    var exerciseFeedback: Int?
+    var exerciseFeedback: Double?
     
     func saveNewExercise(context: ModelContext){
         let exercise = Exercise()
@@ -37,11 +37,13 @@ class SwiftDataController {
     func saveALotOfNewExercise(context: ModelContext){
         var exercises: [Exercise] = []
         
-        for n in 0...30 {
+        for n in 0...17 {
             let exercise = Exercise()
             exercise.startTrainning = .now + TimeInterval(89000 * n) - 300000
             exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
-            exercise.borgScale = Int.random(in: 0...3)
+            exercise.borgScale = Double(Int.random(in: 1...5))
+            exercise.exerciseFeedback = Double(Int.random(in: 0...3))
+            exercise.painLevel = Double(Int.random(in: 1...5))
             exercises.append(exercise)
         }
         
@@ -74,20 +76,6 @@ class SwiftDataController {
         let dates = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
            .compactMap { calendar.date(byAdding:.day, value: $0 - dayOfWeek, to: today) }
         return (dates[0], dates[6])
-    }
-    
-    func fecthLastWeekExercises(context: ModelContext) -> [Exercise] {
-        let (minDay, maxDay) = getLastWeekDaysForPredicate()
-        
-        let tripPredicate = #Predicate<Exercise> {
-            $0.startTrainning >= minDay &&
-            $0.startTrainning <= maxDay
-        }
-        
-        let descriptor = FetchDescriptor<Exercise>(predicate: tripPredicate)
-        print(descriptor)
-        
-        return try! context.fetch(descriptor)
     }
     
     func fetchExercises (_ context : ModelContext) -> [Exercise] {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct GraphData<T>: Identifiable{
     var id: UUID = UUID()
@@ -14,7 +15,7 @@ struct GraphData<T>: Identifiable{
 }
 
 extension Date {
-    static func averageValuesByDay(exercises: [Exercise]) -> [GraphData<Double>] {
+    static func averageValuesByDay(exercises: [Exercise], keypath: KeyPath<Exercise, Double?>) -> [GraphData<Double>] {
         var groupedItems: [String: (sum: Double, count: Int)] = [:]
         
         let dateFormatter = DateFormatter()
@@ -28,7 +29,7 @@ extension Date {
                 groupedItems[dateKey] = (sum: 0, count: 0)
             }
             
-            if let bpm = exercise.avarageHeartBeats {
+            if let bpm = exercise[keyPath: keypath] {
                 groupedItems[dateKey]?.sum += bpm
                 groupedItems[dateKey]?.count += 1
             }

@@ -1,14 +1,13 @@
 //
-//  BPMGraphView.swift
+//  DifficultyGraphView.swift
 //  Handy Watch App
 //
 //  Created by Leonardo Mesquita Alves on 25/05/24.
 //
 
 import SwiftUI
-import Charts
 
-struct BPMGraphView: View {
+struct DifficultGraphView: View {
     
     @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
@@ -17,7 +16,7 @@ struct BPMGraphView: View {
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: 70, maxValue: 90)
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: 1, maxValue: 5)
                 .onAppear{
                     switch graphCase {
                     case .month:
@@ -25,10 +24,9 @@ struct BPMGraphView: View {
                     case .week:
                         retrieveData()
                     }
-                    
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
-                .navigationTitle("Batimentos")
+                .navigationTitle("Dificuldade")
         }
     }
     
@@ -36,18 +34,12 @@ struct BPMGraphView: View {
         let lastWeekDays = controller.getLastWeekDaysForPredicate()
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
-        exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.avarageHeartBeats)
+        exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.borgScale)
         print(exerciseAnalytics)
     }
-    
 }
-
 
 #Preview {
-    BPMGraphView(exerciseAnalytics: [], graphCase: .week)
+    DifficultGraphView(graphCase: .week)
         .environment(SwiftDataController())
 }
-
-
-    
-
