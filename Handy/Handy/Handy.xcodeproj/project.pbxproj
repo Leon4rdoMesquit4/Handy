@@ -51,7 +51,6 @@
 		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
 		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
 		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
-		E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */; };
 		E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A322C06D9AA00AFB0AA /* BarChart.swift */; };
 		E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A332C06D9AA00AFB0AA /* LineChart.swift */; };
 		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
@@ -136,7 +135,6 @@
 		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		E8267A322C06D9AA00AFB0AA /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		E8267A332C06D9AA00AFB0AA /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
@@ -366,11 +364,7 @@
 				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
 				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
 				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
-<<<<<<< Developer
-				E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */,
-=======
 				FDE0DFE52C07A75500B3E280 /* Date+Format.swift */,
->>>>>>> fix/my-goal
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -534,7 +528,6 @@
 				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
 				E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */,
 				E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */,
-				E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */,
 				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
 				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,

@@ -11,7 +11,6 @@ struct PainScaleView: View {
     @State var painIntensity : Int = 0
     @Environment(Coordinator.self) var coordinator
     @Environment(SwiftDataController.self) var controller
-    @Environment(WorkoutController.self) var wcontroller
     @Environment(\.modelContext) var context
     
     var body: some View {
@@ -22,13 +21,7 @@ struct PainScaleView: View {
             Spacer()
             ButtonNextPage{
                 controller.painLevel = Double(painIntensity)
-                controller.avarageHeartBeats = wcontroller.averageHeartRate
-                controller.maxHeartBeats = wcontroller.maxHeartRate
-                controller.minHeartBeats = wcontroller.minHeartRate
-                controller.startTrainning = wcontroller.startTrainning
-                controller.time = wcontroller.time
                 controller.saveNewExercise(context: context)
-                wcontroller.reset()
                 coordinator.navigateToRoot()
             }
         }

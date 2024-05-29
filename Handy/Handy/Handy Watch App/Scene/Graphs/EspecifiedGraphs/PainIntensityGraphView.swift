@@ -20,15 +20,12 @@ struct PainIntensityGraphView: View {
         VStack {
             BarChart<Int>(plottedElements: $plottedElements)
         }
-        .onAppear {
+        .onSubmit {
             retrieveData()
         }
     }
     
-    private func retrieveData() {
-        elements = [0, 0, 0, 0, 0, 0]
-        plottedElements = []
-        
+    private func retrieveData () {
         let lastWeekDays = controller.getLastWeekDaysForPredicate()
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
@@ -41,7 +38,7 @@ struct PainIntensityGraphView: View {
         
         var contador : Int = 0
         for element in elements {
-            plottedElements.append(PlottedElement(image: "intensity\(contador)", value: element))
+            plottedElements.append(PlottedElement(image: "intendity\(contador)", value: element))
             contador += 1
         }
     }

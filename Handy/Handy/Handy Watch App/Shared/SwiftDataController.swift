@@ -53,16 +53,6 @@ class SwiftDataController {
         
     }
     
-    func saveOneExercise(context: ModelContext){
-        let exercise = Exercise()
-        exercise.startTrainning = .now + TimeInterval(89000)
-        exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
-        exercise.borgScale = Double(Int.random(in: 1...5))
-        exercise.exerciseFeedback = Double(Int.random(in: 0...3))
-        exercise.painLevel = Double(Int.random(in: 1...5))
-        context.insert(exercise)
-    }
-    
     func removeAll(context: ModelContext){
         try! context.delete(model: Exercise.self)
     }

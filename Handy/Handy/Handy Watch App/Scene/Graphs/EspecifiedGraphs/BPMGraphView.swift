@@ -14,12 +14,10 @@ struct BPMGraphView: View {
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
     @State var graphCase: Coordinator.Destination.GraphCases
-    @State var minValue: Double = 70
-    @State var maxValue: Double = 90
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue:  $maxValue)
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: 70, maxValue: 90)
                 .onAppear{
                     switch graphCase {
                     case .month:
@@ -40,9 +38,6 @@ struct BPMGraphView: View {
         
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.avarageHeartBeats)
         print(exerciseAnalytics)
-        
-        minValue = Exercise.minBPM(analytics: exerciseAnalytics) - 2
-        maxValue = Exercise.maxBPM(analytics: exerciseAnalytics) + 2
     }
     
 }

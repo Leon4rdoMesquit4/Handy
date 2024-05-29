@@ -16,7 +16,7 @@ struct DifficultGraphView: View {
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: .constant(1), maxValue: .constant(5))
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: 1, maxValue: 5)
                 .onAppear{
                     switch graphCase {
                     case .month:
@@ -37,7 +37,6 @@ struct DifficultGraphView: View {
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.borgScale)
         print(exerciseAnalytics)
     }
-    
 }
 
 #Preview {

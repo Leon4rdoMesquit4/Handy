@@ -14,11 +14,11 @@ struct FeedbackGraphView: View {
     @Environment (\.modelContext) var context
     @Environment (SwiftDataController.self) var controller
     @State var graphCase: Coordinator.Destination.GraphCases
-    @State var plottedElements : [PlottedElement] = []
     
     var body: some View {
         VStack {
-            BarChart<Int>(plottedElements: $plottedElements)
+            //BarChart(elements: $elements, symbols: ["😡", "😠", "😐", "🙂"])
+            //.navigationTitle("Como se sentiu")
         }
         .onAppear{
             switch graphCase {
@@ -32,10 +32,6 @@ struct FeedbackGraphView: View {
     }
     
     func retrieveData () {
-        
-        elements = [0, 0, 0, 0]
-        plottedElements = []
-        
         let lastWeekDays = controller.getLastWeekDaysForPredicate()
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
@@ -46,12 +42,6 @@ struct FeedbackGraphView: View {
                 }
                 
             }
-        }
-        
-        var contador : Int = 0
-        for element in elements {
-            plottedElements.append(PlottedElement(image: "intensity\(contador)", value: element))
-            contador += 1
         }
     }
     

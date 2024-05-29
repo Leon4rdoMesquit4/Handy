@@ -8,17 +8,10 @@
 import SwiftUI
 
 struct TimeView: View {
-    
-    @Environment(WorkoutController.self) var wcontroller
-    @Environment(SwiftDataController.self) var controller
     var timePassed: TimeInterval = 0
-    var formatter = TimeFormatter()
-    
     var body: some View {
-        VStack{
-            Text(NSNumber(value: timePassed), formatter: formatter)
+            Text("00:00.01")
                 .fontWeight(.semibold)
-        }
     }
 }
 

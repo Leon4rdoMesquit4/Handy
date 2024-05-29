@@ -11,7 +11,6 @@ struct DidFeelPainView: View {
     @Environment(Coordinator.self) var coordinator
     @Environment(\.modelContext) var context
     @Environment(SwiftDataController.self) var controller
-    @Environment(WorkoutController.self) var wcontroller
     
     var body: some View {
         VStack{
@@ -21,13 +20,6 @@ struct DidFeelPainView: View {
             
             HStack (spacing: 30){
                 Button {
-                    controller.startTrainning = wcontroller.startTrainning
-                    controller.avarageHeartBeats = wcontroller.averageHeartRate
-                    controller.maxHeartBeats = wcontroller.maxHeartRate
-                    controller.minHeartBeats = wcontroller.minHeartRate
-                    controller.time = wcontroller.time
-                    controller.saveNewExercise(context: context)
-                    wcontroller.reset()
                     controller.saveNewExercise(context: context)
                     coordinator.navigateToRoot()
                 } label: {

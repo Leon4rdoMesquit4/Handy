@@ -11,7 +11,7 @@ import SwiftData
 @main
 struct Handy_Watch_AppApp: App {
     
-    @State var controller = WorkoutController()
+    @StateObject var controller = WorkoutController()
     @State var mainCoordinator: Coordinator = Coordinator()
     @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
     @State var swiftDataController = SwiftDataController()
