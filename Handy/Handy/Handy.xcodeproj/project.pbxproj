@@ -62,6 +62,7 @@
 		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
 		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
 		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
+		FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE872C07C0E500B02E77 /* Date+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
 		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
 		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
+		FDF6AE872C07C0E500B02E77 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +367,7 @@
 				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
 				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
 				E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */,
+				FDF6AE872C07C0E500B02E77 /* Date+Format.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
+				FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */,
 				E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */,
 				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
 				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
@@ -685,7 +689,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
@@ -719,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Handy;
