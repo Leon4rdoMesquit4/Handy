@@ -51,6 +51,8 @@
 		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
 		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
 		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
+		E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A322C06D9AA00AFB0AA /* BarChart.swift */; };
+		E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A332C06D9AA00AFB0AA /* LineChart.swift */; };
 		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
 		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
 		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
@@ -131,6 +133,8 @@
 		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
 		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E8267A322C06D9AA00AFB0AA /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		E8267A332C06D9AA00AFB0AA /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
 		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
 		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 		E0711D122BFFE1BE00084CAF /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
+				E8267A342C06D9AA00AFB0AA /* Components */,
 				E888FB912C02BD46000B048F /* EspecifiedGraphs */,
 				E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */,
 				E888FB822C02BC8E000B048F /* GraphsTabView.swift */,
@@ -364,6 +369,15 @@
 				E0711D552BFFE1E200084CAF /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E8267A342C06D9AA00AFB0AA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8267A322C06D9AA00AFB0AA /* BarChart.swift */,
+				E8267A332C06D9AA00AFB0AA /* LineChart.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E888FB912C02BD46000B048F /* EspecifiedGraphs */ = {
@@ -488,11 +502,13 @@
 				E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */,
 				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
 				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
+				E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */,
 				E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */,
 				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
 				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
 				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
 				E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */,
+				E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */,
 				E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */,
 				E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */,
 				E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */,
