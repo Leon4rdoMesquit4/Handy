@@ -11,8 +11,8 @@ import Charts
 struct LineChart: View {
     
     @Binding var exerciseAnalytics: [GraphData<Double>]
-    @State var minValue: Double
-    @State var maxValue: Double
+    @Binding var minValue: Double
+    @Binding var maxValue: Double
     
     var body: some View {
 
@@ -41,5 +41,5 @@ struct LineChart: View {
 }
 
 #Preview {
-    LineChart(exerciseAnalytics: .constant([GraphData<Double>]()), minValue: 0, maxValue: 5)
+    LineChart(exerciseAnalytics: .constant([GraphData<Double>]()), minValue: .constant(0), maxValue: .constant(5))
 }
