@@ -16,7 +16,7 @@ struct ExerciseDetailView: View {
         ScrollView {
             VStack (alignment: .leading){
                 // mostrando a duração do exercício
-//                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
+                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
@@ -37,7 +37,7 @@ struct ExerciseDetailView: View {
                 }
             }
         }
-        .navigationTitle(exercise.startTrainning?.formatted(date: .numeric, time: .omitted) ?? "")
+        .navigationTitle(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
         .onAppear{
             // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
@@ -45,7 +45,7 @@ struct ExerciseDetailView: View {
     }
     
     var sharelink : some View {
-        ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning?.formatted(date: .numeric, time: .omitted).description ?? "")")) {
+        ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
             Image(systemName: "square.and.arrow.up")
         }
         .frame(width: 75)
@@ -97,7 +97,7 @@ struct ExerciseDetailView: View {
     func setupExercise () -> Exercise {
         let exercise = Exercise()
         exercise.borgScale = 1
-//        exercise.time = "20:30s"
+        exercise.time = "20:30s"
         exercise.avarageHeartBeats = 90
         exercise.startTrainning = Date()
         exercise.painLevel = 1

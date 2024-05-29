@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-/// Essa tela possui uma date picker que vai determinar a tela de início
-/// - Parameters:
-///      - dataInicio: a data que vai ser recebida e alterada pelo DataPicker
 struct TreatmentTimeBeginningView: View {
     
     @Binding var dataInicio : Date
@@ -18,8 +15,7 @@ struct TreatmentTimeBeginningView: View {
     var body: some View {
         
         VStack (spacing: 20){
-            
-            DatePicker("Data de início", selection: $dataInicio, in: Date() ... Date().addingTimeInterval(.infinity), displayedComponents: .date)
+            DatePicker("Data de início", selection: $dataInicio)
                 .frame(height: 120)
             
             Button ("Definir") {

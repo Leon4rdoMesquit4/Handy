@@ -75,11 +75,11 @@ final class OnboardingCoordinator{
             }
         }
         
-        case symbolSelectionView
+        case emojiSelectionView
         case treatmentTimeView
         case treatmentTimeBeginningView(Binding<Date>)
         case treatmentTimeEndView(Binding<Date>)
-        case SymbolPickerView(Binding<String>)
+        case EmojiPickerView(Binding<String>)
     }
     
     var navPath: [Destination] = []

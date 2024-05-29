@@ -9,22 +9,8 @@
 import Foundation
 import HealthKit
 
-@Observable
-class WorkoutController: NSObject  {
+class WorkoutController: NSObject, ObservableObject, Observable  {
     //MARK: - Main Variables
-    
-    //Variáveis responsáveis por receber os dados do workout
-    var heartRate: Double = 0
-    var averageHeartRate: Double = 0
-    var minHeartRate: Double = 0
-    var maxHeartRate: Double = 0
-    var startTrainning: Date = Date()
-    var endTrainning: Date = Date()
-    var workout: HKWorkout?
-    
-    
-    var working:Bool = false
-    
     //Workout type
     let workoutType: HKWorkoutActivityType = .preparationAndRecovery
     
@@ -81,47 +67,12 @@ class WorkoutController: NSObject  {
                 print(error.localizedDescription)
             }
         })
-        startTrainning = Date()
     }
     
-    //MARK: - Metrics
-    
-    ///atualiza as métricas do workout
-    func updateMetrics(_ statistics: HKStatistics?){
-        guard let statistics = statistics else { return }
-        
-        DispatchQueue.main.async {
-            switch statistics.quantityType{
-            case HKQuantityType.quantityType(forIdentifier: .heartRate):
-                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-                
-                self.heartRate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-                
-                self.averageHeartRate = statistics.averageQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-                
-                self.minHeartRate = statistics.minimumQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-                
-                self.maxHeartRate = statistics.maximumQuantity()?.doubleValue(for: heartRateUnit) ?? 0
-                
-            default:
-                return
-            }
-        }
-    }
-    
-    ///Reinicia o workout
-    func reset(){
-        builder = nil
-        session = nil
-        heartRate = 0
-        averageHeartRate = 0
-        minHeartRate = 0
-        maxHeartRate = 0
-        startTrainning = Date()
-        endTrainning = Date()
-    }
     
     //MARK: - Session state control
+    
+    @Published var working:Bool = false
     
     ///funções responsáveis por controlar os estados do workout
     func togglePause(){
@@ -142,7 +93,35 @@ class WorkoutController: NSObject  {
     
     func endWorkout(){
         session?.end()
-        endTrainning = session?.endDate ?? Date()
+    }
+    
+    
+    //MARK: - Metrics
+    //Variáveis e funções responsáveis por receber os dados do workout
+    @Published var heartRate: Double = 0
+    @Published var workout: HKWorkout?
+    
+    ///atualiza as métricas do workout
+    func updateMetrics(_ statics: HKStatistics?){
+        guard let statics = statics else { return }
+        
+        DispatchQueue.main.async {
+            switch statics.quantityType{
+            case HKQuantityType.quantityType(forIdentifier: .heartRate):
+                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
+                self.heartRate = statics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
+                print(self.heartRate)
+            default:
+                return
+            }
+        }
+    }
+    
+    ///Reinicia o workout
+    func reset(){
+        builder = nil
+        session = nil
+        heartRate = 0
     }
 }
 

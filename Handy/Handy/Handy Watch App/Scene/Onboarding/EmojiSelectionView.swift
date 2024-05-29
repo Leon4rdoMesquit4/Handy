@@ -8,9 +8,9 @@
 import SwiftUI
 
 /// View que serve para selecionar o emoji que vai ser usado para descrever a meta do usuário ao usar o nosso aplicativo
-struct SymbolSelectionView: View {
+struct EmojiSelectionView: View {
     @Environment(OnboardingCoordinator.self) var coordinator
-    @StateObject var vm = SymbolSelectionViewModel()
+    @StateObject var vm = EmojiSelectionViewModel()
     
     var body: some View {
         VStack (alignment: .leading, spacing: 30){
@@ -22,26 +22,24 @@ struct SymbolSelectionView: View {
                 Spacer()
                 
                 ZStack {
-                    if vm.symbol.count == 0 {
+                    if vm.emoji.count == 0 {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 40)
                             .foregroundStyle(.gray)
                             .onTapGesture {
-                                coordinator.navigate(to: .SymbolPickerView($vm.symbol))
+                                coordinator.navigate(to: .EmojiPickerView($vm.emoji))
                             }
                     }
                     
-                    Image(systemName: vm.symbol)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
+                    Text(vm.emoji)
                         .onTapGesture {
-                            coordinator.navigate(to: .SymbolPickerView($vm.symbol))
-                            //coordinator.present(.EmojiPickerView($vm.emoji))
+                            coordinator.navigate(to: .EmojiPickerView($vm.emoji))
                         }
+
                 }
                 Spacer()
             }
+                        
             self.botaoNextPage
         }
         .alert(isPresented: $vm.alertInvalidEmojiIsPresented) {
@@ -57,10 +55,6 @@ struct SymbolSelectionView: View {
             ButtonNextPage(callback: {
                 if vm.validateEmoji() {
                     coordinator.navigate(to: .treatmentTimeView)
-                    //coordinator.
-                    //coordinator.present(
-                      //  .EmojiPickerView($vm.emoji)
-                    //)
                 } else {
                     vm.showAlertInvalidEmoji()
                 }
@@ -71,6 +65,6 @@ struct SymbolSelectionView: View {
 }
 
 #Preview {
-    SymbolSelectionView()
+    EmojiSelectionView()
         .environment(OnboardingCoordinator())
 }

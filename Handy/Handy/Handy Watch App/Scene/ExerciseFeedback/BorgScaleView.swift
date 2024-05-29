@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BorgScaleView: View {
-    @State var borgScale : Int = 1
+    @State var borgScale : Double = 1
     @Environment(Coordinator.self) var coordinator
     @Environment(SwiftDataController.self) var controller
     

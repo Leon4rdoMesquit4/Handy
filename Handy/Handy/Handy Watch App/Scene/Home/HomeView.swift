@@ -59,4 +59,5 @@ extension HomeView {
 #Preview {
     HomeView()
         .environment(Coordinator())
+        .environment(SwiftDataController())
 }

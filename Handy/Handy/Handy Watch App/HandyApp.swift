@@ -11,7 +11,7 @@ import SwiftData
 @main
 struct Handy_Watch_AppApp: App {
     
-    @State var controller = WorkoutController()
+    @StateObject var controller = WorkoutController()
     @State var mainCoordinator: Coordinator = Coordinator()
     @State var onboardingCoordinator: OnboardingCoordinator = OnboardingCoordinator()
     @State var swiftDataController = SwiftDataController()
@@ -36,8 +36,8 @@ struct Handy_Watch_AppApp: App {
                     Onboarding()
                         .navigationDestination(for: OnboardingCoordinator.Destination.self) { destination in
                             switch destination {
-                            case .symbolSelectionView:
-                                SymbolSelectionView()
+                            case .emojiSelectionView:
+                                EmojiSelectionView()
                                     .navigationBarBackButtonHidden()
                             case .treatmentTimeView:
                                 TreatmentTimeView_(isOnboardingComplete: $isOnboardingComplete)
@@ -46,8 +46,8 @@ struct Handy_Watch_AppApp: App {
                                 TreatmentTimeBeginningView(dataInicio: binding)
                             case .treatmentTimeEndView(let binding):
                                 TreatmentTimeEndView(dataFinal: binding)
-                            case .SymbolPickerView(let binding):
-                                SymbolPickerView(symbolPicked: binding)
+                            case .EmojiPickerView(let binding):
+                                EmojiPickerView(emojiPicked: binding)
                             }
                         }
                 }
@@ -89,7 +89,6 @@ struct Handy_Watch_AppApp: App {
                     controller.requestAuthorization()
                     controller.startWorkout()
                 })
-                .environment(controller)
                 .environment(mainCoordinator)
                 .environment(swiftDataController)
                 

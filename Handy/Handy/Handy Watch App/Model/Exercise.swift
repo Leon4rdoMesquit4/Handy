@@ -11,18 +11,21 @@ import SwiftData
 @Model
 class Exercise {
     
-    var exerciseFeedback: Int?
+    //Como você se sentiu
+    var exerciseFeedback: Double?
     
-    /// Variável que indica a quantidade de segundos que o usuário passou fazendo o exercício
-    var secondsExercise : Int?
+    //Tempo de prática
+    var time : String?
+    
+    //Batimentos
     var avarageHeartBeats : Double?
     var minHeartBeats : Double?
     var maxHeartBeats : Double?
-    var startTrainning : Date?
-    var endTrainning : Date?
+    var startTrainning : Date
     
+    //Dificuldade do exercício (ESCALA DE BORG)
     /// Um atributo que indica a escala de Borg do usuário, eu fiz uma pequena validação para saber se o novo valor que ele passou está válido
-    var borgScale : Int? {
+    var borgScale : Double? {
         willSet {
             if let newValue {
                 validateBorgScale(newValue: newValue)
@@ -30,6 +33,7 @@ class Exercise {
         }
     }
     
+    //Intensidade de dor
     /// Um atributo que indica o quanto de dor que a pessoa teve durante o exercício. Caso seja 0, então não teve dor.
     var painLevel : Double? {
         willSet {
@@ -39,7 +43,9 @@ class Exercise {
         }
     }
     
-    init() {}
+    init() {
+        startTrainning = .now
+    }
     
     /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
     func returnImageBorgScale () -> String {
@@ -63,7 +69,7 @@ class Exercise {
         }
     }
     
-    private func validateBorgScale (newValue : Int) {
+    private func validateBorgScale (newValue : Double) {
         if newValue >= 0 && newValue <= 10 {
             self.borgScale = newValue
         } else {
@@ -80,4 +86,16 @@ class Exercise {
             self.painLevel = 0
         }
     }
+    
+    static func minBPM(analytics: [GraphData<Double>]) -> Double? {
+        analytics.min(by: {$0.value < $1.value})?.value
+        
+    }
+    
+    static func maxBPM(analytics: [GraphData<Double>]) -> Double? {
+        analytics.max(by: {$0.value < $1.value})?.value
+        
+    }
 }
+
+

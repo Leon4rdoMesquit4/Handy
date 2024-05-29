@@ -11,17 +11,20 @@ struct GraphsTabView: View {
     
     @State var graphCase: Coordinator.Destination.GraphCases
     
+    @Environment(SwiftDataController.self) var controller
+    @Environment(\.modelContext) var context
+    
     var body: some View {
         TabView{
-            PracticeTimeGraphView()
+            PracticeTimeGraphView(graphCase: graphCase)
             
-            BPMGraphView()
+            BPMGraphView(graphCase: graphCase)
             
-            BorgScaleGraphView()
+            FeedbackGraphView(graphCase: graphCase)
             
-            DifficultyGraphView()
+            DifficultGraphView(graphCase: graphCase)
             
-            PainIntensityGraphView()
+            PainIntensityGraphView(graphCase: graphCase)
         }
         .tabViewStyle(.carousel)
     }

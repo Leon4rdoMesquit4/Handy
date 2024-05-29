@@ -1,7 +1,13 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld%%" : {
+
+    },
+    "00:00.01" : {
 
     },
     "1/3" : {
@@ -10,7 +16,16 @@
     "3/3" : {
 
     },
-    "10/05/24" : {
+    "Batimentos" : {
+
+    },
+    "bpm" : {
+
+    },
+    "cai" : {
+
+    },
+    "Como se sentiu" : {
 
     },
     "Data de início" : {
@@ -19,13 +34,19 @@
     "Data do final" : {
 
     },
+    "day" : {
+
+    },
     "Definir" : {
+
+    },
+    "Dificuldade" : {
 
     },
     "Duração do tratamento:" : {
 
     },
-    "Escolha um símbolo" : {
+    "Escolha um emoji %@" : {
 
     },
     "Estabeleça a sua meta" : {
@@ -62,7 +83,7 @@
     "Suas práticas" : {
 
     },
-    "Tempo de Pratica" : {
+    "Tempo de PrÃ¡tica" : {
 
     },
     "Treino do dia: %@" : {
