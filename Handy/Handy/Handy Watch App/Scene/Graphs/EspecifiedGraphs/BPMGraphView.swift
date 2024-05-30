@@ -34,12 +34,11 @@ struct BPMGraphView: View {
         }
     }
     
-    func retrieveData () {
+    func retrieveData() {
         let lastWeekDays = controller.getLastWeekDaysForPredicate()
         let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
         
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.avarageHeartBeats)
-        print(exerciseAnalytics)
         
         if !exerciseAnalytics.isEmpty {
             minValue = Exercise.minBPM(analytics: exerciseAnalytics) - 2

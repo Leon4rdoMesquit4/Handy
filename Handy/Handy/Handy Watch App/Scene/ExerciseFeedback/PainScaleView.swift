@@ -18,7 +18,7 @@ struct PainScaleView: View {
         VStack{
             TitleForm(text: "Qual a intensidade da dor?")
             Spacer()
-            StepperImage(value: $painIntensity, interval: 1 ... 10, prefixImage: "pain")
+            StepperImage(value: $painIntensity, interval: 0 ... 5, prefixImage: "pain")
             Spacer()
             ButtonNextPage{
                 controller.painLevel = Double(painIntensity)

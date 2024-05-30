@@ -45,8 +45,8 @@ class SwiftDataController {
         
         for n in 0...17 {
             let exercise = Exercise()
-            exercise.startTrainning = .now + TimeInterval(89000 * n) - 300000
-            exercise.startTrainning = .now + TimeInterval(89000 * n) - 280000
+            exercise.startTrainning = .now + TimeInterval(74000 * n) - 300000
+            exercise.endTrainning = .now + TimeInterval(74000 * n) - 295000 + TimeInterval.random(in: 0...4000)
             exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
             exercise.borgScale = Double(Int.random(in: 1...5))
             exercise.exerciseFeedback = Double(Int.random(in: 0...3))
@@ -93,6 +93,16 @@ class SwiftDataController {
         let dates = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
            .compactMap { calendar.date(byAdding:.day, value: $0 - dayOfWeek, to: today) }
         return (dates[0], dates[6])
+    }
+    
+    ///Return the minimum and the maximum day of the current week
+    func getLastWeekDaysForPredicateAllDates() -> [Date] {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date.now)
+        let dayOfWeek = calendar.component(.weekday, from: today)
+        let dates = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
+           .compactMap { calendar.date(byAdding:.day, value: $0 - dayOfWeek, to: today) }
+        return dates
     }
     
     func fetchExercises (_ context : ModelContext) -> [Exercise] {
