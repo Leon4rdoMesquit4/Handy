@@ -19,6 +19,7 @@ struct FeedbackGraphView: View {
     var body: some View {
         VStack {
             BarChart<Int>(plottedElements: $plottedElements)
+                .navigationTitle("Feedback")
         }
         .onAppear{
             switch graphCase {

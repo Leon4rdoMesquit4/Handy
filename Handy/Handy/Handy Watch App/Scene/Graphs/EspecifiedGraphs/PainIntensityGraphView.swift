@@ -19,6 +19,7 @@ struct PainIntensityGraphView: View {
     var body: some View {
         VStack {
             BarChart<Int>(plottedElements: $plottedElements)
+                .navigationTitle("Dor")
         }
         .onAppear {
             retrieveData()
