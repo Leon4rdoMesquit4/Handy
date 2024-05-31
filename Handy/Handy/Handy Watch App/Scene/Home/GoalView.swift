@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GoalView: View {
-    @AppStorage("emoji") var emoji : String = "🍴"
+    @AppStorage("emoji") var emoji : String = "figure.walk"
     @AppStorage("dateBeginningTreatment") var beginningTreatmentAppStorage : String = "25_05_2024"
     @AppStorage("dateEndTreatment") var endTreatmentAppStorage : String = "31_05_2024"
     
@@ -56,7 +56,7 @@ struct GoalView: View {
         }
     }
     
-    func getWatchWidth () -> Double {
+    private func getWatchWidth () -> Double {
         let s = WKInterfaceDevice.current().screenBounds
         return s.width
     }
@@ -88,10 +88,11 @@ struct GoalView: View {
 extension GoalView {
     var goalProgress: some View {
         VStack {
-            Text(self.emoji)
-                .font(.largeTitle)
-                .padding()
+            Image(systemName: emoji)
+                .font(.title2)
+                .padding(.vertical)
             HStack {
+                // TODO: TROCAR ESSA CARINHA
                 Image(systemName: "face.smiling.inverse")
                     .foregroundStyle(.borgScale0)
                 Text("\(Int(calculateProgressTreatment()))%")
@@ -138,7 +139,7 @@ extension GoalView {
             Spacer()
             HStack {
                 Spacer()
-                Image(systemName: "pencil")
+                Image(systemName: emoji)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20)
@@ -158,7 +159,7 @@ extension GoalView {
 
 #Preview {
     NavigationStack {
-        GoalView(goal: Goal(name: "", emoji: "🍴", progress: 50))
+        GoalView(goal: Goal(name: "", emoji: "figure.walk", progress: 50))
     }
 }
 

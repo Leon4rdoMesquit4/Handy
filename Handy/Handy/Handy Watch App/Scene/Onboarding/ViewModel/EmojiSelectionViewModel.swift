@@ -35,5 +35,9 @@ extension EmojiSelectionView {
         func showAlertInvalidEmoji () {
             self.alertInvalidEmojiIsPresented = true
         }
+        
+        func isEmojiSelected () -> Bool {
+            return emoji.count > 0
+        }
     }
 }
