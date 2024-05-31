@@ -88,7 +88,8 @@ extension GoalView {
                 )
                 .rotationEffect(.degrees(-90))
                 .frame(width: vm.getWatchWidth() / 1.4)
-                .foregroundStyle(Color.brand)
+                .foregroundStyle(LinearGradient(colors: [.brand.opacity(0.3), .brand], startPoint: .bottomLeading, endPoint: .topTrailing))
+            
         }
         .overlay(alignment: .center) {
             goalProgress
@@ -109,7 +110,7 @@ extension GoalView {
                     .frame(width: 20)
                     .font(.title2)
                     .onTapGesture {}
-                    .foregroundStyle(Color.base)
+                    .foregroundStyle(.base)
                     .padding()
                     .background(
                         Color.brand
