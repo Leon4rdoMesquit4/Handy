@@ -63,6 +63,7 @@
 		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
 		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
 		FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE872C07C0E500B02E77 /* Date+Format.swift */; };
+		FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +117,7 @@
 		E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
 		E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
 		E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesScrollView.swift; sourceTree = "<group>"; };
-		E0711D142BFFE1BE00084CAF /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		E0711D142BFFE1BE00084CAF /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalView.swift; path = ../GoalView.swift; sourceTree = "<group>"; };
 		E0711D152BFFE1BE00084CAF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		E0711D162BFFE1BE00084CAF /* HomeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		E0711D172BFFE1BE00084CAF /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
 		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
 		FDF6AE872C07C0E500B02E77 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +297,8 @@
 		E0711D182BFFE1BE00084CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FDF6AE892C0A140700B02E77 /* New Group */,
 				E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */,
-				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
 				E0711D152BFFE1BE00084CAF /* HomeController.swift */,
 				E0711D162BFFE1BE00084CAF /* HomeTabView.swift */,
 				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
@@ -399,6 +401,15 @@
 				E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */,
 			);
 			path = EspecifiedGraphs;
+			sourceTree = "<group>";
+		};
+		FDF6AE892C0A140700B02E77 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
+				FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +547,7 @@
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
 				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,
 				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
+				FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
 				FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */,
