@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct HomeTabView: View {
-    var goal: Goal
     var body: some View {
         ZStack {
             TabView {
                 HomeView()
                     .tabItem {
                     }
-                GoalView(goal: goal)
+                GoalView()
                     .tabItem {
                     }
                 ExercisesScrollView()
@@ -30,6 +29,6 @@ struct HomeTabView: View {
 
 
 #Preview {
-    HomeTabView(goal: Goal(name: "", emoji: "🍴", progress: 25))
+    HomeTabView()
         .environment(Coordinator())
 }
