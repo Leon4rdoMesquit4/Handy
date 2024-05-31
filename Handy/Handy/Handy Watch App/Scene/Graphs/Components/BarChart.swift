@@ -13,6 +13,7 @@ import Charts
 struct BarChart<T: Plottable & Hashable>: View {
     /// lista de elementos plotados na tela
     @Binding var plottedElements : [PlottedElement]
+    var hasImages: Bool = true
     
     var body: some View {
         Chart (plottedElements, id: \.image){p in
@@ -21,7 +22,7 @@ struct BarChart<T: Plottable & Hashable>: View {
                 .foregroundStyle(by: .value("value", p.image))
         }
         .chartLegend(.hidden)
-        
+        .chartXAxis(hasImages ? .visible : .hidden)
         .chartXAxis {
             AxisMarks { val in
                 AxisValueLabel {

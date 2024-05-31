@@ -21,16 +21,16 @@ struct HomeView: View {
     let randomView: [RandomHomeView] = []
     
     var body: some View {
-        ZStack {
+        VStack {
             selectRandomHomeView(randomView.randomElement() ?? .view1)
                 .onTapGesture {
                     coordinator.navigate(to: .countdownView)
 //                    controller.saveALotOfNewExercise(context: context)
 //                    controller.saveOneExercise(context: context)
                 }
-//            Button("CLIQUE AQUI") {
-//                controller.removeAll(context: context)
-//            }
+            Button("CLIQUE AQUI") {
+                controller.removeAll(context: context)
+            }
             navigateToGraphButton
         }.ignoresSafeArea()
     }

@@ -19,6 +19,9 @@
     "bpm" : {
 
     },
+    "CLIQUE AQUI" : {
+
+    },
     "Data de início" : {
 
     },
@@ -34,6 +37,9 @@
     "Dificuldade" : {
 
     },
+    "Dor" : {
+
+    },
     "Duração do tratamento:" : {
 
     },
@@ -43,10 +49,10 @@
     "Estabeleça a sua meta" : {
 
     },
-    "Hello, world!" : {
+    "Feedback" : {
 
     },
-    "Hello, World!" : {
+    "Hello, world!" : {
 
     },
     "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo." : {
@@ -78,6 +84,9 @@
 
     },
     "Tempo de Pratica" : {
+
+    },
+    "Tempo de prática" : {
 
     },
     "Treino do dia: %@" : {

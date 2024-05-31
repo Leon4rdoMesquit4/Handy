@@ -17,7 +17,7 @@ struct ExerciseUserFeedbackView: View {
         VStack (spacing: 8) {
             TitleForm(text: "Como foi a prática do exercício")
             Spacer()
-            StepperImage(value: $feedback, interval: 1 ... 10, prefixImage: "mood")
+            StepperImage(value: $feedback, interval: 0 ... 3, prefixImage: "mood")
             Spacer()
             ButtonNextPage{
                 controller.exerciseFeedback = Double(feedback)
