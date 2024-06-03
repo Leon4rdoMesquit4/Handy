@@ -13,6 +13,9 @@
     "3/3" : {
 
     },
+    "A data de final deve ser uma data após a de início" : {
+
+    },
     "Batimentos" : {
 
     },
@@ -71,10 +74,16 @@
     "Month" : {
 
     },
+    "ok" : {
+
+    },
     "Ops! Nenhum emoji selecionado" : {
 
     },
     "Qual a sua meta?" : {
+
+    },
+    "Selecione datas válidas" : {
 
     },
     "Suas práticas" : {

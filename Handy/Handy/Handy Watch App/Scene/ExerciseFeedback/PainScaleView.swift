@@ -18,8 +18,11 @@ struct PainScaleView: View {
         VStack{
             TitleForm(text: "Qual a intensidade da dor?")
             Spacer()
-            StepperImage(value: $painIntensity, interval: 0 ... 5, prefixImage: "pain")
-            Spacer()
+            StepperImage(value: $painIntensity, interval: 0 ... 2, prefixImage: "pain")
+            
+            painScaleLabel()
+                .font(.caption)
+            
             ButtonNextPage{
                 controller.painLevel = Double(painIntensity)
                 controller.avarageHeartBeats = wcontroller.averageHeartRate
@@ -33,6 +36,20 @@ struct PainScaleView: View {
                 coordinator.navigateToRoot()
             }
         }
+    }
+    
+    
+    func painScaleLabel () -> Text {
+        var painLabel : String = ""
+        
+        switch painIntensity {
+        case 0: painLabel = "Pouca dor"
+        case 1: painLabel = "Dor moderada"
+        case 2: painLabel = "Muita dor"
+        default: break
+        }
+        
+        return Text(painLabel)
     }
 }
 
