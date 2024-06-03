@@ -19,7 +19,7 @@ struct ExerciseDetailView: View {
                     .padding(.bottom)
                 
                 // mostrando a duração do exercício
-                sectionBuilder(title: "Duração", subtitle: exercise.time?.getTimeString() ?? "")
+                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
@@ -52,6 +52,8 @@ struct ExerciseDetailView: View {
             // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
         }
+        .padding(.horizontal, 5)
+        .background(Color.base)
     }
     
     // MARK: COMPONENTES DE UI
@@ -65,6 +67,9 @@ struct ExerciseDetailView: View {
             
             ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
                 Image(systemName: "square.and.arrow.up")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 18)
                     .foregroundStyle(.base)
             }
             .tint(.brand)
@@ -142,6 +147,7 @@ struct ExerciseDetailView: View {
         exercise.avarageHeartBeats = 90
         exercise.startTrainning = Date()
         exercise.painLevel = 1
+        exercise.exerciseFeedback = 2
         
         return exercise
     }
