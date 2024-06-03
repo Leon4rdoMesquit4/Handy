@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct GraphsTabView: View {
-    
-    @State var graphCase: Coordinator.Destination.GraphCases
-    
+        
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
     
     var body: some View {
         TabView{
-            PracticeTimeGraphView(graphCase: graphCase)
+            PracticeTimeGraphView()
             
-            BPMGraphView(graphCase: graphCase)
+            BPMGraphView()
             
-            FeedbackGraphView(graphCase: graphCase)
+            FeedbackGraphView()
             
-            DifficultGraphView(graphCase: graphCase)
+//            DifficultGraphView(graphCase: graphCase)
             
-            PainIntensityGraphView(graphCase: graphCase)
+            PainIntensityGraphView()
         }
         .tabViewStyle(.carousel)
     }
 }
 
 #Preview {
-    GraphsTabView(graphCase: .month)
+    GraphsTabView()
 }

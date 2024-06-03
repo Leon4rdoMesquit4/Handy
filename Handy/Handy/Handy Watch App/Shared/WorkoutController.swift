@@ -51,7 +51,7 @@ class WorkoutController: NSObject  {
         
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { success, error in
             if let error = error {
-                print(error.localizedDescription)
+//                print(error.localizedDescription)
             }
         }
     }
@@ -66,7 +66,7 @@ class WorkoutController: NSObject  {
             session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             builder = session?.associatedWorkoutBuilder()
         }catch {
-            print(error.localizedDescription)
+//            print(error.localizedDescription)
             return
         }
         
@@ -79,7 +79,7 @@ class WorkoutController: NSObject  {
         session?.startActivity(with: startDate)
         builder?.beginCollection(withStart: startDate, completion: { (success,error) in
             if let error = error{
-                print(error.localizedDescription)
+//                print(error.localizedDescription)
             }
         })
         startTrainning = Date()
