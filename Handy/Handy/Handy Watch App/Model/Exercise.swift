@@ -59,13 +59,9 @@ class Exercise {
     }
     
     /// Uma função que retorna uma string que vai se usada em uma Image para renderizar a imagem que representa a quantidade de dor que o usuário sentiu durante o exercício (se o usuário teve um level de dor nulo ou 0, ele simplesmente retorna uma string vazia)
-    func returnImagePainScale () -> String {
+    func returnImagePainLevel () -> String {
         if let painLevel {
-            if painLevel == 0 {
-                return ""
-            } else {
-                return "pain\(painLevel)"
-            }
+            return "pain\(Int(painLevel))"
         } else {
             return ""
         }

@@ -15,21 +15,8 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .leading){
-                HStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.brand.opacity(0.5))
-                        .overlay (alignment: .leading) {
-                            Text(exercise.endTrainning.formatted(date: .omitted, time: .shortened))
-                                .font(.callout)
-                                .foregroundStyle(.white)
-                                .padding(.leading)
-                        }
-                        .frame(height: 35)
-                    
-                    Rectangle()
-                        .foregroundStyle(.clear)
-                }
-                .padding(.bottom)
+                dateLabel
+                    .padding(.bottom)
                 
                 // mostrando a duração do exercício
                 sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
@@ -45,6 +32,8 @@ struct ExerciseDetailView: View {
                 // mostrando o nível de dor que a pessoa sentiu durante os exercícios
                 sectionBuilder(title: "Nível de dor", subtitle: "\(Int(exercise.painLevel ?? 0))")
                     //.padding(.bottom, 30)
+                
+                sectionBuilder(title: "Intensidade", image: exercise.returnImagePainLevel())
                 
                 // mostrando o botão que permite o compartilhamento das informações exercício
                 HStack {
@@ -63,13 +52,41 @@ struct ExerciseDetailView: View {
         }
     }
     
+    // MARK: COMPONENTES DE UI
+    
     var sharelink : some View {
-        ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
-            Image(systemName: "square.and.arrow.up")
+        
+        ZStack {
+            Color.brand
+                .clipShape(Capsule())
+                .frame(width: 100)
+            
+            ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
+                Image(systemName: "square.and.arrow.up")
+                    .foregroundStyle(.base)
+            }
+            .tint(.brand)
+            .frame(width: 75)
+            
         }
-        .tint(.brandColor2)
-        .foregroundStyle(.base)
-        .frame(width: 75)
+        
+        
+    }
+    
+    var dateLabel : some View {
+        HStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(.brand.opacity(0.5))
+                .overlay (alignment: .leading) {
+                    Text(exercise.endTrainning.formatted(date: .omitted, time: .shortened))
+                        .font(.callout)
+                        .foregroundStyle(.white)
+                        .padding(.leading)
+                }
+                .frame(height: 35)
+            Rectangle()
+                .foregroundStyle(.clear)
+        }
     }
     
     
