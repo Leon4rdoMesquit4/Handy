@@ -21,17 +21,15 @@ struct HomeView: View {
     let randomView: [RandomHomeView] = []
     
     var body: some View {
-        VStack {
-            selectRandomHomeView(randomView.randomElement() ?? .view1)
-                .onTapGesture {
-                    coordinator.navigate(to: .countdownView)
-//                    controller.saveALotOfNewExercise(context: context)
-//                    controller.saveOneExercise(context: context)
-                }
-            Button("CLIQUE AQUI") {
-                controller.removeAll(context: context)
-            }
+        ZStack {
+//            selectRandomHomeView(randomView.randomElement() ?? .view1)
+//                .onTapGesture {
+//                    coordinator.navigate(to: .countdownView)
+//                    //                    controller.saveALotOfNewExercise(context: context)
+//                    //                    controller.saveOneExercise(context: context)
+//                }
             navigateToGraphButton
+                .padding(15)
         }.ignoresSafeArea()
     }
 }
@@ -52,7 +50,15 @@ extension HomeView {
         VStack {
             HStack {
                 Image(systemName: "chart.bar.xaxis")
-                    .padding(15)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20)
+                    .foregroundStyle(.base)
+                    .padding()
+                    .background (
+                        Color("BrandColor2")
+                            .clipShape(Circle())
+                    )
                     .onTapGesture {
                         coordinator.navigate(to: .selectGraphView)
                     }

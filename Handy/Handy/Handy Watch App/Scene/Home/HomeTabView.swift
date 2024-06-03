@@ -30,5 +30,4 @@ struct HomeTabView: View {
 
 #Preview {
     HomeTabView()
-        .environment(Coordinator())
 }
