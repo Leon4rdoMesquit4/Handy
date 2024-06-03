@@ -24,6 +24,7 @@ struct PainScaleView: View {
                 .font(.caption)
             
             ButtonNextPage{
+                
                 controller.painLevel = Double(painIntensity)
                 controller.avarageHeartBeats = wcontroller.averageHeartRate
                 controller.maxHeartBeats = wcontroller.maxHeartRate
@@ -34,6 +35,11 @@ struct PainScaleView: View {
                 controller.saveNewExercise(context: context)
                 wcontroller.reset()
                 coordinator.navigateToRoot()
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("3/3")
             }
         }
     }
@@ -54,7 +60,9 @@ struct PainScaleView: View {
 }
 
 #Preview {
-    PainScaleView()
-        .environment(Coordinator())
-        .environment(SwiftDataController())
+    NavigationStack {
+        PainScaleView()
+            .environment(Coordinator())
+            .environment(SwiftDataController())
+    }
 }

@@ -36,7 +36,7 @@ final class Coordinator{
         case graphView
         case selectGraphView
         case exerciseTabView
-        case borgScaleView
+        //case borgScaleView
         case didFeelPainView
         case painScaleView
         case exerciseUserFeedbackView

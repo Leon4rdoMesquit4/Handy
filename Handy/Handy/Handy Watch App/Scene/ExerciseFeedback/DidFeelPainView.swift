@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DidFeelPainView: View {
+    
     @Environment(Coordinator.self) var coordinator
     @Environment(\.modelContext) var context
     @Environment(SwiftDataController.self) var controller
     @Environment(WorkoutController.self) var wcontroller
     
+     
     var body: some View {
         VStack{
             
@@ -21,6 +23,7 @@ struct DidFeelPainView: View {
             
             HStack (spacing: 30){
                 Button {
+                    
                     controller.startTrainning = wcontroller.startTrainning
                     controller.endTrainning = wcontroller.endTrainning
                     controller.avarageHeartBeats = wcontroller.averageHeartRate
@@ -30,6 +33,7 @@ struct DidFeelPainView: View {
                     controller.saveNewExercise(context: context)
                     wcontroller.reset()
                     coordinator.navigateToRoot()
+                     
                 } label: {
                     Image(systemName: "xmark")
                 }
@@ -46,7 +50,7 @@ struct DidFeelPainView: View {
         .padding()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Text("3/3")
+                Text("2/3")
             }
         }
     }
