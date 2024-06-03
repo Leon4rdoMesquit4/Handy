@@ -277,7 +277,6 @@
 				E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */,
 				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
 				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
-				E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */,
 			);
 			path = ExerciseFeedback;
 			sourceTree = "<group>";
@@ -345,6 +344,7 @@
 				E0711D0F2BFFE1BE00084CAF /* ExerciseFeedback */,
 				E0711D122BFFE1BE00084CAF /* Graphs */,
 				E0711D182BFFE1BE00084CAF /* Home */,
+				E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */,
 				E0711D232BFFE1BE00084CAF /* Onboarding */,
 			);
 			path = Scene;
