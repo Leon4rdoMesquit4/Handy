@@ -52,7 +52,7 @@ class Exercise {
     /// Uma função que retorna uma String que vai ser usada em uma Image para trazer uma imagem que represente a quantidade de esforço que o usuário teve durante o exercício (usando a escala de Borg), se o esforço que o usuário fez foi nulo, então ele retorna uma String vazia.
     func returnImageBorgScale () -> String {
         if let borgScale {
-            return "borgScale\(borgScale)"
+            return "intensity\(Int(borgScale))"
         } else {
             return ""
         }

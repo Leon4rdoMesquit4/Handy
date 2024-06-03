@@ -15,19 +15,36 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .leading){
+                HStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundStyle(.brand.opacity(0.5))
+                        .overlay (alignment: .leading) {
+                            Text(exercise.endTrainning.formatted(date: .omitted, time: .shortened))
+                                .font(.callout)
+                                .foregroundStyle(.white)
+                                .padding(.leading)
+                        }
+                        .frame(height: 35)
+                    
+                    Rectangle()
+                        .foregroundStyle(.clear)
+                }
+                .padding(.bottom)
+                
                 // mostrando a duração do exercício
                 sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
-                    sectionBuilder(title: "Média de batimentos", subtitle: "\(avarageHeartBeats) bpm")
+                    sectionBuilder(title: "Batimentos", subtitle: "\(avarageHeartBeats) bpm")
                 }
                 
                 // mostrando a intensidade do exercício com base na escala de Borg
-                sectionBuilder(title: "Intensidade", image: exercise.returnImageBorgScale())
+                sectionBuilder(title: "Como foi", image: exercise.returnImageBorgScale())
                 
                 // mostrando o nível de dor que a pessoa sentiu durante os exercícios
                 sectionBuilder(title: "Nível de dor", subtitle: "\(Int(exercise.painLevel ?? 0))")
+                    //.padding(.bottom, 30)
                 
                 // mostrando o botão que permite o compartilhamento das informações exercício
                 HStack {
@@ -35,9 +52,11 @@ struct ExerciseDetailView: View {
                     sharelink
                     Spacer()
                 }
+                .padding(.top, 30)
             }
         }
         .navigationTitle(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear{
             // passando o exercício como argumento para a ViewModel usar nas suas funções
             vm.config(exercise: exercise)
@@ -48,6 +67,8 @@ struct ExerciseDetailView: View {
         ShareLink(item: vm.makeSharedText(), preview: SharePreview("Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted).description)")) {
             Image(systemName: "square.and.arrow.up")
         }
+        .tint(.brandColor2)
+        .foregroundStyle(.base)
         .frame(width: 75)
     }
     
@@ -73,6 +94,7 @@ struct ExerciseDetailView: View {
     /// - Parameters:
     ///  - title: uma String que representa o título da seção
     ///  - image: uma String que representa o nome da imagem que vai ser mostrada na seção
+    /// - Returns: Uma view que representa uma seção
     @ViewBuilder
     func sectionBuilder (title : String, image : String?) -> some View{
         Section {
@@ -96,7 +118,7 @@ struct ExerciseDetailView: View {
     
     func setupExercise () -> Exercise {
         let exercise = Exercise()
-        exercise.borgScale = 1
+        exercise.borgScale = 0
         exercise.time = "20:30s"
         exercise.avarageHeartBeats = 90
         exercise.startTrainning = Date()
