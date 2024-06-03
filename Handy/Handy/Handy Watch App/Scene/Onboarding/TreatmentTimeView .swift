@@ -11,6 +11,7 @@ struct TreatmentTimeView_: View {
     @Binding var isOnboardingComplete: Bool
     @State var dataInicio : Date = Date()
     @State var dataFinal : Date = Date()
+    @State var showAlert: Bool = false
     @Environment(OnboardingCoordinator.self) var coordinator
     
     // MARK: VARIÁVEIS RELACIONADAS AO QUE ESTÁ SENDO SALVO NO USERDEFAULTS
@@ -41,14 +42,19 @@ struct TreatmentTimeView_: View {
                 ButtonNextPage{
                     // salvando as coisas no User Defaults
                     // TODO: AINDA FAREI ALGUMAS VALIDAÇÕES
-                    self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
-                    self.dateEndTreatment = Date.convertDateToString(dataFinal)
-                    
-                    isOnboardingComplete = true
+                    if dataInicio < dataFinal{
+                        self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
+                        self.dateEndTreatment = Date.convertDateToString(dataFinal)
+                        isOnboardingComplete = true
+                    } else {
+                        showAlert.toggle()
+                    }
                 }
                 Spacer()
             }
             
+        }.alert(isPresented: $showAlert) {
+            Alert(title: Text("Selecione datas válidas"), message: Text("A data de final deve ser uma data após a de início"), dismissButton: .default(Text("ok")))
         }
     }
     
