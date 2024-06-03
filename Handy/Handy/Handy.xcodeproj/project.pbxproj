@@ -25,7 +25,6 @@
 		E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */; };
 		E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D082BFFE1BE00084CAF /* StepperImage.swift */; };
 		E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D092BFFE1BE00084CAF /* TitleForm.swift */; };
-		E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */; };
 		E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */; };
 		E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */; };
 		E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */; };
@@ -111,7 +110,6 @@
 		E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNextPage.swift; sourceTree = "<group>"; };
 		E0711D082BFFE1BE00084CAF /* StepperImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperImage.swift; sourceTree = "<group>"; };
 		E0711D092BFFE1BE00084CAF /* TitleForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleForm.swift; sourceTree = "<group>"; };
-		E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorgScaleView.swift; sourceTree = "<group>"; };
 		E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidFeelPainView.swift; sourceTree = "<group>"; };
 		E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseUserFeedbackView.swift; sourceTree = "<group>"; };
 		E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				E0711D0A2BFFE1BE00084CAF /* Component */,
-				E0711D0B2BFFE1BE00084CAF /* BorgScaleView.swift */,
 				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
 				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
 				E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */,
@@ -541,7 +538,6 @@
 				E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */,
 				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
 				E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */,
-				E0711D322BFFE1BE00084CAF /* BorgScaleView.swift in Sources */,
 				E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */,
 				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
 				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,

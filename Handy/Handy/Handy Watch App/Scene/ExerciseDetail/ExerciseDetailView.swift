@@ -31,10 +31,11 @@ struct ExerciseDetailView: View {
                 sectionBuilder(title: "Como foi", image: exercise.returnImageBorgScale())
                 
                 // mostrando o nível de dor que a pessoa sentiu durante os exercícios
-                sectionBuilder(title: "Nível de dor", subtitle: "\(Int(exercise.painLevel ?? 0))")
-                    //.padding(.bottom, 30)
+                let imagePainLevel = exercise.returnImagePainLevel()
+                if !imagePainLevel.isEmpty {
+                    sectionBuilder(title: "Intensidade", image: exercise.returnImagePainLevel())
+                }
                 
-                sectionBuilder(title: "Intensidade", image: exercise.returnImagePainLevel())
                 
                 // mostrando o botão que permite o compartilhamento das informações exercício
                 HStack {

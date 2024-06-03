@@ -14,13 +14,27 @@ struct ButtonNextPage : View {
     var callback: (() -> Void)
     
     var body: some View {
-        Button {
-            // boa leozinho!
-            callback()
-        } label: {
-            Image (systemName: "chevron.right")
-        }
-        .frame(width: 75)
+        
+        Image(systemName: "chevron.right")
+            .resizable()
+            .scaledToFit()
+            .foregroundStyle(.base)
+            .frame(height: 15)
+            .bold()
+            .frame(width: 70, height: 25)
+            .background(
+                Color.brand
+            )
+            .clipShape(Capsule())
+            .onTapGesture {
+                callback()
+            }
+    }
+}
+
+#Preview {
+    ButtonNextPage {
+        
     }
 }
 

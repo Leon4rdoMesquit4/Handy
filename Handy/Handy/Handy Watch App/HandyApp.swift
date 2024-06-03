@@ -68,8 +68,8 @@ struct Handy_Watch_AppApp: App {
                             case .exerciseTabView:
                                 ExerciseTabView()
                                     .navigationBarBackButtonHidden()
-                            case .borgScaleView:
-                                BorgScaleView()
+                            //case .borgScaleView:
+                            //    BorgScaleView()
                                     .navigationBarBackButtonHidden()
                             case .didFeelPainView:
                                 DidFeelPainView()
