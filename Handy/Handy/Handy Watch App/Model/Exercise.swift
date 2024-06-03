@@ -75,7 +75,7 @@ class Exercise {
         if newValue >= 0 && newValue <= 10 {
             self.borgScale = newValue
         } else {
-            print("Valor passado para a escala de Borg do usuário é inválida...")
+//            print("Valor passado para a escala de Borg do usuário é inválida...")
             self.borgScale = nil
         }
     }
@@ -84,7 +84,7 @@ class Exercise {
         if newValue >= 0 && newValue <= 10 {
             self.painLevel = newValue
         } else {
-            print("Valor passado para o nível de dor do usuário é inválida...")
+//            print("Valor passado para o nível de dor do usuário é inválida...")
             self.painLevel = 0
         }
     }

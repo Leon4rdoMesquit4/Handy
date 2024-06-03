@@ -24,7 +24,8 @@ struct HomeView: View {
         VStack {
             selectRandomHomeView(randomView.randomElement() ?? .view1)
                 .onTapGesture {
-                    coordinator.navigate(to: .countdownView)
+//                    coordinator.navigate(to: .countdownView)
+                    controller.saveNewExercises(context: context)
 //                    controller.saveALotOfNewExercise(context: context)
 //                    controller.saveOneExercise(context: context)
                 }
@@ -54,7 +55,7 @@ extension HomeView {
                 Image(systemName: "chart.bar.xaxis")
                     .padding(15)
                     .onTapGesture {
-                        coordinator.navigate(to: .selectGraphView)
+                        coordinator.navigate(to: .graphView)
                     }
                 Spacer()
             }

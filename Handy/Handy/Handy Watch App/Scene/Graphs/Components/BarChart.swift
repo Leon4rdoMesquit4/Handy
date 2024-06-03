@@ -8,21 +8,22 @@
 import SwiftUI
 import Charts
 
-
-
 struct BarChart<T: Plottable & Hashable>: View {
     /// lista de elementos plotados na tela
     @Binding var plottedElements : [PlottedElement]
     var hasImages: Bool = true
     
     var body: some View {
-        Chart (plottedElements, id: \.image){p in
+        Chart (plottedElements, id: \.image) { p in
             BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
                 .clipShape(Capsule())
                 .foregroundStyle(by: .value("value", p.image))
         }
         .chartLegend(.hidden)
         .chartXAxis(hasImages ? .visible : .hidden)
+        .chartYAxis {
+            AxisMarks(position: .leading)
+        }
         .chartXAxis {
             AxisMarks { val in
                 AxisValueLabel {

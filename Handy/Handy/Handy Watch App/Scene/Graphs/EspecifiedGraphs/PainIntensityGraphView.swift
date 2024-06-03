@@ -12,8 +12,7 @@ struct PainIntensityGraphView: View {
     @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
-    @State var graphCase: Coordinator.Destination.GraphCases
-    @State var elements : [Int] = [0, 0, 0, 0, 0, 0]
+    @State var elements : [Int] = [0, 0, 0]
     @State var plottedElements : [PlottedElement] = []
     
     var body: some View {
@@ -27,11 +26,11 @@ struct PainIntensityGraphView: View {
     }
     
     private func retrieveData() {
-        elements = [0, 0, 0, 0, 0, 0]
+        elements = [0, 0, 0]
         plottedElements = []
         
-        let lastWeekDays = controller.getLastWeekDaysForPredicate()
-        let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
+        let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
+        let exercises = controller.fetchExercises(context, in: lastWeekDays)
         
         for exercise in exercises {
             if let feedback = exercise.painLevel {
@@ -50,5 +49,5 @@ struct PainIntensityGraphView: View {
 }
 
 #Preview {
-    PainIntensityGraphView(graphCase: .week)
+    PainIntensityGraphView()
 }
