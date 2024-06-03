@@ -16,11 +16,11 @@ struct ExerciseDetailView: View {
         ScrollView {
             VStack (alignment: .leading){
                 // mostrando a duração do exercício
-                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
+                sectionBuilder(title: "Duração", subtitle: exercise.time?.getTimeString() ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
-                    sectionBuilder(title: "Média de batimentos", subtitle: "\(avarageHeartBeats) bpm")
+                    sectionBuilder(title: "Média de batimentos", subtitle: "\(Int(avarageHeartBeats - avarageHeartBeats.truncatingRemainder(dividingBy: 1))) bpm")
                 }
                 
                 // mostrando a intensidade do exercício com base na escala de Borg
