@@ -33,7 +33,7 @@ final class Coordinator{
         }
         
         case countdownView
-        case graphView(GraphCases)
+        case graphView
         case selectGraphView
         case exerciseTabView
         //case borgScaleView

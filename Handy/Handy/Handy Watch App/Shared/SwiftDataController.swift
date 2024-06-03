@@ -60,6 +60,32 @@ class SwiftDataController {
         
     }
     
+    func saveNewExercises(context: ModelContext){
+                
+        for n in 2...25 {
+            
+            let components = DateComponents(year: 2024, month: 6, day: n, hour: 14, minute: 30, second: 0)
+            guard let inicialDate = Calendar.current.date(from: components) else {
+                fatalError("Não foi possível criar a data")
+            }
+            
+            let finalComponents = DateComponents(year: 2024, month: 6, day: n, hour: 14, minute: 30 + Int.random(in: 10...50), second: 0)
+            guard let finalDate = Calendar.current.date(from: finalComponents) else {
+                fatalError("Não foi possível criar a data")
+            }
+            
+            let exercise = Exercise()
+            exercise.startTrainning = inicialDate
+            exercise.endTrainning = finalDate
+            exercise.avarageHeartBeats = Double(Int.random(in: 70...112))
+            exercise.exerciseFeedback = Double(Int.random(in: 0...5))
+            exercise.painLevel = Double(Int.random(in: 0...2))
+            context.insert(exercise)
+            
+        }
+ 
+    }
+    
     func saveOneExercise(context: ModelContext){
         let exercise = Exercise()
         exercise.startTrainning = .now + TimeInterval(89000)
@@ -115,15 +141,33 @@ class SwiftDataController {
         return exercisesFetched
     }
     
-    func fetchExercises (_ context : ModelContext, in week: ClosedRange<Date>) -> [Exercise]{
+    func fetchExercises (_ context : ModelContext, in week: [Date]) -> [Exercise]{
         let totalExercises = fetchExercises(context)
         var exercisesInWeek : [Exercise] = []
         
         for exercise in totalExercises {
-            let startTrainning = exercise.startTrainning 
-                if week.contains(startTrainning) {
+                        
+            print("Exercicio = \(exercise.startTrainning)")
+            
+            let startTrainning = exercise.startTrainning
+            
+            for day in week {
+                if Calendar.current.isDate(day, equalTo: startTrainning, toGranularity: .day) {
                     exercisesInWeek.append(exercise)
                 }
+            }
+            
+            
+            
+//                if week.contains(startTrainning) {
+//                    exercisesInWeek.append(exercise)
+//                }
+        }
+        
+        print("Dados tratados")
+        
+        for n in exercisesInWeek{
+            print("Exercicio = \(n.startTrainning)")
         }
         
         return exercisesInWeek

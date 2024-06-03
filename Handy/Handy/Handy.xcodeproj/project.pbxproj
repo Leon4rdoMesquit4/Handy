@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */; };
 		E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E02970552BFFDCCA0042E261 /* Handy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705C2BFFDCCA0042E261 /* ContentView.swift */; };
 		E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E029705E2BFFDCCC0042E261 /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleView.swift; sourceTree = "<group>"; };
 		E029704F2BFFDCCA0042E261 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02970552BFFDCCA0042E261 /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3CFE6C02C0E381F0013A49F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
+				C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		E02970482BFFDCCA0042E261 = {
 			isa = PBXGroup;
 			children = (
@@ -294,11 +305,11 @@
 		E0711D182BFFE1BE00084CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FDF6AE892C0A140700B02E77 /* New Group */,
+				FDF6AE892C0A140700B02E77 /* GoalView */,
 				E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */,
 				E0711D152BFFE1BE00084CAF /* HomeController.swift */,
 				E0711D162BFFE1BE00084CAF /* HomeTabView.swift */,
-				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
+				C3CFE6C02C0E381F0013A49F /* HomeView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -400,13 +411,13 @@
 			path = EspecifiedGraphs;
 			sourceTree = "<group>";
 		};
-		FDF6AE892C0A140700B02E77 /* New Group */ = {
+		FDF6AE892C0A140700B02E77 /* GoalView */ = {
 			isa = PBXGroup;
 			children = (
 				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
 				FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */,
 			);
-			path = "New Group";
+			path = GoalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +524,7 @@
 				E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */,
 				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
 				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
+				C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */,
 				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,
 				E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */,
 				E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */,
