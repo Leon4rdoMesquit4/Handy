@@ -41,6 +41,10 @@ final class Coordinator{
         case painScaleView
         case exerciseUserFeedbackView
         case exerciseDetailView(Exercise)
+        case goalEditorView
+        case goalDateEditorView
+        case EmojiPickerView(Binding<String>)
+        case GoalEditorDatePickerView(String, Binding<Date>)
     }
     
     var navPath: [Destination] = []

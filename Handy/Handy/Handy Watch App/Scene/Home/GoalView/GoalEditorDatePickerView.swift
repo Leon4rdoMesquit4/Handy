@@ -1,17 +1,17 @@
 //
-//  TreatmentTimeBeginningView.swift
+//  GoalEditorDatePickerView.swift
 //  Handy Watch App
 //
-//  Created by Caio Marques on 22/05/24.
+//  Created by Caio Marques on 04/06/24.
 //
 
+import Foundation
 import SwiftUI
 
-struct TreatmentTimeBeginningView: View {
-    
+struct GoalEditorDatePickerView : View {
     @Binding var dataInicio : Date
-    @Environment(OnboardingCoordinator.self) var coordinator
-    var title : String = "Data de início"
+    @Environment(Coordinator.self) var coordinator
+    var title : String
     
     var body: some View {
         
@@ -29,6 +29,5 @@ struct TreatmentTimeBeginningView: View {
 }
 
 #Preview {
-    TreatmentTimeBeginningView(dataInicio: .constant(Date()), title: "Data de início")
-        .environment(OnboardingCoordinator())
+    GoalEditorDatePickerView(dataInicio: .constant(Date()), title: "Date")
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalView: View {
     @StateObject var vm = GoalViewModel()
+    @Environment(Coordinator.self) var coordinator
     
     var body: some View {
         VStack {
@@ -109,13 +110,15 @@ extension GoalView {
                     .scaledToFit()
                     .frame(width: 20)
                     .font(.title2)
-                    .onTapGesture {}
                     .foregroundStyle(.base)
                     .padding()
                     .background(
                         Color.brand
                             .clipShape(Circle())
                     )
+                    .onTapGesture {
+                        coordinator.navigate(to: .goalEditorView)
+                    }
             }
         }
     }
