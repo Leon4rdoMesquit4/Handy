@@ -24,7 +24,7 @@ struct EmojiPickerView: View {
     // MARK: BODY
     var body: some View {
         VStack (spacing: 20){
-            Text("Escolha um símbolo \(emojiPicked)")
+            Text("Escolha um símbolo")
             
             // aqui é onde é exibida a lista de símbolos. É uma LazyVGrid com 5 colunas
             LazyVGrid(columns: columns, content: {

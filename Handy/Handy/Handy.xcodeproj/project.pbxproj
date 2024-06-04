@@ -85,6 +85,9 @@
 		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
 		FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE872C07C0E500B02E77 /* Date+Format.swift */; };
 		FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */; };
+		FDF6AE922C0F87C900B02E77 /* GoalEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */; };
+		FDF6AE942C0F894800B02E77 /* GoalEDateEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */; };
+		FDF6AE982C0F9E6500B02E77 /* GoalEditorDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +196,9 @@
 		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
 		FDF6AE872C07C0E500B02E77 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditorView.swift; sourceTree = "<group>"; };
+		FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEDateEditorView.swift; sourceTree = "<group>"; };
+		FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditorDatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,6 +495,9 @@
 			children = (
 				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
 				FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */,
+				FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */,
+				FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */,
+				FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */,
 			);
 			path = GoalView;
 			sourceTree = "<group>";
@@ -615,14 +624,17 @@
 				E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */,
 				C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */,
 				E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */,
+				FDF6AE982C0F9E6500B02E77 /* GoalEditorDatePickerView.swift in Sources */,
 				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
 				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
 				C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */,
 				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,
 				E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */,
+				FDF6AE922C0F87C900B02E77 /* GoalEditorView.swift in Sources */,
 				E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */,
 				E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */,
 				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
+				FDF6AE942C0F894800B02E77 /* GoalEDateEditorView.swift in Sources */,
 				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
 				E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */,
 				E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */,

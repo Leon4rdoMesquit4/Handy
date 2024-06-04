@@ -28,9 +28,6 @@
     "bpm" : {
 
     },
-    "Data de início" : {
-
-    },
     "Data do final" : {
 
     },
@@ -49,7 +46,10 @@
     "Duração do tratamento:" : {
 
     },
-    "Escolha um símbolo %@" : {
+    "Editar meta" : {
+
+    },
+    "Escolha um símbolo" : {
 
     },
     "Estabeleça a sua meta" : {
@@ -102,6 +102,9 @@
 
     },
     "Tempo de prática" : {
+
+    },
+    "Tratamento" : {
 
     },
     "Treino do dia: %@" : {
