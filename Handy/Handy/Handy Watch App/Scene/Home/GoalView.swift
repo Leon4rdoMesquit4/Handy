@@ -99,6 +99,7 @@ extension GoalView {
 }
 
 // MARK: PENCIL BUTTON
+/// Extensão para montar o botão de editar o objetivo.
 extension GoalView {
     var pencilButton : some View {
         VStack {
@@ -109,6 +110,7 @@ extension GoalView {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20)
+                    .bold()
                     .font(.title2)
                     .foregroundStyle(.base)
                     .padding()
