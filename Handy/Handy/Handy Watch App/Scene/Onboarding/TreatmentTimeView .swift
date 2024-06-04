@@ -74,10 +74,12 @@ struct TreatmentTimeView_: View {
     @ViewBuilder
     func dateButton (_ label : String, date : Date) -> some View {
         VStack (alignment: .leading, spacing: 4){
-            Text(label)
-                .bold()
-                .font(.caption)
-            Text(date.formatted(date: .numeric, time: .omitted))
+            Group{
+                Text(label)
+                    .bold()
+                    .font(.caption)
+                Text(date.formatted(date: .numeric, time: .omitted))
+            }
         }
     }
 }
