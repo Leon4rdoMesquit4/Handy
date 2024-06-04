@@ -23,7 +23,7 @@ struct ExerciseTabView: View {
             
             ExerciseStatsView().tag(TabItems.stats)
             
-            NowPlayingView().tag(TabItems.media)
+            NowPlayingView().background(Color.base).tint(Color.brandColor2).tag(TabItems.media)
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: isLuminanceReduced ? .never : .automatic))
         .tabViewStyle(.carousel)

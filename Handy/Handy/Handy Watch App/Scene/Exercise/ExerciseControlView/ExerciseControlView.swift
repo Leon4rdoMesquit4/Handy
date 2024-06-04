@@ -15,22 +15,27 @@ struct ExerciseControlView: View {
     @Environment(WorkoutController.self) var wcontroller
     
     var body: some View {
-        HStack{
-            ControlButton(color: .gray, action: {
-                
-                wcontroller.endWorkout()
-                controller.startTrainning = .now
-                coordinator.navigate(to: .exerciseUserFeedbackView)
-                
-            }, name: "end", image: Image(systemName: "xmark"))
+        ZStack{
             
+            Color.base
             
-            ControlButton(color: .gray, action: {
+            HStack{
+                ControlButton(color: .colorSupport03, action: {
+                    
+                    wcontroller.endWorkout()
+                    controller.startTrainning = .now
+                    coordinator.navigate(to: .exerciseUserFeedbackView)
+                    
+                }, name: "end", image: Image(systemName: "xmark"))
                 
-                wcontroller.togglePause()
                 
-            }, name: "Pausar", image: Image(systemName: wcontroller.working ? "pause.fill" : "play.fill"))
-        }.background(Color.base)
+                ControlButton(color: .brandColor2, action: {
+                    
+                    wcontroller.togglePause()
+                    
+                }, name: "Pausar", image: Image(systemName: wcontroller.working ? "pause.fill" : "play.fill"))
+            }.padding()
+        }.ignoresSafeArea()
     }
 }
 
