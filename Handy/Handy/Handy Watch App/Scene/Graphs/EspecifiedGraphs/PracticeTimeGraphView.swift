@@ -22,6 +22,7 @@ struct PracticeTimeGraphView: View {
                 .navigationTitle{
                     Text("Tempo de prática")
                         .foregroundStyle(.white)
+                        .font(.poppins(.light, size: 13, relativeTo: .title))
                 }
         }
     }

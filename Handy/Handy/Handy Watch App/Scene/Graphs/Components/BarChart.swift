@@ -37,7 +37,7 @@ struct BarChart<T: Plottable & Hashable>: View {
                     AxisMarks(position: .leading){ val in
                         if !hasImages{
                             AxisValueLabel()
-                                .font(.largeTitle)
+                                .font(.alata(.regular, size: 12, relativeTo: .body))
                         } else {
                             AxisValueLabel{
                                 Text("")
@@ -48,8 +48,9 @@ struct BarChart<T: Plottable & Hashable>: View {
                 }
             HStack{
                 Text("30")
-                    .font(.title)
+                    .font(.alata(.regular, size: 28, relativeTo: .headline))
                 Text("Min")
+                    .font(.poppins(.light, size: 10, relativeTo: .body))
                 Spacer()
             }
         }.padding()
