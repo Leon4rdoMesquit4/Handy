@@ -23,7 +23,6 @@ class WorkoutController: NSObject  {
     var workout: HKWorkout?
     var time: String = ""
     
-    
     var working:Bool = false
     
     //Workout type
