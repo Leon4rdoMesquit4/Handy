@@ -13,6 +13,7 @@ struct ExerciseStatsView: View {
     @Environment(SwiftDataController.self) var controller
     
     var body: some View {
+        
         TimelineView(MetricsTimelineSchedule(from: wcontroller.builder?.startDate ?? Date(),
         isPaused: wcontroller.session?.state == .paused)) { context in
             
