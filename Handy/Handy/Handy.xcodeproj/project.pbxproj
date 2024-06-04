@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */; };
+		C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */; };
 		E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E02970552BFFDCCA0042E261 /* Handy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705C2BFFDCCA0042E261 /* ContentView.swift */; };
 		E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E029705E2BFFDCCC0042E261 /* Assets.xcassets */; };
@@ -93,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleView.swift; sourceTree = "<group>"; };
+		C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleViewModel.swift; sourceTree = "<group>"; };
 		E029704F2BFFDCCA0042E261 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02970552BFFDCCA0042E261 /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
 				C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */,
+				C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			files = (
 				E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */,
 				E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */,
+				C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */,
 				E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */,
 				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
 				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
