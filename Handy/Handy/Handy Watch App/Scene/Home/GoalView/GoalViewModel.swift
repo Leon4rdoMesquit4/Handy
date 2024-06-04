@@ -42,7 +42,7 @@ extension GoalView {
                 return (alreadyProgressed / totalTime) * 100
             }
             
-            print("Erro: initialTreatmentDate e/ou endingTreatmentDate está(ão) vazio(s)")
+//            print("Erro: initialTreatmentDate e/ou endingTreatmentDate está(ão) vazio(s)")
             return 0
         }
         
@@ -60,7 +60,6 @@ extension GoalView {
             } else {
                 return 0
             }
-            return 5
         }
     }
 }
