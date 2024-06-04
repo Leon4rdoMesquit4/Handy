@@ -14,23 +14,50 @@ struct BarChart<T: Plottable & Hashable>: View {
     var hasImages: Bool = true
     
     var body: some View {
-        Chart (plottedElements, id: \.image) { p in
-            BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
-                .clipShape(Capsule())
-                .foregroundStyle(by: .value("value", p.image))
-        }
-        .chartLegend(.hidden)
-        .chartXAxis(hasImages ? .visible : .hidden)
-        .chartYAxis {
-            AxisMarks(position: .leading)
-        }
-        .chartXAxis {
-            AxisMarks { val in
-                AxisValueLabel {
-                    axisImage(val: val.index)
-                }
+        VStack{
+            Chart (plottedElements, id: \.image) { p in
+                BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
+                    .clipShape(Capsule())
+                    .foregroundStyle(by: .value("value", p.image))
             }
-        }
+                .chartLegend(.hidden)
+                .chartXAxis(hasImages ? .visible : .hidden)
+                .chartYAxis(hasImages ? .hidden : .visible)
+            //        .chartYAxis {
+            //            AxisMarks(position: .leading)
+            //        }
+                .chartXAxis {
+                    AxisMarks { val in
+                        AxisValueLabel {
+                            axisImage(val: val.index)
+                        }
+                    }
+                }
+                .chartYAxis{
+                    AxisMarks(position: .leading){ val in
+                        if !hasImages{
+                            AxisValueLabel()
+                                .font(.largeTitle)
+                        } else {
+                            AxisValueLabel{
+                                Text("")
+                            }
+                        }
+                        
+                    }
+                }
+            HStack{
+                Text("30")
+                    .font(.title)
+                Text("Min")
+                Spacer()
+            }
+        }.padding()
+        .background(LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top))
+        .ignoresSafeArea(edges: .bottom)
+            
+        
+        
     }
     
     @ViewBuilder
@@ -38,7 +65,7 @@ struct BarChart<T: Plottable & Hashable>: View {
         Image(plottedElements[val].image)
             .resizable()
             .scaledToFit()
-            .frame(width: 15)
+            .frame(width: 20)
             .padding(.vertical)
     }
 }

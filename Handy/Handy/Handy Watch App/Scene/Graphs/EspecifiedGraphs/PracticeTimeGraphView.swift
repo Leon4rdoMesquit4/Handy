@@ -19,7 +19,10 @@ struct PracticeTimeGraphView: View {
                 .onAppear{
                     retrieveData()
                 }
-                .navigationTitle("Tempo de prática")
+                .navigationTitle{
+                    Text("Tempo de prática")
+                        .foregroundStyle(.white)
+                }
         }
     }
     
@@ -72,7 +75,7 @@ struct PracticeTimeGraphView: View {
 //        print(plottedElements)
     }
     
-    struct TimeGraphData{
+    struct TimeGraphData {
         var count: Int
         var sum: Double
         

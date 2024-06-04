@@ -20,12 +20,9 @@ struct ExerciseUserFeedbackView: View {
             StepperImage(value: $feedback, interval: 0 ... 5, prefixImage: "intensity")
                 .padding(WKInterfaceDevice.current().screenBounds.height / 400)
             
-            
             Text(labelIntensity())
                 .font(.caption2)
                 .padding(.bottom, WKInterfaceDevice.current().screenBounds.height / 400)
-
-            
             
             ButtonNextPage{
                 controller.exerciseFeedback = Double(feedback)
@@ -38,9 +35,7 @@ struct ExerciseUserFeedbackView: View {
             }
         }
         
-        
     }
-    
     
     /// Uma função que retorna uma string que representa a legenda que vai ser colocada abaixo da imagem
     func labelIntensity () -> String {
