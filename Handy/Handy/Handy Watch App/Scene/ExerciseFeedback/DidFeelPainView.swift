@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct DidFeelPainView: View {
+    
     @Environment(Coordinator.self) var coordinator
     @Environment(\.modelContext) var context
     @Environment(SwiftDataController.self) var controller
     @Environment(WorkoutController.self) var wcontroller
-    
+     
     var body: some View {
         VStack{
             
             TitleForm(text: "Sentiu dor ao praticar?")
             Spacer()
             
-            HStack (spacing: 30){
+            HStack (spacing: 15){
                 Button {
                     controller.startTrainning = wcontroller.startTrainning
                     controller.endTrainning = wcontroller.endTrainning
@@ -32,13 +33,24 @@ struct DidFeelPainView: View {
                     coordinator.navigateToRoot()
                 } label: {
                     Image(systemName: "xmark")
+                        .bold()
+                        .foregroundStyle(.base)
                 }
+                .background(Color.colorSupport03)
+                .frame(height: 40)
+                .clipShape(Capsule())
                 
                 Button {
                     coordinator.navigate(to: .painScaleView)
                 } label: {
                     Image(systemName: "checkmark")
+                        .foregroundStyle(.base)
+                        .bold()
                 }
+                .background(Color.colorSupport02)
+                .frame(height: 40)
+                .clipShape(Capsule())
+
             }
             
             Spacer()
@@ -46,7 +58,7 @@ struct DidFeelPainView: View {
         .padding()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Text("3/3")
+                Text("2/3")
             }
         }
     }

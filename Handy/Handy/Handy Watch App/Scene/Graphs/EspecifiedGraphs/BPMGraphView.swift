@@ -13,7 +13,6 @@ struct BPMGraphView: View {
     @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
-    @State var graphCase: Coordinator.Destination.GraphCases
     @State var minValue: Double = 70
     @State var maxValue: Double = 90
     
@@ -21,13 +20,7 @@ struct BPMGraphView: View {
         VStack{
             LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue:  $maxValue)
                 .onAppear{
-                    switch graphCase {
-                    case .month:
-                        exerciseAnalytics = []
-                    case .week:
-                        retrieveData()
-                    }
-                    
+                    retrieveData()
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
                 .navigationTitle("Batimentos")
@@ -35,8 +28,8 @@ struct BPMGraphView: View {
     }
     
     func retrieveData() {
-        let lastWeekDays = controller.getLastWeekDaysForPredicate()
-        let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
+        let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
+        let exercises = controller.fetchExercises(context, in: lastWeekDays)
         
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.avarageHeartBeats)
         
@@ -50,7 +43,7 @@ struct BPMGraphView: View {
 
 
 #Preview {
-    BPMGraphView(exerciseAnalytics: [], graphCase: .week)
+    BPMGraphView(exerciseAnalytics: [])
         .environment(SwiftDataController())
 }
 

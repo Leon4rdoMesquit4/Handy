@@ -31,8 +31,8 @@ struct DifficultGraphView: View {
     }
     
     func retrieveData () {
-        let lastWeekDays = controller.getLastWeekDaysForPredicate()
-        let exercises = controller.fetchExercises(context, in: lastWeekDays.0 ... lastWeekDays.1)
+        let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
+        let exercises = controller.fetchExercises(context, in: lastWeekDays)
         
         exerciseAnalytics = Date.averageValuesByDay(exercises: exercises, keypath: \.borgScale)
         print(exerciseAnalytics)

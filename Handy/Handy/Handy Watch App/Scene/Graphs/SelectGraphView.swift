@@ -14,12 +14,12 @@ struct SelectGraphView: View {
         
         Text("Week")
             .onTapGesture {
-                coordinator.navigate(to: .graphView(.week))
+                coordinator.navigate(to: .graphView)
             }
         
         Text("Month")
             .onTapGesture {
-                coordinator.navigate(to: .graphView(.month))
+                coordinator.navigate(to: .graphView)
             }
     }
 }
