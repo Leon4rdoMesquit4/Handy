@@ -15,7 +15,8 @@ struct GoalView: View {
             title.padding(5)
             goalGraph
             Spacer()
-        }.ignoresSafeArea()
+        }.background(Color.base)
+        .ignoresSafeArea()
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 HStack {
