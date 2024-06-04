@@ -13,27 +13,40 @@ struct ExerciseStatsView: View {
     @Environment(SwiftDataController.self) var controller
     
     var body: some View {
-        TimelineView(MetricsTimelineSchedule(from: wcontroller.builder?.startDate ?? Date(),
-        isPaused: wcontroller.session?.state == .paused)) { context in
+        ZStack{
             
-            Text("Tempo de Pratica")
-                .padding()
+            Color.base
+            
+            TimelineView(MetricsTimelineSchedule(from: wcontroller.builder?.startDate ?? Date(),
+                                                 isPaused: wcontroller.session?.state == .paused)) { context in
+                
+                Text("Tempo de Pratica")
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                TimeView(timePassed: wcontroller.builder?.elapsedTime(at: context.date) ?? 0)
+                    .font(.system(.title,design: .rounded).monospacedDigit().lowercaseSmallCaps())
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundStyle(Color.brandColor2)
+                            .opacity(0.4)
+                            .padding()
+                    }
+                
+                HStack{
+                    Image(systemName: "heart.fill")
+                        .foregroundStyle(Color.colorSupport03)
+                    Text(wcontroller.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
+                }
                 .frame(maxWidth: .infinity, alignment: .leading)
-            
-            TimeView(timePassed: wcontroller.builder?.elapsedTime(at: context.date) ?? 0)
-                .font(.system(.title,design: .rounded).monospacedDigit().lowercaseSmallCaps())
-                .frame(maxWidth: .infinity, alignment: .center)
                 .padding()
-            
-            HStack{
-                Image(systemName: "heart.fill")
-                Text(wcontroller.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
+                
             }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-            
-        }
-        .ignoresSafeArea(edges: .bottom)
+        }.ignoresSafeArea()
     }
 }
 

@@ -11,7 +11,7 @@ import Foundation
 /// - parameters:
 ///        - image: uma string que é capaz de mostrar uma imagem dos assets
 ///        - value: o valor numérico que indica quantidade desse elemento que existem 
-struct PlottedElement {
+struct PlottedElement: Hashable {
     var image : String
     var value : Int
 }

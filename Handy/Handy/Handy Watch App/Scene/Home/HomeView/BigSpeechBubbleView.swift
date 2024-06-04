@@ -9,11 +9,13 @@ import SwiftUI
 
 struct BigSpeechBubbleView: View {
     
+    @StateObject var vm = BigSpeechBubbleViewModel()
+    
     var body: some View {
             Image("BigSpeechBubble")
                 .resizable()
                 .overlay(alignment: .topLeading) {
-                    Text("")
+                    Text(vm.selectRandomSpeechBubblePhrase())
                         .padding(15)
                 }
     }
