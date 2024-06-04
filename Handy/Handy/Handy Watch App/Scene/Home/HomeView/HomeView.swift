@@ -22,12 +22,12 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-//            selectRandomHomeView(randomView.randomElement() ?? .view1)
-//                .onTapGesture {
-//                    coordinator.navigate(to: .countdownView)
-//                    //                    controller.saveALotOfNewExercise(context: context)
-//                    //                    controller.saveOneExercise(context: context)
-//                }
+            selectRandomHomeView(randomView.randomElement() ?? .view1)
+                .onTapGesture {
+                    coordinator.navigate(to: .countdownView)
+                    //                    controller.saveALotOfNewExercise(context: context)
+                    //                    controller.saveOneExercise(context: context)
+                }
             navigateToGraphButton
                 .padding(15)
         }.ignoresSafeArea()
@@ -60,7 +60,7 @@ extension HomeView {
                             .clipShape(Circle())
                     )
                     .onTapGesture {
-                        coordinator.navigate(to: .selectGraphView)
+                        coordinator.navigate(to: .graphView)
                     }
                 Spacer()
             }
