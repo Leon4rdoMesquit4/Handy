@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+/// View que renderiza um DatePicker e permite a alteração de uma data enviada como Binding
+/// - Parameters:
+///    - dataInicio: o Binding da data que vai ser alterada.
+///    - title: String que vai ser exibida na tela.
 struct GoalEditorDatePickerView : View {
     @Binding var dataInicio : Date
     @Environment(Coordinator.self) var coordinator
