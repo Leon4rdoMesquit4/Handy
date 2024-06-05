@@ -20,7 +20,11 @@ struct LineChart: View {
             ForEach(exerciseAnalytics) { item in
                 LineMark(x: .value("day", item.date),
                          y: .value("bpm", item.value))
-                .foregroundStyle(LinearGradient(colors: [.orange, .pink], startPoint: .bottomLeading, endPoint: .topTrailing))
+                .foregroundStyle(.red)
+                
+                PointMark(x: .value("day", item.date),
+                          y: .value("bpm", item.value))
+                .foregroundStyle(.red)
             }
             .symbol(.circle)
         }

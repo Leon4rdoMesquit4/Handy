@@ -16,7 +16,7 @@ struct PainIntensityGraphView: View {
     @State var plottedElements : [PlottedElement] = []
     
     var body: some View {
-        VStack {
+        ZStack {
             BarChart<Int>(plottedElements: $plottedElements)
                 .navigationTitle("Dor")
         }
@@ -41,7 +41,7 @@ struct PainIntensityGraphView: View {
         
         var contador : Int = 0
         for element in elements {
-            plottedElements.append(PlottedElement(image: "intensity\(contador)", value: element))
+            plottedElements.append(PlottedElement(image: "pain\(contador)", value: element))
             contador += 1
         }
     }

@@ -16,6 +16,12 @@
     "3/3" : {
 
     },
+    "30" : {
+
+    },
+    "A data de fim do tratamento não pode ser menor que a data do início do tratamento..." : {
+
+    },
     "A data de final deve ser uma data após a de início" : {
 
     },
@@ -25,10 +31,10 @@
     "bpm" : {
 
     },
-    "Data de início" : {
+    "Data do final" : {
 
     },
-    "Data do final" : {
+    "Data inválida" : {
 
     },
     "day" : {
@@ -46,7 +52,10 @@
     "Duração do tratamento:" : {
 
     },
-    "Escolha um símbolo %@" : {
+    "Editar meta" : {
+
+    },
+    "Escolha um símbolo" : {
 
     },
     "Estabeleça a sua meta" : {
@@ -62,6 +71,9 @@
 
     },
     "image" : {
+
+    },
+    "Min" : {
 
     },
     "Minha meta" : {
@@ -80,6 +92,9 @@
     "ok" : {
 
     },
+    "OK" : {
+
+    },
     "Ops! Nenhum emoji selecionado" : {
 
     },
@@ -96,6 +111,9 @@
 
     },
     "Tempo de prática" : {
+
+    },
+    "Tratamento" : {
 
     },
     "Treino do dia: %@" : {

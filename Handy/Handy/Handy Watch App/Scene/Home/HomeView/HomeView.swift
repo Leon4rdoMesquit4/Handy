@@ -57,7 +57,7 @@ extension HomeView {
                             .clipShape(Circle())
                     )
                     .onTapGesture {
-                        coordinator.navigate(to: .selectGraphView)
+                        coordinator.navigate(to: .graphView)
                     }
                 Spacer()
             }

@@ -68,8 +68,8 @@ struct Handy_Watch_AppApp: App {
                             case .exerciseTabView:
                                 ExerciseTabView()
                                     .navigationBarBackButtonHidden()
-                            //case .borgScaleView:
-                            //    BorgScaleView()
+                                //case .borgScaleView:
+                                //    BorgScaleView()
                                     .navigationBarBackButtonHidden()
                             case .didFeelPainView:
                                 DidFeelPainView()
@@ -82,6 +82,14 @@ struct Handy_Watch_AppApp: App {
                                     .navigationBarBackButtonHidden()
                             case .exerciseDetailView(let exercise):
                                 ExerciseDetailView(exercise: exercise)
+                            case .goalEditorView:
+                                GoalEditorView()
+                            case .goalDateEditorView:
+                                GoalEDateEditorView()
+                            case .EmojiPickerView(let binding):
+                                EmojiPickerView(emojiPicked: binding)
+                            case .GoalEditorDatePickerView(let string, let date):
+                                GoalEditorDatePickerView(dataInicio: date, title: string)
                             }
                         }
                 }

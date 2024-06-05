@@ -23,7 +23,6 @@ class WorkoutController: NSObject  {
     var workout: HKWorkout?
     var time: String = ""
     
-    
     var working:Bool = false
     
     //Workout type
@@ -51,7 +50,8 @@ class WorkoutController: NSObject  {
         
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { success, error in
             if let error = error {
-//                print(error.localizedDescription)
+                print(error.localizedDescription)
+                print("#DEBUG: não autorizou o workout")
             }
         }
     }
@@ -94,6 +94,7 @@ class WorkoutController: NSObject  {
         DispatchQueue.main.async {
             switch statistics.quantityType{
             case HKQuantityType.quantityType(forIdentifier: .heartRate):
+                
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
                 
                 self.heartRate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
@@ -136,6 +137,7 @@ class WorkoutController: NSObject  {
     
     func pause(){
         session?.pause()
+        print("#DEBUG: pausou a session")
         working.toggle()
     }
     

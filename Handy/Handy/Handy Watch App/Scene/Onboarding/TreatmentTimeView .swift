@@ -26,12 +26,18 @@ struct TreatmentTimeView_: View {
                 .padding(.horizontal)
             
                 dateButton("Data de início", date: dataInicio)
+                .accessibilityAction {
+                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
+                }
                 .onTapGesture {
                     coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
                 }
         
                         
                 dateButton("Data final", date: dataFinal)
+                .accessibilityAction {
+                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
+                }
                 .onTapGesture {
                     coordinator.navigate(to: .treatmentTimeEndView($dataFinal))
                 }

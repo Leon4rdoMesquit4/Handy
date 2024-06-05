@@ -33,16 +33,17 @@ extension GoalView {
         func calculateProgressTreatment () -> Double {
             if let initialTreatmentDate, let endingTreatmentDate {
                 //primeiramente eu preciso saber a subtração entre a data final pela inicial
+                
                 let totalTime = endingTreatmentDate.timeIntervalSinceReferenceDate - initialTreatmentDate.timeIntervalSinceReferenceDate
                 
                 // agora, eu preciso saber a subtração entre agora e a data no início do tratamento
                 let alreadyProgressed = Date().timeIntervalSinceReferenceDate - initialTreatmentDate.timeIntervalSinceReferenceDate
                 
+                
                 // agora é só dividir um pelo outro e multiplicar por 100 para obter o valor do progresso.
                 return (alreadyProgressed / totalTime) * 100
             }
             
-//            print("Erro: initialTreatmentDate e/ou endingTreatmentDate está(ão) vazio(s)")
             return 0
         }
         

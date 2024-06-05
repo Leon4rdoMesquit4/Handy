@@ -9,21 +9,23 @@ import Foundation
 import SwiftUI
 
 /// Uma View que vai renderizar um botão na tela que vai redirecionar o usuário para a próxima tela
+/// Recebe um systemImage caso seja uma imagem diferente de um chevron que se deseja apresentar.
 struct ButtonNextPage : View {
     
     var callback: (() -> Void)
+    var systemImage : String = "chevron.right"
     
     var body: some View {
         
-        Image(systemName: "chevron.right")
+        Image(systemName: systemImage)
             .resizable()
             .scaledToFit()
             .foregroundStyle(.base)
             .frame(height: 15)
             .bold()
-            .frame(width: 70, height: 25)
+            .frame(width: 60, height: 28)
             .background(
-                Color.brand
+                Color.brandColor2
             )
             .clipShape(Capsule())
             .onTapGesture {
