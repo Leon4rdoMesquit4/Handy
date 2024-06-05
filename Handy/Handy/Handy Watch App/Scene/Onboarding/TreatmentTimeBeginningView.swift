@@ -17,7 +17,7 @@ struct TreatmentTimeBeginningView: View {
         
         VStack (spacing: 20){
             
-            DatePicker(title, selection: $dataInicio)
+            DatePicker(title, selection: $dataInicio, in: Calendar.current.date(byAdding: .year, value: -20, to: Date.init())!...Calendar.current.date(byAdding: .year, value: 20, to: Date.init())!)
                 .frame(height: 120)
             
             Button ("Definir") {

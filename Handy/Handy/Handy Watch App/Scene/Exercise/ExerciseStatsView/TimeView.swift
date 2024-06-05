@@ -17,6 +17,7 @@ struct TimeView: View {
     var body: some View {
         VStack{
             Text(NSNumber(value: timePassed), formatter: formatter)
+                .font(Font.largeTitle.monospacedDigit())
                 .font(.system(size: 40))
                 .fontWeight(.semibold)
                 .foregroundStyle(Color.brandColor2)

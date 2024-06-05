@@ -79,7 +79,7 @@ class WorkoutController: NSObject  {
         session?.startActivity(with: startDate)
         builder?.beginCollection(withStart: startDate, completion: { (success,error) in
             if let error = error{
-//                print(error.localizedDescription)
+                print(error.localizedDescription)
             }
         })
         startTrainning = Date()
