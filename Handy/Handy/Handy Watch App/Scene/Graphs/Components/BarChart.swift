@@ -54,6 +54,7 @@ struct BarChart<T: Plottable & Hashable>: View {
                                                              miterLimit: 1,
                                                              dash: [],
                                                              dashPhase: 1))
+                            .foregroundStyle(.white)
                         }
                         
                         if !hasImages {
@@ -71,13 +72,14 @@ struct BarChart<T: Plottable & Hashable>: View {
                 }
             }
             if !hasImages{
-                HStack{
+                HStack(alignment: .bottom){
                     
                     Text("\(Int(avarage))")
                         .font(.alata(.regular, size: 28, relativeTo: .headline))
                         .foregroundStyle(.timeGraphColor3)
-                    Text("Min")
+                    Text("min")
                         .font(.poppins(.light, size: 10, relativeTo: .body))
+                        .padding(.bottom, 3)
                     Spacer()
                 }.padding(.leading)
             } else {
@@ -96,6 +98,7 @@ struct BarChart<T: Plottable & Hashable>: View {
         .padding(.trailing)
         .background(linearGradient)
         .ignoresSafeArea(edges: .bottom)
+        
         //        .onAppear{
         //            getAvarage()
         //        }

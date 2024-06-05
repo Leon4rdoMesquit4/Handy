@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%lld" : {
+
+    },
     "%lld%%" : {
 
     },
@@ -14,9 +17,6 @@
 
     },
     "3/3" : {
-
-    },
-    "30" : {
 
     },
     "A data de fim do tratamento não pode ser menor que a data do início." : {
@@ -31,6 +31,9 @@
     "bpm" : {
 
     },
+    "Como se sentiu" : {
+
+    },
     "Data do final" : {
 
     },
@@ -43,12 +46,6 @@
     "Definir" : {
 
     },
-    "Dificuldade" : {
-
-    },
-    "Dor" : {
-
-    },
     "Duração do tratamento:" : {
 
     },
@@ -58,22 +55,22 @@
     "Escolha um símbolo" : {
 
     },
-    "Estabeleça sua meta" : {
-
-    },
-    "Feedback" : {
+    "Estabeleça a sua meta" : {
 
     },
     "Hello, world!" : {
 
     },
-    "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir." : {
+    "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo." : {
 
     },
     "image" : {
 
     },
-    "Min" : {
+    "Intensidade da dor" : {
+
+    },
+    "min" : {
 
     },
     "Minha meta" : {
