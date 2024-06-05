@@ -64,7 +64,6 @@ struct FeedbackGraphView: View {
             text = Feedback.getPainLevel(index: elements.firstIndex(of: elements.max()!)!)
         }
         
-        
     }
     
     enum Feedback: String, CaseIterable {
