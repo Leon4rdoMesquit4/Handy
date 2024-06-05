@@ -20,65 +20,78 @@ struct TreatmentTimeView_: View {
     @AppStorage ("dateEndTreatment") var dateEndTreatment : String = Date().formatted()
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 10){
-            treatmentDuration
-                .font(.caption)
-                .padding(.horizontal)
-            
+        ScrollView {
+            VStack (alignment: .leading, spacing: 10){
+                Text("Duração do tratamento:")
+                    .foregroundStyle(.brand)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                
+                
                 dateButton("Data de início", date: dataInicio)
-                .accessibilityAction {
-                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
-                }
-                .onTapGesture {
-                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
-                }
-        
-                        
-                dateButton("Data final", date: dataFinal)
-                .accessibilityAction {
-                    coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
-                }
-                .onTapGesture {
-                    coordinator.navigate(to: .treatmentTimeEndView($dataFinal))
-                }
-            
-            
-            HStack {
-                Spacer()
-                ButtonNextPage{
-                    // salvando as coisas no User Defaults
-                    // TODO: AINDA FAREI ALGUMAS VALIDAÇÕES
-                    if dataInicio < dataFinal{
-                        self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
-                        self.dateEndTreatment = Date.convertDateToString(dataFinal)
-                        isOnboardingComplete = true
-                    } else {
-                        showAlert.toggle()
+                    .accessibilityAction {
+                        coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
                     }
-                }
-                Spacer()
-            }
+                    .onTapGesture {
+                        coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
+                    }
             
-        }.alert(isPresented: $showAlert) {
-            Alert(title: Text("Selecione datas válidas"), message: Text("A data de final deve ser uma data após a de início"), dismissButton: .default(Text("ok")))
+                            
+                dateButton("Data final", date: dataFinal)
+                    .accessibilityAction {
+                        coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
+                    }
+                    .onTapGesture {
+                        coordinator.navigate(to: .treatmentTimeEndView($dataFinal))
+                    }
+                
+                
+                HStack {
+                    Spacer()
+                    ButtonNextPage{
+                        // salvando as coisas no User Defaults
+                        // TODO: AINDA FAREI ALGUMAS VALIDAÇÕES
+                        if dataInicio < dataFinal{
+                            self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
+                            self.dateEndTreatment = Date.convertDateToString(dataFinal)
+                            isOnboardingComplete = true
+                        } else {
+                            showAlert.toggle()
+                        }
+                    }
+                    Spacer()
+                }
+                
+            }.alert(isPresented: $showAlert) {
+                Alert(title: Text("Selecione datas válidas"), message: Text("A data de final deve ser uma data após a de início"), dismissButton: .default(Text("ok")))
+            }
         }
-    }
-    
-    var treatmentDuration : some View {
-        Text("Duração do tratamento:")
-            .font(.title3)
-            .bold()
-            .frame(height: 50)
+        .padding()
+        .padding(.top, 30)
+        .background(Color.base)
+        .ignoresSafeArea()
     }
     
     @ViewBuilder
     func dateButton (_ label : String, date : Date) -> some View {
         VStack (alignment: .leading, spacing: 4){
-            Text(label)
-                .bold()
-                .font(.caption)
-            Text(date.formatted(date: .numeric, time: .omitted))
+            HStack {
+                VStack (alignment: .leading) {
+                    Text(label)
+                        .fontWeight(.semibold)
+                        .font(.caption)
+                    Text(date.formatted(date: .numeric, time: .omitted))
+                        .font(.caption2)
+                        .foregroundStyle(.brandColor2)
+                }
+                .padding()
+                Spacer()
+            }
+            
         }
+        .frame(maxWidth: .infinity)
+        .background(Color.brand.opacity(0.5))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
