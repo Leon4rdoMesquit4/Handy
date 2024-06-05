@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalView: View {
     @StateObject var vm = GoalViewModel()
+    @Environment(Coordinator.self) var coordinator
     
     var body: some View {
         VStack {
@@ -99,6 +100,7 @@ extension GoalView {
 }
 
 // MARK: PENCIL BUTTON
+/// Extensão para montar o botão de editar o objetivo.
 extension GoalView {
     var pencilButton : some View {
         VStack {
@@ -109,14 +111,17 @@ extension GoalView {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20)
+                    .bold()
                     .font(.title2)
-                    .onTapGesture {}
                     .foregroundStyle(.base)
                     .padding()
                     .background(
                         Color.brand
                             .clipShape(Circle())
                     )
+                    .onTapGesture {
+                        coordinator.navigate(to: .goalEditorView)
+                    }
             }
         }
     }

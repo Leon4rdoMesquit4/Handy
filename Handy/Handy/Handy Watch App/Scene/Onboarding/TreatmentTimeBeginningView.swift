@@ -11,11 +11,13 @@ struct TreatmentTimeBeginningView: View {
     
     @Binding var dataInicio : Date
     @Environment(OnboardingCoordinator.self) var coordinator
+    var title : String = "Data de início"
     
     var body: some View {
         
         VStack (spacing: 20){
-            DatePicker("Data de início", selection: $dataInicio)
+            
+            DatePicker(title, selection: $dataInicio)
                 .frame(height: 120)
             
             Button ("Definir") {
@@ -27,6 +29,6 @@ struct TreatmentTimeBeginningView: View {
 }
 
 #Preview {
-    TreatmentTimeBeginningView(dataInicio: .constant(Date()))
+    TreatmentTimeBeginningView(dataInicio: .constant(Date()), title: "Data de início")
         .environment(OnboardingCoordinator())
 }

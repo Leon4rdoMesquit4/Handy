@@ -95,6 +95,7 @@ struct EmojiSelectionView: View {
     /// Função chamada quando o botão de ir para a próxima tela é chamado
     private func buttonNextPagePressed () {
         if vm.validateEmoji() {
+            vm.saveEmoji()
             coordinator.navigate(to: .treatmentTimeView)
         } else {
             vm.showAlertInvalidEmoji()
