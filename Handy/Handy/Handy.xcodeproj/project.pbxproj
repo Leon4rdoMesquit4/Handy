@@ -11,6 +11,8 @@
 		C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */; };
 		C3CFE6C72C0F8A540013A49F /* SmallSpeechBubbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C62C0F8A540013A49F /* SmallSpeechBubbleButton.swift */; };
 		C3CFE6CA2C0F8C410013A49F /* HandyView_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */; };
+		C3CFE6CC2C10E54E0013A49F /* HandyView_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6CB2C10E54E0013A49F /* HandyView_2.swift */; };
+		C3CFE6CE2C10E8EB0013A49F /* Handy_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6CD2C10E8EA0013A49F /* Handy_3.swift */; };
 		E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E02970552BFFDCCA0042E261 /* Handy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705C2BFFDCCA0042E261 /* ContentView.swift */; };
 		E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E029705E2BFFDCCC0042E261 /* Assets.xcassets */; };
@@ -122,6 +124,8 @@
 		C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleViewModel.swift; sourceTree = "<group>"; };
 		C3CFE6C62C0F8A540013A49F /* SmallSpeechBubbleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSpeechBubbleButton.swift; sourceTree = "<group>"; };
 		C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyView_1.swift; sourceTree = "<group>"; };
+		C3CFE6CB2C10E54E0013A49F /* HandyView_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyView_2.swift; sourceTree = "<group>"; };
+		C3CFE6CD2C10E8EA0013A49F /* Handy_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_3.swift; sourceTree = "<group>"; };
 		E029704F2BFFDCCA0042E261 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02970552BFFDCCA0042E261 /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */,
+				C3CFE6CB2C10E54E0013A49F /* HandyView_2.swift */,
+				C3CFE6CD2C10E8EA0013A49F /* Handy_3.swift */,
 			);
 			path = HandyViews;
 			sourceTree = "<group>";
@@ -698,6 +704,7 @@
 				FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */,
 				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
 				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
+				C3CFE6CE2C10E8EB0013A49F /* Handy_3.swift in Sources */,
 				FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */,
 				E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */,
 				C3CFE6CA2C0F8C410013A49F /* HandyView_1.swift in Sources */,
@@ -713,6 +720,7 @@
 				E899FB122C0FA4E300945E81 /* Font.swift in Sources */,
 				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
 				E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */,
+				C3CFE6CC2C10E54E0013A49F /* HandyView_2.swift in Sources */,
 				E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
