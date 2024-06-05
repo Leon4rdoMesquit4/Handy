@@ -19,7 +19,7 @@ struct ExerciseDetailView: View {
                     .padding(.bottom)
                 
                 // mostrando a duração do exercício
-                sectionBuilder(title: "Duração", subtitle: exercise.time ?? "")
+                sectionBuilder(title: "Duração", subtitle: exercise.time?.getTimeString() ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {

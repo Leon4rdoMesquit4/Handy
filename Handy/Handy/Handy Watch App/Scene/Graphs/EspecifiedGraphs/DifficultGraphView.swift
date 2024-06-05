@@ -16,17 +16,17 @@ struct DifficultGraphView: View {
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: .constant(1), maxValue: .constant(5))
-                .onAppear{
-                    switch graphCase {
-                    case .month:
-                        exerciseAnalytics = []
-                    case .week:
-                        retrieveData()
-                    }
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
-                .navigationTitle("Dificuldade")
+//            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: .constant(1), maxValue: .constant(5))
+//                .onAppear{
+//                    switch graphCase {
+//                    case .month:
+//                        exerciseAnalytics = []
+//                    case .week:
+//                        retrieveData()
+//                    }
+//                }
+//                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+//                .navigationTitle("Dificuldade")
         }
     }
     

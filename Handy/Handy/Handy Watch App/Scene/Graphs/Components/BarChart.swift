@@ -11,33 +11,57 @@ import Charts
 struct BarChart<T: Plottable & Hashable>: View {
     /// lista de elementos plotados na tela
     @Binding var plottedElements : [PlottedElement]
+    @Binding var avarage : Double
     var hasImages: Bool = true
+    @Binding var mainFeeling: String
+    @State var linearGradient: LinearGradient
+    @State var accentColor: Color
     
     var body: some View {
-        VStack{
-            Chart (plottedElements, id: \.image) { p in
-                BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
-                    .clipShape(Capsule())
-                    .foregroundStyle(by: .value("value", p.image))
-            }
+        VStack {
+            ZStack {
+                Chart (plottedElements, id: \.image) { p in
+                    BarMark(x: .value("image", p.image), y: .value("value", p.value), width: 10)
+                        .clipShape(.rect(cornerRadii: .init(topLeading: 15, bottomLeading: 0, bottomTrailing: 0, topTrailing: 15)))
+                    //                        .foregroundStyle(by: .value("value", p.image))
+                        .foregroundStyle(accentColor)
+                }
+                
                 .chartLegend(.hidden)
-                .chartXAxis(hasImages ? .visible : .hidden)
-                .chartYAxis(hasImages ? .hidden : .visible)
-            //        .chartYAxis {
-            //            AxisMarks(position: .leading)
-            //        }
+                //                .chartXAxis(hasImages ? .visible : .hidden)
+//                .chartYAxis(hasImages ? .hidden : .visible)
+                //        .chartYAxis {
+                //            AxisMarks(position: .leading)
+                //        }
                 .chartXAxis {
                     AxisMarks { val in
-                        AxisValueLabel {
-                            axisImage(val: val.index)
+                        AxisGridLine()
+                        if hasImages{
+                            AxisValueLabel {
+                                axisImage(val: val.index)
+                            }
                         }
                     }
                 }
                 .chartYAxis{
+                    
                     AxisMarks(position: .leading){ val in
-                        if !hasImages{
+                        
+                        if val.index == 0 {
+                            AxisGridLine(stroke: StrokeStyle(lineWidth: 2,
+                                                             lineCap: .butt,
+                                                             lineJoin: .bevel,
+                                                             miterLimit: 1,
+                                                             dash: [],
+                                                             dashPhase: 1))
+                            .foregroundStyle(.white)
+                        }
+                        
+                        if !hasImages {
                             AxisValueLabel()
-                                .font(.alata(.regular, size: 12, relativeTo: .body))
+                                .font(.alata(.regular, size: 14, relativeTo: .body))
+                                .foregroundStyle(.baseColor2)
+                                .offset(x: -3, y: 0)
                         } else {
                             AxisValueLabel{
                                 Text("")
@@ -46,17 +70,38 @@ struct BarChart<T: Plottable & Hashable>: View {
                         
                     }
                 }
-            HStack{
-                Text("30")
-                    .font(.alata(.regular, size: 28, relativeTo: .headline))
-                Text("Min")
-                    .font(.poppins(.light, size: 10, relativeTo: .body))
-                Spacer()
             }
-        }.padding()
-        .background(LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top))
+            if !hasImages{
+                HStack(alignment: .bottom){
+                    
+                    Text("\(Int(avarage))")
+                        .font(.alata(.regular, size: 28, relativeTo: .headline))
+                        .foregroundStyle(.timeGraphColor3)
+                    Text("min")
+                        .font(.poppins(.light, size: 10, relativeTo: .body))
+                        .padding(.bottom, 3)
+                    Spacer()
+                }.padding(.leading)
+            } else {
+                HStack{
+                    Text(mainFeeling)
+                        .font(.alata(.regular, size: 17, relativeTo: .headline))
+                        .foregroundStyle(accentColor)
+                    Spacer()
+                }.padding(.top, 4)
+                    .padding(.leading, 10)
+                    .padding(.bottom, 3)
+            }
+        }
+        .padding(.bottom)
+        .padding(.horizontal)
+        .padding(.trailing)
+        .background(linearGradient)
         .ignoresSafeArea(edges: .bottom)
-            
+        
+        //        .onAppear{
+        //            getAvarage()
+        //        }
         
         
     }
@@ -67,8 +112,9 @@ struct BarChart<T: Plottable & Hashable>: View {
             .resizable()
             .scaledToFit()
             .frame(width: 20)
-            .padding(.vertical)
+            .padding(.top)
     }
+
 }
 
 #Preview {
@@ -79,7 +125,7 @@ struct BarChart<T: Plottable & Hashable>: View {
         PlottedElement(image: "intensity3", value: 8),
         PlottedElement(image: "intensity4", value: 18),
         PlottedElement(image: "intensity5", value: 5),
-
+        
     ]
-    return BarChart<Int>(plottedElements: $elementsList)
+    return BarChart<Int>(plottedElements: $elementsList, avarage: .constant(0), mainFeeling: .constant(""), linearGradient: LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .timeGraphColor3)
 }

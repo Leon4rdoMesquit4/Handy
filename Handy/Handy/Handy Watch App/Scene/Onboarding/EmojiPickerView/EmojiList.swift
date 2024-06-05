@@ -18,7 +18,7 @@ let physiotherapyGoalsEmojis: [String] = [
     "soccerball",
     "skateboard",
     "car.fill",
-    "bicycle.circle.fill",
+    "bicycle",
     "scooter",
     "camera.fill",
     "map.fill",

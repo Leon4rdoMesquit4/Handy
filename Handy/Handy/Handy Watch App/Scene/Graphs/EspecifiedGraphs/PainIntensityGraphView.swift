@@ -14,11 +14,16 @@ struct PainIntensityGraphView: View {
     @Environment(\.modelContext) var context
     @State var elements : [Int] = [0, 0, 0]
     @State var plottedElements : [PlottedElement] = []
+    @State var text: String = ""
     
     var body: some View {
         ZStack {
-            BarChart<Int>(plottedElements: $plottedElements)
-                .navigationTitle("Dor")
+            BarChart<Int>(plottedElements: $plottedElements, avarage: .constant(0), mainFeeling: $text, linearGradient: LinearGradient(colors: [.painIntensityGraphColor2, .painIntensityGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .painIntensityGraphColor3)
+                .navigationTitle{
+                    Text("Intensidade da dor")
+                        .foregroundStyle(.white)
+                        .font(.poppins(.light, size: 13, relativeTo: .title))
+                }
         }
         .onAppear {
             retrieveData()
@@ -40,9 +45,38 @@ struct PainIntensityGraphView: View {
         }
         
         var contador : Int = 0
+        var painVerifier : Bool = false
+        
         for element in elements {
             plottedElements.append(PlottedElement(image: "pain\(contador)", value: element))
             contador += 1
+            
+            if element != 0 {
+                painVerifier = true
+            }
+        }
+        
+        if painVerifier{
+            text = Pain.getPainLevel(index: elements.firstIndex(of: elements.max()!)!)
+        }
+    }
+    
+    enum Pain: String, CaseIterable {
+        case moderada = "Dor moderada"
+        case baixa = "Desconforto"
+        case alta = "Dor intensa"
+        case semDor = "Sem dor"
+        
+        static func getPainLevel(index: Int) -> String{
+            if index == 0 {
+                baixa.rawValue
+            } else if index == 1 {
+                moderada.rawValue
+            } else if index == 2{
+                alta.rawValue
+            } else {
+                semDor.rawValue
+            }
         }
     }
     

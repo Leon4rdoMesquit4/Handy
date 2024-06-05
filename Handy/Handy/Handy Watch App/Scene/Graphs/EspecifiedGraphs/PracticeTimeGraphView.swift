@@ -12,22 +12,27 @@ struct PracticeTimeGraphView: View {
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
     @State var plottedElements : [PlottedElement] = []
+    @State var timeAvarage: Double = 0.0
     
     var body: some View {
         VStack{
-            BarChart<Int>(plottedElements: $plottedElements, hasImages: false)
+            BarChart<Int>(plottedElements: $plottedElements, avarage: $timeAvarage, hasImages: false, mainFeeling: .constant(""), linearGradient: LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .timeGraphColor3)
                 .onAppear{
                     retrieveData()
                 }
                 .navigationTitle{
                     Text("Tempo de prática")
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.baseColor2)
                         .font(.poppins(.light, size: 13, relativeTo: .title))
                 }
         }
     }
     
     func retrieveData () {
+        
+        var avarage = 0.0
+        var count = 0.0
+        
         var elements = [TimeGraphData(count: 0, sum: 0),
                         TimeGraphData(count: 0, sum: 0),
                         TimeGraphData(count: 0, sum: 0),
@@ -48,13 +53,19 @@ struct PracticeTimeGraphView: View {
         let calendar = Calendar.current
         
         for exercise in exercises {
-            let start = exercise.startTrainning 
+            let start = exercise.startTrainning
             let end = exercise.endTrainning
             
 //            print("\nStart: \(start)")
             
             let components = calendar.dateComponents([.minute,.second], from: start, to: end)
             let minutos = Double(components.minute!) + (Double(components.second!) / 60)
+            
+            if minutos != 0 {
+                print(minutos)
+                avarage += minutos
+                count += 1
+            }
                         
             for (index, n) in lastWeekDays.enumerated() {
 //                print("\(n) - Está é a data que tem e esse é o index = \(index)")
@@ -73,7 +84,10 @@ struct PracticeTimeGraphView: View {
         
         plottedElements = realExercises
         
-//        print(plottedElements)
+        if count != 0{
+            timeAvarage = avarage / count
+        }
+        
     }
     
     struct TimeGraphData {

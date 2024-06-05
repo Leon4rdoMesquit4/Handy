@@ -18,12 +18,16 @@ struct BPMGraphView: View {
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue:  $maxValue)
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue: $maxValue, avarage: .constant(90), linearGradient: LinearGradient(colors: [.bpmGraphColor2, .bpmGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .bpmGraphColor3)
                 .onAppear{
                     retrieveData()
                 }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
-                .navigationTitle("Batimentos")
+                
+                .navigationTitle{
+                    Text("Batimentos")
+                        .foregroundStyle(.white)
+                        .font(.poppins(.light, size: 13, relativeTo: .title))
+                }
         }
     }
     
