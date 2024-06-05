@@ -14,11 +14,10 @@ struct EmojiPickerView: View {
     
     /// Um array que determina as colunas do LazyVGrid abaixo.
     var columns : [GridItem] = [
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
+        GridItem(.fixed(35)),
+        GridItem(.fixed(35)),
+        GridItem(.fixed(35)),
+        GridItem(.fixed(35)),
     ]
     
     // MARK: BODY
@@ -27,19 +26,24 @@ struct EmojiPickerView: View {
             Text("Escolha um símbolo")
             
             // aqui é onde é exibida a lista de símbolos. É uma LazyVGrid com 5 colunas
-            LazyVGrid(columns: columns, content: {
-                ForEach(physiotherapyGoalsEmojis, id: \.self) { symbol in
-                    Image(systemName: symbol)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 18)
-                        .onTapGesture {
-                            // ao apertar no symbol escolhido
-                            selectSymbol(symbol)
-                        }
-                }
-            })
+            ScrollView {
+                LazyVGrid(columns: columns, content: {
+                    ForEach(physiotherapyGoalsEmojis, id: \.self) { symbol in
+                        Image(systemName: symbol)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24)
+                            .onTapGesture {
+                                // ao apertar no symbol escolhido
+                                selectSymbol(symbol)
+                            }
+                            .padding(.bottom, 5)
+                    }
+                })
+            }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.base)
     }
 
     // MARK: LÓGICA
