@@ -23,6 +23,9 @@ struct GoalEDateEditorView: View {
     /// variável que representa o valor transitório da data final do tratamento do usuário (o valor inicial dela é um valor surreal (ano 1)
     @State var dateEnd : Date = Calendar.current.date(from: DateComponents(year: 1)) ?? Date()
     
+    /// Variável que representa se o alert de data inválida aparece.
+    @State var showAlertInvalidDate : Bool = false
+    
     // MARK: BODY
     var body: some View {
         VStack (spacing: 10){
@@ -37,7 +40,6 @@ struct GoalEDateEditorView: View {
             // A ação do botão para ir para a próxima view é salvar as datas e sair da view.
             ButtonNextPage (callback: {
                 saveDates()
-                exitView()
             }, systemImage: "checkmark")
         }
         .padding(.horizontal)
@@ -48,10 +50,16 @@ struct GoalEDateEditorView: View {
         .onAppear(perform: {
             fetchDatesFromAppStorage()
         })
+        .alert("Data inválida", isPresented: $showAlertInvalidDate) {
+            Button("OK"){}
+        } message: {
+            Text("A data de fim do tratamento não pode ser menor que a data do início.")
+        }
+
     }
     
     /// Função que recupera os dados salvos no User Defaults para dados temporários
-    func fetchDatesFromAppStorage () {
+    private func fetchDatesFromAppStorage () {
         // verificando se o valor de dateBeginning é a data absurda que eu estabeleci (a com o ano 1), se for a data absurda, eu atribuo o valor ao valor que se encontra dentro do UserDefaults. Faço isso com as duas variáveis.
         if Calendar.current.dateComponents([.year], from: dateBeginning).year == 1 {
             dateBeginning = Date.convertStringToDate(beginningTreatmentAppStorage) ?? Date()
@@ -62,14 +70,20 @@ struct GoalEDateEditorView: View {
     }
     
     /// Função que salva os dados temporários no User Defaults.
-    func saveDates () {
-        // converte as datas para String (na formatação dd_mm_aaaa e salvo elas no User Defaults).
-        beginningTreatmentAppStorage = Date.convertDateToString(dateBeginning)
-        endTreatmentAppStorage = Date.convertDateToString(dateEnd)
+    private func saveDates () {
+        // TODO: VERIFICAR SE A DATA DE FINAL ESTÁ ANTES DA DATA DE INÍCIO DO TRATAMENTO.
+        if dateBeginning < dateEnd {
+            // converte as datas para String (na formatação dd_mm_aaaa e salvo elas no User Defaults).
+            beginningTreatmentAppStorage = Date.convertDateToString(dateBeginning)
+            endTreatmentAppStorage = Date.convertDateToString(dateEnd)
+            exitView()
+        } else {
+            self.showAlertInvalidDate.toggle()
+        }
     }
     
     /// Função que sai da View.
-    func exitView () {
+    private func exitView () {
         // Retira do navPath as duas últimas views, isso vai dar o efeito de duplo dismiss, e como temos certeza que são somente duas views de editar o objetivo do usuário então isso vai funcionar
         coordinator.navPath.removeLast()
         coordinator.navPath.removeLast()
