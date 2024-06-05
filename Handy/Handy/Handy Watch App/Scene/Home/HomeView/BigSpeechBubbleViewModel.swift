@@ -7,17 +7,29 @@
 
 import Foundation
 
-extension BigSpeechBubbleView {
+//enum criado para a passagem de dados que define a orientação da BigSpeechBubbleView
+enum SpeechBubbleOrientation {
+    case left
+    case right
+}
+
+class BigSpeechBubbleViewModel : ObservableObject {
     
-    class BigSpeechBubbleViewModel : ObservableObject {
-        var speechBubbleText : [String] = ["Acredite na sua recuperação.", "Cada passo importa muito.", "Superação é seu destino.", "Determinação é sua aliada.", "Você é mais forte!", "Continue avançando, sem desistir.", "Você pode, você consegue!"]
-        
-        func selectRandomSpeechBubblePhrase() -> String {
-            if let randomPhrase = speechBubbleText.randomElement() {
-                return randomPhrase
-            } else {
-                return ""
-            }
+    //Parâmetro que define a orientação da BigSpeechBubbleView
+    var orientation: SpeechBubbleOrientation
+    var speechBubbleText : [String] = ["Acredite na sua recuperação.", "Cada passo importa muito.", "Superação é seu destino.", "Determinação é sua aliada.", "Você é mais forte!", "Continue avançando, sem desistir.", "Você pode, você consegue!"]
+    
+    init(orientation: SpeechBubbleOrientation) {
+        self.orientation = orientation
+    }
+    
+    //Função que retorna uma frase aleatória
+    func selectRandomSpeechBubblePhrase() -> String {
+        if let randomPhrase = speechBubbleText.randomElement() {
+            return randomPhrase
+        } else {
+            return ""
         }
     }
 }
+

@@ -22,23 +22,20 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-//            selectRandomHomeView(randomView.randomElement() ?? .view1)
-//                .onTapGesture {
-//                    coordinator.navigate(to: .countdownView)
-//                    //                    controller.saveALotOfNewExercise(context: context)
-//                    //                    controller.saveOneExercise(context: context)
-//                }
+            HandyView_1()
             navigateToGraphButton
-                .padding(15)
-        }.ignoresSafeArea()
+        }
     }
 }
 
 //implementação temporária
 ///Função que retorna uma view aleatória para ser mostrada na HomeView
 @ViewBuilder
-func selectRandomHomeView (_ view : RandomHomeView) -> some View {
+func selectRandomHomeView (_ views : [RandomHomeView]) -> some View {
+    let view = views.randomElement()
     switch view {
+    case .view1:
+        HandyView_1()
     default:
         Image(systemName: "plus.square.fill")
     }
