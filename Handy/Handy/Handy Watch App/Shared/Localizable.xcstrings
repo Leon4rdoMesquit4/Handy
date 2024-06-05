@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%lld" : {
+
+    },
     "%lld%%" : {
 
     },
@@ -16,9 +19,6 @@
     "3/3" : {
 
     },
-    "30" : {
-
-    },
     "A data de final deve ser uma data após a de início" : {
 
     },
@@ -26,6 +26,9 @@
 
     },
     "bpm" : {
+
+    },
+    "Como se sentiu" : {
 
     },
     "Data de início" : {
@@ -43,9 +46,6 @@
     "Dificuldade" : {
 
     },
-    "Dor" : {
-
-    },
     "Duração do tratamento:" : {
 
     },
@@ -55,9 +55,6 @@
     "Estabeleça a sua meta" : {
 
     },
-    "Feedback" : {
-
-    },
     "Hello, world!" : {
 
     },
@@ -65,6 +62,9 @@
 
     },
     "image" : {
+
+    },
+    "Intensidade da dor" : {
 
     },
     "Min" : {
