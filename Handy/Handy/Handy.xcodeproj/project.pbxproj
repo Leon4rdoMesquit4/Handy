@@ -1,0 +1,982 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */; };
+		C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */; };
+		C3CFE6C72C0F8A540013A49F /* SmallSpeechBubbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C62C0F8A540013A49F /* SmallSpeechBubbleButton.swift */; };
+		C3CFE6CA2C0F8C410013A49F /* HandyView_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */; };
+		E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E02970552BFFDCCA0042E261 /* Handy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E029705C2BFFDCCA0042E261 /* ContentView.swift */; };
+		E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E029705E2BFFDCCC0042E261 /* Assets.xcassets */; };
+		E02970622BFFDCCC0042E261 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */; };
+		E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF52BFFE1B100084CAF /* HandyApp.swift */; };
+		E0711D252BFFE1BE00084CAF /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */; };
+		E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CF82BFFE1BE00084CAF /* ControlButton.swift */; };
+		E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */; };
+		E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */; };
+		E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFD2BFFE1BE00084CAF /* TimeView.swift */; };
+		E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */; };
+		E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D002BFFE1BE00084CAF /* ExerciseController.swift */; };
+		E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */; };
+		E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */; };
+		E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */; };
+		E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */; };
+		E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D082BFFE1BE00084CAF /* StepperImage.swift */; };
+		E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D092BFFE1BE00084CAF /* TitleForm.swift */; };
+		E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */; };
+		E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */; };
+		E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */; };
+		E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */; };
+		E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */; };
+		E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D142BFFE1BE00084CAF /* GoalView.swift */; };
+		E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D152BFFE1BE00084CAF /* HomeController.swift */; };
+		E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D162BFFE1BE00084CAF /* HomeTabView.swift */; };
+		E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D172BFFE1BE00084CAF /* HomeView.swift */; };
+		E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D192BFFE1BE00084CAF /* EmojiList.swift */; };
+		E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */; };
+		E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */; };
+		E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */; };
+		E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */; };
+		E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */; };
+		E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */; };
+		E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */; };
+		E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D452BFFE1D000084CAF /* Exercise.swift */; };
+		E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D462BFFE1D000084CAF /* Meta.swift */; };
+		E0711D4B2BFFE1D000084CAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D472BFFE1D000084CAF /* User.swift */; };
+		E0711D512BFFE1DB00084CAF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */; };
+		E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4D2BFFE1DB00084CAF /* Strings.swift */; };
+		E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */; };
+		E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */; };
+		E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711D552BFFE1E200084CAF /* Coordinator.swift */; };
+		E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */; };
+		E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A322C06D9AA00AFB0AA /* BarChart.swift */; };
+		E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A332C06D9AA00AFB0AA /* LineChart.swift */; };
+		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
+		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
+		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
+		E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */; };
+		E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */; };
+		E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */; };
+		E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */; };
+		E899FAEB2C0FA20100945E81 /* Alata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAEA2C0FA20100945E81 /* Alata-Regular.ttf */; };
+		E899FAFE2C0FA21D00945E81 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAEC2C0FA21C00945E81 /* Poppins-ExtraBoldItalic.ttf */; };
+		E899FAFF2C0FA21D00945E81 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAED2C0FA21C00945E81 /* Poppins-Bold.ttf */; };
+		E899FB002C0FA21D00945E81 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAEE2C0FA21C00945E81 /* Poppins-ExtraLightItalic.ttf */; };
+		E899FB012C0FA21D00945E81 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAEF2C0FA21C00945E81 /* Poppins-Light.ttf */; };
+		E899FB022C0FA21D00945E81 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF02C0FA21C00945E81 /* Poppins-SemiBoldItalic.ttf */; };
+		E899FB032C0FA21D00945E81 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF12C0FA21C00945E81 /* Poppins-ExtraBold.ttf */; };
+		E899FB042C0FA21D00945E81 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF22C0FA21C00945E81 /* Poppins-Thin.ttf */; };
+		E899FB052C0FA21D00945E81 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF32C0FA21C00945E81 /* Poppins-BoldItalic.ttf */; };
+		E899FB062C0FA21D00945E81 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF42C0FA21C00945E81 /* Poppins-BlackItalic.ttf */; };
+		E899FB072C0FA21D00945E81 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF52C0FA21C00945E81 /* Poppins-Medium.ttf */; };
+		E899FB082C0FA21D00945E81 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF62C0FA21D00945E81 /* Poppins-Regular.ttf */; };
+		E899FB092C0FA21D00945E81 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF72C0FA21D00945E81 /* Poppins-Italic.ttf */; };
+		E899FB0A2C0FA21D00945E81 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF82C0FA21D00945E81 /* Poppins-ThinItalic.ttf */; };
+		E899FB0B2C0FA21D00945E81 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAF92C0FA21D00945E81 /* Poppins-LightItalic.ttf */; };
+		E899FB0C2C0FA21D00945E81 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAFA2C0FA21D00945E81 /* Poppins-ExtraLight.ttf */; };
+		E899FB0D2C0FA21D00945E81 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAFB2C0FA21D00945E81 /* Poppins-MediumItalic.ttf */; };
+		E899FB0E2C0FA21D00945E81 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAFC2C0FA21D00945E81 /* Poppins-SemiBold.ttf */; };
+		E899FB0F2C0FA21D00945E81 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAFD2C0FA21D00945E81 /* Poppins-Black.ttf */; };
+		E899FB122C0FA4E300945E81 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899FB112C0FA4E300945E81 /* Font.swift */; };
+		FD37AEB12C10979F009BE6FD /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37AEB02C10979F009BE6FD /* Element.swift */; };
+		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
+		FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE872C07C0E500B02E77 /* Date+Format.swift */; };
+		FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */; };
+		FDF6AE922C0F87C900B02E77 /* GoalEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */; };
+		FDF6AE942C0F894800B02E77 /* GoalEDateEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */; };
+		FDF6AE982C0F9E6500B02E77 /* GoalEditorDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E02970572BFFDCCA0042E261 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E02970492BFFDCCA0042E261 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E02970542BFFDCCA0042E261;
+			remoteInfo = "Handy Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E02970682BFFDCCC0042E261 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleView.swift; sourceTree = "<group>"; };
+		C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpeechBubbleViewModel.swift; sourceTree = "<group>"; };
+		C3CFE6C62C0F8A540013A49F /* SmallSpeechBubbleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSpeechBubbleButton.swift; sourceTree = "<group>"; };
+		C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyView_1.swift; sourceTree = "<group>"; };
+		E029704F2BFFDCCA0042E261 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02970552BFFDCCA0042E261 /* Handy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E029705C2BFFDCCA0042E261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E029705E2BFFDCCC0042E261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Handy Watch App.entitlements"; sourceTree = "<group>"; };
+		E0711CF52BFFE1B100084CAF /* HandyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyApp.swift; sourceTree = "<group>"; };
+		E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		E0711CF82BFFE1BE00084CAF /* ControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
+		E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseControlView.swift; sourceTree = "<group>"; };
+		E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
+		E0711CFD2BFFE1BE00084CAF /* TimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		E0711D002BFFE1BE00084CAF /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTabView.swift; sourceTree = "<group>"; };
+		E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNextPage.swift; sourceTree = "<group>"; };
+		E0711D082BFFE1BE00084CAF /* StepperImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperImage.swift; sourceTree = "<group>"; };
+		E0711D092BFFE1BE00084CAF /* TitleForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleForm.swift; sourceTree = "<group>"; };
+		E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidFeelPainView.swift; sourceTree = "<group>"; };
+		E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseUserFeedbackView.swift; sourceTree = "<group>"; };
+		E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainScaleView.swift; sourceTree = "<group>"; };
+		E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGraphView.swift; sourceTree = "<group>"; };
+		E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesScrollView.swift; sourceTree = "<group>"; };
+		E0711D142BFFE1BE00084CAF /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalView.swift; path = ../GoalView.swift; sourceTree = "<group>"; };
+		E0711D152BFFE1BE00084CAF /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		E0711D162BFFE1BE00084CAF /* HomeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		E0711D172BFFE1BE00084CAF /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E0711D192BFFE1BE00084CAF /* EmojiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiList.swift; sourceTree = "<group>"; };
+		E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionViewModel.swift; sourceTree = "<group>"; };
+		E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionView.swift; sourceTree = "<group>"; };
+		E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeBeginningView.swift; sourceTree = "<group>"; };
+		E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTimeEndView.swift; sourceTree = "<group>"; };
+		E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreatmentTimeView .swift"; sourceTree = "<group>"; };
+		E0711D452BFFE1D000084CAF /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E0711D462BFFE1D000084CAF /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		E0711D472BFFE1D000084CAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E0711D4D2BFFE1DB00084CAF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataController.swift; sourceTree = "<group>"; };
+		E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		E0711D552BFFE1E200084CAF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		E8267A322C06D9AA00AFB0AA /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		E8267A332C06D9AA00AFB0AA /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
+		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
+		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
+		E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGraphView.swift; sourceTree = "<group>"; };
+		E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultGraphView.swift; sourceTree = "<group>"; };
+		E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMGraphView.swift; sourceTree = "<group>"; };
+		E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimeGraphView.swift; sourceTree = "<group>"; };
+		E899FAEA2C0FA20100945E81 /* Alata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Alata-Regular.ttf"; sourceTree = "<group>"; };
+		E899FAEC2C0FA21C00945E81 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E899FAED2C0FA21C00945E81 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		E899FAEE2C0FA21C00945E81 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E899FAEF2C0FA21C00945E81 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		E899FAF02C0FA21C00945E81 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E899FAF12C0FA21C00945E81 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E899FAF22C0FA21C00945E81 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		E899FAF32C0FA21C00945E81 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E899FAF42C0FA21C00945E81 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E899FAF52C0FA21C00945E81 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		E899FAF62C0FA21D00945E81 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E899FAF72C0FA21D00945E81 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		E899FAF82C0FA21D00945E81 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		E899FAF92C0FA21D00945E81 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		E899FAFA2C0FA21D00945E81 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E899FAFB2C0FA21D00945E81 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E899FAFC2C0FA21D00945E81 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E899FAFD2C0FA21D00945E81 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		E899FB102C0FA24200945E81 /* Handy-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Handy-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E899FB112C0FA4E300945E81 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		FD37AEB02C10979F009BE6FD /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
+		FDF6AE872C07C0E500B02E77 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditorView.swift; sourceTree = "<group>"; };
+		FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEDateEditorView.swift; sourceTree = "<group>"; };
+		FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditorDatePickerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E02970522BFFDCCA0042E261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3CFE6C02C0E381F0013A49F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C3CFE6C82C0F8BD00013A49F /* HandyViews */,
+				E0711D172BFFE1BE00084CAF /* HomeView.swift */,
+				C3CFE6C12C0E3D6A0013A49F /* BigSpeechBubbleView.swift */,
+				C3CFE6C42C0E45D20013A49F /* BigSpeechBubbleViewModel.swift */,
+				C3CFE6C62C0F8A540013A49F /* SmallSpeechBubbleButton.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		C3CFE6C82C0F8BD00013A49F /* HandyViews */ = {
+			isa = PBXGroup;
+			children = (
+				C3CFE6C92C0F8C410013A49F /* HandyView_1.swift */,
+			);
+			path = HandyViews;
+			sourceTree = "<group>";
+		};
+		E02970482BFFDCCA0042E261 = {
+			isa = PBXGroup;
+			children = (
+				E02970592BFFDCCA0042E261 /* Handy Watch App */,
+				E02970502BFFDCCA0042E261 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E02970502BFFDCCA0042E261 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E029704F2BFFDCCA0042E261 /* Handy.app */,
+				E02970552BFFDCCA0042E261 /* Handy Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E02970592BFFDCCA0042E261 /* Handy Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				E899FB102C0FA24200945E81 /* Handy-Watch-App-Info.plist */,
+				E899FAE92C0F9BFE00945E81 /* Fonts */,
+				E029706C2BFFDCEA0042E261 /* Handy Watch App.entitlements */,
+				E0711CF52BFFE1B100084CAF /* HandyApp.swift */,
+				E0711D562BFFE1E200084CAF /* Coordinator */,
+				E0711D502BFFE1DB00084CAF /* Shared */,
+				E0711D482BFFE1D000084CAF /* Model */,
+				E0711D242BFFE1BE00084CAF /* Scene */,
+				E029705C2BFFDCCA0042E261 /* ContentView.swift */,
+				E029705E2BFFDCCC0042E261 /* Assets.xcassets */,
+				E02970602BFFDCCC0042E261 /* Preview Content */,
+			);
+			path = "Handy Watch App";
+			sourceTree = "<group>";
+		};
+		E02970602BFFDCCC0042E261 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E02970612BFFDCCC0042E261 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E0711CF92BFFE1BE00084CAF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CF72BFFE1BE00084CAF /* CircularProgressBarView.swift */,
+				E0711CF82BFFE1BE00084CAF /* ControlButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E0711CFB2BFFE1BE00084CAF /* ExerciseControlView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CFA2BFFE1BE00084CAF /* ExerciseControlView.swift */,
+			);
+			path = ExerciseControlView;
+			sourceTree = "<group>";
+		};
+		E0711CFE2BFFE1BE00084CAF /* ExerciseStatsView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CFC2BFFE1BE00084CAF /* ExerciseStatsView.swift */,
+				E0711CFD2BFFE1BE00084CAF /* TimeView.swift */,
+			);
+			path = ExerciseStatsView;
+			sourceTree = "<group>";
+		};
+		E0711D022BFFE1BE00084CAF /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				E0711CF92BFFE1BE00084CAF /* Components */,
+				E0711CFB2BFFE1BE00084CAF /* ExerciseControlView */,
+				E0711CFE2BFFE1BE00084CAF /* ExerciseStatsView */,
+				E0711CFF2BFFE1BE00084CAF /* CountdownView.swift */,
+				E0711D002BFFE1BE00084CAF /* ExerciseController.swift */,
+				E0711D012BFFE1BE00084CAF /* ExerciseTabView.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		E0711D042BFFE1BE00084CAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D032BFFE1BE00084CAF /* ExerciseDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0711D062BFFE1BE00084CAF /* ExerciseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D042BFFE1BE00084CAF /* ViewModel */,
+				E0711D052BFFE1BE00084CAF /* ExerciseDetailView.swift */,
+			);
+			path = ExerciseDetail;
+			sourceTree = "<group>";
+		};
+		E0711D0A2BFFE1BE00084CAF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D072BFFE1BE00084CAF /* ButtonNextPage.swift */,
+				E0711D082BFFE1BE00084CAF /* StepperImage.swift */,
+				E0711D092BFFE1BE00084CAF /* TitleForm.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E0711D0F2BFFE1BE00084CAF /* ExerciseFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D0A2BFFE1BE00084CAF /* Component */,
+				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
+				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
+			);
+			path = ExerciseFeedback;
+			sourceTree = "<group>";
+		};
+		E0711D122BFFE1BE00084CAF /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				E8267A342C06D9AA00AFB0AA /* Components */,
+				E888FB912C02BD46000B048F /* EspecifiedGraphs */,
+				E0711D112BFFE1BE00084CAF /* SelectGraphView.swift */,
+				E888FB822C02BC8E000B048F /* GraphsTabView.swift */,
+				E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		E0711D182BFFE1BE00084CAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FD37AEAD2C10936E009BE6FD /* GoalEditorViews */,
+				FDF6AE892C0A140700B02E77 /* GoalView */,
+				E0711D132BFFE1BE00084CAF /* ExercisesScrollView.swift */,
+				E0711D152BFFE1BE00084CAF /* HomeController.swift */,
+				E0711D162BFFE1BE00084CAF /* HomeTabView.swift */,
+				C3CFE6C02C0E381F0013A49F /* HomeView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D192BFFE1BE00084CAF /* EmojiList.swift */,
+				E0711D1A2BFFE1BE00084CAF /* EmojiPickerView.swift */,
+			);
+			path = EmojiPickerView;
+			sourceTree = "<group>";
+		};
+		E0711D1D2BFFE1BE00084CAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D1C2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0711D232BFFE1BE00084CAF /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D1B2BFFE1BE00084CAF /* EmojiPickerView */,
+				E0711D1D2BFFE1BE00084CAF /* ViewModel */,
+				E0711D1E2BFFE1BE00084CAF /* EmojiSelectionView.swift */,
+				E0711D1F2BFFE1BE00084CAF /* Onboarding.swift */,
+				E0711D202BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift */,
+				E0711D212BFFE1BE00084CAF /* TreatmentTimeEndView.swift */,
+				E0711D222BFFE1BE00084CAF /* TreatmentTimeView .swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E0711D242BFFE1BE00084CAF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D022BFFE1BE00084CAF /* Exercise */,
+				E0711D062BFFE1BE00084CAF /* ExerciseDetail */,
+				E0711D0F2BFFE1BE00084CAF /* ExerciseFeedback */,
+				E0711D122BFFE1BE00084CAF /* Graphs */,
+				E0711D182BFFE1BE00084CAF /* Home */,
+				E0711D0E2BFFE1BE00084CAF /* PainScaleView.swift */,
+				E0711D232BFFE1BE00084CAF /* Onboarding */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E0711D482BFFE1D000084CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D452BFFE1D000084CAF /* Exercise.swift */,
+				E0711D462BFFE1D000084CAF /* Meta.swift */,
+				E0711D472BFFE1D000084CAF /* User.swift */,
+				FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0711D502BFFE1DB00084CAF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D4C2BFFE1DB00084CAF /* Localizable.xcstrings */,
+				E0711D4D2BFFE1DB00084CAF /* Strings.swift */,
+				E0711D4E2BFFE1DB00084CAF /* SwiftDataController.swift */,
+				E0711D4F2BFFE1DB00084CAF /* WorkoutController.swift */,
+				E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */,
+				FDF6AE872C07C0E500B02E77 /* Date+Format.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0711D562BFFE1E200084CAF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D552BFFE1E200084CAF /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E8267A342C06D9AA00AFB0AA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8267A322C06D9AA00AFB0AA /* BarChart.swift */,
+				E8267A332C06D9AA00AFB0AA /* LineChart.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E888FB912C02BD46000B048F /* EspecifiedGraphs */ = {
+			isa = PBXGroup;
+			children = (
+				E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */,
+				E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */,
+				E888FB8B2C02BD1E000B048F /* DifficultGraphView.swift */,
+				E888FB8D2C02BD2D000B048F /* BPMGraphView.swift */,
+				E888FB8F2C02BD3D000B048F /* PracticeTimeGraphView.swift */,
+			);
+			path = EspecifiedGraphs;
+			sourceTree = "<group>";
+		};
+		E899FAE92C0F9BFE00945E81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E899FAFD2C0FA21D00945E81 /* Poppins-Black.ttf */,
+				E899FAF42C0FA21C00945E81 /* Poppins-BlackItalic.ttf */,
+				E899FAED2C0FA21C00945E81 /* Poppins-Bold.ttf */,
+				E899FAF32C0FA21C00945E81 /* Poppins-BoldItalic.ttf */,
+				E899FAF12C0FA21C00945E81 /* Poppins-ExtraBold.ttf */,
+				E899FAEC2C0FA21C00945E81 /* Poppins-ExtraBoldItalic.ttf */,
+				E899FAFA2C0FA21D00945E81 /* Poppins-ExtraLight.ttf */,
+				E899FAEE2C0FA21C00945E81 /* Poppins-ExtraLightItalic.ttf */,
+				E899FAF72C0FA21D00945E81 /* Poppins-Italic.ttf */,
+				E899FAEF2C0FA21C00945E81 /* Poppins-Light.ttf */,
+				E899FAF92C0FA21D00945E81 /* Poppins-LightItalic.ttf */,
+				E899FAF52C0FA21C00945E81 /* Poppins-Medium.ttf */,
+				E899FAFB2C0FA21D00945E81 /* Poppins-MediumItalic.ttf */,
+				E899FAF62C0FA21D00945E81 /* Poppins-Regular.ttf */,
+				E899FAFC2C0FA21D00945E81 /* Poppins-SemiBold.ttf */,
+				E899FAF02C0FA21C00945E81 /* Poppins-SemiBoldItalic.ttf */,
+				E899FAF22C0FA21C00945E81 /* Poppins-Thin.ttf */,
+				E899FAF82C0FA21D00945E81 /* Poppins-ThinItalic.ttf */,
+				E899FAEA2C0FA20100945E81 /* Alata-Regular.ttf */,
+				E899FB112C0FA4E300945E81 /* Font.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FD37AEAD2C10936E009BE6FD /* GoalEditorViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD37AEAF2C109780009BE6FD /* New Group */,
+				FDF6AE912C0F87C900B02E77 /* GoalEditorView.swift */,
+				FDF6AE932C0F894800B02E77 /* GoalEDateEditorView.swift */,
+				FDF6AE972C0F9E6500B02E77 /* GoalEditorDatePickerView.swift */,
+			);
+			path = GoalEditorViews;
+			sourceTree = "<group>";
+		};
+		FD37AEAF2C109780009BE6FD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				FD37AEB02C10979F009BE6FD /* Element.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		FDF6AE892C0A140700B02E77 /* GoalView */ = {
+			isa = PBXGroup;
+			children = (
+				E0711D142BFFE1BE00084CAF /* GoalView.swift */,
+				FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */,
+			);
+			path = GoalView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E029704E2BFFDCCA0042E261 /* Handy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02970692BFFDCCC0042E261 /* Build configuration list for PBXNativeTarget "Handy" */;
+			buildPhases = (
+				E029704D2BFFDCCA0042E261 /* Resources */,
+				E02970682BFFDCCC0042E261 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E02970582BFFDCCA0042E261 /* PBXTargetDependency */,
+			);
+			name = Handy;
+			productName = Handy;
+			productReference = E029704F2BFFDCCA0042E261 /* Handy.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		E02970542BFFDCCA0042E261 /* Handy Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02970652BFFDCCC0042E261 /* Build configuration list for PBXNativeTarget "Handy Watch App" */;
+			buildPhases = (
+				E02970512BFFDCCA0042E261 /* Sources */,
+				E02970522BFFDCCA0042E261 /* Frameworks */,
+				E02970532BFFDCCA0042E261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Handy Watch App";
+			productName = "Handy Watch App";
+			productReference = E02970552BFFDCCA0042E261 /* Handy Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E02970492BFFDCCA0042E261 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E029704E2BFFDCCA0042E261 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E02970542BFFDCCA0042E261 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = E029704C2BFFDCCA0042E261 /* Build configuration list for PBXProject "Handy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E02970482BFFDCCA0042E261;
+			productRefGroup = E02970502BFFDCCA0042E261 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E029704E2BFFDCCA0042E261 /* Handy */,
+				E02970542BFFDCCA0042E261 /* Handy Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E029704D2BFFDCCA0042E261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02970532BFFDCCA0042E261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02970622BFFDCCC0042E261 /* Preview Assets.xcassets in Resources */,
+				E899FB072C0FA21D00945E81 /* Poppins-Medium.ttf in Resources */,
+				E899FB062C0FA21D00945E81 /* Poppins-BlackItalic.ttf in Resources */,
+				E899FB002C0FA21D00945E81 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				E899FAFF2C0FA21D00945E81 /* Poppins-Bold.ttf in Resources */,
+				E899FB0A2C0FA21D00945E81 /* Poppins-ThinItalic.ttf in Resources */,
+				E899FB052C0FA21D00945E81 /* Poppins-BoldItalic.ttf in Resources */,
+				E899FB0B2C0FA21D00945E81 /* Poppins-LightItalic.ttf in Resources */,
+				E899FB0F2C0FA21D00945E81 /* Poppins-Black.ttf in Resources */,
+				E899FB012C0FA21D00945E81 /* Poppins-Light.ttf in Resources */,
+				E899FB0D2C0FA21D00945E81 /* Poppins-MediumItalic.ttf in Resources */,
+				E029705F2BFFDCCC0042E261 /* Assets.xcassets in Resources */,
+				E899FB022C0FA21D00945E81 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				E899FB082C0FA21D00945E81 /* Poppins-Regular.ttf in Resources */,
+				E899FB092C0FA21D00945E81 /* Poppins-Italic.ttf in Resources */,
+				E899FB032C0FA21D00945E81 /* Poppins-ExtraBold.ttf in Resources */,
+				E899FB0E2C0FA21D00945E81 /* Poppins-SemiBold.ttf in Resources */,
+				E899FB0C2C0FA21D00945E81 /* Poppins-ExtraLight.ttf in Resources */,
+				E0711D512BFFE1DB00084CAF /* Localizable.xcstrings in Resources */,
+				E899FAEB2C0FA20100945E81 /* Alata-Regular.ttf in Resources */,
+				E899FB042C0FA21D00945E81 /* Poppins-Thin.ttf in Resources */,
+				E899FAFE2C0FA21D00945E81 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E02970512BFFDCCA0042E261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0711D282BFFE1BE00084CAF /* ExerciseStatsView.swift in Sources */,
+				E0711D2E2BFFE1BE00084CAF /* ExerciseDetailView.swift in Sources */,
+				C3CFE6C52C0E45D20013A49F /* BigSpeechBubbleViewModel.swift in Sources */,
+				E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */,
+				FDF6AE982C0F9E6500B02E77 /* GoalEditorDatePickerView.swift in Sources */,
+				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
+				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
+				C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */,
+				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,
+				E0711D332BFFE1BE00084CAF /* DidFeelPainView.swift in Sources */,
+				FDF6AE922C0F87C900B02E77 /* GoalEditorView.swift in Sources */,
+				E0711D292BFFE1BE00084CAF /* TimeView.swift in Sources */,
+				E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */,
+				E0711D492BFFE1D000084CAF /* Exercise.swift in Sources */,
+				FDF6AE942C0F894800B02E77 /* GoalEDateEditorView.swift in Sources */,
+				E0711D2A2BFFE1BE00084CAF /* CountdownView.swift in Sources */,
+				E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */,
+				E888FB8C2C02BD1E000B048F /* DifficultGraphView.swift in Sources */,
+				E0711D542BFFE1DB00084CAF /* WorkoutController.swift in Sources */,
+				E0711D4A2BFFE1D000084CAF /* Meta.swift in Sources */,
+				FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */,
+				E0711CF62BFFE1B100084CAF /* HandyApp.swift in Sources */,
+				E0711D312BFFE1BE00084CAF /* TitleForm.swift in Sources */,
+				E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */,
+				E0711D2D2BFFE1BE00084CAF /* ExerciseDetailViewModel.swift in Sources */,
+				E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */,
+				E0711D2B2BFFE1BE00084CAF /* ExerciseController.swift in Sources */,
+				E0711D252BFFE1BE00084CAF /* CircularProgressBarView.swift in Sources */,
+				E0711D432BFFE1BE00084CAF /* TreatmentTimeEndView.swift in Sources */,
+				E0711D342BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift in Sources */,
+				E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */,
+				E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */,
+				E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */,
+				C3CFE6C72C0F8A540013A49F /* SmallSpeechBubbleButton.swift in Sources */,
+				FD37AEB12C10979F009BE6FD /* Element.swift in Sources */,
+				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
+				E0711D572BFFE1E200084CAF /* Coordinator.swift in Sources */,
+				E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */,
+				E0711D272BFFE1BE00084CAF /* ExerciseControlView.swift in Sources */,
+				E029705D2BFFDCCA0042E261 /* ContentView.swift in Sources */,
+				E0711D4B2BFFE1D000084CAF /* User.swift in Sources */,
+				E0711D522BFFE1DB00084CAF /* Strings.swift in Sources */,
+				FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */,
+				E0711D422BFFE1BE00084CAF /* TreatmentTimeBeginningView.swift in Sources */,
+				E0711D402BFFE1BE00084CAF /* EmojiSelectionView.swift in Sources */,
+				FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */,
+				E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */,
+				C3CFE6CA2C0F8C410013A49F /* HandyView_1.swift in Sources */,
+				E0711D3F2BFFE1BE00084CAF /* EmojiSelectionViewModel.swift in Sources */,
+				E0711D2C2BFFE1BE00084CAF /* ExerciseTabView.swift in Sources */,
+				E0711D442BFFE1BE00084CAF /* TreatmentTimeView .swift in Sources */,
+				E0711D3E2BFFE1BE00084CAF /* EmojiPickerView.swift in Sources */,
+				E0711D262BFFE1BE00084CAF /* ControlButton.swift in Sources */,
+				E0711D382BFFE1BE00084CAF /* ExercisesScrollView.swift in Sources */,
+				E0711D3A2BFFE1BE00084CAF /* HomeController.swift in Sources */,
+				E888FB8E2C02BD2D000B048F /* BPMGraphView.swift in Sources */,
+				E0711D372BFFE1BE00084CAF /* SelectGraphView.swift in Sources */,
+				E899FB122C0FA4E300945E81 /* Font.swift in Sources */,
+				E0711D392BFFE1BE00084CAF /* GoalView.swift in Sources */,
+				E0711D352BFFE1BE00084CAF /* PainScaleView.swift in Sources */,
+				E0711D412BFFE1BE00084CAF /* Onboarding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E02970582BFFDCCA0042E261 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E02970542BFFDCCA0042E261 /* Handy Watch App */;
+			targetProxy = E02970572BFFDCCA0042E261 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E02970632BFFDCCC0042E261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E02970642BFFDCCC0042E261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E02970662BFFDCCC0042E261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = SRXHT55569;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Handy-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to healthy records";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share user heathy data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update user healthy records";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		E02970672BFFDCCC0042E261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = SRXHT55569;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Handy-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to healthy records";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share user heathy data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update user healthy records";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		E029706A2BFFDCCC0042E261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E029706B2BFFDCCC0042E261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = Handy;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E029704C2BFFDCCA0042E261 /* Build configuration list for PBXProject "Handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02970632BFFDCCC0042E261 /* Debug */,
+				E02970642BFFDCCC0042E261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E02970652BFFDCCC0042E261 /* Build configuration list for PBXNativeTarget "Handy Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02970662BFFDCCC0042E261 /* Debug */,
+				E02970672BFFDCCC0042E261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E02970692BFFDCCC0042E261 /* Build configuration list for PBXNativeTarget "Handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E029706A2BFFDCCC0042E261 /* Debug */,
+				E029706B2BFFDCCC0042E261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E02970492BFFDCCA0042E261 /* Project object */;
+}
