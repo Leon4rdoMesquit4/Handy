@@ -14,24 +14,30 @@ struct EmojiSelectionView: View {
     
     // MARK: BODY
     var body: some View {
-        VStack (alignment: .leading, spacing: 10){
+        ZStack{
             
-            title
-                        
-            selectedSymbol
-                .padding(.vertical, 10)
+            Color.base
             
-            if vm.isEmojiSelected() {
-                self.botaoNextPage
-            } else {
-                Spacer()
+            VStack (alignment: .leading, spacing: 10){
+                
+                title
+                
+                selectedSymbol
+                    .padding(.vertical, 10)
+                
+                if vm.isEmojiSelected() {
+                    self.botaoNextPage
+                } else {
+                    Spacer()
+                }
             }
-        }
-        .ignoresSafeArea()
-        .padding()
-        .alert(isPresented: $vm.alertInvalidEmojiIsPresented) {
-            Alert(title: Text("Ops! Nenhum emoji selecionado"))
-        }
+            .ignoresSafeArea()
+            .padding()
+            .alert(isPresented: $vm.alertInvalidEmojiIsPresented) {
+                Alert(title: Text("Ops! Nenhum emoji selecionado"))
+            }
+            .background(Color.base)
+        }.background(Color.base)
     }
     
     // MARK: COMPONENTES DE UI

@@ -87,7 +87,6 @@ struct TreatmentTimeView_: View {
                 .padding()
                 Spacer()
             }
-            
         }
         .frame(maxWidth: .infinity)
         .background(Color.brand.opacity(0.5))

@@ -28,10 +28,11 @@ struct ExercisesScrollView: View {
             ScrollView {
                 ForEach(exercises) { exercise in
                     exerciseListItem(exercise: exercise)
+                        .padding()
                 }
                 
             }.padding(.top, 25)
-        }
+        }.background(Color.base)
     }
 }
 
@@ -41,12 +42,12 @@ extension ExercisesScrollView {
         VStack (alignment: .leading) {
             HStack {
                 Text(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color.baseColor2)
                     .padding(.leading)
                 Spacer()
             }
             .padding(.vertical, 25)
-            .background(Color.gray)
+            .background(Color.brandColor1)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .onTapGesture {
                 coordinator.navigate(to: .exerciseDetailView(exercise

@@ -15,25 +15,27 @@ struct ExerciseUserFeedbackView: View {
     @Environment(SwiftDataController.self) var controller
     
     var body: some View {
-        VStack {
-            TitleForm(text: "Como foi a prática do exercício")
-            StepperImage(value: $feedback, interval: 0 ... 5, prefixImage: "intensity")
-                .padding(WKInterfaceDevice.current().screenBounds.height / 400)
-            
-            Text(labelIntensity())
-                .font(.caption2)
-                .padding(.bottom, WKInterfaceDevice.current().screenBounds.height / 400)
-            
-            ButtonNextPage{
-                controller.exerciseFeedback = Double(feedback)
-                coordinator.navigate(to: .didFeelPainView)
+        ZStack{
+            VStack {
+                TitleForm(text: "Como foi a prática do exercício")
+                StepperImage(value: $feedback, interval: 0 ... 5, prefixImage: "intensity")
+                    .padding(WKInterfaceDevice.current().screenBounds.height / 400)
+                
+                Text(labelIntensity())
+                    .font(.caption2)
+                    .padding(.bottom, WKInterfaceDevice.current().screenBounds.height / 400)
+                
+                ButtonNextPage{
+                    controller.exerciseFeedback = Double(feedback)
+                    coordinator.navigate(to: .didFeelPainView)
+                }
             }
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Text("1/3")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("1/3")
+                }
             }
-        }
+        }.background(Color.base)
         
     }
     

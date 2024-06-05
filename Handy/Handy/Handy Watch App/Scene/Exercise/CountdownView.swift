@@ -13,27 +13,33 @@ struct CountdownView: View {
     @State var counter : Double = 3
     
     var body: some View {
-        VStack {
-            CircularProgressBar(contagem: $counter, contagemMaxima: 3)
-                .overlay(alignment: .center) {
-                    Text(Int(counter).description)
-                        .font(.title)
-                        .bold()
-                }
-        }
-        .onAppear(perform: {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                
-                if self.counter <= 0 {
-                    timer.invalidate()
-                    coordinator.navigate(to: .exerciseTabView)
-                    workoutController.startWorkout()
-                } else {
-                    self.counter -= 1
-                }
-                
+        ZStack{
+            
+            Color.base
+            
+            VStack {
+                CircularProgressBar(contagem: $counter, contagemMaxima: 3)
+                    .overlay(alignment: .center) {
+                        Text(Int(counter).description)
+                            .font(.title)
+                            .bold()
+                    }
             }
-        })
+            .background(Color.base)
+            .onAppear(perform: {
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                    
+                    if self.counter <= 0 {
+                        timer.invalidate()
+                        coordinator.navigate(to: .exerciseTabView)
+                        workoutController.startWorkout()
+                    } else {
+                        self.counter -= 1
+                    }
+                    
+                }
+            })
+        }.background(Color.base)
     }
 }
 

@@ -10,28 +10,27 @@ import SwiftUI
 struct Onboarding: View {
     
     @Environment(OnboardingCoordinator.self) var coordinator
-
+    
     var body: some View {
-        VStack (alignment: .leading, spacing: 10){
-            title
-                .font(.title3)
-                .frame(height: 0)
+        ZStack{
             
-            Spacer()
-            descriptionPage
-                .font(.system(size: 12))
-            Spacer()
+            Color.base
             
-            self.buttonNextPage
-        }
+            VStack (alignment: .leading, spacing: 10){
+                
+                ScrollView{
+                    descriptionPage
+                        .font(.system(size: 12))
+                        .padding()
+                }
+                
+                self.buttonNextPage
+                    .padding()
+            }.navigationTitle("Estabeleça sua meta")
+        }.background(Color.base)
     }
     
     // MARK: COMPONENTES DE UI
-    
-    var title : some View {
-        Text("Estabeleça a sua meta")
-    }
-    
     var buttonNextPage : some View {
         HStack {
             Spacer()
@@ -39,13 +38,13 @@ struct Onboarding: View {
             ButtonNextPage{
                 coordinator.navigate(to: .emojiSelectionView)
             }
-                .frame(height: 1)
+            .frame(height: 1)
             Spacer()
         }
     }
     
     var descriptionPage : some View {
-        Text("Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.\n\nEstaremos com você durante todo o processo.")
+        Text("Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir.")
     }
 }
 
