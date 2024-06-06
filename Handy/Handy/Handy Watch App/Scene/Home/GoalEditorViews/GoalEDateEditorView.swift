@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 /// View responsável por permitir que o usuário edite o início do seu tratamento e o final do seu tratamento dentro do aplicativo, as alterações feitas aqui deverão ser salvas dentro do User Defaults através do botão de confirmar que estará disposto no final da tela.
 struct GoalEDateEditorView: View {
     // MARK: VARIÁVEIS
     /// Variável que representa a data de início de tratamento do usuário que está dentro do User Defaults.
-    @AppStorage("dateBeginningTreatment") var beginningTreatmentAppStorage : String = "25_05_2024"
+    @AppStorage("dateBeginningTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var beginningTreatmentAppStorage : String = "25_05_2024"
     /// Variável que representa a data de final de tratamento do usuário que está dentro do User Defaults.
-    @AppStorage("dateEndTreatment") var endTreatmentAppStorage : String = "31_06_2024"
+    @AppStorage("dateEndTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var endTreatmentAppStorage : String = "31_06_2024"
     
     /// Coordinator: vai fazer o controle de navegação da View.
     @Environment(Coordinator.self) var coordinator
@@ -76,6 +77,7 @@ struct GoalEDateEditorView: View {
             // converte as datas para String (na formatação dd_mm_aaaa e salvo elas no User Defaults).
             beginningTreatmentAppStorage = Date.convertDateToString(dateBeginning)
             endTreatmentAppStorage = Date.convertDateToString(dateEnd)
+            WidgetCenter.shared.reloadTimelines(ofKind: "ProgressComplication")
             exitView()
         } else {
             self.showAlertInvalidDate.toggle()
