@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct TreatmentTimeView_: View {
     @Binding var isOnboardingComplete: Bool
@@ -16,8 +17,8 @@ struct TreatmentTimeView_: View {
     
     // MARK: VARIÁVEIS RELACIONADAS AO QUE ESTÁ SENDO SALVO NO USERDEFAULTS
     // A data de início do tratamento e a data do fim do tratamento.
-    @AppStorage ("dateBeginningTreatment") var dateBeginningTreatment : String = Date().formatted()
-    @AppStorage ("dateEndTreatment") var dateEndTreatment : String = Date().formatted()
+    @AppStorage ("dateBeginningTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var dateBeginningTreatment : String = Date().formatted()
+    @AppStorage ("dateEndTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var dateEndTreatment : String = Date().formatted()
     
     var body: some View {
         ScrollView {
@@ -54,6 +55,7 @@ struct TreatmentTimeView_: View {
                         if dataInicio < dataFinal{
                             self.dateBeginningTreatment = Date.convertDateToString(dataInicio)
                             self.dateEndTreatment = Date.convertDateToString(dataFinal)
+                            WidgetCenter.shared.reloadTimelines(ofKind: "ProgressComplication")
                             isOnboardingComplete = true
                         } else {
                             showAlert.toggle()

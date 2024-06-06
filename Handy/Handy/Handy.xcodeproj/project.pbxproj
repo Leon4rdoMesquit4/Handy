@@ -87,6 +87,13 @@
 		E899FB0F2C0FA21D00945E81 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E899FAFD2C0FA21D00945E81 /* Poppins-Black.ttf */; };
 		E899FB122C0FA4E300945E81 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899FB112C0FA4E300945E81 /* Font.swift */; };
 		FD37AEB12C10979F009BE6FD /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37AEB02C10979F009BE6FD /* Element.swift */; };
+		FD37AEB92C110731009BE6FD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD37AEB82C110731009BE6FD /* WidgetKit.framework */; };
+		FD37AEBB2C110731009BE6FD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD37AEBA2C110731009BE6FD /* SwiftUI.framework */; };
+		FD37AEBE2C110731009BE6FD /* ProgressComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37AEBD2C110731009BE6FD /* ProgressComplication.swift */; };
+		FD37AEC02C110732009BE6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD37AEBF2C110732009BE6FD /* Assets.xcassets */; };
+		FD37AEC42C110732009BE6FD /* ProgressComplicationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD37AEB62C110731009BE6FD /* ProgressComplicationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD37AECC2C11EBC5009BE6FD /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37AECB2C11EBC5009BE6FD /* Date+Format.swift */; };
+		FD37AECD2C11ECA6009BE6FD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37AEC92C11EAF5009BE6FD /* DataService.swift */; };
 		FDE0DFE22C075A2800B3E280 /* PlottedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */; };
 		FDF6AE882C07C0E500B02E77 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE872C07C0E500B02E77 /* Date+Format.swift */; };
 		FDF6AE8B2C0A141700B02E77 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */; };
@@ -103,6 +110,13 @@
 			remoteGlobalIDString = E02970542BFFDCCA0042E261;
 			remoteInfo = "Handy Watch App";
 		};
+		FD37AEC22C110732009BE6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E02970492BFFDCCA0042E261 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD37AEB52C110731009BE6FD;
+			remoteInfo = ProgressComplicationExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +129,17 @@
 				E02970562BFFDCCA0042E261 /* Handy Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD37AEC52C110733009BE6FD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD37AEC42C110732009BE6FD /* ProgressComplicationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -203,6 +228,15 @@
 		E899FB102C0FA24200945E81 /* Handy-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Handy-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E899FB112C0FA4E300945E81 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FD37AEB02C10979F009BE6FD /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		FD37AEB62C110731009BE6FD /* ProgressComplicationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProgressComplicationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD37AEB82C110731009BE6FD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FD37AEBA2C110731009BE6FD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FD37AEBD2C110731009BE6FD /* ProgressComplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComplication.swift; sourceTree = "<group>"; };
+		FD37AEBF2C110732009BE6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD37AEC12C110732009BE6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD37AEC92C11EAF5009BE6FD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		FD37AECB2C11EBC5009BE6FD /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		FD37AECE2C11EE75009BE6FD /* ProgressComplicationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProgressComplicationExtension.entitlements; sourceTree = "<group>"; };
 		FDE0DFE12C075A2800B3E280 /* PlottedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottedElement.swift; sourceTree = "<group>"; };
 		FDF6AE872C07C0E500B02E77 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		FDF6AE8A2C0A141700B02E77 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
@@ -216,6 +250,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD37AEB32C110731009BE6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD37AEBB2C110731009BE6FD /* SwiftUI.framework in Frameworks */,
+				FD37AEB92C110731009BE6FD /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +290,10 @@
 		E02970482BFFDCCA0042E261 = {
 			isa = PBXGroup;
 			children = (
+				FD37AECE2C11EE75009BE6FD /* ProgressComplicationExtension.entitlements */,
 				E02970592BFFDCCA0042E261 /* Handy Watch App */,
+				FD37AEBC2C110731009BE6FD /* ProgressComplication */,
+				FD37AEB72C110731009BE6FD /* Frameworks */,
 				E02970502BFFDCCA0042E261 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -257,6 +303,7 @@
 			children = (
 				E029704F2BFFDCCA0042E261 /* Handy.app */,
 				E02970552BFFDCCA0042E261 /* Handy Watch App.app */,
+				FD37AEB62C110731009BE6FD /* ProgressComplicationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,6 +579,27 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		FD37AEB72C110731009BE6FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD37AEB82C110731009BE6FD /* WidgetKit.framework */,
+				FD37AEBA2C110731009BE6FD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD37AEBC2C110731009BE6FD /* ProgressComplication */ = {
+			isa = PBXGroup;
+			children = (
+				FD37AEBD2C110731009BE6FD /* ProgressComplication.swift */,
+				FD37AEBF2C110732009BE6FD /* Assets.xcassets */,
+				FD37AEC12C110732009BE6FD /* Info.plist */,
+				FD37AEC92C11EAF5009BE6FD /* DataService.swift */,
+				FD37AECB2C11EBC5009BE6FD /* Date+Format.swift */,
+			);
+			path = ProgressComplication;
+			sourceTree = "<group>";
+		};
 		FDF6AE892C0A140700B02E77 /* GoalView */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,15 +636,34 @@
 				E02970512BFFDCCA0042E261 /* Sources */,
 				E02970522BFFDCCA0042E261 /* Frameworks */,
 				E02970532BFFDCCA0042E261 /* Resources */,
+				FD37AEC52C110733009BE6FD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD37AEC32C110732009BE6FD /* PBXTargetDependency */,
 			);
 			name = "Handy Watch App";
 			productName = "Handy Watch App";
 			productReference = E02970552BFFDCCA0042E261 /* Handy Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FD37AEB52C110731009BE6FD /* ProgressComplicationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD37AEC82C110733009BE6FD /* Build configuration list for PBXNativeTarget "ProgressComplicationExtension" */;
+			buildPhases = (
+				FD37AEB22C110731009BE6FD /* Sources */,
+				FD37AEB32C110731009BE6FD /* Frameworks */,
+				FD37AEB42C110731009BE6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProgressComplicationExtension;
+			productName = ProgressComplicationExtension;
+			productReference = FD37AEB62C110731009BE6FD /* ProgressComplicationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -592,6 +679,9 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					E02970542BFFDCCA0042E261 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FD37AEB52C110731009BE6FD = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -611,6 +701,7 @@
 			targets = (
 				E029704E2BFFDCCA0042E261 /* Handy */,
 				E02970542BFFDCCA0042E261 /* Handy Watch App */,
+				FD37AEB52C110731009BE6FD /* ProgressComplicationExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -649,6 +740,14 @@
 				E899FAEB2C0FA20100945E81 /* Alata-Regular.ttf in Resources */,
 				E899FB042C0FA21D00945E81 /* Poppins-Thin.ttf in Resources */,
 				E899FAFE2C0FA21D00945E81 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD37AEB42C110731009BE6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD37AEC02C110732009BE6FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +824,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD37AEB22C110731009BE6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD37AECD2C11ECA6009BE6FD /* DataService.swift in Sources */,
+				FD37AECC2C11EBC5009BE6FD /* Date+Format.swift in Sources */,
+				FD37AEBE2C110731009BE6FD /* ProgressComplication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -732,6 +841,11 @@
 			isa = PBXTargetDependency;
 			target = E02970542BFFDCCA0042E261 /* Handy Watch App */;
 			targetProxy = E02970572BFFDCCA0042E261 /* PBXContainerItemProxy */;
+		};
+		FD37AEC32C110732009BE6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD37AEB52C110731009BE6FD /* ProgressComplicationExtension */;
+			targetProxy = FD37AEC22C110732009BE6FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -853,13 +967,14 @@
 		E02970662BFFDCCC0042E261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Handy-Watch-App-Info.plist";
@@ -888,13 +1003,14 @@
 		E02970672BFFDCCC0042E261 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Handy Watch App/Handy Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Handy Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Handy-Watch-App-Info.plist";
@@ -954,6 +1070,69 @@
 			};
 			name = Release;
 		};
+		FD37AEC62C110733009BE6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ProgressComplicationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProgressComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProgressComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy.watchkitapp.ProgressComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		FD37AEC72C110733009BE6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ProgressComplicationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProgressComplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProgressComplication;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Handy.watchkitapp.ProgressComplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -980,6 +1159,15 @@
 			buildConfigurations = (
 				E029706A2BFFDCCC0042E261 /* Debug */,
 				E029706B2BFFDCCC0042E261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD37AEC82C110733009BE6FD /* Build configuration list for PBXNativeTarget "ProgressComplicationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD37AEC62C110733009BE6FD /* Debug */,
+				FD37AEC72C110733009BE6FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

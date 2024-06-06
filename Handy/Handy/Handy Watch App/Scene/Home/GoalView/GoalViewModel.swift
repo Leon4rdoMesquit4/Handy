@@ -12,8 +12,8 @@ import SwiftUI
 extension GoalView {
     class GoalViewModel : ObservableObject {
         @AppStorage("emoji") var emoji : String = "figure.walk"
-        @AppStorage("dateBeginningTreatment") var beginningTreatmentAppStorage : String = "25_05_2024"
-        @AppStorage("dateEndTreatment") var endTreatmentAppStorage : String = "31_05_2024"
+        @AppStorage("dateBeginningTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var beginningTreatmentAppStorage : String = "25_05_2024"
+        @AppStorage("dateEndTreatment", store: UserDefaults(suiteName: "group.Luca.Handy")) var endTreatmentAppStorage : String = "31_05_2024"
         
         @Published var initialTreatmentDate : Date? = nil
         @Published var endingTreatmentDate : Date? = nil
