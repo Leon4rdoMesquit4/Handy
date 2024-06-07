@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Formata a hora atual para mostrar o tempo passado desde o ínicio do workout 
 class TimeFormatter: Formatter {
     let componentsFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
