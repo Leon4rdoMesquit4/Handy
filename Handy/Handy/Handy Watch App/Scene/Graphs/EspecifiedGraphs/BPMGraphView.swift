@@ -31,6 +31,7 @@ struct BPMGraphView: View {
         }
     }
     
+    //Retorna os dados tratados para esse tipo de gráfico
     func retrieveData() {
         let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
         let exercises = controller.fetchExercises(context, in: lastWeekDays)

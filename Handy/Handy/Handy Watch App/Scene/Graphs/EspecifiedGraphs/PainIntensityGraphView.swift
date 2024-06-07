@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+//Gráfico responsável por mostra
 struct PainIntensityGraphView: View {
     
     @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
+    
+    //Cada indice representa um nível de dor do menor para o maior
     @State var elements : [Int] = [0, 0, 0]
     @State var plottedElements : [PlottedElement] = []
     @State var text: String = ""
@@ -30,6 +33,7 @@ struct PainIntensityGraphView: View {
         }
     }
     
+    //Retorna os dados tratados para esse tipo de gráfico
     private func retrieveData() {
         elements = [0, 0, 0]
         plottedElements = []
@@ -61,12 +65,14 @@ struct PainIntensityGraphView: View {
         }
     }
     
+    //Enum responasável pelas strings e organização por indices
     enum Pain: String, CaseIterable {
         case moderada = "Dor moderada"
         case baixa = "Desconforto"
         case alta = "Dor intensa"
         case semDor = "Sem dor"
         
+        //Retorna a string por indice
         static func getPainLevel(index: Int) -> String{
             if index == 0 {
                 baixa.rawValue

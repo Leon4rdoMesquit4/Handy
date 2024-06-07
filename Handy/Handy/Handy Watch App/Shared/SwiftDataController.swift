@@ -21,6 +21,7 @@ class SwiftDataController {
     var painLevel: Double?
     var exerciseFeedback: Double?
     
+    //Criar um novo exercicio com as variáveis alteradas no controller
     func saveNewExercise(context: ModelContext){
         let exercise = Exercise()
         if let startTrainning = startTrainning {
@@ -40,6 +41,7 @@ class SwiftDataController {
         resetElements()
     }
     
+    //Criar varios novos exercicios com variaveis sample
     func saveALotOfNewExercise(context: ModelContext){
         var exercises: [Exercise] = []
         
@@ -60,6 +62,7 @@ class SwiftDataController {
         
     }
     
+    //Segunda função criar varios novos exercicios com variaveis sample
     func saveNewExercises(context: ModelContext){
                 
         for n in 2...25 {
@@ -86,6 +89,7 @@ class SwiftDataController {
  
     }
     
+    //Terceira função criar novo exercicio com variaveis sample
     func saveOneExercise(context: ModelContext){
         let exercise = Exercise()
         exercise.startTrainning = .now + TimeInterval(89000)
@@ -96,10 +100,12 @@ class SwiftDataController {
         context.insert(exercise)
     }
     
+    //Função para remover todos os elementos do swift data
     func removeAll(context: ModelContext){
         try! context.delete(model: Exercise.self)
     }
     
+    //Reiniciar os elementos da controller para uma nova instância
     func resetElements() {
         time = nil
         avarageHeartBeats = nil
@@ -131,6 +137,7 @@ class SwiftDataController {
         return dates
     }
     
+    //Função responsável por fazer as requisições dos elementos existentes no swift data
     func fetchExercises (_ context : ModelContext) -> [Exercise] {
         var exercisesFetched : [Exercise] = []
         
@@ -141,6 +148,7 @@ class SwiftDataController {
         return exercisesFetched
     }
     
+    //Função responsável por fazer as requisições dos elementos existentes no swift data
     func fetchExercises (_ context : ModelContext, in week: [Date]) -> [Exercise]{
         let totalExercises = fetchExercises(context)
         var exercisesInWeek : [Exercise] = []
@@ -156,12 +164,7 @@ class SwiftDataController {
                     exercisesInWeek.append(exercise)
                 }
             }
-            
-            
-            
-//                if week.contains(startTrainning) {
-//                    exercisesInWeek.append(exercise)
-//                }
+        
         }
         
         print("Dados tratados")

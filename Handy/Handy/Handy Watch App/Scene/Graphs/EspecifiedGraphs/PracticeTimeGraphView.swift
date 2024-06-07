@@ -28,6 +28,7 @@ struct PracticeTimeGraphView: View {
         }
     }
     
+    //Retorna os dados tratados para esse tipo de gráfico
     func retrieveData () {
         
         var avarage = 0.0
@@ -90,6 +91,7 @@ struct PracticeTimeGraphView: View {
         
     }
     
+    //Fomatador de dados para a média de tempo de prática
     struct TimeGraphData {
         var count: Int
         var sum: Double

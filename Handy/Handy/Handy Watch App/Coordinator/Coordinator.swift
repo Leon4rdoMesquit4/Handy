@@ -14,7 +14,7 @@ final class Coordinator{
     
     ///Destinos possíveis para a navegação
     public enum Destination: Equatable, Hashable {
-        
+        //MARK: - Funções para permitir que o app receba um binding
         public static func == (lhs: Coordinator.Destination, rhs: Coordinator.Destination) -> Bool {
             return lhs.hashValue == rhs.hashValue
         }
@@ -26,12 +26,7 @@ final class Coordinator{
             }
         }
         
-        
-        enum GraphCases{
-            case month
-            case week
-        }
-        
+        //MARK: - Funções para a troca de telas do fluxo principal do aplicativo
         case countdownView
         case graphView
         case selectGraphView
@@ -47,16 +42,20 @@ final class Coordinator{
         case GoalEditorDatePickerView(String, Binding<Date>)
     }
     
+    //No path será armazenado todas as direções do aplicativo
     var navPath: [Destination] = []
     
+    //Serve como um navigation link para todo o sistema de navegação do app
     func navigate(to destination: Destination) {
         navPath.append(destination)
     }
     
+    //Volta uma view na hierarquia de navegação do aplicativo
     func navigateBack() {
         navPath.removeLast()
     }
     
+    //Volta para a primeira view da hierarquia
     func navigateToRoot() {
         navPath.removeLast(navPath.count)
     }
@@ -68,6 +67,7 @@ final class Coordinator{
 final class OnboardingCoordinator{
     
     public enum Destination: Equatable, Hashable {
+        //Funções para permitir que o app receba um binding
         public static func == (lhs: OnboardingCoordinator.Destination, rhs: OnboardingCoordinator.Destination) -> Bool {
             return lhs.hashValue == rhs.hashValue
         }
@@ -79,6 +79,7 @@ final class OnboardingCoordinator{
             }
         }
         
+        //Funções para a troca de telas do fluxo principal do aplicativo:
         case emojiSelectionView
         case treatmentTimeView
         case treatmentTimeBeginningView(Binding<Date>)
@@ -86,12 +87,15 @@ final class OnboardingCoordinator{
         case EmojiPickerView(Binding<String>)
     }
     
+    //No path será armazenado todas as direções do aplicativo
     var navPath: [Destination] = []
     
+    //Serve como um navigation link para todo o sistema de navegação do app
     func navigate(to destination: Destination) {
         navPath.append(destination)
     }
     
+    //Volta uma view na hierarquia de navegação do aplicativo
     func navigateBack() {
         navPath.removeLast()
     }

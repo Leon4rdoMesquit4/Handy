@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+//Esse é o botão base para a tela de controle de exercícios
 struct ControlButton: View {
     
     var color: Color
+    
+    //A action é responsável pelo callback do botão
     var action: () -> Void
     var name: String?
     var image:Image
