@@ -106,6 +106,7 @@ struct BarChart<T: Plottable & Hashable>: View {
         
     }
     
+    //facilitador de imagens do gráfico
     @ViewBuilder
     private func axisImage (val : Int) -> some View {
         Image(plottedElements[val].image)

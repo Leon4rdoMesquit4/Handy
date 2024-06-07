@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//Struct ligado aos dados básicos de todos os gráficos
 struct GraphData<T>: Identifiable{
     var id: UUID = UUID()
     var date: Date
@@ -15,6 +16,8 @@ struct GraphData<T>: Identifiable{
 }
 
 extension Date {
+    
+    //Gerenciamento da média dos gráficos baseado em um keypath especifico dos exercícios
     static func averageValuesByDay(exercises: [Exercise], keypath: KeyPath<Exercise, Double?>) -> [GraphData<Double>] {
         var groupedItems: [String: (sum: Double, count: Int)] = [:]
         
