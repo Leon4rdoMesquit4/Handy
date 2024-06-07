@@ -12,7 +12,6 @@ extension String {
         
         let time = self
         
-        
         guard let value = TimeInterval(time) else { return nil }
         
         var seconds = Int(value - value.truncatingRemainder(dividingBy: 1))

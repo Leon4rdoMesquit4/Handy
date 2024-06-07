@@ -12,7 +12,6 @@ struct DifficultGraphView: View {
     @State var exerciseAnalytics = [GraphData<Double>]()
     @Environment(SwiftDataController.self) var controller
     @Environment(\.modelContext) var context
-    @State var graphCase: Coordinator.Destination.GraphCases
     
     var body: some View {
         VStack{
@@ -30,6 +29,7 @@ struct DifficultGraphView: View {
         }
     }
     
+    //Retorna os dados tratados para esse tipo de gráfico
     func retrieveData () {
         let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
         let exercises = controller.fetchExercises(context, in: lastWeekDays)
@@ -41,6 +41,6 @@ struct DifficultGraphView: View {
 }
 
 #Preview {
-    DifficultGraphView(graphCase: .week)
+    DifficultGraphView()
         .environment(SwiftDataController())
 }

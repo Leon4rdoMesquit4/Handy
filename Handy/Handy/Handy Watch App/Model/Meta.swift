@@ -7,6 +7,7 @@
 
 import Foundation
 
+//
 class Goal {
     var name : String
     var emoji : String

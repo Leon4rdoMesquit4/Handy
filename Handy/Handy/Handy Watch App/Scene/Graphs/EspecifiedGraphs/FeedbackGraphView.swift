@@ -10,6 +10,7 @@ import SwiftData
 import Charts
 
 struct FeedbackGraphView: View {
+    //Cada indice representa um nível de feedback do menor para o maior
     @State var elements : [Int] = [0, 0, 0, 0, 0, 0]
     @Environment (\.modelContext) var context
     @Environment (SwiftDataController.self) var controller
@@ -31,6 +32,7 @@ struct FeedbackGraphView: View {
         
     }
     
+    //Retorna os dados tratados para esse tipo de gráfico
     func retrieveData () {
         
         elements = [0, 0, 0, 0, 0, 0]
@@ -66,6 +68,7 @@ struct FeedbackGraphView: View {
         
     }
     
+    //Enum responasável pelas strings e organização por indices
     enum Feedback: String, CaseIterable {
         case facil = "Fácil"
         case ligeiramenteFacil = "Ligeiramente fácil"
@@ -75,6 +78,7 @@ struct FeedbackGraphView: View {
         case exaustivo = "Exaustivo"
         case semDificuldade = "Sem dificuldade"
         
+        //Retorna a string por indice
         static func getPainLevel(index: Int) -> String{
             if index == 0 {
                 facil.rawValue

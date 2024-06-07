@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Tela de controle de pause e finalização do exercício
 struct ExerciseControlView: View {
     @State var progresso : Double = 1
     @State var contador : Int = 3
@@ -21,7 +22,6 @@ struct ExerciseControlView: View {
             
             HStack{
                 ControlButton(color: .colorSupport03, action: {
-                    
                     wcontroller.endWorkout()
                     controller.startTrainning = .now
                     coordinator.navigate(to: .exerciseUserFeedbackView)

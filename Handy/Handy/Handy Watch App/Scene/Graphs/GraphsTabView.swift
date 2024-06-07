@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Gerenciador geral de graficos na tabbar
 struct GraphsTabView: View {
         
     @Environment(SwiftDataController.self) var controller

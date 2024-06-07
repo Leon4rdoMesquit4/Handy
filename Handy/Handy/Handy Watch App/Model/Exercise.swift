@@ -85,10 +85,12 @@ class Exercise {
         }
     }
     
+    //Retorna o mínimo de batimentos em um array base de um gráfico
     static func minBPM(analytics: [GraphData<Double>]) -> Double {
         analytics.min(by: {$0.value < $1.value})!.value
     }
     
+    //Retorna o máximo de batimentos em um array base de um gráfico
     static func maxBPM(analytics: [GraphData<Double>]) -> Double {
         analytics.max(by: {$0.value < $1.value})!.value
         
