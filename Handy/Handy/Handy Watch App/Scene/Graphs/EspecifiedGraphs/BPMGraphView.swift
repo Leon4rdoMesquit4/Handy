@@ -15,18 +15,23 @@ struct BPMGraphView: View {
     @Environment(\.modelContext) var context
     @State var minValue: Double = 70
     @State var maxValue: Double = 90
+    @State var avarage: Double = 90
     
     var body: some View {
         VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue: $maxValue, avarage: .constant(90), linearGradient: LinearGradient(colors: [.bpmGraphColor2, .bpmGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .bpmGraphColor3)
+            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue: $maxValue, avarage: $avarage, linearGradient: LinearGradient(colors: [.bpmGraphColor2, .bpmGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .bpmGraphColor3)
                 .onAppear{
                     retrieveData()
+                    print(exerciseAnalytics)
                 }
                 
                 .navigationTitle{
                     Text("Batimentos")
                         .foregroundStyle(.white)
                         .font(.poppins(.light, size: 13, relativeTo: .title))
+                }
+                .onAppear{
+                    receiveAvarage()
                 }
         }
     }
@@ -42,6 +47,22 @@ struct BPMGraphView: View {
             minValue = Exercise.minBPM(analytics: exerciseAnalytics) - 2
             maxValue = Exercise.maxBPM(analytics: exerciseAnalytics) + 2
         }
+    }
+    
+    func receiveAvarage() {
+        var values: [Double] = []
+        
+        guard exerciseAnalytics.isEmpty != true else {
+            avarage = 0
+            return
+        }
+        
+        exerciseAnalytics.forEach { graph in
+            values.append(graph.value)
+        }
+        
+        avarage = values.reduce(0, +) / Double(values.count)
+        print(avarage)
     }
     
 }

@@ -34,7 +34,7 @@ struct CircularProgressBar: View {
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(percentage, 1)))
                 .stroke(style: StrokeStyle(lineWidth: 12, lineCap: .round))
-                .foregroundStyle(cor)
+                .foregroundStyle(.brandColor2)
                 .rotationEffect(Angle(degrees: 270))
                 .animation(.easeInOut(duration: 0.5), value: contagem)
         }
