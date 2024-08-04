@@ -16,23 +16,38 @@ struct BPMGraphView: View {
     @State var minValue: Double = 70
     @State var maxValue: Double = 90
     @State var avarage: Double = 90
+    @State var dataIsBlocked: Bool = false
     
     var body: some View {
-        VStack{
-            LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue: $maxValue, avarage: $avarage, linearGradient: LinearGradient(colors: [.bpmGraphColor2, .bpmGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .bpmGraphColor3)
-                .onAppear{
-                    retrieveData()
-                    print(exerciseAnalytics)
-                }
+        ZStack {
+            VStack{
+                LineChart(exerciseAnalytics: $exerciseAnalytics, minValue: $minValue, maxValue: $maxValue, avarage: $avarage, linearGradient: LinearGradient(colors: [.bpmGraphColor2, .bpmGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .bpmGraphColor3)
+                    .onAppear{
+                        retrieveData()
+                        print(exerciseAnalytics)
+                    }
                 
-                .navigationTitle{
-                    Text("Batimentos")
-                        .foregroundStyle(.white)
-                        .font(.poppins(.light, size: 13, relativeTo: .title))
-                }
-                .onAppear{
-                    receiveAvarage()
-                }
+                    .navigationTitle{
+                        Text("Batimentos")
+                            .foregroundStyle(.white)
+                            .font(.poppins(.light, size: 13, relativeTo: .title))
+                    }
+                    .onAppear{
+                        receiveAvarage()
+                    }
+            }
+            if dataIsBlocked {
+                Text("Você precisa completar o primeiro exercício da semana para que os dados apareçam.")
+                    .font(.poppins(.extraBold,size: 14, relativeTo: .subheadline))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background{
+                        Rectangle()
+                            .foregroundStyle(.black.opacity(0.69))
+                            .ignoresSafeArea()
+                    }
+            }
         }
     }
     
@@ -54,6 +69,7 @@ struct BPMGraphView: View {
         
         guard exerciseAnalytics.isEmpty != true else {
             avarage = 0
+            dataIsBlocked = true
             return
         }
         

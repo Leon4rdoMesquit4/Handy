@@ -13,18 +13,33 @@ struct PracticeTimeGraphView: View {
     @Environment(\.modelContext) var context
     @State var plottedElements : [PlottedElement] = []
     @State var timeAvarage: Double = 0.0
+    @State var dataIsBlocked: Bool = false
     
     var body: some View {
-        VStack{
-            BarChart<Int>(plottedElements: $plottedElements, avarage: $timeAvarage, hasImages: false, mainFeeling: .constant(""), linearGradient: LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .timeGraphColor3)
-                .onAppear{
-                    retrieveData()
-                }
-                .navigationTitle{
-                    Text("Tempo de prática")
-                        .foregroundStyle(.baseColor2)
-                        .font(.poppins(.light, size: 13, relativeTo: .title))
-                }
+        ZStack{
+            VStack{
+                BarChart<Int>(plottedElements: $plottedElements, avarage: $timeAvarage, hasImages: false, mainFeeling: .constant(""), linearGradient: LinearGradient(colors: [.timeGraphColor2, .timeGraphColor1], startPoint: .bottom, endPoint: .top), accentColor: .timeGraphColor3)
+                    .onAppear{
+                        retrieveData()
+                    }
+                    .navigationTitle{
+                        Text("Tempo de prática")
+                            .foregroundStyle(.baseColor2)
+                            .font(.poppins(.light, size: 13, relativeTo: .title))
+                    }
+            }
+            if dataIsBlocked {
+                Text("Você precisa completar o primeiro exercício da semana para que os dados apareçam.")
+                    .font(.poppins(.extraBold,size: 14, relativeTo: .subheadline))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background{
+                        Rectangle()
+                            .foregroundStyle(.black.opacity(0.69))
+                            .ignoresSafeArea()
+                    }
+            }
         }
     }
     
@@ -49,6 +64,11 @@ struct PracticeTimeGraphView: View {
         
         let exercises = controller.fetchExercises(context, in: lastWeekDays)
         
+        guard exercises.isEmpty == false else {
+            print(exercises.isEmpty)
+            dataIsBlocked = true
+            return
+        }
 //        print(exercises)
         
         let calendar = Calendar.current

@@ -48,7 +48,7 @@ struct LineChart: View {
                                                          miterLimit: 1,
                                                          dash: [],
                                                          dashPhase: 1))
-                        .offset(x: 0, y: 20)
+                        .offset(x: 0, y: 10)
                         .foregroundStyle(.white)
                     }
                     AxisValueLabel()

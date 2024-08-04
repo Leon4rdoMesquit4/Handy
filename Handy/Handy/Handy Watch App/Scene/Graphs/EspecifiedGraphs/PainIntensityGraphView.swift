@@ -18,6 +18,7 @@ struct PainIntensityGraphView: View {
     @State var elements : [Int] = [0, 0, 0]
     @State var plottedElements : [PlottedElement] = []
     @State var text: String = ""
+    @State var dataIsBlocked: Bool = false
     
     var body: some View {
         ZStack {
@@ -27,6 +28,19 @@ struct PainIntensityGraphView: View {
                         .foregroundStyle(.white)
                         .font(.poppins(.light, size: 13, relativeTo: .title))
                 }
+            
+            if dataIsBlocked {
+                Text("Você precisa completar o primeiro exercício da semana para que os dados apareçam.")
+                    .font(.poppins(.extraBold,size: 14, relativeTo: .subheadline))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background{
+                        Rectangle()
+                            .foregroundStyle(.black.opacity(0.69))
+                            .ignoresSafeArea()
+                    }
+            }
         }
         .onAppear {
             retrieveData()
@@ -40,6 +54,11 @@ struct PainIntensityGraphView: View {
         
         let lastWeekDays = controller.getLastWeekDaysForPredicateAllDates()
         let exercises = controller.fetchExercises(context, in: lastWeekDays)
+        
+        guard exercises.isEmpty != true else {
+            dataIsBlocked = true
+            return
+        }
         
         for exercise in exercises {
             if let feedback = exercise.painLevel {

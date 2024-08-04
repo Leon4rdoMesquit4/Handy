@@ -23,6 +23,8 @@ struct HandyView_2: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                Color.base
+                    .ignoresSafeArea()
                 BigSpeechBubbleView(vm: BigSpeechBubbleViewModel(orientation: .right))
                     .frame(maxWidth: geometry.size.width * 0.7, maxHeight: geometry.size.height * 0.7)
                     .position(x: geometry.size.width * 0.58, y: geometry.size.height * 0.20)
@@ -40,7 +42,8 @@ struct HandyView_2: View {
                         Spacer(minLength: geometry.size.width * 0.65)
                     }
                     Spacer()
-                }.ignoresSafeArea(.all)
+                }
+                .ignoresSafeArea(.all)
                 Image("Handy_2")
                     .resizable()
                     .scaledToFit()

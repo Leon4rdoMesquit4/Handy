@@ -21,8 +21,6 @@ struct GraphsTabView: View {
             
             FeedbackGraphView()
             
-//            DifficultGraphView(graphCase: graphCase)
-            
             PainIntensityGraphView()
         }
         .tabViewStyle(.carousel)

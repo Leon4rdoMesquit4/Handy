@@ -60,6 +60,7 @@
 		E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A332C06D9AA00AFB0AA /* LineChart.swift */; };
 		E82C8CCF2C5EC5A100BA332D /* ExerciseCongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */; };
 		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
+		E8624DF42C5FD762007A8192 /* GoalFinishedCongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8624DF32C5FD762007A8192 /* GoalFinishedCongratulationView.swift */; };
 		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
 		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
 		E888FB8A2C02BD0B000B048F /* FeedbackGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */; };
@@ -200,6 +201,7 @@
 		E8267A332C06D9AA00AFB0AA /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCongratulationsView.swift; sourceTree = "<group>"; };
 		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
+		E8624DF32C5FD762007A8192 /* GoalFinishedCongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalFinishedCongratulationView.swift; sourceTree = "<group>"; };
 		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
 		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
 		E888FB892C02BD0B000B048F /* FeedbackGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGraphView.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
 				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
 				E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */,
+				E8624DF32C5FD762007A8192 /* GoalFinishedCongratulationView.swift */,
 			);
 			path = ExerciseFeedback;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				E0711D2F2BFFE1BE00084CAF /* ButtonNextPage.swift in Sources */,
 				E0711D302BFFE1BE00084CAF /* StepperImage.swift in Sources */,
 				E0711D3C2BFFE1BE00084CAF /* HomeView.swift in Sources */,
+				E8624DF42C5FD762007A8192 /* GoalFinishedCongratulationView.swift in Sources */,
 				C3CFE6C72C0F8A540013A49F /* SmallSpeechBubbleButton.swift in Sources */,
 				FD37AEB12C10979F009BE6FD /* Element.swift in Sources */,
 				E0711D3D2BFFE1BE00084CAF /* EmojiList.swift in Sources */,
