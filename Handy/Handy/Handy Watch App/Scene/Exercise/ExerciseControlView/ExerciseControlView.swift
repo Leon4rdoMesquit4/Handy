@@ -17,7 +17,6 @@ struct ExerciseControlView: View {
     
     var body: some View {
         ZStack{
-            
             Color.base
             
             HStack{

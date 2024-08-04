@@ -32,8 +32,8 @@ struct HandyView_2: View {
                         Image("SmallSpeechBubbleButton")
                             .resizable()
                             .scaledToFit()
-                            .frame(maxWidth: geometry.size.width * 0.27)
-                            .padding(.top, geometry.size.height * 0.55)
+                            .frame(maxWidth: geometry.size.width * 0.33)
+                            .padding(.top, geometry.size.height * 0.57)
                             .onTapGesture {
                                 coordinator.navigate(to: .countdownView)
                             }

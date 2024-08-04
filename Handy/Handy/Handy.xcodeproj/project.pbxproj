@@ -58,6 +58,7 @@
 		E0D9FEDE2C079FF200614A40 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */; };
 		E8267A352C06D9AA00AFB0AA /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A322C06D9AA00AFB0AA /* BarChart.swift */; };
 		E8267A362C06D9AA00AFB0AA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8267A332C06D9AA00AFB0AA /* LineChart.swift */; };
+		E82C8CCF2C5EC5A100BA332D /* ExerciseCongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */; };
 		E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */; };
 		E888FB832C02BC8E000B048F /* GraphsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB822C02BC8E000B048F /* GraphsTabView.swift */; };
 		E888FB882C02BCEA000B048F /* PainIntensityGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */; };
@@ -197,6 +198,7 @@
 		E0D9FEDD2C079FF200614A40 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		E8267A322C06D9AA00AFB0AA /* BarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		E8267A332C06D9AA00AFB0AA /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCongratulationsView.swift; sourceTree = "<group>"; };
 		E83E0FDC2C06A4B300A3BE5E /* GraphShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphShared.swift; sourceTree = "<group>"; };
 		E888FB822C02BC8E000B048F /* GraphsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTabView.swift; sourceTree = "<group>"; };
 		E888FB872C02BCEA000B048F /* PainIntensityGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainIntensityGraphView.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				E0711D0A2BFFE1BE00084CAF /* Component */,
 				E0711D0C2BFFE1BE00084CAF /* DidFeelPainView.swift */,
 				E0711D0D2BFFE1BE00084CAF /* ExerciseUserFeedbackView.swift */,
+				E82C8CCE2C5EC5A100BA332D /* ExerciseCongratulationsView.swift */,
 			);
 			path = ExerciseFeedback;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				E83E0FDD2C06A4B300A3BE5E /* GraphShared.swift in Sources */,
 				FDF6AE982C0F9E6500B02E77 /* GoalEditorDatePickerView.swift in Sources */,
 				E888FB902C02BD3D000B048F /* PracticeTimeGraphView.swift in Sources */,
+				E82C8CCF2C5EC5A100BA332D /* ExerciseCongratulationsView.swift in Sources */,
 				E0711D532BFFE1DB00084CAF /* SwiftDataController.swift in Sources */,
 				C3CFE6C22C0E3D6A0013A49F /* BigSpeechBubbleView.swift in Sources */,
 				E0711D3B2BFFE1BE00084CAF /* HomeTabView.swift in Sources */,

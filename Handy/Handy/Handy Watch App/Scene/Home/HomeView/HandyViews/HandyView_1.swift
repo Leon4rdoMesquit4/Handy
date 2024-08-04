@@ -10,6 +10,7 @@ import SwiftUI
 struct HandyView_1: View {
     
     @Environment(Coordinator.self) var coordinator
+    @Environment(SwiftDataController.self) var controller
     
     var body: some View {
         GeometryReader { geometry in
@@ -23,8 +24,8 @@ struct HandyView_1: View {
                         Image("SmallSpeechBubbleButton")
                             .resizable()
                             .scaledToFit()
-                            .frame(maxWidth: geometry.size.width * 0.27)
-                            .padding(.top, geometry.size.height * 0.17)
+                            .frame(maxWidth: geometry.size.width * 0.33)
+                            .padding(.top, geometry.size.height * 0.18)
                             .onTapGesture {
                                 coordinator.navigate(to: .countdownView)
                             }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import SpriteKit
 
 @main
 struct Handy_Watch_AppApp: App {
@@ -70,7 +71,7 @@ struct Handy_Watch_AppApp: App {
                                     .navigationBarBackButtonHidden()
                                 //case .borgScaleView:
                                 //    BorgScaleView()
-                                    .navigationBarBackButtonHidden()
+//                                    .navigationBarBackButtonHidden()
                             case .didFeelPainView:
                                 DidFeelPainView()
                                     .navigationBarBackButtonHidden()
@@ -90,6 +91,9 @@ struct Handy_Watch_AppApp: App {
                                 EmojiPickerView(emojiPicked: binding)
                             case .GoalEditorDatePickerView(let string, let date):
                                 GoalEditorDatePickerView(dataInicio: date, title: string)
+                            case .congratulationsView:
+                                ExerciseCongratulationsView()
+                                    .navigationBarBackButtonHidden()
                             }
                         }
                 }

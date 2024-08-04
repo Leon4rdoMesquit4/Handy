@@ -35,7 +35,7 @@ struct PainScaleView: View {
                     controller.time = wcontroller.time
                     controller.saveNewExercise(context: context)
                     wcontroller.reset()
-                    coordinator.navigateToRoot()
+                    coordinator.navigate(to: .congratulationsView)
                 }
             }
             .toolbar {

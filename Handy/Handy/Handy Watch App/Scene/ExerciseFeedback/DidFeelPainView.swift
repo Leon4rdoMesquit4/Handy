@@ -34,7 +34,7 @@ struct DidFeelPainView: View {
                         controller.time = wcontroller.time
                         controller.saveNewExercise(context: context)
                         wcontroller.reset()
-                        coordinator.navigateToRoot()
+                        coordinator.navigate(to: .congratulationsView)
                     } label: {
                         Image(systemName: "xmark")
                             .bold()
@@ -75,5 +75,6 @@ struct DidFeelPainView: View {
         DidFeelPainView()
             .environment(Coordinator())
             .environment(SwiftDataController())
+            .environment(WorkoutController())
     }
 }

@@ -38,6 +38,7 @@ final class Coordinator{
         case exerciseDetailView(Exercise)
         case goalEditorView
         case goalDateEditorView
+        case congratulationsView
         case EmojiPickerView(Binding<String>)
         case GoalEditorDatePickerView(String, Binding<Date>)
     }
