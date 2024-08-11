@@ -20,58 +20,204 @@
 
     },
     "A data de fim do tratamento não pode ser menor que a data do início." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The end date of the treatment cannot be earlier than the start date."
+          }
+        }
+      }
     },
     "A data de final deve ser uma data após a de início" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The end date must be a date after the start date."
+          }
+        }
+      }
+    },
+    "Acredite na sua recuperação." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Believe in your recovery."
+          }
+        }
+      }
     },
     "Batimentos" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heartbeats"
+          }
+        }
+      }
     },
     "bpm" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bpm"
+          }
+        }
+      }
+    },
+    "Cada passo importa muito." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every step matters."
+          }
+        }
+      }
     },
     "Como se sentiu" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How did you feel?"
+          }
+        }
+      }
+    },
+    "Continue avançando, sem desistir." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep moving forward, without giving up."
+          }
+        }
+      }
     },
     "Data do final" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End date"
+          }
+        }
+      }
     },
     "Data inválida" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid date"
+          }
+        }
+      }
     },
     "day" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "day"
+          }
+        }
+      }
     },
     "Definir" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Define"
+          }
+        }
+      }
+    },
+    "Determinação é sua aliada." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Determination is your ally."
+          }
+        }
+      }
     },
     "Duração do tratamento:" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Treatment duration:"
+          }
+        }
+      }
     },
     "Editar meta" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit goal"
+          }
+        }
+      }
     },
     "Escolha um símbolo" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Choose a symbol"
+          }
+        }
+      }
     },
     "Estabeleça sua meta" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set your goal"
+          }
+        }
+      }
     },
     "Hello, world!" : {
 
     },
-    "Hello, World!" : {
-
-    },
     "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today marks the beginning of your recovery! With a goal in mind, it's easier to stay on track."
+          }
+        }
+      }
     },
     "image" : {
 
     },
     "Intensidade da dor" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pain intensity"
+          }
+        }
+      }
     },
     "min" : {
 
@@ -96,40 +242,163 @@
 
     },
     "Ops! Nenhum emoji selecionado" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! No emoji selected"
+          }
+        }
+      }
+    },
+    "Parabéns" : {
 
     },
     "Parabéns!" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Congratulations!"
+          }
+        }
+      }
     },
     "Persistencia é o caminho." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persistence is the way."
+          }
+        }
+      }
     },
     "Qual a sua meta?" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is your goal?"
+          }
+        }
+      }
     },
     "Selecione datas válidas" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select valid dates"
+          }
+        }
+      }
     },
     "Suas práticas" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your practices"
+          }
+        }
+      }
+    },
+    "Superação é seu destino." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overcoming is your destiny."
+          }
+        }
+      }
     },
     "Tempo de Pratica" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice time"
+          }
+        }
+      }
     },
     "Tempo de prática" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice time"
+          }
+        }
+      }
     },
     "Tratamento" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Treatment"
+          }
+        }
+      }
     },
     "Treino do dia: %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workout of the day: %@"
+          }
+        }
+      }
     },
     "value" : {
 
     },
+    "Você é mais forte!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You are stronger!"
+          }
+        }
+      }
+    },
+    "Você pode, você consegue!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can, you can do it!"
+          }
+        }
+      }
+    },
+    "Você praticou muito até aqui e completou sua meta!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You've practiced a lot so far and completed your goal!"
+          }
+        }
+      }
+    },
     "Você precisa completar o primeiro exercício da semana para que os dados apareçam." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You need to complete the first exercise of the week for the data to appear."
+          }
+        }
+      }
     },
     "Week" : {
 
