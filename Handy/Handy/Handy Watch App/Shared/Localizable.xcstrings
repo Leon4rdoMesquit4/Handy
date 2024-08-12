@@ -81,6 +81,9 @@
         }
       }
     },
+    "Como foi a prática do exercício" : {
+
+    },
     "Como se sentiu" : {
       "localizations" : {
         "en" : {
@@ -264,9 +267,6 @@
     "Parabéns" : {
 
     },
-    "Parabéns" : {
-
-    },
     "Parabéns!" : {
       "localizations" : {
         "en" : {
@@ -316,6 +316,9 @@
           }
         }
       }
+    },
+    "Sentiu dor ao praticar?" : {
+
     },
     "Suas práticas" : {
       "localizations" : {

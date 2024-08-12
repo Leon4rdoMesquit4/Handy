@@ -105,7 +105,6 @@ struct PainIntensityGraphView: View {
             }
         }
     }
-    
 }
 
 #Preview {

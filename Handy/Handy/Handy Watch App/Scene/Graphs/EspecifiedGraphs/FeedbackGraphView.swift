@@ -84,7 +84,7 @@ struct FeedbackGraphView: View {
         }
         
         if painVerifier{
-            text = Feedback.getPainLevel(index: elements.firstIndex(of: elements.max()!)!)
+            text = Feedback.getFeedbackLevel(index: elements.firstIndex(of: elements.max()!)!)
         }
         
     }
