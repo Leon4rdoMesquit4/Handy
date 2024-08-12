@@ -22,6 +22,8 @@ struct BigSpeechBubbleView: View {
                         .minimumScaleFactor(0.1)
                         .frame(maxHeight: geometry.size.height * 2/3)
                         .padding(.horizontal)
+                        .padding(.vertical, 3)
+                        .font(.alata(.regular, size: 16, relativeTo: .title3))
                 }
             }
     }

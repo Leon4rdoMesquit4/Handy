@@ -61,9 +61,6 @@
     "Hello, world!" : {
 
     },
-    "Hello, World!" : {
-
-    },
     "Hoje começa sua recuperação! Com um objetivo em mente, fica mais fácil seguir." : {
 
     },
@@ -98,6 +95,9 @@
     "Ops! Nenhum emoji selecionado" : {
 
     },
+    "Parabéns" : {
+
+    },
     "Parabéns!" : {
 
     },
@@ -126,6 +126,9 @@
 
     },
     "value" : {
+
+    },
+    "Você praticou muito até aqui e completou sua meta!" : {
 
     },
     "Você precisa completar o primeiro exercício da semana para que os dados apareçam." : {

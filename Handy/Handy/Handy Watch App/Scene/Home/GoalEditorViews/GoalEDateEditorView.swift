@@ -46,7 +46,11 @@ struct GoalEDateEditorView: View {
         .padding(.horizontal)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.base)
-        .navigationTitle("Tratamento")
+        .navigationTitle(
+            Text("Tratamento")
+                .font(.alata(.regular, size: 18, relativeTo: .title3))
+                .foregroundStyle(.baseColor2)
+        )
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
             fetchDatesFromAppStorage()
