@@ -92,15 +92,16 @@ struct PainIntensityGraphView: View {
         case semDor = "Sem dor"
         
         //Retorna a string por indice
-        static func getPainLevel(index: Int) -> String{
-            if index == 0 {
-                baixa.rawValue
-            } else if index == 1 {
-                moderada.rawValue
-            } else if index == 2{
-                alta.rawValue
-            } else {
-                semDor.rawValue
+        static func getPainLevel(index: Int) -> String {
+            switch index {
+            case 0:
+                return String(localized: String.LocalizationValue(Pain.baixa.rawValue))
+            case 1:
+                return String(localized: String.LocalizationValue(Pain.moderada.rawValue))
+            case 2:
+                return String(localized: String.LocalizationValue(Pain.alta.rawValue))
+            default:
+                return String(localized: String.LocalizationValue(Pain.semDor.rawValue))
             }
         }
     }

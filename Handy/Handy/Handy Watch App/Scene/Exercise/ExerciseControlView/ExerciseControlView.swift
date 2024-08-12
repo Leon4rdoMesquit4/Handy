@@ -14,7 +14,8 @@ struct ExerciseControlView: View {
     @Environment(Coordinator.self) var coordinator
     @Environment(SwiftDataController.self) var controller
     @Environment(WorkoutController.self) var wcontroller
-    
+    var endButtonString = String(localized: "Finalizar")
+    var pauseButtonString = String(localized: "Pausar")
     var body: some View {
         ZStack{
             Color.base
@@ -25,14 +26,14 @@ struct ExerciseControlView: View {
                     controller.startTrainning = .now
                     coordinator.navigate(to: .exerciseUserFeedbackView)
                     
-                }, name: "end", image: Image(systemName: "xmark"))
+                }, name: endButtonString, image: Image(systemName: "xmark"))
                 
                 
                 ControlButton(color: .brandColor2, action: {
                     
                     wcontroller.togglePause()
                     
-                }, name: "Pausar", image: Image(systemName: wcontroller.working ? "pause.fill" : "play.fill"))
+                }, name: pauseButtonString, image: Image(systemName: wcontroller.working ? "pause.fill" : "play.fill"))
             }.padding()
         }.ignoresSafeArea()
     }

@@ -21,7 +21,7 @@ struct DidFeelPainView: View {
             
             VStack{
                 
-                TitleForm(text: "Sentiu dor ao praticar?")
+                TitleForm(text: String(localized:"Sentiu dor ao praticar?"))
                 Spacer()
                 
                 HStack (spacing: 15){

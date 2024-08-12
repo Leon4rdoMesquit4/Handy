@@ -17,7 +17,7 @@ class BigSpeechBubbleViewModel : ObservableObject {
     
     //Parâmetro que define a orientação da BigSpeechBubbleView
     var orientation: SpeechBubbleOrientation
-    var speechBubbleText : [String] = ["Acredite na sua recuperação.", "Cada passo importa muito.", "Superação é seu destino.", "Determinação é sua aliada.", "Você é mais forte!", "Continue avançando, sem desistir.", "Você pode, você consegue!"]
+    var speechBubbleText : [String] = [String(localized:"Acredite na sua recuperação."), String(localized:"Cada passo importa muito."), String(localized:"Superação é seu destino."), String(localized:"Determinação é sua aliada."), String(localized:"Você é mais forte!"), String(localized:"Continue avançando, sem desistir."), String(localized: "Você pode, você consegue!")]
     
     init(orientation: SpeechBubbleOrientation) {
         self.orientation = orientation

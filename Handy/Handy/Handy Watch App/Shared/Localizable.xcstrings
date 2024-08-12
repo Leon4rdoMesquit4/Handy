@@ -193,6 +193,16 @@
         }
       }
     },
+    "Finalizar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        }
+      }
+    },
     "Hello, world!" : {
 
     },
@@ -259,7 +269,17 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Congratulations!"
+            "value" : "Good"
+          }
+        }
+      }
+    },
+    "Pausar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pause"
           }
         }
       }

@@ -99,25 +99,27 @@ struct FeedbackGraphView: View {
         case exaustivo = "Exaustivo"
         case semDificuldade = "Sem dificuldade"
         
-        //Retorna a string por indice
-        static func getPainLevel(index: Int) -> String{
-            if index == 0 {
-                facil.rawValue
-            } else if index == 1 {
-                ligeiramenteFacil.rawValue
-            } else if index == 2 {
-                desconfortavel.rawValue
-            } else if index == 3 {
-                cansativo.rawValue
-            } else if index == 4 {
-                muitoCansativo.rawValue
-            } else if index == 5 {
-                exaustivo.rawValue
-            } else {
-                semDificuldade.rawValue
+        // Retorna a string por índice com localização
+        static func getFeedbackLevel(index: Int) -> String {
+            switch index {
+            case 0:
+                return String(localized: String.LocalizationValue(Feedback.facil.rawValue))
+            case 1:
+                return String(localized: String.LocalizationValue(Feedback.ligeiramenteFacil.rawValue))
+            case 2:
+                return String(localized: String.LocalizationValue(Feedback.desconfortavel.rawValue))
+            case 3:
+                return String(localized: String.LocalizationValue(Feedback.cansativo.rawValue))
+            case 4:
+                return String(localized: String.LocalizationValue(Feedback.muitoCansativo.rawValue))
+            case 5:
+                return String(localized: String.LocalizationValue(Feedback.exaustivo.rawValue))
+            default:
+                return String(localized: String.LocalizationValue(Feedback.semDificuldade.rawValue))
             }
         }
     }
+
     
 }
 

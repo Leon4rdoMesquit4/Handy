@@ -17,7 +17,7 @@ struct ExerciseUserFeedbackView: View {
     var body: some View {
         ZStack{
             VStack {
-                TitleForm(text: "Como foi a prática do exercício")
+                TitleForm(text: String(localized:"Como foi a prática do exercício"))
                 StepperImage(value: $feedback, interval: 0 ... 5, prefixImage: "intensity")
                     .padding(WKInterfaceDevice.current().screenBounds.height / 400)
                 
