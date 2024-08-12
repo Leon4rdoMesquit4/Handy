@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%lld" : {
 
     },
@@ -38,6 +41,9 @@
           }
         }
       }
+    },
+    "A intensidade do exercício marcada pela escala de Borg foi de %lf/10" : {
+
     },
     "Acredite na sua recuperação." : {
       "extractionState" : "manual",
@@ -196,6 +202,17 @@
         }
       }
     },
+    "Fácil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Easy"
+          }
+        }
+      }
+    },
     "Finalizar" : {
       "localizations" : {
         "en" : {
@@ -244,6 +261,9 @@
           }
         }
       }
+    },
+    "Minha taxa de batimento cardíaco média foi %@ bpm" : {
+
     },
     "Month" : {
 

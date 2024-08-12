@@ -18,10 +18,11 @@ extension ExerciseDetailView {
         
         func makeSharedText () -> String {
             if let exercise {
-                let dayExercise = "Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted))"
-                let avarageHeartbeat : String = "Minha taxa de batimento cardíaco média foi \(Int(exercise.avarageHeartBeats ?? 0).description) bpm"
-                let painLevels = "\(exercise.painLevel != 0 ? "Meu nível de dor foi: \(Int(exercise.painLevel ?? 1).description)/10": "Eu não senti dor durante o exercício")"
-                let intensityLevels = "A intensidade do exercício marcada pela escala de Borg foi de \(exercise.borgScale ?? 0)/10"
+                
+                let dayExercise = String(localized :"Treino do dia: \(exercise.startTrainning.formatted(date: .numeric, time: .omitted))")
+                let avarageHeartbeat = String(localized:"Minha taxa de batimento cardíaco média foi \(Int(exercise.avarageHeartBeats ?? 0).description) bpm")
+                let painLevels = String(localized:"\(exercise.painLevel != 0 ? "Meu nível de dor foi: \(Int(exercise.painLevel ?? 1).description)/10": "Eu não senti dor durante o exercício")")
+                let intensityLevels = String(localized:"A intensidade do exercício marcada pela escala de Borg foi de \(exercise.borgScale ?? 0)/10")
                 
                 
                 return """
