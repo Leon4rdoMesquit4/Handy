@@ -17,7 +17,7 @@ struct PainScaleView: View {
     var body: some View {
         ZStack{
             VStack{
-                TitleForm(text: "Qual a intensidade da dor?")
+                TitleForm(text: String(localized: "Qual a intensidade da dor?"))
                 Spacer()
                 StepperImage(value: $painIntensity, interval: 0 ... 2, prefixImage: "pain")
                 
