@@ -82,7 +82,14 @@
       }
     },
     "Como foi a prática do exercício" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How was your practice?"
+          }
+        }
+      }
     },
     "Como se sentiu" : {
       "localizations" : {
@@ -145,6 +152,17 @@
         }
       }
     },
+    "Desconforto" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discomfort"
+          }
+        }
+      }
+    },
     "Determinação é sua aliada." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -152,6 +170,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Determination is your ally."
+          }
+        }
+      }
+    },
+    "Dor intensa" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Severe pain"
+          }
+        }
+      }
+    },
+    "Dor moderada" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moderate pain"
           }
         }
       }
@@ -297,6 +337,16 @@
         }
       }
     },
+    "Qual a intensidade da dor?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What is the intensity of the pain?"
+          }
+        }
+      }
+    },
     "Qual a sua meta?" : {
       "localizations" : {
         "en" : {
@@ -317,8 +367,26 @@
         }
       }
     },
+    "Sem dor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pain"
+          }
+        }
+      }
+    },
     "Sentiu dor ao praticar?" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Did you feel pain while practicing?"
+          }
+        }
+      }
     },
     "Suas práticas" : {
       "localizations" : {
