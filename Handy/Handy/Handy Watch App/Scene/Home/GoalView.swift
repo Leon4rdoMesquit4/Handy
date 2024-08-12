@@ -40,6 +40,8 @@ struct GoalView: View {
                 .padding()
                 .font(.title3)
                 .bold()
+                .font(.alata(.regular, size: 18, relativeTo: .title3))
+                .foregroundStyle(.baseColor2)
             
             Spacer()
         }

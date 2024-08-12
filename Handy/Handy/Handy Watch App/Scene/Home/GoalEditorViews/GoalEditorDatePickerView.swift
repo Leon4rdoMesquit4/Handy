@@ -23,6 +23,7 @@ struct GoalEditorDatePickerView : View {
             
             DatePicker(title, selection: $dataInicio)
                 .frame(height: 120)
+                
             
             Button ("Definir") {
                 coordinator.navigateBack()

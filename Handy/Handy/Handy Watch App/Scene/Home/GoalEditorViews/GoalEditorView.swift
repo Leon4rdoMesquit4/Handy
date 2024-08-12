@@ -34,7 +34,11 @@ struct GoalEditorView: View {
             }
             Spacer()
         }
-        .navigationTitle("Editar meta")
+        .navigationTitle{
+            Text("Editar meta")
+                .font(.alata(.regular, size: 18, relativeTo: .title3))
+                .foregroundStyle(.baseColor2)
+        }
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             fetchEmojiFromAppStorage()

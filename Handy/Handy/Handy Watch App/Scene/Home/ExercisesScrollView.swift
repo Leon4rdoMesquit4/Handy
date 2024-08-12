@@ -20,7 +20,8 @@ struct ExercisesScrollView: View {
                     Text("Suas práticas")
                         .padding(.horizontal, 10)
                         .padding(.vertical, 25)
-                        .font(.title3)
+                        .font(.alata(.regular, size: 18, relativeTo: .title3))
+                        .foregroundStyle(.baseColor2)
                     Spacer()
                 }
                 Spacer()
@@ -28,10 +29,11 @@ struct ExercisesScrollView: View {
             ScrollView {
                 ForEach(exercises) { exercise in
                     exerciseListItem(exercise: exercise)
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom, 8)
                 }
                 
-            }.padding(.top, 25)
+            }.padding(.top, 18)
         }.background(Color.base)
     }
 }
@@ -42,13 +44,24 @@ extension ExercisesScrollView {
         VStack (alignment: .leading) {
             HStack {
                 Text(exercise.startTrainning.formatted(date: .numeric, time: .omitted))
+                    .font(.alata(.regular,size: 15, relativeTo: .body))
                     .foregroundStyle(Color.baseColor2)
-                    .padding(.leading)
+                    
                 Spacer()
+                Image(systemName: "control")
+                    .rotationEffect(.degrees(90))
             }
-            .padding(.vertical, 25)
-            .background(Color.brandColor1)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .padding(.horizontal)
+            .padding(.vertical, 17)
+            .background{
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundStyle(Color.brandColor1.opacity(0.5))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.brandColor1, lineWidth: 1)
+                            .foregroundStyle(Color.brandColor1.opacity(0.5))
+                    }
+            }
             .onTapGesture {
                 coordinator.navigate(to: .exerciseDetailView(exercise
                                                             ))
