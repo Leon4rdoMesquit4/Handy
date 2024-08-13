@@ -42,12 +42,12 @@ struct ExerciseUserFeedbackView: View {
     /// Uma função que retorna uma string que representa a legenda que vai ser colocada abaixo da imagem
     func labelIntensity () -> String {
         switch feedback {
-            case 0: "Fácil"
-            case 1: "Ligeiramente fácil"
-        	case 2: "Desconfortável"
-            case 3: "Cansativo"
-            case 4: "Muito cansativo"
-            case 5: "Exaustivo"
+        case 0: String(localized: "fácil")
+            case 1: String(localized: "Ligeiramente fácil")
+        	case 2: String(localized: "Desconfortável")
+            case 3: String(localized: "Cansativo")
+            case 4: String(localized: "Muito cansativo")
+            case 5: String(localized: "Exaustivo")
             default: ""
         }
     }

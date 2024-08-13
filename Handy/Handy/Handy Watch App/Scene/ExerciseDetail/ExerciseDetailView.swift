@@ -19,21 +19,21 @@ struct ExerciseDetailView: View {
                     .padding(.bottom)
                 
                 // mostrando a duração do exercício
-                sectionBuilder(title: "Duração", subtitle: exercise.time?.getTimeString() ?? "")
+                sectionBuilder(title: String(localized: "Duração"), subtitle: exercise.time?.getTimeString() ?? "")
                 
                 // mostrando o batimento cardíaco médio que ele teve durante o exercício.
                 if let avarageHeartBeats = exercise.avarageHeartBeats {
-                    sectionBuilder(title: "Batimentos", subtitle: "\(Int(avarageHeartBeats - avarageHeartBeats.truncatingRemainder(dividingBy: 1))) bpm")
+                    sectionBuilder(title: String(localized: "Batimentos"), subtitle: "\(Int(avarageHeartBeats - avarageHeartBeats.truncatingRemainder(dividingBy: 1))) bpm")
 
                 }
                 
                 // mostrando a intensidade do exercício com base na escala de Borg
-                sectionBuilder(title: "Como foi", image: exercise.returnImageBorgScale())
+                sectionBuilder(title: String(localized: "Como foi"), image: exercise.returnImageBorgScale())
                 
                 // mostrando o nível de dor que a pessoa sentiu durante os exercícios
                 let imagePainLevel = exercise.returnImagePainLevel()
                 if !imagePainLevel.isEmpty {
-                    sectionBuilder(title: "Intensidade", image: exercise.returnImagePainLevel())
+                    sectionBuilder(title: String(localized: "Intensidade"), image: exercise.returnImagePainLevel())
                 }
                 
                 

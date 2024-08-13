@@ -29,7 +29,7 @@ struct TreatmentTimeView_: View {
                     .fontWeight(.semibold)
                 
                 
-                dateButton("Data de início", date: dataInicio)
+                dateButton(String(localized: "Data de início"), date: dataInicio)
                     .accessibilityAction {
                         coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
                     }
@@ -38,7 +38,7 @@ struct TreatmentTimeView_: View {
                     }
             
                             
-                dateButton("Data final", date: dataFinal)
+                dateButton(String(localized: "Data final"), date: dataFinal)
                     .accessibilityAction {
                         coordinator.navigate(to: .treatmentTimeBeginningView($dataInicio))
                     }

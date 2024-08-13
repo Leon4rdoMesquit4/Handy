@@ -51,9 +51,9 @@ struct PainScaleView: View {
         var painLabel : String = ""
         
         switch painIntensity {
-        case 0: painLabel = "Pouca dor"
-        case 1: painLabel = "Dor moderada"
-        case 2: painLabel = "Muita dor"
+        case 0: painLabel = String(localized: "Pouca dor")
+        case 1: painLabel = String(localized: "Dor moderada")
+        case 2: painLabel = String(localized: "Muita dor")
         default: break
         }
         

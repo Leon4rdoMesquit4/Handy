@@ -87,6 +87,26 @@
         }
       }
     },
+    "Cansativo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiring"
+          }
+        }
+      }
+    },
+    "Como foi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How it went"
+          }
+        }
+      }
+    },
     "Como foi a prática do exercício" : {
       "localizations" : {
         "en" : {
@@ -118,7 +138,27 @@
         }
       }
     },
+    "Data de início" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start date"
+          }
+        }
+      }
+    },
     "Data do final" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End date"
+          }
+        }
+      }
+    },
+    "Data final" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -154,6 +194,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Define"
+          }
+        }
+      }
+    },
+    "Desconfortável" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uncomfortable"
           }
         }
       }
@@ -202,6 +252,16 @@
         }
       }
     },
+    "Duração" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duration"
+          }
+        }
+      }
+    },
     "Duração do tratamento:" : {
       "localizations" : {
         "en" : {
@@ -238,6 +298,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set your goal"
+          }
+        }
+      }
+    },
+    "Exaustivo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exaustive"
+          }
+        }
+      }
+    },
+    "fácil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Easy"
           }
         }
       }
@@ -279,12 +359,25 @@
     "image" : {
 
     },
+    "Intensidade" : {
+
+    },
     "Intensidade da dor" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pain intensity"
+          }
+        }
+      }
+    },
+    "Ligeiramente fácil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slightly easy"
           }
         }
       }
@@ -307,6 +400,26 @@
     },
     "Month" : {
 
+    },
+    "Muita dor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A lot of pain"
+          }
+        }
+      }
+    },
+    "Muito cansativo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Very tiring"
+          }
+        }
+      }
     },
     "ok" : {
 
@@ -353,6 +466,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Persistence is the way."
+          }
+        }
+      }
+    },
+    "Pouca dor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Little pain"
           }
         }
       }
